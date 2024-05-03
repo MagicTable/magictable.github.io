@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tool | PyPi - 命令 - 查询手册 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Tool | PyPi - 命令 - 查询手册</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-08-09T20:01:00.000Z" id="date"> 2023-08-10</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-05-03T16:36:24.115Z" id="updated"> 2024-05-04</time></div></span></div></div><hr><div id="post-content"><p><strong>摘要：</strong> pip（python包管理器）第三方库命令查询手册。</p>
+<span id="more"></span>
+
+
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><blockquote>
+<ul>
+<li>pip 是最为广泛使用的 Python 包管理器。</li>
+<li>pip本质上是一个python第三方库，我们也可以选择手动来安装和管理python库。</li>
+<li>pip第三方库在安装过程中可以选择安装pip库，这里也推荐安装方便后续管理第三方库。</li>
+</ul>
+</blockquote>
+<h1 id="基本操作命令"><a href="#基本操作命令" class="headerlink" title="基本操作命令"></a>基本操作命令</h1><h2 id="安装第三方库"><a href="#安装第三方库" class="headerlink" title="安装第三方库"></a>安装第三方库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 下载最新版本</span><br>pip install [库名]<br><br><span class="hljs-comment"># 下载指定版本</span><br>pip install [库名]==X.X<br><br><span class="hljs-comment"># 下载指定最低版本以上</span><br>pip install [库名]&gt;=X.X<br><br><span class="hljs-comment"># 通过requirements.txt安装第三方库</span><br>pip install -r [requirements.txt]<br>pip install -r [完整路径+requirements.txt]<br></code></pre></td></tr></table></figure>
+
+<h2 id="升级第三方库"><a href="#升级第三方库" class="headerlink" title="升级第三方库"></a>升级第三方库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 以管理员身份升级库</span><br>pip install --upgrade [库名]<br></code></pre></td></tr></table></figure>
+
+<h2 id="卸载第三方库"><a href="#卸载第三方库" class="headerlink" title="卸载第三方库"></a>卸载第三方库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 卸载第三方库</span><br>pip uninstall [库名]<br></code></pre></td></tr></table></figure>
+
+<h2 id="离线安装第三方库"><a href="#离线安装第三方库" class="headerlink" title="离线安装第三方库"></a>离线安装第三方库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 安装.whl文件</span><br>pip install whl [文件名.whl]<br>pip install whl [完成路径.whl]<br><br><span class="hljs-comment"># 安装下载下来的源文件第三方库，执行源文件下的setup.py进行安装</span><br>python setup.py install<br>python [完整路径+setup.py] install<br></code></pre></td></tr></table></figure>
+
+<h2 id="显示当前python环境下已安装的所有第三方库"><a href="#显示当前python环境下已安装的所有第三方库" class="headerlink" title="显示当前python环境下已安装的所有第三方库"></a>显示当前python环境下已安装的所有第三方库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 显示当前python环境的本地第三方库</span><br>pip list<br><br><span class="hljs-comment"># 查询需要升级的第三方库</span><br>pip list -o<br></code></pre></td></tr></table></figure>
+
+<h2 id="导出本地所用到的第三方包的名称和版本"><a href="#导出本地所用到的第三方包的名称和版本" class="headerlink" title="导出本地所用到的第三方包的名称和版本"></a>导出本地所用到的第三方包的名称和版本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 当需要将项目分享给别人时，别人需要自行下载项目所依赖的第三方库才能正常运行</span><br><span class="hljs-comment"># 导出项目所用到的第三方库</span><br>pip freeze &gt; requirements.txt<br>pip freeze &gt; [完整路径+requirements.txt]<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="pip信息查询命令"><a href="#pip信息查询命令" class="headerlink" title="pip信息查询命令"></a>pip信息查询命令</h1><h2 id="查询python和pip的处理器架构"><a href="#查询python和pip的处理器架构" class="headerlink" title="查询python和pip的处理器架构"></a>查询python和pip的处理器架构</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python -c <span class="hljs-string">&quot;import platform;print(platform.architecture()[0]);print(platform.machine())&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="查询python信息"><a href="#查询python信息" class="headerlink" title="查询python信息"></a>查询python信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看版本信息</span><br>python --version<br>python -V<br><br><span class="hljs-comment"># 查看python本地存储的目录</span><br><span class="hljs-built_in">which</span> python3<br></code></pre></td></tr></table></figure>
+
+<h2 id="查询pip信息"><a href="#查询pip信息" class="headerlink" title="查询pip信息"></a>查询pip信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看版本信息</span><br>pip --version<br>pip -V<br><br><span class="hljs-comment"># 显示pip版本、本地存储的目录</span><br>python -m pip --version<br></code></pre></td></tr></table></figure>
+
+<h2 id="查询本地第三方库信息"><a href="#查询本地第三方库信息" class="headerlink" title="查询本地第三方库信息"></a>查询本地第三方库信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 显示相关信息，不显示详细的本地相关文件</span><br>pip show [库名]<br><br><span class="hljs-comment"># 显示相关信息，包含每个详细文件位置</span><br>pip show -f [库名]<br></code></pre></td></tr></table></figure>
+
+<h2 id="查询本地第三方库的依赖关系"><a href="#查询本地第三方库的依赖关系" class="headerlink" title="查询本地第三方库的依赖关系"></a>查询本地第三方库的依赖关系</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 需要先通过pip安装pipdeptree第三方库</span><br><span class="hljs-comment"># 查看详细依赖关系的方法</span><br>pipdeptree -p [库名]<br></code></pre></td></tr></table></figure>
+
+<h1 id="pip镜像源操作命令"><a href="#pip镜像源操作命令" class="headerlink" title="pip镜像源操作命令"></a>pip镜像源操作命令</h1><h2 id="临时更换镜像源"><a href="#临时更换镜像源" class="headerlink" title="临时更换镜像源"></a>临时更换镜像源</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 指定镜像源来安装第三方库</span><br>pip install [库名] -i [镜像源地址]<br></code></pre></td></tr></table></figure>
+
+<h2 id="添加指定的默认镜像源"><a href="#添加指定的默认镜像源" class="headerlink" title="添加指定的默认镜像源"></a>添加指定的默认镜像源</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip config <span class="hljs-built_in">set</span> global.index-url [镜像源地址]<br><span class="hljs-comment"># 提示：配置文件将存储在“/home/用户/.config/pip/pip.conf”</span><br></code></pre></td></tr></table></figure>
+
+<p>通过手动修改文件的方式来更换镜像源</p>
+<blockquote>
+<ul>
+<li>修改<code>/home/用户/.config/pip/</code>目录下的<code>pip.conf</code>文件。</li>
+<li>改为如下内容：</li>
+</ul>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs txt">[global]<br>index-url = https://mirrors.huaweicloud.com/repository/pypi/simple<br>trusted-host = mirrors.huaweicloud.com<br>timeout = 120<br></code></pre></td></tr></table></figure>
+
+
+<h2 id="查看已添加的镜像源"><a href="#查看已添加的镜像源" class="headerlink" title="查看已添加的镜像源"></a>查看已添加的镜像源</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip config list<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><blockquote>
+<ul>
+<li>镜像源请尽可能只使用其中一个，不要下载的第三方库是在多个不同地方的镜像源下载的。（这有可能由于不同镜像源的不及时同步导致出现第三方库有问题）</li>
+</ul>
+</blockquote>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Language-Python3-Lib-logging-Command-Query/">← 下一篇 Language | Python3 - logging标准库 - 查询手册</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-Python3-CodeWritingSkill-Summary/">Language | Python3 - 使用技巧 - 知识总结 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>记录实现虚拟老婆大人的技术文章和相关知识总结。</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">基本操作命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93"><span class="toc-number">2.1.</span> <span class="toc-text">安装第三方库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%87%E7%BA%A7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93"><span class="toc-number">2.2.</span> <span class="toc-text">升级第三方库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B8%E8%BD%BD%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93"><span class="toc-number">2.3.</span> <span class="toc-text">卸载第三方库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93"><span class="toc-number">2.4.</span> <span class="toc-text">离线安装第三方库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E5%BD%93%E5%89%8Dpython%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%B7%B2%E5%AE%89%E8%A3%85%E7%9A%84%E6%89%80%E6%9C%89%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93"><span class="toc-number">2.5.</span> <span class="toc-text">显示当前python环境下已安装的所有第三方库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA%E6%9C%AC%E5%9C%B0%E6%89%80%E7%94%A8%E5%88%B0%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8C%85%E7%9A%84%E5%90%8D%E7%A7%B0%E5%92%8C%E7%89%88%E6%9C%AC"><span class="toc-number">2.6.</span> <span class="toc-text">导出本地所用到的第三方包的名称和版本</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pip%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2%E5%91%BD%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text">pip信息查询命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2python%E5%92%8Cpip%E7%9A%84%E5%A4%84%E7%90%86%E5%99%A8%E6%9E%B6%E6%9E%84"><span class="toc-number">3.1.</span> <span class="toc-text">查询python和pip的处理器架构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2python%E4%BF%A1%E6%81%AF"><span class="toc-number">3.2.</span> <span class="toc-text">查询python信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2pip%E4%BF%A1%E6%81%AF"><span class="toc-number">3.3.</span> <span class="toc-text">查询pip信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E6%9C%AC%E5%9C%B0%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E4%BF%A1%E6%81%AF"><span class="toc-number">3.4.</span> <span class="toc-text">查询本地第三方库信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E6%9C%AC%E5%9C%B0%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E7%9A%84%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB"><span class="toc-number">3.5.</span> <span class="toc-text">查询本地第三方库的依赖关系</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pip%E9%95%9C%E5%83%8F%E6%BA%90%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text">pip镜像源操作命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%B4%E6%97%B6%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90"><span class="toc-number">4.1.</span> <span class="toc-text">临时更换镜像源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%8C%87%E5%AE%9A%E7%9A%84%E9%BB%98%E8%AE%A4%E9%95%9C%E5%83%8F%E6%BA%90"><span class="toc-number">4.2.</span> <span class="toc-text">添加指定的默认镜像源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%B7%B2%E6%B7%BB%E5%8A%A0%E7%9A%84%E9%95%9C%E5%83%8F%E6%BA%90"><span class="toc-number">4.3.</span> <span class="toc-text">查看已添加的镜像源</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">5.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">6.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>

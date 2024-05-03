@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Language | Java8 - API - 查询手册 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | Java8 - API - 查询手册</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-08-10T00:00:05.000Z" id="date"> 2023-08-10</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-04-27T07:25:58.662Z" id="updated"> 2024-04-27</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 待完善<br><strong>摘要：</strong> 无需导入并实例化对象，直接调用就能使用的方法，该文章将整理Java8常用官方默认的静态方法。</p>
+<span id="more"></span>
+<h1 id="Java内置异常类-运行时异常"><a href="#Java内置异常类-运行时异常" class="headerlink" title="Java内置异常类 - 运行时异常"></a>Java内置异常类 - 运行时异常</h1><table>
+<thead>
+<tr>
+<th align="center">异常类名</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ArithmeticException</td>
+<td align="left">当出现异常的运算条件时</td>
+</tr>
+<tr>
+<td align="center">ArrayIndexOutOfBoundsException</td>
+<td align="left">用非法索引访问数组时</td>
+</tr>
+<tr>
+<td align="center">ArrayStoreException</td>
+<td align="left">将错误类型的对象存储到一个对象数组时</td>
+</tr>
+<tr>
+<td align="center">ClassCastException</td>
+<td align="left">将对象强制转换为不是实例的子类时</td>
+</tr>
+<tr>
+<td align="center">IllegalArgumentException</td>
+<td align="left">向方法中传递了一个不合法或不正确的参数</td>
+</tr>
+<tr>
+<td align="center">NumberFormatException</td>
+<td align="left">将字符串转换成一种数值类型，但该字符串不能转换为适当格式时</td>
+</tr>
+</tbody></table>
+<h1 id="Java内置异常类-检查时异常"><a href="#Java内置异常类-检查时异常" class="headerlink" title="Java内置异常类 - 检查时异常"></a>Java内置异常类 - 检查时异常</h1><table>
+<thead>
+<tr>
+<th align="center">异常类名</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">IOException</td>
+<td align="left">读取文件不存在</td>
+</tr>
+<tr>
+<td align="center">ClassNotFoundException</td>
+<td align="left">应用程序试图加载类时，找不到相应的类</td>
+</tr>
+<tr>
+<td align="center">CloneNotSupportedException</td>
+<td align="left">当调用<code>Object类</code>中的<code>clone方法</code>克隆对象，但该对象的类无法实现<code>Cloneable接口</code>时</td>
+</tr>
+<tr>
+<td align="center">IllegalAccessException</td>
+<td align="left">拒绝访问一个类的时候</td>
+</tr>
+<tr>
+<td align="center">InstantiationException</td>
+<td align="left">当试图使用<code>Class类</code>中的<code>newInstance方法</code>创建一个类的实例，而指定的类对象因为是一个接口或是一个抽象类而无法实例化时</td>
+</tr>
+<tr>
+<td align="center">InterruptedException</td>
+<td align="left">一个线程被另一个线程中断</td>
+</tr>
+<tr>
+<td align="center">NoSuchFieldException</td>
+<td align="left">请求的变量不存在</td>
+</tr>
+<tr>
+<td align="center">NoSuchMethodException</td>
+<td align="left">请求的方法不存在</td>
+</tr>
+</tbody></table>
+<h1 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h1><h1 id="非静态方法（标准库包）"><a href="#非静态方法（标准库包）" class="headerlink" title="非静态方法（标准库包）"></a>非静态方法（标准库包）</h1><h2 id="重要概念"><a href="#重要概念" class="headerlink" title="重要概念"></a>重要概念</h2><p><strong>导入包</strong></p>
+<blockquote>
+<p>在使用这些API时需要在代码文件中导入包，将外部class文件的功能引入到自身文件中。</p>
+<ul>
+<li>语法：<code>import 包名.类名;</code></li>
+</ul>
+</blockquote>
+<h2 id="java-util-Scanner（接收用户输入）"><a href="#java-util-Scanner（接收用户输入）" class="headerlink" title="java.util.Scanner（接收用户输入）"></a>java.util.Scanner（接收用户输入）</h2><blockquote>
+<ul>
+<li><code>.nextInt();</code>：接收整数类型</li>
+<li><code>.nextDouble();</code>：接收小数类型</li>
+<li><code>.next();</code>：接收字符串类型</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><code>.next().charAt(0);</code>接收字符串的第一个字符，即单个字符</li>
+</ul>
+</blockquote>
+<p><strong>使用方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//第一步：导入包</span><br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span> <span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">// 第二步：定义扫描仪</span><br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">userInput</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        <span class="hljs-comment">// 第三步：接收用户输入，程序`阻塞`等待。</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">data</span> <span class="hljs-operator">=</span> userInput.next();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>异常</strong></p>
+<blockquote>
+<p>若输入的数据类型不匹配时，会显示<code>java.util.InputMismatchException</code>的错误。</p>
+</blockquote>
+<p>Arrays.copyOf();<br>Arrays.sort();<br>Math.random();<br>Math.sqrt();</p>
+<h1 id="图形化界面-AWT"><a href="#图形化界面-AWT" class="headerlink" title="图形化界面 - AWT"></a>图形化界面 - AWT</h1><p>包名：<code>java.awt</code></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><p>暂无</p>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Language-Java8-CodeStyle-Summary/">← 下一篇 Language | Java8 - 代码风格 - 知识总结</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-Java8-DataType-Query/">Language | Java8 - 数据类型静态方法 - 查询手册 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>记录实现虚拟老婆大人的技术文章和相关知识总结。</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E5%86%85%E7%BD%AE%E5%BC%82%E5%B8%B8%E7%B1%BB-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%BC%82%E5%B8%B8"><span class="toc-number">1.</span> <span class="toc-text">Java内置异常类 - 运行时异常</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E5%86%85%E7%BD%AE%E5%BC%82%E5%B8%B8%E7%B1%BB-%E6%A3%80%E6%9F%A5%E6%97%B6%E5%BC%82%E5%B8%B8"><span class="toc-number">2.</span> <span class="toc-text">Java内置异常类 - 检查时异常</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">静态方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%9E%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%EF%BC%88%E6%A0%87%E5%87%86%E5%BA%93%E5%8C%85%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">非静态方法（标准库包）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5"><span class="toc-number">4.1.</span> <span class="toc-text">重要概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java-util-Scanner%EF%BC%88%E6%8E%A5%E6%94%B6%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%EF%BC%89"><span class="toc-number">4.2.</span> <span class="toc-text">java.util.Scanner（接收用户输入）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2-AWT"><span class="toc-number">5.</span> <span class="toc-text">图形化界面 - AWT</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">5.1.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">6.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">7.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Language | Markdown - 语法规则 - 查询手册 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | Markdown - 语法规则 - 查询手册</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-08-09T19:00:01.000Z" id="date"> 2023-08-10</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-04-13T09:15:14.218Z" id="updated"> 2024-04-13</time></div></span></div></div><hr><div id="post-content"><p><strong>摘要：</strong> 查询手册</p>
+<span id="more"></span>
+
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><h2 id="使用-和-来标记一级和二级标题"><a href="#使用-和-来标记一级和二级标题" class="headerlink" title="使用&#x3D;和-来标记一级和二级标题"></a>使用&#x3D;和-来标记一级和二级标题</h2><p>效果：</p>
+<blockquote>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2></blockquote>
+<p>格式：</p>
+<blockquote>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section">一级标题</span><br><span class="hljs-section">=========</span><br><span class="hljs-section">二级标题</span><br><span class="hljs-section">---------</span><br></code></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="使用-号标记标题"><a href="#使用-号标记标题" class="headerlink" title="使用#号标记标题"></a>使用<code>#</code>号标记标题</h2><ul>
+<li>使用<code>#</code>号可表示 1-6 级标题，一级标题对应一个<code>#</code>号，二级标题对应两个<code>#</code>号，以此类推。</li>
+</ul>
+<p>效果：</p>
+<blockquote>
+<h1 id="一级标题-1"><a href="#一级标题-1" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6></blockquote>
+<p>格式：</p>
+<blockquote>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># 一级标题</span><br><span class="hljs-section">## 二级标题</span><br><span class="hljs-section">### 三级标题</span><br><span class="hljs-section">#### 四级标题</span><br><span class="hljs-section">##### 五级标题</span><br><span class="hljs-section">###### 六级标题</span><br></code></pre></td></tr></table></figure>
+</blockquote>
+<h1 id="段落样式"><a href="#段落样式" class="headerlink" title="段落样式"></a>段落样式</h1><ul>
+<li>Markdown 段落没有特殊的格式，直接编写文字就好，段落的换行是使用两个以上空格加上回车。</li>
+<li>也可以在段落后面使用一个空行来表示重新开始一个段落。</li>
+</ul>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><ul>
+<li>Markdown可以使用以下几种字体</li>
+</ul>
+<p>效果：</p>
+<blockquote>
+<p><em>斜体文本</em><br><strong>粗体文本</strong><br><em><strong>粗斜体文本</strong></em></p>
+</blockquote>
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-emphasis">*斜体文本*</span><br><span class="hljs-emphasis">_斜体文本_</span><br><br><span class="hljs-strong">**粗体文本**</span><br><span class="hljs-strong">__粗体文本__</span><br><br><span class="hljs-strong">**<span class="hljs-emphasis">*粗斜体文本*</span>**</span><br><span class="hljs-strong">__<span class="hljs-emphasis">_粗斜体文本_</span>__</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><ul>
+<li>在一行中用三个或三个以上的星号（*）、减号（-）、下划线（_）来组成一个下划线样式。</li>
+<li>允许在星号（*）或者减号（-）中间插入空格。</li>
+<li>行内不能写其他东西。</li>
+</ul>
+<p>效果：</p>
+<blockquote>
+<p>所谓人类的感情，他原本就是一种宁可害人害己，也会想将它释放出来的欲望。</p>
+<hr>
+<p>只不过以一般定义而论，好人终究擅长用理性去驾驭感情，而恶人习惯让感情支配自己的理性罢了。</p>
+<hr>
+<p>至于所谓理性的恶人，他们把自己的人生活成了一台只会计算利益的机器，甚至不值得被称而为人。</p>
+<hr>
+</blockquote>
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs markdown">分割线（三个或三个以上的星号组成）<br><span class="hljs-strong">***</span><br><span class="hljs-strong">* * *</span><br><span class="hljs-strong"></span><br><span class="hljs-strong">分割线（三个或三个以上的减号组成）</span><br><span class="hljs-strong">---</span><br><span class="hljs-strong">- - -</span><br><span class="hljs-strong"></span><br><span class="hljs-strong">分割线（三个或三个以上的下划线组成）</span><br><span class="hljs-strong">__<span class="hljs-emphasis">_</span></span><br></code></pre></td></tr></table></figure>
+
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><ul>
+<li>在文本的两端加上两个波浪线（~~）即可，<code>Shift + ~</code>就能输入波浪线符号。</li>
+</ul>
+<p>效果：</p>
+<blockquote>
+<p>好人终究擅长用理性去驾驭感情<br><del>而恶人习惯让感情支配自己的理性罢了</del></p>
+</blockquote>
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">好人终究擅长用理性去驾驭感情<br>~~而恶人习惯让感情支配自己的理性罢了~~<br></code></pre></td></tr></table></figure>
+
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><ul>
+<li>通过HTML的<code>&lt;u&gt;</code>标签来实现下划线效果。</li>
+</ul>
+<p>效果：</p>
+<blockquote>
+<p><u>为了骗过世人，你就得装作世人的样子。</u></p>
+</blockquote>
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">u</span>&gt;</span></span>为了骗过世人，你就得装作世人的样子。<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">u</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><ul>
+<li>脚注是对文本的补充说明。</li>
+</ul>
+<p>效果：</p>
+<blockquote>
+<p>奥托·阿波卡利斯[^简介]<br>[^简介]:我愚弄了友人，愚弄了至亲，愚弄了世界和它之上的规则，只为了给予那唯一真实的你以第二次生命，我回来了，卡莲。</p>
+</blockquote>
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">奥托·阿波卡利斯[^简介]<br>[<span class="hljs-symbol">^简介</span>]:<span class="hljs-link">我愚弄了友人，愚弄了至亲，愚弄了世界和它之上的规则，只为了给予那唯一真实的你以第二次生命，我回来了，卡莲。</span><br></code></pre></td></tr></table></figure>
+
+
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><ul>
+<li>无序列表使用星号（*）、加号（+）、减号（-）作为列表标记。</li>
+</ul>
+<p>效果：</p>
+<blockquote>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<ul>
+<li>人名</li>
+</ul>
+<ul>
+<li>地名</li>
+</ul>
+</blockquote>
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> 第一项<br><span class="hljs-bullet">-</span> 第二项<br><span class="hljs-bullet">-</span> 第三项<br><span class="hljs-bullet">+</span> 人名<br><span class="hljs-bullet">-</span> 地名<br></code></pre></td></tr></table></figure>
+
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><ul>
+<li>有序列表使用数字，并紧跟一个<code>.</code>英文点号和一个空格符号来表示。</li>
+</ul>
+<p>效果：</p>
+<blockquote>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+</blockquote>
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> 第一项<br><span class="hljs-bullet">2.</span> 第二项<br><span class="hljs-bullet">3.</span> 第三项<br></code></pre></td></tr></table></figure>
+
+<h2 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h2><ul>
+<li>列表嵌套通过在列表中的选项添加4个空格表示一次缩进，可进行多次缩进4个空格。</li>
+</ul>
+<p>效果：</p>
+<ol>
+<li>第一项：<ul>
+<li>第一项嵌套的第一个元素</li>
+<li>第一项嵌套的第二个元素</li>
+</ul>
+</li>
+<li>第二项：<ul>
+<li>第二项嵌套的第一个元素</li>
+<li>第二项嵌套的第二个元素</li>
+</ul>
+</li>
+</ol>
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">1.</span> 第一项：<br><span class="hljs-bullet">    -</span> 第一项嵌套的第一个元素<br><span class="hljs-bullet">    -</span> 第一项嵌套的第二个元素<br><span class="hljs-bullet">2.</span> 第二项：<br><span class="hljs-bullet">    -</span> 第二项嵌套的第一个元素<br><span class="hljs-bullet">    -</span> 第二项嵌套的第二个元素<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h1><ul>
+<li>Markdown区块引用是在段落开头使用<code>&gt;</code>右尖括号，并紧跟一个空格符号。</li>
+</ul>
+<p>效果：</p>
+<blockquote>
+<p>这是一个区块</p>
+</blockquote>
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-quote">&gt; 这是一个区块</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>区块可以嵌套，一个<code>&gt;</code>是最外层，两个<code>&gt;</code>是第一层嵌套，以此类推</strong></p>
+<p>效果：</p>
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+<blockquote>
+<p>第二层嵌套</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-quote">&gt; 最外层</span><br><span class="hljs-quote">&gt; &gt; 第一层嵌套</span><br><span class="hljs-quote">&gt; &gt; &gt; 第二层嵌套</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>区块中使用列表</strong></p>
+<p>效果：</p>
+<blockquote>
+<p>区块中使用列表</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+</ol>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+</blockquote>
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-quote">&gt; 区块中使用列表</span><br><span class="hljs-quote">&gt; </span><br><span class="hljs-quote">&gt; 1. 第一项</span><br><span class="hljs-quote">&gt; 2. 第二项</span><br><span class="hljs-quote">&gt; + 第一项</span><br><span class="hljs-quote">&gt; + 第二项</span><br><span class="hljs-quote">&gt; + 第三项</span><br></code></pre></td></tr></table></figure>
+
+
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><h2 id="段落上的代码片段"><a href="#段落上的代码片段" class="headerlink" title="段落上的代码片段"></a>段落上的代码片段</h2><ul>
+<li>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（&#96;）。</li>
+</ul>
+<p>效果：</p>
+<blockquote>
+<p><code>print()</code>函数</p>
+</blockquote>
+<p>文本：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-code">`print()`</span>函数<br></code></pre></td></tr></table></figure>
+
+<h2 id="代码区块"><a href="#代码区块" class="headerlink" title="代码区块"></a>代码区块</h2><ul>
+<li>代码区块使用4个空格或者一个制表符（Tab 键）。</li>
+<li>也可以用 &#96;&#96;&#96; 包裹一段代码，并指定一种语言（也可以不指定）。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-comment"># 测试代码</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):<br>    i++<br>    <span class="hljs-built_in">print</span>(i)<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="链接外部网页"><a href="#链接外部网页" class="headerlink" title="链接外部网页"></a>链接外部网页</h1><p>效果：</p>
+<blockquote>
+<p>方案1：<a target="_blank" rel="noopener" href="https://baidu.com/">百度官网</a></p>
+<p>方案2：<a target="_blank" rel="noopener" href="https://baidu.com/">https://baidu.com</a></p>
+</blockquote>
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">方案1：[<span class="hljs-string">百度官网</span>](<span class="hljs-link">https://baidu.com</span>)<br><br>方案2：https://baidu.com<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="链接本地文章"><a href="#链接本地文章" class="headerlink" title="链接本地文章"></a>链接本地文章</h1><p>案例：</p>
+<a href="/title/Tool-Hexo-Command-Query/" title="Tool | Hexo - 命令 - 查询手册">Tool | Hexo - 命令 - 查询手册</a>
+
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% post<span class="hljs-emphasis">_link 文章文件名(不带后缀) 显示文本文章标题(可选) %&#125;</span><br><span class="hljs-emphasis"></span><br></code></pre></td></tr></table></figure>
+
+
+<h1 id="插入网络照片"><a href="#插入网络照片" class="headerlink" title="插入网络照片"></a>插入网络照片</h1><p>效果：<br class='item-img' data-src='https://gd-hbimg.huaban.com/2d291e31a30711e30b3b5ba2c4ba54377f4ab834553d1-z9Mbqr'><img src="https://gd-hbimg.huaban.com/2d291e31a30711e30b3b5ba2c4ba54377f4ab834553d1-z9Mbqr" alt="角色设计草图" title="角色设计草图"></p>
+<p>格式：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown">![<span class="hljs-string">图片的替代文本</span>](<span class="hljs-link">图片地址</span>)<br>![<span class="hljs-string">图片的替代文本</span>](<span class="hljs-link">图片地址 &quot;可选标题&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="插入本地图片"><a href="#插入本地图片" class="headerlink" title="插入本地图片"></a>插入本地图片</h1><p><strong>方法1：</strong></p>
+<blockquote>
+<ul>
+<li>通过局部路径的方法读取相关文件。</li>
+<li>如下所示：</li>
+</ul>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">![<span class="hljs-string">显示文本内容</span>](<span class="hljs-link">../需要读取的资源文件路径/文件名+后缀</span>)<br></code></pre></td></tr></table></figure>
+<p>效果：</p>
+<blockquote>
+<p class='item-img' data-src='/../assets/image/Diary/A0_0001.jpg'><img src="/../assets/image/Diary/A0_0001.jpg" alt="奥托·阿波卡利斯人物壁纸"></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>“..”两个点表明是上一级目录，“.”一个点表明是当前目录。</li>
+</ul>
+</blockquote>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><blockquote>
+<ul>
+<li>Markdown 制作表格使用<code>|</code>来分隔不同的单元格，使用<code>-</code>来分隔表头和其他行。</li>
+</ul>
+</blockquote>
+<p>效果：</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">标题</th>
+<th align="center">标题</th>
+<th align="right">标题</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">居左对齐</td>
+<td align="center">剧中对齐</td>
+<td align="right">居右对齐</td>
+</tr>
+<tr>
+<td align="left">单元格</td>
+<td align="center">单元格</td>
+<td align="right">单元格</td>
+</tr>
+</tbody></table>
+</blockquote>
+<p>格式：</p>
+<blockquote>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown">| 标题 | 标题 | 标题 |<br>| :- | :-: | -: |<br>| 居左对齐 | 剧中对齐 | 居右对齐 |<br>| 单元格 | 单元格 | 单元格 |<br></code></pre></td></tr></table></figure>
+</blockquote>
+<h1 id="待办事项"><a href="#待办事项" class="headerlink" title="待办事项"></a>待办事项</h1><p>效果：</p>
+<blockquote>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 已完成的事项效果</li>
+<li><input disabled="" type="checkbox"> 未完成的事项效果</li>
+</ul>
+</blockquote>
+<p>格式：</p>
+<blockquote>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> [x] 已完成的事项效果<br><span class="hljs-bullet">-</span> [ ] 未完成的事项效果<br></code></pre></td></tr></table></figure>
+</blockquote>
+<h1 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h1><ul>
+<li>当需要在编辑器中插入数学公式时，可以使用两个美元符$$包裹TeX或LaTeX格式的数学公式来实现。提交后，问答和文章页会根据需要加载Mathjax对数学公式进行渲染。</li>
+</ul>
+<p>默认下的分隔符：</p>
+<blockquote>
+<p>$…$ 或者 (…) 中的数学表达式将会在行内显示。<br>$$…$$ 或者 […] 或者 &#96;&#96;&#96;math 中的数学表达式将会在块内显示。</p>
+</blockquote>
+<h1 id="绘制图表"><a href="#绘制图表" class="headerlink" title="绘制图表"></a>绘制图表</h1><h2 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h2><p>横向流程图</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">graph LR<br>A[方形] --&gt;B(圆角)<br>    B --&gt; C&#123;条件a&#125;<br>    C --&gt;|a=1| D[结果1]<br>    C --&gt;|a=2| E[结果2]<br>    F[横向流程图]<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">graph LR<br>A[方形] --&gt;B(圆角)<br>    B --&gt; C&#123;条件a&#125;<br>    C --&gt;|a=1| D[结果1]<br>    C --&gt;|a=2| E[结果2]<br>    F[横向流程图]<br></code></pre></td></tr></table></figure>
+
+
+<p>竖向流程图</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">graph TD<br>A[方形] --&gt; B(圆角)<br>    B --&gt; C&#123;条件a&#125;<br>    C --&gt; |a=1| D[结果1]<br>    C --&gt; |a=2| E[结果2]<br>    F[竖向流程图]<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">graph TD<br>A[方形] --&gt; B(圆角)<br>    B --&gt; C&#123;条件a&#125;<br>    C --&gt; |a=1| D[结果1]<br>    C --&gt; |a=2| E[结果2]<br>    F[竖向流程图]<br></code></pre></td></tr></table></figure>
+
+<h2 id="序列图"><a href="#序列图" class="headerlink" title="序列图"></a>序列图</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">%% 时序图例子,-&gt; 直线，--&gt;虚线，-&gt;&gt;实线箭头<br>  sequenceDiagram<br>    participant 张三<br>    participant 李四<br>    张三-&gt;王五: 王五你好吗？<br>    loop 健康检查<br>        王五-&gt;王五: 与疾病战斗<br>    end<br>    Note right of 王五: 合理 食物 &lt;br/&gt;看医生...<br>    李四--&gt;&gt;张三: 很好!<br>    王五-&gt;李四: 你怎么样?<br>    李四--&gt;王五: 很好!<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs text">%% 时序图例子,-&gt; 直线，--&gt;虚线，-&gt;&gt;实线箭头<br>  sequenceDiagram<br>    participant 张三<br>    participant 李四<br>    张三-&gt;王五: 王五你好吗？<br>    loop 健康检查<br>        王五-&gt;王五: 与疾病战斗<br>    end<br>    Note right of 王五: 合理 食物 &lt;br/&gt;看医生...<br>    李四--&gt;&gt;张三: 很好!<br>    王五-&gt;李四: 你怎么样?<br>    李四--&gt;王五: 很好!<br></code></pre></td></tr></table></figure>
+
+<h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">classDiagram<br>classA --|&gt; classB : Inheritance<br>classC --* classD : Composition<br>classE --o classF : Aggregation<br>classG --&gt; classH : Association<br>classI -- classJ : Link(Solid)<br>classK ..&gt; classL : Dependency<br>classM ..|&gt; classN : Realization<br>classO .. classP : Link(Dashed)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs text">classDiagram<br>classA --|&gt; classB : Inheritance<br>classC --* classD : Composition<br>classE --o classF : Aggregation<br>classG --&gt; classH : Association<br>classI -- classJ : Link(Solid)<br>classK ..&gt; classL : Dependency<br>classM ..|&gt; classN : Realization<br>classO .. classP : Link(Dashed)<br></code></pre></td></tr></table></figure>
+
+<h2 id="状态图"><a href="#状态图" class="headerlink" title="状态图"></a>状态图</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">stateDiagram-v2<br>        State1: The state with a note<br>        note right of State1<br>            Important information! You can write<br>            notes.<br>        end note<br>        State1 --&gt; State2<br>        note left of State2 : This is the note to the left.<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs text">stateDiagram-v2<br>        State1: The state with a note<br>        note right of State1<br>            Important information! You can write<br>            notes.<br>        end note<br>        State1 --&gt; State2<br>        note left of State2 : This is the note to the left.<br></code></pre></td></tr></table></figure>
+
+<h2 id="实体关系图"><a href="#实体关系图" class="headerlink" title="实体关系图"></a>实体关系图</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">erDiagram<br>    CUSTOMER ||--o&#123; ORDER : places<br>    ORDER ||--|&#123; LINE-ITEM : contains<br>    CUSTOMER &#125;|..|&#123; DELIVERY-ADDRESS : uses<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">erDiagram<br>    CUSTOMER ||--o&#123; ORDER : places<br>    ORDER ||--|&#123; LINE-ITEM : contains<br>    CUSTOMER &#125;|..|&#123; DELIVERY-ADDRESS : uses<br></code></pre></td></tr></table></figure>
+
+<h2 id="用户旅行图"><a href="#用户旅行图" class="headerlink" title="用户旅行图"></a>用户旅行图</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">journey<br>    title My working day<br>    section Go to work<br>      Make tea: 5: Me<br>      Go upstairs: 3: Me<br>      Do work: 1: Me, Cat<br>    section Go home<br>      Go downstairs: 5: Me<br>      Sit down: 5: Me<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs text">journey<br>    title My working day<br>    section Go to work<br>      Make tea: 5: Me<br>      Go upstairs: 3: Me<br>      Do work: 1: Me, Cat<br>    section Go home<br>      Go downstairs: 5: Me<br>      Sit down: 5: Me<br></code></pre></td></tr></table></figure>
+
+<h2 id="甘特图"><a href="#甘特图" class="headerlink" title="甘特图"></a>甘特图</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">gantt<br>    title A Gantt Diagram<br>    dateFormat  YYYY-MM-DD<br>    section Section<br>    A task           :a1, 2014-01-01, 30d<br>    Another task     :after a1  , 20d<br>    section Another<br>    Task in sec      :2014-01-12  , 12d<br>    another task      : 24d<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs text">gantt<br>    title A Gantt Diagram<br>    dateFormat  YYYY-MM-DD<br>    section Section<br>    A task           :a1, 2014-01-01, 30d<br>    Another task     :after a1  , 20d<br>    section Another<br>    Task in sec      :2014-01-12  , 12d<br>    another task      : 24d<br></code></pre></td></tr></table></figure>
+
+<h2 id="指令图"><a href="#指令图" class="headerlink" title="指令图"></a>指令图</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">%%&#123;init: &#123; &#x27;logLevel&#x27;: &#x27;debug&#x27;, &#x27;theme&#x27;: &#x27;dark&#x27; &#125; &#125;%%<br>sequenceDiagram<br>%%&#123;config: &#123; &#x27;fontFamily&#x27;: &#x27;Menlo&#x27;, &#x27;fontSize&#x27;: 18, &#x27;fontWeight&#x27;: 400&#125; &#125;%%<br>Alice-&gt;&gt;Bob: Hi Bob<br>Bob-&gt;&gt;Alice: Hi Alice<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">%%&#123;init: &#123; &#x27;logLevel&#x27;: &#x27;debug&#x27;, &#x27;theme&#x27;: &#x27;dark&#x27; &#125; &#125;%%<br>sequenceDiagram<br>%%&#123;config: &#123; &#x27;fontFamily&#x27;: &#x27;Menlo&#x27;, &#x27;fontSize&#x27;: 18, &#x27;fontWeight&#x27;: 400&#125; &#125;%%<br>Alice-&gt;&gt;Bob: Hi Bob<br>Bob-&gt;&gt;Alice: Hi Alice<br></code></pre></td></tr></table></figure>
+
+<h2 id="饼图"><a href="#饼图" class="headerlink" title="饼图"></a>饼图</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs mermaid">pie<br>    title Key elements in Product X<br>    &quot;Calcium&quot; : 42.96<br>    &quot;Potassium&quot; : 50.05<br>    &quot;Magnesium&quot; : 10.01<br>    &quot;Iron&quot; :  5<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">pie<br>    title Key elements in Product X<br>    &quot;Calcium&quot; : 42.96<br>    &quot;Potassium&quot; : 50.05<br>    &quot;Magnesium&quot; : 10.01<br>    &quot;Iron&quot; :  5<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="支持的HTML元素"><a href="#支持的HTML元素" class="headerlink" title="支持的HTML元素"></a>支持的HTML元素</h1><ul>
+<li>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</li>
+<li>目前支持的 HTML 元素有：&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;等</li>
+</ul>
+<h1 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h1><ul>
+<li>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符。<br>Markdown 使用反斜杠转义特殊字符：</li>
+</ul>
+<p>效果：</p>
+<blockquote>
+<p><strong>文本加粗</strong> </p>
+</blockquote>
+<p>格式：</p>
+<blockquote>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">\<span class="hljs-emphasis">*\*</span> 正常显示星号 \<span class="hljs-emphasis">*\*</span><br></code></pre></td></tr></table></figure>
+</blockquote>
+<p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<table>
+<thead>
+<tr>
+<th align="center">转义符号</th>
+<th align="center">名字</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">\\</td>
+<td align="center">反斜线</td>
+</tr>
+<tr>
+<td align="center">\&#96;</td>
+<td align="center">反引号</td>
+</tr>
+<tr>
+<td align="center">\*</td>
+<td align="center">星号</td>
+</tr>
+<tr>
+<td align="center">\_</td>
+<td align="center">下划线</td>
+</tr>
+<tr>
+<td align="center">\{\}</td>
+<td align="center">花括号</td>
+</tr>
+<tr>
+<td align="center">\[\]</td>
+<td align="center">方括号</td>
+</tr>
+<tr>
+<td align="center">\(\)</td>
+<td align="center">小括号</td>
+</tr>
+<tr>
+<td align="center">\#</td>
+<td align="center">井字号</td>
+</tr>
+<tr>
+<td align="center">\+</td>
+<td align="center">加号</td>
+</tr>
+<tr>
+<td align="center">\-</td>
+<td align="center">减号</td>
+</tr>
+<tr>
+<td align="center">\.</td>
+<td align="center">英文句点</td>
+</tr>
+<tr>
+<td align="center">\!</td>
+<td align="center">感叹号</td>
+</tr>
+</tbody></table>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Language-Python3-Summary/">← 下一篇 Language | Python3 - 知识总结</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-Markdown-Summary/">Language | Markdown - 知识总结 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>记录实现虚拟老婆大人的技术文章和相关知识总结。</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-%E5%92%8C-%E6%9D%A5%E6%A0%87%E8%AE%B0%E4%B8%80%E7%BA%A7%E5%92%8C%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">1.1.</span> <span class="toc-text">使用&#x3D;和-来标记一级和二级标题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">一级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">2.1.</span> <span class="toc-text">二级标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-%E5%8F%B7%E6%A0%87%E8%AE%B0%E6%A0%87%E9%A2%98"><span class="toc-number">2.2.</span> <span class="toc-text">使用#号标记标题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98-1"><span class="toc-number">3.</span> <span class="toc-text">一级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98-1"><span class="toc-number">3.1.</span> <span class="toc-text">二级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">3.1.1.</span> <span class="toc-text">三级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">3.1.1.1.</span> <span class="toc-text">四级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%94%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">3.1.1.1.1.</span> <span class="toc-text">五级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%85%AD%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="toc-number">3.1.1.1.1.1.</span> <span class="toc-text">六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD%E6%A0%B7%E5%BC%8F"><span class="toc-number">4.</span> <span class="toc-text">段落样式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93"><span class="toc-number">4.1.</span> <span class="toc-text">字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-number">4.2.</span> <span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%BA%BF"><span class="toc-number">4.3.</span> <span class="toc-text">删除线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E5%88%92%E7%BA%BF"><span class="toc-number">4.4.</span> <span class="toc-text">下划线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%84%9A%E6%B3%A8"><span class="toc-number">4.5.</span> <span class="toc-text">脚注</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">5.</span> <span class="toc-text">列表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">5.1.</span> <span class="toc-text">无序列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">5.2.</span> <span class="toc-text">有序列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97"><span class="toc-number">5.3.</span> <span class="toc-text">列表嵌套</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97"><span class="toc-number">6.</span> <span class="toc-text">区块</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">7.</span> <span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD%E4%B8%8A%E7%9A%84%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5"><span class="toc-number">7.1.</span> <span class="toc-text">段落上的代码片段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9D%97"><span class="toc-number">7.2.</span> <span class="toc-text">代码区块</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E5%A4%96%E9%83%A8%E7%BD%91%E9%A1%B5"><span class="toc-number">8.</span> <span class="toc-text">链接外部网页</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E6%9C%AC%E5%9C%B0%E6%96%87%E7%AB%A0"><span class="toc-number">9.</span> <span class="toc-text">链接本地文章</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E7%BD%91%E7%BB%9C%E7%85%A7%E7%89%87"><span class="toc-number">10.</span> <span class="toc-text">插入网络照片</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87"><span class="toc-number">11.</span> <span class="toc-text">插入本地图片</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-number">12.</span> <span class="toc-text">表格</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9"><span class="toc-number">13.</span> <span class="toc-text">待办事项</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F"><span class="toc-number">14.</span> <span class="toc-text">数学公式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%98%E5%88%B6%E5%9B%BE%E8%A1%A8"><span class="toc-number">15.</span> <span class="toc-text">绘制图表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">15.1.</span> <span class="toc-text">流程图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E5%9B%BE"><span class="toc-number">15.2.</span> <span class="toc-text">序列图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9B%BE"><span class="toc-number">15.3.</span> <span class="toc-text">类图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E5%9B%BE"><span class="toc-number">15.4.</span> <span class="toc-text">状态图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E4%BD%93%E5%85%B3%E7%B3%BB%E5%9B%BE"><span class="toc-number">15.5.</span> <span class="toc-text">实体关系图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E6%97%85%E8%A1%8C%E5%9B%BE"><span class="toc-number">15.6.</span> <span class="toc-text">用户旅行图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%98%E7%89%B9%E5%9B%BE"><span class="toc-number">15.7.</span> <span class="toc-text">甘特图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4%E5%9B%BE"><span class="toc-number">15.8.</span> <span class="toc-text">指令图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A5%BC%E5%9B%BE"><span class="toc-number">15.9.</span> <span class="toc-text">饼图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E7%9A%84HTML%E5%85%83%E7%B4%A0"><span class="toc-number">16.</span> <span class="toc-text">支持的HTML元素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89"><span class="toc-number">17.</span> <span class="toc-text">转义</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>

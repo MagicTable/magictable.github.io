@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Language | HTML - 知识总结 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | HTML - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-08-09T21:00:00.000Z" id="date"> 2023-08-10</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-04-27T07:26:26.838Z" id="updated"> 2024-04-27</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 待完善<br><strong>摘要：</strong> 超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+<span id="more"></span>
+
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><strong>完整HTML页面样例图</strong></p>
+<blockquote>
+<p class='item-img' data-src='/../assets/image/Language/HTML/HTML-Summary_01.jpg'><img src="/../assets/image/Language/HTML/HTML-Summary_01.jpg" alt="完整HTML页面样例图"></p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 声明HTML文档 --&gt;</span><br><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- HTML最外层 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br>	<span class="hljs-comment">&lt;!-- 元信息，头部元素 --&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>	    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span><br>	    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span><br>	    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>标签页名称<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><br>	<span class="hljs-comment">&lt;!-- 页面内容 --&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>	    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>标题<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><br>	    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>段落<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>HTML介绍</strong></p>
+<blockquote>
+<ul>
+<li>HTML 是用来描述网页的一种语言。</li>
+<li>HTML 指的是超文本标记语言: HyperText Markup Language</li>
+<li>HTML 不是一种编程语言，而是一种标记语言</li>
+<li>标记语言是一套标记标签 (markup tag)</li>
+<li>HTML 使用标记标签来描述网页</li>
+<li>HTML 文档包含了HTML 标签及文本内容</li>
+<li>HTML文档也叫做 web 页面</li>
+</ul>
+</blockquote>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><blockquote>
+<ul>
+<li>程序员在代码中加入的辅助说明，不能被计算机执行，不受语法的限制，可以写任何内容。</li>
+<li>格式：内容写在<code>&lt;!--</code>和<code>--&gt;</code>之间。</li>
+</ul>
+</blockquote>
+<h1 id="HTML标签"><a href="#HTML标签" class="headerlink" title="HTML标签"></a>HTML标签</h1><blockquote>
+<ul>
+<li>HTML 标记标签通常被称为 HTML 标签 (HTML tag)。</li>
+<li>具体标签的说明请查看该文章：&#x3D;&#x3D;{HTML - 标签 - 查询手册}&#x3D;&#x3D;</li>
+</ul>
+</blockquote>
+<p><strong>单标签</strong></p>
+<blockquote>
+<ul>
+<li>单标签用于没有内容的元素。</li>
+</ul>
+</blockquote>
+<p><strong>双标签</strong></p>
+<blockquote>
+<ul>
+<li>HTML 标签是由尖括号包围的关键词，比如 <code>&lt;html&gt;</code>。</li>
+<li>双标签是成对出现的，比如 <code>&lt;b&gt;</code> 和 <code>&lt;/b&gt;</code>。</li>
+<li>标签对中的第一个标签是开始标签，第二个标签是结束标签。</li>
+<li>开始和结束标签也被称为开放标签和闭合标签。</li>
+<li>双标签用于有内容的元素。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>详细说明请查看该文章：<a href="/title/Language-HTML-Tag-Query/" title="Language | HTML - 标签 - 查询手册">Language | HTML - 标签 - 查询手册</a></p>
+</blockquote>
+<h1 id="HTML属性"><a href="#HTML属性" class="headerlink" title="HTML属性"></a>HTML属性</h1><blockquote>
+<ul>
+<li>定义元素的行为、外观、与其他元素的关系。</li>
+<li>属性写在HTML元素的“开始标签”中。</li>
+<li>每个HTML元素可以同时具有多个不同的属性。</li>
+<li>属性名不区分大小写。</li>
+<li>属性值对大小写敏感。</li>
+<li>属性的值需要用引号<code>&quot; &quot;</code>括起来。</li>
+<li>多个属性之间用空格<code> </code>隔开。</li>
+<li>单个属性中有多个值时用分号<code>;</code>隔开。</li>
+</ul>
+</blockquote>
+<p><strong>基本语法</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">&lt;标签 属性名=&quot;属性值&quot;&gt;<br><br>&lt;/标签&gt;<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="公共标签的属性"><a href="#公共标签的属性" class="headerlink" title="公共标签的属性"></a>公共标签的属性</h1><h2 id="class属性"><a href="#class属性" class="headerlink" title="class属性"></a>class属性</h2><blockquote>
+<p>对 HTML 进行分类（设置类），使我们能够为元素的类定义 CSS 样式。<br>为相同的类设置相同的样式，或者为不同的类设置不同的样式。<br>一个元素能指定多个类。</p>
+</blockquote>
+<blockquote>
+<p>在<code>&lt;head&gt;&lt;/head&gt;</code>标签中的<code>&lt;style&gt;&lt;/style&gt;</code>标签中写一个名为<code>abc</code>类，如下所示：</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css"></span><br><span class="language-css">		<span class="hljs-comment">/* abc的`&#123; &#125;`中是编写的样式 */</span></span><br><span class="language-css">		<span class="hljs-selector-class">.abc</span> &#123;</span><br><span class="language-css">		    <span class="hljs-attribute">background-color</span>:black;</span><br><span class="language-css">		    <span class="hljs-attribute">color</span>:white;</span><br><span class="language-css">		    <span class="hljs-attribute">margin</span>:<span class="hljs-number">20px</span>;</span><br><span class="language-css">		    <span class="hljs-attribute">padding</span>:<span class="hljs-number">20px</span>;</span><br><span class="language-css">		&#125; </span><br><span class="language-css">		</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>		<span class="hljs-comment">&lt;!-- 有设置abc类，这将使用上面abc的样式 --&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;abc&quot;</span>&gt;</span><br>		<br>		<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> <br>	<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="id属性"><a href="#id属性" class="headerlink" title="id属性"></a>id属性</h2><blockquote>
+<p>定义元素唯一的id。<br><code>id</code> 属性指定 HTML 元素的唯一 ID。 <code>id</code> 属性的值在 HTML 文档中必须是唯一的。<br><code>id</code> 属性用于指向样式表中的特定样式声明。<br>JavaScript 也可使用它来访问和操作拥有特定 ID 的元素。</p>
+</blockquote>
+<p><strong>语法规则</strong></p>
+<blockquote>
+<p>写一个井号 <code>#</code>，后跟一个 id 名称。然后，在花括号<code> &#123;&#125;</code> 中定义 CSS 属性。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css"></span><br><span class="language-css">		<span class="hljs-comment">/* id属性定义的样式代码 */</span></span><br><span class="language-css">		<span class="hljs-selector-id">#abc</span> &#123;</span><br><span class="language-css">			样式块</span><br><span class="language-css">		&#125;</span><br><span class="language-css">		</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="style属性"><a href="#style属性" class="headerlink" title="style属性"></a>style属性</h2><blockquote>
+<p>规定元素的行为样式。</p>
+</blockquote>
+<p><strong>支持参数</strong></p>
+<blockquote>
+<p><code>background-color:&lt;颜色&gt;</code></p>
+<ul>
+<li>定义背景颜色。</li>
+</ul>
+<p><code>font-family:&lt;字体名&gt;</code></p>
+<ul>
+<li>定义字体系列。</li>
+</ul>
+<p><code>color:&lt;颜色名&gt;</code></p>
+<ul>
+<li>定义字体颜色。</li>
+</ul>
+<p><code>font-size:&lt;数值&gt;px</code></p>
+<ul>
+<li>定义字体尺寸，格式：&lt;数值&gt;px</li>
+</ul>
+<p><code>text-align:&lt;对齐方式&gt;</code></p>
+<ul>
+<li>文本的水平对齐方式</li>
+<li>支持参数：<code>center</code>居中对齐，…</li>
+</ul>
+</blockquote>
+<h1 id="声明"><a href="#声明" class="headerlink" title="&lt;!DOCTYPE&gt;声明"></a>&lt;!DOCTYPE&gt;声明</h1><blockquote>
+<ul>
+<li><code>&lt;!DOCTYPE&gt;</code>声明有助于浏览器中正确显示网页。</li>
+<li><code>&lt;!DOCTYPE&gt;</code>声明不区分大小写</li>
+</ul>
+</blockquote>
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><blockquote>
+<ul>
+<li>避免使用样式相关的标签，建议使用<code>style</code>属性实现对样式的修改，即通过<code>style</code>属性写在操作对象的开始标签中。</li>
+</ul>
+</blockquote>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><blockquote>
+<ul>
+<li>HTML颜色参数查询手册文章：<a href="/title/Language-HTML-Colour-Query/" title="Language | HTML - 颜色 - 查询手册">Language | HTML - 颜色 - 查询手册</a></li>
+</ul>
+</blockquote>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Language-HTML-Tag-Query/">← 下一篇 Language | HTML - 标签 - 查询手册</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-Python3-Lib-logging-Command-Query/">Language | Python3 - logging标准库 - 查询手册 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>记录实现虚拟老婆大人的技术文章和相关知识总结。</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">2.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML%E6%A0%87%E7%AD%BE"><span class="toc-number">3.</span> <span class="toc-text">HTML标签</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML%E5%B1%9E%E6%80%A7"><span class="toc-number">4.</span> <span class="toc-text">HTML属性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AC%E5%85%B1%E6%A0%87%E7%AD%BE%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">5.</span> <span class="toc-text">公共标签的属性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#class%E5%B1%9E%E6%80%A7"><span class="toc-number">5.1.</span> <span class="toc-text">class属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#id%E5%B1%9E%E6%80%A7"><span class="toc-number">5.2.</span> <span class="toc-text">id属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#style%E5%B1%9E%E6%80%A7"><span class="toc-number">5.3.</span> <span class="toc-text">style属性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E"><span class="toc-number">6.</span> <span class="toc-text">&lt;!DOCTYPE&gt;声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">7.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">8.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>

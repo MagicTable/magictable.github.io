@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Language | Java8 - Swing图形化界面开发 - 知识总结 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | Java8 - Swing图形化界面开发 - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-08-10T00:00:07.000Z" id="date"> 2023-08-10</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-05-02T08:19:54.433Z" id="updated"> 2024-05-02</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 待完善<br><strong>摘要：</strong> Java图形化界面程序开发。</p>
+<span id="more"></span>
+
+
+<h1 id="Swing简介"><a href="#Swing简介" class="headerlink" title="Swing简介"></a>Swing简介</h1><blockquote>
+<ul>
+<li>Swing是AWT的扩展。</li>
+<li>AWT，抽象窗口工具包（Abstract Windows Toolkit，简称<code>AWT</code>），是Java中包含的一个用于基本GUI程序设计的类库（工具包），该工具包依附于操作系统提供的UI，具体样式会根据不同操作系统提供的界面元素进行展示。</li>
+<li>swing包路径：<code>javax.swing</code></li>
+<li>awt包路径：<code>javax.awt</code></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>组件使用<code>swing</code></li>
+<li>布局使用<code>awt</code></li>
+</ul>
+</blockquote>
+<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><blockquote>
+<p><strong>注意事项</strong></p>
+<ul>
+<li>默认情况下窗口是不可见的，需要将窗口对象修改为<code>对象.setVisible(true)</code>。</li>
+<li>窗口默认没有大小，需要使用<code>对象.setSize(&lt;宽度&gt;, &lt;高度&gt;)</code>来设置窗口大小。</li>
+<li>组件在实例化对象后，需要添加到窗口中才能显示，需要使用<code>对象.add(&lt;组件对象名&gt;)</code>来添加。</li>
+<li>在容器组件有设置布局的情况下，在其中的组件最好不要使用位置方法。</li>
+<li>窗口和面板都属于<code>容器</code>类型的组件。</li>
+</ul>
+</blockquote>
+<h2 id="公共方法"><a href="#公共方法" class="headerlink" title="公共方法"></a>公共方法</h2><table>
+<thead>
+<tr>
+<th align="left">方法名</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&lt;对象&gt;.setLocation(int x, int y)</td>
+<td align="left">设置组件的位置</td>
+</tr>
+<tr>
+<td align="left">&lt;对象&gt;.setSize(int width, int height)</td>
+<td align="left">设置组件的大小</td>
+</tr>
+<tr>
+<td align="left">&lt;对象&gt;.setBounds(int x, int y, int width, int height)</td>
+<td align="left">同时设置组件的位置、大小</td>
+</tr>
+<tr>
+<td align="left">&lt;对象&gt;.setVisible(Boolean b)</td>
+<td align="left">设置该组件的可见性</td>
+</tr>
+<tr>
+<td align="left">&lt;容器对象&gt;.add(&lt;组件或容器&gt;)</td>
+<td align="left">将组件或容器添加到容器对象中</td>
+</tr>
+<tr>
+<td align="left">&lt;组件对象&gt;.setToolTipText(String text)</td>
+<td align="left">鼠标停靠在组件上时显示悬浮提示信息</td>
+</tr>
+<tr>
+<td align="left">&lt;容器对象&gt;.setPreferredSize(new Dimension(int width, int height));</td>
+<td align="left">设置面板的宽度和高度</td>
+</tr>
+</tbody></table>
+<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><h3 id="JFrame窗体"><a href="#JFrame窗体" class="headerlink" title="JFrame窗体"></a>JFrame窗体</h3><blockquote>
+<ul>
+<li>默认布局：边界布局</li>
+</ul>
+</blockquote>
+<p><strong>实例化</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化一个窗口对象</span><br><span class="hljs-type">JFrame</span> <span class="hljs-variable">frame</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JFrame</span>();<br></code></pre></td></tr></table></figure>
+
+<p><strong>修改</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 标题名</span><br>frame.setTitle(String name);<br><span class="hljs-comment">// 尺寸大小</span><br>frame.setSize(<span class="hljs-type">int</span> width, <span class="hljs-type">int</span> height);<br><span class="hljs-comment">// 默认显示位置</span><br>frame.setLocation(<span class="hljs-type">int</span> x, <span class="hljs-type">int</span> y);<br><span class="hljs-comment">// 居中位置显示</span><br>frame.setLocationRelativeTo(<span class="hljs-literal">null</span>);<br><span class="hljs-comment">// 窗口关闭按钮的动作</span><br><span class="hljs-comment">// 参数：</span><br><span class="hljs-comment">// ---- EXIT_ON_CLOSE：关闭</span><br><span class="hljs-comment">// ---- DISPOSE_ON_CLOSE：关闭且释放资源</span><br><span class="hljs-comment">// ---- DO_NOTHING_ON_CLOSE：不做任何动作</span><br><span class="hljs-comment">// ---- HIDE_ON_COLSE：隐藏</span><br>frame.setDefaultCloseOperation(WindowConstants.&lt;参数&gt;);<br><span class="hljs-comment">// 限制 - 是否可以调整窗口大小</span><br>frame.setResizable(<span class="hljs-type">boolean</span>);<br><br><br><span class="hljs-comment">// 背景颜色</span><br>frame.setBackground(&lt;颜色&gt;);<br><span class="hljs-comment">// 光标样式</span><br>frame.setCursor(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Cousor</span>(&lt;光标样式&gt;));<br><span class="hljs-comment">// 添加组件到窗口</span><br>frame.add(&lt;组件&gt;);<br><br><br><span class="hljs-comment">// 窗口是否可见</span><br>frame.setVisible(<span class="hljs-type">boolean</span>);<br></code></pre></td></tr></table></figure>
+
+<p><strong>获取</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><br></code></pre></td></tr></table></figure>
+
+<h3 id="JDialog提示对话框"><a href="#JDialog提示对话框" class="headerlink" title="JDialog提示对话框"></a>JDialog提示对话框</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化提示对话框对象</span><br><span class="hljs-comment">// owner：当前对话框的父窗口</span><br><span class="hljs-comment">// title：当前对话框的标题</span><br><span class="hljs-comment">// modal：当前对话框是否是模式对话框</span><br><span class="hljs-type">JDialog</span> <span class="hljs-variable">dialog</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JDialog</span>(&lt;窗口对象&gt;, <span class="hljs-string">&quot;提示对话框&quot;</span>, <span class="hljs-literal">true</span>);<br></code></pre></td></tr></table></figure>
+
+<h3 id="颜色选择器界面"><a href="#颜色选择器界面" class="headerlink" title="颜色选择器界面"></a>颜色选择器界面</h3><blockquote>
+<ul>
+<li>打开一个颜色选择器对话框界面。</li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><br></code></pre></td></tr></table></figure>
+
+<h3 id="文件选择器界面"><a href="#文件选择器界面" class="headerlink" title="文件选择器界面"></a>文件选择器界面</h3><blockquote>
+<ul>
+<li>打开一个选择文件的对话框界面。</li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化对象</span><br><span class="hljs-type">JFileChooser</span> <span class="hljs-variable">chooser</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JFileChooser</span>();<br></code></pre></td></tr></table></figure>
+
+<h3 id="文件树界面"><a href="#文件树界面" class="headerlink" title="文件树界面"></a>文件树界面</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化对象</span><br><span class="hljs-type">JTree</span> <span class="hljs-variable">tree</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTree</span>();<br></code></pre></td></tr></table></figure>
+
+<h3 id="JFileDialog文件对话框"><a href="#JFileDialog文件对话框" class="headerlink" title="JFileDialog文件对话框"></a>JFileDialog文件对话框</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化文件对话框对象</span><br><span class="hljs-type">JFileDialog</span> <span class="hljs-variable">fileDialog</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JFileDialog</span>(frame, <span class="hljs-string">&quot;选择文件对话框&quot;</span>, FileDialog.LOAD);<br></code></pre></td></tr></table></figure>
+
+<h3 id="JOptionPane小型对话框"><a href="#JOptionPane小型对话框" class="headerlink" title="JOptionPane小型对话框"></a>JOptionPane小型对话框</h3><h3 id="JPanel面板"><a href="#JPanel面板" class="headerlink" title="JPanel面板"></a>JPanel面板</h3><blockquote>
+<ul>
+<li>面板相当于是一个存放其他组件的组件，跟窗口一样也是一个容器。</li>
+<li>面板与窗口的操作一样。</li>
+<li>默认布局：流式布局</li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化 面板 对象</span><br><span class="hljs-type">JPanel</span> <span class="hljs-variable">panel</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JPanel</span>();<br></code></pre></td></tr></table></figure>
+
+<h3 id="JScrollPane滚动条面板"><a href="#JScrollPane滚动条面板" class="headerlink" title="JScrollPane滚动条面板"></a>JScrollPane滚动条面板</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化 滚动面板 对象</span><br><span class="hljs-type">JScrollPane</span> <span class="hljs-variable">scrollPane</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JScrollPane</span>();<br></code></pre></td></tr></table></figure>
+
+
+<h2 id="JLabel标签"><a href="#JLabel标签" class="headerlink" title="JLabel标签"></a>JLabel标签</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化标签`Label`对象</span><br><span class="hljs-type">JLabel</span> <span class="hljs-variable">label</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(String text);<br><span class="hljs-comment">// 必须设定标签的位置和大小，否则会显示不出来。</span><br></code></pre></td></tr></table></figure>
+
+
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 调整标签的层叠顺序</span><br>setComponentZOrder(&lt;组件&gt;,&lt;数字&gt;);<br></code></pre></td></tr></table></figure>
+
+<p>Canvas：用于绘图的画布</p>
+<h2 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h2><h3 id="JButton按钮"><a href="#JButton按钮" class="headerlink" title="JButton按钮"></a>JButton按钮</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化按钮`Button`对象</span><br><span class="hljs-type">JButton</span> <span class="hljs-variable">button</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JButton</span>();<br></code></pre></td></tr></table></figure>
+
+<h3 id="JToggleButton开关按钮"><a href="#JToggleButton开关按钮" class="headerlink" title="JToggleButton开关按钮"></a>JToggleButton开关按钮</h3><blockquote>
+<ul>
+<li>开关按钮有两个状态，一个是开、另一个是关。</li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化开关按钮对象</span><br><span class="hljs-type">JToggleButton</span> <span class="hljs-variable">button</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JToggleButton</span>(String name);<br><span class="hljs-comment">// 设置开关按钮默认状态</span><br>button.setSelected(<span class="hljs-type">boolean</span> bool);<br></code></pre></td></tr></table></figure>
+
+<h3 id="JCheckBox勾选框"><a href="#JCheckBox勾选框" class="headerlink" title="JCheckBox勾选框"></a>JCheckBox勾选框</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化勾选框`Checkbox`对象</span><br><span class="hljs-type">JCheckBox</span> <span class="hljs-variable">checkBox</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JCheckBox</span>();<br><span class="hljs-comment">// 勾选框里的内容</span><br>checkBox.setText(String text);<br><span class="hljs-comment">// 判断勾选框是否勾选，返回boolean</span><br>checkbox.getState();<br></code></pre></td></tr></table></figure>
+
+<h4 id="CheckboxGroup勾选框组（单选）"><a href="#CheckboxGroup勾选框组（单选）" class="headerlink" title="CheckboxGroup勾选框组（单选）"></a>CheckboxGroup勾选框组（单选）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化勾选框组（单选）`CheckboxGroup`对象</span><br><span class="hljs-type">CheckboxGroup</span> <span class="hljs-variable">group</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">CheckboxGroup</span>();<br><span class="hljs-comment">// 将勾选框添加到勾选框组`group`对象中</span><br>&lt;勾选框<span class="hljs-number">1</span>&gt;.setCheckboxGroup(group);<br>&lt;勾选框<span class="hljs-number">2</span>&gt;.setCheckboxGroup(group);<br><span class="hljs-comment">// 获取组中选择的哪个框中的文本</span><br>group.setSelectedCheckbox().getLable();<br></code></pre></td></tr></table></figure>
+
+
+<h2 id="JList列表"><a href="#JList列表" class="headerlink" title="JList列表"></a>JList列表</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化列表对象</span><br><span class="hljs-type">JList</span> <span class="hljs-variable">list</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JList</span>();<br><span class="hljs-comment">// 在列表中添加元素</span><br>list.add(String text);<br><br><span class="hljs-comment">// 是否支持多选</span><br>list.setMultipleMode(<span class="hljs-type">boolean</span> bool);<br></code></pre></td></tr></table></figure>
+
+
+<h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><h3 id="文本框"><a href="#文本框" class="headerlink" title="文本框"></a>文本框</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化文本框`TextField`对象</span><br><span class="hljs-type">TextField</span> <span class="hljs-variable">textField</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">TextField</span>();<br><span class="hljs-comment">// 指定输入的文本实际显示的符号</span><br>textField.setEchoChar(<span class="hljs-type">char</span> t);<br><span class="hljs-comment">// 接收到文本框内输入的文本内容</span><br><span class="hljs-type">String</span> <span class="hljs-variable">text</span> <span class="hljs-operator">=</span> textField.getText();<br></code></pre></td></tr></table></figure>
+
+<h3 id="文本域"><a href="#文本域" class="headerlink" title="文本域"></a>文本域</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化文本域`TextArea`对象</span><br><span class="hljs-type">TextArea</span> <span class="hljs-variable">textArea</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">TextArea</span>();<br><span class="hljs-comment">// 限制行数</span><br>textArea.setRows(<span class="hljs-type">int</span> rows);<br><span class="hljs-comment">// 限制列数</span><br>textArea.setColumns(<span class="hljs-type">int</span> columns);<br></code></pre></td></tr></table></figure>
+
+
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java">```<br><br><br><br><br><br>## JProgressBar进度条<br>```java<br><span class="hljs-comment">// 创建进度条对象</span><br><span class="hljs-type">JProgressBar</span> <span class="hljs-variable">bar</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JProgressBar</span>();<br><span class="hljs-comment">// 设定进度条的最大值</span><br>bar.setMaximum(<span class="hljs-type">int</span> n);<br><span class="hljs-comment">// 设定进度值</span><br>bar.setValue(<span class="hljs-type">int</span> n);<br></code></pre></td></tr></table></figure>
+
+
+<h2 id="JMenuBar菜单栏"><a href="#JMenuBar菜单栏" class="headerlink" title="JMenuBar菜单栏"></a>JMenuBar菜单栏</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化 &quot;菜单栏&quot; 对象</span><br><span class="hljs-type">JMenuBar</span> <span class="hljs-variable">menuBer</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JMenuBar</span>();<br><span class="hljs-comment">// 实例化 &quot;菜单&quot; 对象</span><br><span class="hljs-type">JMenu</span> <span class="hljs-variable">menu</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JMenu</span>(String label);<br><span class="hljs-comment">// 实例化 &quot;菜单子对象&quot; 对象</span><br><span class="hljs-type">JMenuItem</span> <span class="hljs-variable">menuItem</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JMenuItem</span>(String label);<br><br><span class="hljs-comment">// 为 &quot;菜单子对象&quot; 添加快捷键</span><br>menuItem.setAccelerator(KeyStroke.getKeyStroke(Char keyChar));<br><br><span class="hljs-comment">// 将 &quot;菜单子对象&quot; 添加到 &quot;菜单&quot; 中</span><br>menu.add(menuItem);<br><span class="hljs-comment">// 将 &quot;菜单&quot; 添加到 &quot;菜单栏&quot; 中</span><br>menuBer.add(menu);<br><span class="hljs-comment">// 将 &quot;菜单栏&quot; 添加到 &quot;窗口&quot; 中</span><br>&lt;窗口容器&gt;.setJMenuBar(menuBer);<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h1><blockquote>
+<p><strong>作用</strong></p>
+<ul>
+<li>自动放置组件的方式。</li>
+</ul>
+<p><strong>注意事项</strong></p>
+<ul>
+<li>窗口默认情况下会采用<code>BorderLayout</code>作为布局，可以使用<code>对象.setLayout(null)</code>将布局清空。</li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 添加布局，`null`表示不使用布局</span><br>&lt;容器&gt;.setLayout(<span class="hljs-literal">null</span>);<br></code></pre></td></tr></table></figure>
+
+<h2 id="边界布局BorderLayout"><a href="#边界布局BorderLayout" class="headerlink" title="边界布局BorderLayout"></a>边界布局BorderLayout</h2><blockquote>
+<ul>
+<li>该布局是容器组件的默认布局。</li>
+<li>该布局将组件定义为五个区域：<code>WEST</code>左边、<code>EAST</code>右边、<code>NORTH</code>上边、<code>SOUTH</code>下边、<code>CENTER</code>中间。</li>
+<li>当向使用该布局的容器中添加组件时，若不指定区域，则默认添加到中间区域。</li>
+<li>如果在某个位置重复添加组件，只有最后一个添加的组件可见。</li>
+<li>若“上下左右”其中几个区域中没有组件时，中间区域会会延伸到没有组件的区域位置。</li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化 边界布局 对象</span><br><span class="hljs-type">BorderLayout</span> <span class="hljs-variable">borderLayout</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">BorderLayout</span>();<br><br><span class="hljs-comment">// 修改布局的位置之间的横向间距</span><br>borderLayout.setHgap(<span class="hljs-number">50</span>);<br><br><span class="hljs-comment">// 修改布局的位置之间的纵向间距</span><br>borderLayout.setVgap(<span class="hljs-number">50</span>);<br><br><span class="hljs-comment">// 为组件添加布局的位置</span><br><span class="hljs-comment">/* - 支持的参数：</span><br><span class="hljs-comment">    `BorderLayout.WEST`   左边</span><br><span class="hljs-comment">    `BorderLayout.EAST`   右边</span><br><span class="hljs-comment">    `BorderLayout.NORTH`  上边</span><br><span class="hljs-comment">    `BorderLayout.SOUTH`  下边</span><br><span class="hljs-comment">    `BorderLayout.CENTER` 中间</span><br><span class="hljs-comment"> */</span><br>&lt;容器&gt;.add(&lt;组件&gt;, BorderLayout.WEST);<br></code></pre></td></tr></table></figure>
+
+<h2 id="流式布局FlowLayout"><a href="#流式布局FlowLayout" class="headerlink" title="流式布局FlowLayout"></a>流式布局FlowLayout</h2><blockquote>
+<ul>
+<li>按顺序排列的布局。</li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化 流式布局 对象</span><br><span class="hljs-type">FlowLayout</span> <span class="hljs-variable">flowLayout</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">FlowLayout</span>();<br><br><span class="hljs-comment">// 指定对齐方式</span><br><span class="hljs-comment">/* - 支持参数：</span><br><span class="hljs-comment">    `FlowLayout.LEFT`     左对齐</span><br><span class="hljs-comment">    `FlowLayout.CENTER`   中间对齐</span><br><span class="hljs-comment">    `FlowLayout.RIGHT`    左对齐</span><br><span class="hljs-comment">    `FlowLayout.LEADING`</span><br><span class="hljs-comment">    `FlowLayout.TRAILING`</span><br><span class="hljs-comment"> */</span><br>flowLayout.setAlignment(&lt;对齐方式&gt;);<br><br><span class="hljs-comment">// 水平间距</span><br>flowLayout.setHgap(<span class="hljs-type">int</span> hgap);<br><br><span class="hljs-comment">// 垂直间距</span><br>flowLayout.setVgap(<span class="hljs-type">int</span> vgap);<br></code></pre></td></tr></table></figure>
+
+<h2 id="网格布局GridLayout"><a href="#网格布局GridLayout" class="headerlink" title="网格布局GridLayout"></a>网格布局GridLayout</h2><blockquote>
+<ul>
+<li>该布局分割成纵横线分割的网格，每个网格所占的区域大小相同。</li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化 网格布局 对象</span><br><span class="hljs-type">GridLayout</span> <span class="hljs-variable">gridLayout</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">GridLayout</span>();<br><br><span class="hljs-comment">// 排成几列</span><br>gridLayout.setColumns(<span class="hljs-type">int</span> cols);<br><br><span class="hljs-comment">// 排成几行</span><br>gridLayout.setRows(<span class="hljs-type">int</span> rows);<br><br><span class="hljs-comment">// 水平间距</span><br>gridLayout.setHgap(<span class="hljs-type">int</span> hgap);  <br><br><span class="hljs-comment">// 垂直间距</span><br>gridLayout.setVgap(<span class="hljs-type">int</span> vgap);<br></code></pre></td></tr></table></figure>
+
+<h2 id="网格包布局GridBagLayout"><a href="#网格包布局GridBagLayout" class="headerlink" title="网格包布局GridBagLayout"></a>网格包布局GridBagLayout</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化 边界布局 对象</span><br><span class="hljs-type">GridBagLayout</span> <span class="hljs-variable">gridBagLayout</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">GridBagLayout</span>();<br><br><span class="hljs-comment">// 待完善</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="卡片布局CardLayout"><a href="#卡片布局CardLayout" class="headerlink" title="卡片布局CardLayout"></a>卡片布局CardLayout</h2><blockquote>
+<ul>
+<li>将加入容器的所有组件看成一叠组件（卡片），每次只展示最上面的一个组件（卡片）。</li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化 卡片布局 对象</span><br><span class="hljs-type">CardLayout</span> <span class="hljs-variable">cardLayout</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">CardLayout</span>();<br><br><span class="hljs-comment">// 指定组件与容器的水平间距</span><br>gridLayout.setHgap(<span class="hljs-type">int</span> hgap);  <br><br><span class="hljs-comment">// 指定组件与容器的垂直间距</span><br>gridLayout.setVgap(<span class="hljs-type">int</span> vgap);<br><br><span class="hljs-comment">// 显示第一张组件</span><br>cardLayout.first(&lt;容器&gt;);<br><br><span class="hljs-comment">// 显示最后一张组件</span><br>cardLayout.last(&lt;容器&gt;);<br><br><span class="hljs-comment">// 显示前一张组件</span><br>cardLayout.previous(&lt;容器&gt;);<br><br><span class="hljs-comment">// 显示后一张组件</span><br>cardLayout.next(&lt;容器&gt;);<br><br><span class="hljs-comment">// 显示指定名字的组件</span><br>cardLayout.show(&lt;容器&gt;, &lt;组件&gt;);<br><br></code></pre></td></tr></table></figure>
+
+<h2 id="盒子布局BoxLayout"><a href="#盒子布局BoxLayout" class="headerlink" title="盒子布局BoxLayout"></a>盒子布局BoxLayout</h2><blockquote>
+<ul>
+<li>可以设置垂直和水平两个方向上摆放UI组件的容器。</li>
+<li>可以添加垂直和水平方向上的分割组件。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>包路径：<code>javax.swing.BoxLayout</code></li>
+</ul>
+</blockquote>
+<p><strong>布局容器格式</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 创建方案一</span><br><span class="hljs-comment">// 设置窗口或面板对象，未限制是水平方向还是垂直方向</span><br><span class="hljs-type">BoxLayout</span> <span class="hljs-variable">boxLayout</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">BoxLayout</span>();<br><span class="hljs-comment">// 指定水平摆放</span><br><span class="hljs-type">BoxLayout</span> <span class="hljs-variable">boxLayout</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">BoxLayout</span>(&lt;容器&gt;, BoxLayout.X_AXIS);<br><span class="hljs-comment">// 指定垂直摆放</span><br><span class="hljs-type">BoxLayout</span> <span class="hljs-variable">boxLayout</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">BoxLayout</span>(&lt;容器&gt;, BoxLayout.Y_AXIS);<br><br><span class="hljs-comment">// 创建方案二</span><br><span class="hljs-comment">// 设置水平排列组件的Box容器</span><br><span class="hljs-type">Box</span> <span class="hljs-variable">hBox</span> <span class="hljs-operator">=</span> Box.createHorizontalBox();<br><span class="hljs-comment">// 设置垂直排列组件的Box容器</span><br><span class="hljs-type">Box</span> <span class="hljs-variable">vBox</span> <span class="hljs-operator">=</span> Box.createVerticalBox();<br></code></pre></td></tr></table></figure>
+
+<p><strong>分割组件</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 创建`水平分割组件`，两个方向上都能拉伸。</span><br>hBox.add(Box.createHorizontalGlue());<br><span class="hljs-comment">// 创建指定宽度的`水平分割组件`，仅允许垂直方向上拉伸。</span><br>hBox.add(Box.createHorizontalStrut(<span class="hljs-type">int</span> width));<br><br><span class="hljs-comment">// 创建`垂直分割组件`，两个方向上都能拉伸。</span><br>vBox.add(Box.createVerticalGlue());<br><span class="hljs-comment">// 创建指定高度的`垂直分割组件`，仅允许水平方向上拉伸。</span><br>vBox.add(Box.createVerticalStrut(<span class="hljs-type">int</span> height));<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="事件监听器"><a href="#事件监听器" class="headerlink" title="事件监听器"></a>事件监听器</h1><blockquote>
+<ul>
+<li>监听器会监听窗口中发生的一些事件。</li>
+<li>监听器分为：窗口、鼠标、键盘、、、、、、</li>
+</ul>
+</blockquote>
+<h2 id="鼠标监听器"><a href="#鼠标监听器" class="headerlink" title="鼠标监听器"></a>鼠标监听器</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><br><br></code></pre></td></tr></table></figure>
+
+<h2 id="键盘监听器"><a href="#键盘监听器" class="headerlink" title="键盘监听器"></a>键盘监听器</h2><blockquote>
+<ul>
+<li><code>WindowsListener</code></li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><br><br></code></pre></td></tr></table></figure>
+
+<h2 id="动作监听器"><a href="#动作监听器" class="headerlink" title="动作监听器"></a>动作监听器</h2><ul>
+<li>一个监听器监听多个组件，仅支持（Button、菜单子项）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.awt.event.*;  <br>  <br><span class="hljs-comment">// 菜单栏监听  </span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MenuActionLis</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">ActionListener</span> &#123;  <br>    <span class="hljs-meta">@Override</span>  <br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">actionPerformed</span><span class="hljs-params">(ActionEvent e)</span> &#123;  <br>        System.out.println(e.getActionCommand());  <br>        <span class="hljs-keyword">switch</span> (e.getActionCommand()) &#123;  <br>            <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;开始&quot;</span>:  <br>                <span class="hljs-keyword">break</span>;  <br>            <span class="hljs-keyword">default</span>:  <br>                <span class="hljs-keyword">break</span>;  <br>        &#125;  <br>    &#125;  <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 实例化监听器  </span><br><span class="hljs-type">MenuActionLis</span> <span class="hljs-variable">menuActionLis</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MenuActionLis</span>();<br><br><span class="hljs-comment">// 注册监视器  </span><br>&lt;监听对象组件&gt;.addActionListener(menuActionLis);<br><br><span class="hljs-comment">// 设置动作指令  </span><br>&lt;监听对象组件&gt;.setActionCommand(<span class="hljs-string">&quot;开始&quot;</span>);<br><br></code></pre></td></tr></table></figure>
+
+<h2 id="窗口监听器"><a href="#窗口监听器" class="headerlink" title="窗口监听器"></a>窗口监听器</h2><blockquote>
+<ul>
+<li><code>WindowsListener</code></li>
+</ul>
+</blockquote>
+<p><strong>关闭窗口</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">frame.addWindowListener(<span class="hljs-keyword">new</span> <span class="hljs-title class_">WindowAdapter</span>() &#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">windowClosing</span><span class="hljs-params">(WindowEvent e)</span> &#123;<br>        <span class="hljs-comment">// 关闭窗口对象</span><br>        frame.dispose();<br>    &#125;<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><p>暂无</p>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Language-SQL-Summary/">← 下一篇 Language | SQL - 知识总结</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-Java8-CodeStyle-Summary/">Language | Java8 - 代码风格 - 知识总结 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>记录实现虚拟老婆大人的技术文章和相关知识总结。</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Swing%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">Swing简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">组件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AC%E5%85%B1%E6%96%B9%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">公共方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8"><span class="toc-number">2.2.</span> <span class="toc-text">容器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JFrame%E7%AA%97%E4%BD%93"><span class="toc-number">2.2.1.</span> <span class="toc-text">JFrame窗体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDialog%E6%8F%90%E7%A4%BA%E5%AF%B9%E8%AF%9D%E6%A1%86"><span class="toc-number">2.2.2.</span> <span class="toc-text">JDialog提示对话框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2%E9%80%89%E6%8B%A9%E5%99%A8%E7%95%8C%E9%9D%A2"><span class="toc-number">2.2.3.</span> <span class="toc-text">颜色选择器界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E9%80%89%E6%8B%A9%E5%99%A8%E7%95%8C%E9%9D%A2"><span class="toc-number">2.2.4.</span> <span class="toc-text">文件选择器界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%A0%91%E7%95%8C%E9%9D%A2"><span class="toc-number">2.2.5.</span> <span class="toc-text">文件树界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JFileDialog%E6%96%87%E4%BB%B6%E5%AF%B9%E8%AF%9D%E6%A1%86"><span class="toc-number">2.2.6.</span> <span class="toc-text">JFileDialog文件对话框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JOptionPane%E5%B0%8F%E5%9E%8B%E5%AF%B9%E8%AF%9D%E6%A1%86"><span class="toc-number">2.2.7.</span> <span class="toc-text">JOptionPane小型对话框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JPanel%E9%9D%A2%E6%9D%BF"><span class="toc-number">2.2.8.</span> <span class="toc-text">JPanel面板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JScrollPane%E6%BB%9A%E5%8A%A8%E6%9D%A1%E9%9D%A2%E6%9D%BF"><span class="toc-number">2.2.9.</span> <span class="toc-text">JScrollPane滚动条面板</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JLabel%E6%A0%87%E7%AD%BE"><span class="toc-number">2.3.</span> <span class="toc-text">JLabel标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">2.4.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%89%E9%92%AE"><span class="toc-number">2.5.</span> <span class="toc-text">按钮</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JButton%E6%8C%89%E9%92%AE"><span class="toc-number">2.5.1.</span> <span class="toc-text">JButton按钮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JToggleButton%E5%BC%80%E5%85%B3%E6%8C%89%E9%92%AE"><span class="toc-number">2.5.2.</span> <span class="toc-text">JToggleButton开关按钮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JCheckBox%E5%8B%BE%E9%80%89%E6%A1%86"><span class="toc-number">2.5.3.</span> <span class="toc-text">JCheckBox勾选框</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CheckboxGroup%E5%8B%BE%E9%80%89%E6%A1%86%E7%BB%84%EF%BC%88%E5%8D%95%E9%80%89%EF%BC%89"><span class="toc-number">2.5.3.1.</span> <span class="toc-text">CheckboxGroup勾选框组（单选）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JList%E5%88%97%E8%A1%A8"><span class="toc-number">2.6.</span> <span class="toc-text">JList列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC"><span class="toc-number">2.7.</span> <span class="toc-text">文本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%A1%86"><span class="toc-number">2.7.1.</span> <span class="toc-text">文本框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%9F%9F"><span class="toc-number">2.7.2.</span> <span class="toc-text">文本域</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-number">2.8.</span> <span class="toc-text">表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JMenuBar%E8%8F%9C%E5%8D%95%E6%A0%8F"><span class="toc-number">2.9.</span> <span class="toc-text">JMenuBar菜单栏</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%83%E5%B1%80"><span class="toc-number">3.</span> <span class="toc-text">布局</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%B9%E7%95%8C%E5%B8%83%E5%B1%80BorderLayout"><span class="toc-number">3.1.</span> <span class="toc-text">边界布局BorderLayout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80FlowLayout"><span class="toc-number">3.2.</span> <span class="toc-text">流式布局FlowLayout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80GridLayout"><span class="toc-number">3.3.</span> <span class="toc-text">网格布局GridLayout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E6%A0%BC%E5%8C%85%E5%B8%83%E5%B1%80GridBagLayout"><span class="toc-number">3.4.</span> <span class="toc-text">网格包布局GridBagLayout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%A1%E7%89%87%E5%B8%83%E5%B1%80CardLayout"><span class="toc-number">3.5.</span> <span class="toc-text">卡片布局CardLayout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%92%E5%AD%90%E5%B8%83%E5%B1%80BoxLayout"><span class="toc-number">3.6.</span> <span class="toc-text">盒子布局BoxLayout</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text">事件监听器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BC%A0%E6%A0%87%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-number">4.1.</span> <span class="toc-text">鼠标监听器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%94%AE%E7%9B%98%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-number">4.2.</span> <span class="toc-text">键盘监听器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E4%BD%9C%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-number">4.3.</span> <span class="toc-text">动作监听器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-number">4.4.</span> <span class="toc-text">窗口监听器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">5.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">6.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>
