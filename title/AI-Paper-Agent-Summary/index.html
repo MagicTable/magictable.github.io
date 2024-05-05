@@ -26,7 +26,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>AI | 论文 - Agent智能体 - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-08-12T17:00:00.000Z" id="date"> 2023-08-13</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-05-03T02:00:56.507Z" id="updated"> 2024-05-03</time></div></span></div></div><hr><div id="post-content"><p><strong>摘要：</strong> 与AI相关的、流行的、优秀的论文进行总结。</p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>AI | 论文 - Agent智能体 - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-08-12T17:00:00.000Z" id="date"> 2023-08-13</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-05-05T15:19:16.398Z" id="updated"> 2024-05-05</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong> 与AI相关的、流行的、优秀的论文进行总结。</p>
 <span id="more"></span>
 
 <p>以LLM（大型语言模型）为核心控制器构建智能体</p>
@@ -77,6 +77,27 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <li>智能体学习调用外部 API 以获取模型权重中缺少的额外信息（在预训练后通常很难更改），包括当前信息、代码执行能力、对专有信息源的访问等。</li>
 </ul>
 </blockquote>
+<hr>
+<p>任何通过传感器（sensor）感知环境（environment）并通过执行器（actuator）作用于该环境的事物都可以被视为智能体（agent）。</p>
+<p>人类有自己的欲望和偏好，因此人类有适用于自身的理性概念，这一概念与成功地选择产生环境状态序列的行动有关。</p>
+<p>理性，取决于以下4方面：</p>
+<ul>
+<li>定义成功标准的性能度量。</li>
+<li>智能体对环境的先验知识。</li>
+<li>智能体可以执行的动作。</li>
+<li>智能体目前为止的感知序列。</li>
+</ul>
+<p>理性智能体的定义：对于每个可能的感知序列，给定感知序列提供的证据和智能体所拥有的任何先验知识，理性智能体应该选择一个期望最大化其性能度量的动作。</p>
+<p>如果说某种程度上，智能体依赖于其设计者的先验知识，而不是其自身的感知和学习过程，我们就说该智能体缺乏自主性（autonomy）。</p>
+<p>人工智能的工作是设计一个智能体程序（agent program）实现智能体函数，即从感知到动作的映射。假设该程序将运行在某种具有物理传感器和执行器的计算设备上，我们称之为智能体架构（agent architecture）。</p>
+<ul>
+<li>智能体 &#x3D; 架构 + 程序</li>
+</ul>
+<p>简单反射型智能体：<br>基于模型的反射型智能体：智能体能够在传感器受限的情况下尽可能地跟踪世界的状态。（预测世界的变化）<br>基于目标的智能体：基于模型、基于目标的智能体，追踪世界状态以及试图实现的一系列目标，并选择一项最终能够实现目标的动作。<br>基于效用的智能体：</p>
+<p>智能体和环境</p>
+<p>良好行为：理性的概念</p>
+<p>环境的本质</p>
+<p>智能体的结构</p>
 <h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><p>参考文章：</p>
 <blockquote>
 <ul>
