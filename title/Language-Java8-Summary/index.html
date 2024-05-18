@@ -26,7 +26,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | Java8 - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-03-17T16:00:00.000Z" id="date"> 2024-03-18</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-05-18T13:14:54.877Z" id="updated"> 2024-05-18</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 待完善<br><strong>摘要：</strong> Java编程语言的知识总结。<br class='item-img' data-src='/../assets/image/Language/Java-logo.png'><img src="/../assets/image/Language/Java-logo.png" alt="Java-logo"></p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | Java8 - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-03-17T16:00:00.000Z" id="date"> 2024-03-18</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-05-18T14:07:41.508Z" id="updated"> 2024-05-18</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 待完善<br><strong>摘要：</strong> Java编程语言的知识总结。<br class='item-img' data-src='/../assets/image/Language/Java-logo.png'><img src="/../assets/image/Language/Java-logo.png" alt="Java-logo"></p>
 <span id="more"></span>
 
 
@@ -88,17 +88,19 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <p><strong>javac</strong></p>
 <ul>
 <li>将java源文件编译成字节码文件。</li>
-<li>格式：javac -encoding utf-8 &lt;源代码文件名&gt;</li>
+<li>格式：<code>javac -encoding utf-8 &lt;源代码文件名&gt;</code></li>
 </ul>
 <p><strong>java</strong></p>
 <ul>
 <li>运行java字节码文件，即已经编译过的文件。</li>
-<li>格式：java &lt;字节码文件名&gt;</li>
+<li>格式：<code>java &lt;字节码文件&gt;</code></li>
+<li>运行jar文件，即打包好的文件。</li>
+<li>格式：<code>java -jar &lt;jar文件&gt;</code></li>
 </ul>
 <p><strong>javadoc</strong></p>
 <ul>
 <li>将java代码中的文档注释生成一份web项目文档</li>
-<li>格式：javadoc -d  &lt;文档存储路径&gt; -encoding utf-8 &lt;源代码文件名&gt;</li>
+<li>格式：<code>javadoc -d  &lt;文档存储路径&gt; -encoding utf-8 &lt;源代码文件名&gt;</code></li>
 </ul>
 </blockquote>
 <p><strong>配置项目构建工具</strong></p>
@@ -108,6 +110,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <li>Maven是一个Java项目管理和构建工具，可以定义项目结构、项目依赖，使用统一的方式进行自动化构建，是Java项目不可缺少的工具。</li>
 <li>提供了一套标准化的项目结构，提供了一套依赖管理机制（管理项目jar包）。</li>
 <li>清理、编译、测试、报告、打包、发布、部署</li>
+<li>详细说明请查看该文章：<a href="/title/Tool-Maven-Summary/" title="Tool | Maven - 知识总结">Tool | Maven - 知识总结</a></li>
 </ul>
 </blockquote>
 <h1 id="概览-基本语法知识"><a href="#概览-基本语法知识" class="headerlink" title="概览 - 基本语法知识"></a>概览 - 基本语法知识</h1><blockquote>
