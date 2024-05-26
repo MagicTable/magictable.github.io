@@ -26,7 +26,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | HTML - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-05-17T16:00:00.000Z" id="date"> 2024-05-18</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-05-26T02:34:24.279Z" id="updated"> 2024-05-26</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 待完善<br><strong>摘要：</strong> 超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。<br class='item-img' data-src='/../assets/image/Language/HTML-logo.jpeg'><img src="/../assets/image/Language/HTML-logo.jpeg" alt="HTML-logo"></p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | HTML - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-05-17T16:00:00.000Z" id="date"> 2024-05-18</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-05-26T06:48:11.630Z" id="updated"> 2024-05-26</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 待完善<br><strong>摘要：</strong> 超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。<br class='item-img' data-src='/../assets/image/Language/HTML-logo.jpeg'><img src="/../assets/image/Language/HTML-logo.jpeg" alt="HTML-logo"></p>
 <span id="more"></span>
 
 <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><strong>HTML介绍</strong></p>
@@ -83,7 +83,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <p><strong>块级元素</strong></p>
 <blockquote>
 <ul>
-<li>块级元素在其前后都会开始新的一行。</li>
+<li>块级元素在其前后都会开始新的一行（独占一行）。</li>
 <li>它们会尽可能地占据其父元素的整个宽度（除非设置了特定的宽度）。</li>
 <li>常见的块级元素包括：<code>&lt;div&gt;</code>、<code>&lt;p&gt;</code>、<code>&lt;h1&gt;-&lt;h6&gt;</code>、<code>&lt;ol&gt;</code>、<code>&lt;ul&gt;</code>、<code>&lt;li&gt;</code>、<code>&lt;form&gt;</code>、<code>&lt;table&gt;</code>等。</li>
 </ul>
@@ -91,9 +91,17 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <p><strong>行级元素</strong></p>
 <blockquote>
 <ul>
-<li>行级元素不会在其前后开始新的一行。</li>
-<li>它们只会占据内容所需的空间。</li>
-<li>常见的行级元素包括：<code>&lt;span&gt;</code>、<code>&lt;a&gt;</code>、<code>&lt;img&gt;</code>、<code>&lt;button&gt;</code>、<code>&lt;input&gt;</code>、<code>&lt;label&gt;</code>、<code>&lt;strong&gt;</code>、<code>&lt;em&gt;</code>等。</li>
+<li>行级元素不会在其前后开始新的一行（不会独占一行）。</li>
+<li>它们只会占据内容所需的空间（不能手动设置宽高）。</li>
+<li>常见的行级元素包括：<code>&lt;span&gt;</code>、<code>&lt;a&gt;</code>、<code>&lt;button&gt;</code>、<code>&lt;label&gt;</code>、<code>&lt;strong&gt;</code>、<code>&lt;em&gt;</code>等。</li>
+</ul>
+</blockquote>
+<p><strong>行内块级元素</strong></p>
+<blockquote>
+<ul>
+<li>不会独占一行。</li>
+<li>宽度和高度可以手动设置。</li>
+<li>常见行内块级元素包括：<code>&lt;input&gt;</code>、<code>&lt;button&gt;</code>、<code>&lt;img&gt;</code></li>
 </ul>
 </blockquote>
 <h1 id="HTML属性"><a href="#HTML属性" class="headerlink" title="HTML属性"></a>HTML属性</h1><blockquote>
