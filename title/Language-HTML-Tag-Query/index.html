@@ -26,7 +26,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | HTML - 标签 - 查询手册</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-05-17T16:02:00.000Z" id="date"> 2024-05-18</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-05-26T07:31:30.835Z" id="updated"> 2024-05-26</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong> 本文章只整理常用的标签和属性。</p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | HTML - 标签 - 查询手册</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-05-17T16:02:00.000Z" id="date"> 2024-05-18</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-05-26T08:54:57.814Z" id="updated"> 2024-05-26</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong> 本文章只整理常用的标签和属性。</p>
 <ul>
 <li>提示：建议通过浏览器中自带的的网页关键词搜索来快速定位。<span id="more"></span></li>
 </ul>
@@ -266,10 +266,15 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 </blockquote>
 <p><strong>属性</strong></p>
 <blockquote>
-<p>&#96;&#96;</p>
+<p><code>action</code></p>
 <ul>
-<li>功能：</li>
+<li>功能：数据提交的URL地址。</li>
 <li>参数：</li>
+</ul>
+<p><code>method</code></p>
+<ul>
+<li>功能：提交方式。</li>
+<li>参数：get、post</li>
 </ul>
 </blockquote>
 <p><strong>案例</strong></p>
@@ -287,7 +292,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <p><code>type</code></p>
 <ul>
 <li>功能：选择类型。</li>
-<li>参数：<code>text</code>文本框、<code>password</code>密码框、<code>radio</code>单选框、<code>checkbox</code>多选框、<code>button</code>按钮、<code>submit</code>提交按钮、<code>reset</code>清空按钮、<code>file</code> 选择文件按钮、…</li>
+<li>参数：<code>text</code>文本框、<code>password</code>密码框、<code>radio</code>单选框、<code>checkbox</code>多选框、<code>button</code>按钮、<code>file</code> 选择文件按钮、<code>submit</code>提交按钮、<code>reset</code>重置按钮</li>
 </ul>
 <p><code>name</code></p>
 <ul>
@@ -296,8 +301,13 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 </ul>
 <p><code>value</code></p>
 <ul>
-<li>功能：指定默认值。</li>
+<li>功能：显示文字。</li>
 <li>参数：数字、字符串、布尔。</li>
+</ul>
+<p><code>placeholder</code></p>
+<ul>
+<li>功能：提示文字，用户不可修改，且在输入值时会消失。</li>
+<li>参数：字符串</li>
 </ul>
 <p><code>checked</code></p>
 <ul>
@@ -311,7 +321,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 </ul>
 </blockquote>
 <p><strong>案例</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span><br>	<span class="hljs-comment">&lt;!--文本框--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> /&gt;</span><br>	<span class="hljs-comment">&lt;!--密码框--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> /&gt;</span><br>	<span class="hljs-comment">&lt;!--单选框--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> /&gt;</span>男<br>	<span class="hljs-comment">&lt;!--多选框--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> /&gt;</span>吃饭<br>	<span class="hljs-comment">&lt;!--按钮--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;按钮&quot;</span> /&gt;</span><br>	<span class="hljs-comment">&lt;!--提交按钮--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;提交按钮&quot;</span> /&gt;</span><br>	<span class="hljs-comment">&lt;!--清空按钮--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;reset&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;清空按钮&quot;</span> /&gt;</span><br>	<span class="hljs-comment">&lt;!--选择文件按钮--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> /&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span><br>	<span class="hljs-comment">&lt;!--文本框--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> /&gt;</span><br>	<span class="hljs-comment">&lt;!--密码框--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> /&gt;</span><br>	<span class="hljs-comment">&lt;!--单选框 设置相同`name`属性的参数--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;int&quot;</span>/&gt;</span>一年级<br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;int&quot;</span>/&gt;</span>二年级<br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;int&quot;</span>/&gt;</span>三年级<br>	<span class="hljs-comment">&lt;!--多选框--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;task&quot;</span>/&gt;</span>吃饭<br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;task&quot;</span>/&gt;</span>睡觉<br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;task&quot;</span>/&gt;</span>打游戏<br>	<span class="hljs-comment">&lt;!--按钮--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;按钮&quot;</span> /&gt;</span><br>	<span class="hljs-comment">&lt;!--提交按钮--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;提交按钮&quot;</span> /&gt;</span><br>	<span class="hljs-comment">&lt;!--清空按钮--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;reset&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;清空按钮&quot;</span> /&gt;</span><br>	<span class="hljs-comment">&lt;!--选择文件按钮--&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> /&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
 <h2 id="-31"><a href="#-31" class="headerlink" title="&lt;textarea&gt;"></a><code>&lt;textarea&gt;</code></h2><blockquote>
 <ul>
@@ -358,12 +368,12 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 </blockquote>
 <h2 id="-37"><a href="#-37" class="headerlink" title="&lt;fieldset&gt;"></a><code>&lt;fieldset&gt;</code></h2><blockquote>
 <ul>
-<li><code>&lt;fieldset&gt; &lt;/fieldset&gt;</code>定义围绕表单中元素的边框。</li>
+<li><code>&lt;fieldset&gt; &lt;/fieldset&gt;</code>区域块，围绕<code>&lt;form&gt;</code>表单中元素的边框。</li>
 </ul>
 </blockquote>
 <h2 id="-38"><a href="#-38" class="headerlink" title="&lt;legend&gt;"></a><code>&lt;legend&gt;</code></h2><blockquote>
 <ul>
-<li><code>&lt;legend&gt; &lt;/legend&gt;</code>定义 fieldset 元素的标题。</li>
+<li><code>&lt;legend&gt; &lt;/legend&gt;</code>定义 <code>&lt;fieldset&gt;</code>区域块标签的标题。</li>
 </ul>
 </blockquote>
 <h2 id="-39"><a href="#-39" class="headerlink" title="&lt;datalist&gt;"></a><code>&lt;datalist&gt;</code></h2><blockquote>
@@ -608,7 +618,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 
 <h2 id="-59"><a href="#-59" class="headerlink" title="&lt;link&gt;"></a><code>&lt;link&gt;</code></h2><blockquote>
 <ul>
-<li><code>&lt;link /&gt;</code>定义文档与外部资源的关系。</li>
+<li><code>&lt;link /&gt;</code>定义文档与外部资源的关系，导入CSS样式文件。</li>
 </ul>
 </blockquote>
 <h2 id="-60"><a href="#-60" class="headerlink" title="&lt;main&gt;"></a><code>&lt;main&gt;</code></h2><blockquote>
@@ -730,6 +740,12 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <li><p>功能：单元格的外边距。</p>
 </li>
 <li><p>参数：数值。</p>
+</li>
+<li><p><code>align</code></p>
+</li>
+<li><p>功能：表格中的内容对齐方式。</p>
+</li>
+<li><p>参数：<code>left</code>左对齐、<code>right</code>右对齐、<code>center</code>居中对齐</p>
 </li>
 <li><p><code>colspan</code></p>
 </li>
