@@ -26,7 +26,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>AI | 项目 - XAgent智能体 - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-11-22T16:00:00.000Z" id="date"> 2023-11-23</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-05-24T15:40:35.854Z" id="updated"> 2024-05-24</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong> XAgent是一个开源的基于大型语言模型（LLM）的自主智能体，可以自动解决各种任务。</p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>AI | 项目 - XAgent智能体 - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-11-22T16:00:00.000Z" id="date"> 2023-11-23</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-05-26T02:09:01.310Z" id="updated"> 2024-05-26</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong> XAgent是一个开源的基于大型语言模型（LLM）的自主智能体，可以自动解决各种任务。</p>
 <span id="more"></span>
 
 
@@ -90,22 +90,16 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <p class='item-img' data-src='/../assets/image/AI/Xagent-%E5%8F%8C%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6.png'><img src="/../assets/image/AI/Xagent-%E5%8F%8C%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6.png" alt="Xagent-双循环机制"></p>
 <p><code>Outer-Loop</code>外循环</p>
 <ul>
-<li><p>外循环充当高级计划者和任务的主要编排者，充当整个问题解决序列的主管。</p>
-</li>
-<li><p><strong>初始计划生成（Initial Plan Generation）：</strong>PlanAgent 首先生成一个初始计划，该计划为任务执行制定了基本策略。这涉及将给定的复杂任务 T 分解为更小、更易于管理的子任务。此细分可以表现为任务队列。这些子任务的意图很明确，可以更直接地执行，而不会使系统不堪重负。给定一个复杂的任务，使用 PlanAgent 将其分解为一系列子任务。</p>
-</li>
-<li><p><strong>迭代计划优化（Iterative Plan Refinements）：</strong>在初始计划之后，PlanAgent 通过从任务队列中弹出第一个子任务来进行。然后，将此子任务传递到内循环。PlanAgent 持续监控任务的进度和状态。执行每个子任务后，内部循环会从 ToolAgent 报告 Feedback。根据反馈，PlanAgent 会触发适当的处理机制，例如优化计划或继续执行后续子任务。外循环完成，直到队列中没有剩余子任务。</p>
-</li>
-<li><p><code>Inner-Loop</code>内循环</p>
-</li>
-<li><p>内循环对于执行外循环分配的各个子任务至关重要。</p>
-</li>
-<li><p><strong>代理调度和工具检索（Agent Dispatch and Tool Retrieval）：</strong>根据子任务的性质，派遣具有完成任务所需能力的适当工具代理。</p>
-</li>
-<li><p><strong>工具执行（Tool Execution）：</strong>ToolAgent 首先从外部系统检索工具以帮助完成任务。然后，代理使用 ReACT 进行子任务求解。此方法搜索完成子任务的最佳操作系列（工具调用）。</p>
-</li>
-<li><p><strong>反馈和反思（Feedback and Reflection）：</strong>在一系列操作之后，ToolAgent 可以发出一个名为“subtask_submit”的特定操作来完成当前子任务的处理，并将反馈和反射传递给 PlanAgent。此反馈可以指示子任务是否成功完成，或突出显示潜在的改进。</p>
-</li>
+<li>外循环充当高级计划者和任务的主要编排者，充当整个问题解决序列的主管。</li>
+<li><strong>初始计划生成（Initial Plan Generation）：</strong>PlanAgent 首先生成一个初始计划，该计划为任务执行制定了基本策略。这涉及将给定的复杂任务 T 分解为更小、更易于管理的子任务。此细分可以表现为任务队列。这些子任务的意图很明确，可以更直接地执行，而不会使系统不堪重负。给定一个复杂的任务，使用 PlanAgent 将其分解为一系列子任务。</li>
+<li><strong>迭代计划优化（Iterative Plan Refinements）：</strong>在初始计划之后，PlanAgent 通过从任务队列中弹出第一个子任务来进行。然后，将此子任务传递到内循环。PlanAgent 持续监控任务的进度和状态。执行每个子任务后，内部循环会从 ToolAgent 报告 Feedback。根据反馈，PlanAgent 会触发适当的处理机制，例如优化计划或继续执行后续子任务。外循环完成，直到队列中没有剩余子任务。</li>
+</ul>
+<p><code>Inner-Loop</code>内循环</p>
+<ul>
+<li>内循环对于执行外循环分配的各个子任务至关重要。</li>
+<li><strong>代理调度和工具检索（Agent Dispatch and Tool Retrieval）：</strong>根据子任务的性质，派遣具有完成任务所需能力的适当工具代理。</li>
+<li><strong>工具执行（Tool Execution）：</strong>ToolAgent 首先从外部系统检索工具以帮助完成任务。然后，代理使用 ReACT 进行子任务求解。此方法搜索完成子任务的最佳操作系列（工具调用）。</li>
+<li><strong>反馈和反思（Feedback and Reflection）：</strong>在一系列操作之后，ToolAgent 可以发出一个名为“subtask_submit”的特定操作来完成当前子任务的处理，并将反馈和反射传递给 PlanAgent。此反馈可以指示子任务是否成功完成，或突出显示潜在的改进。</li>
 </ul>
 </blockquote>
 <h2 id="PlanAgent动态规划和迭代优化"><a href="#PlanAgent动态规划和迭代优化" class="headerlink" title="PlanAgent动态规划和迭代优化"></a><code>PlanAgent</code>动态规划和迭代优化</h2><blockquote>
@@ -133,9 +127,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 </ul>
 </blockquote>
 <h2 id="ToolServer支持多种工具"><a href="#ToolServer支持多种工具" class="headerlink" title="ToolServer支持多种工具"></a><code>ToolServer</code>支持多种工具</h2><blockquote>
-<ul>
-<li>ToolServer 由三个关键组件组成：</li>
-</ul>
+<p>ToolServer 由三个关键组件组成：</p>
 <ol>
 <li>ToolServerManager 管理 docker 容器（即节点）的生命周期，处理它们的创建、监控和关闭。每当新会话启动时，管理器都可以创建一个新节点。定期检查这些节点的状态，以确保它们正常运行;</li>
 <li>ToolServerMonitor检查节点的状态，更新节点的状态，确保节点的高效执行。如果节点长时间处于空闲状态，监视器可以停止它以节省资源;</li>
@@ -156,19 +148,19 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <h2 id="工具执行-Docker"><a href="#工具执行-Docker" class="headerlink" title="工具执行 Docker"></a>工具执行 Docker</h2><blockquote>
 <ul>
 <li>实现弹性、效率和可扩展性对于代理系统至关重要。与传统系统不同，XAgent 使用 ToolServer（作为执行引擎）来支持这些属性。它在 Docker 环境中运行，为工具执行提供隔离且安全的空间。这种隔离可确保工具执行的操作不会危及主系统的稳定性或安全性。</li>
-<li>这种设计带来了许多好处：</li>
 </ul>
+<p>这种设计带来了许多好处：</p>
 <ol>
-<li>安全性：在Docker容器中运行工具可以保护主系统免受潜在伤害;</li>
-<li>模块化：将座席规划和工具执行的角色分开，可以使代码更易于管理，更容易调试，并具有可扩展性;</li>
-<li>效率：系统可以根据需求和使用模式启动、停止和重启节点，从而实现最优的资源利用。借助 ToolServer，XAgent 将决策过程的复杂性LLM与工具执行分开。</li>
+<li><strong>安全性：</strong>在Docker容器中运行工具可以保护主系统免受潜在伤害;</li>
+<li><strong>模块化：</strong>将座席规划和工具执行的角色分开，可以使代码更易于管理，更容易调试，并具有可扩展性;</li>
+<li><strong>效率：</strong>系统可以根据需求和使用模式启动、停止和重启节点，从而实现最优的资源利用。借助 ToolServer，XAgent 将决策过程的复杂性LLM与工具执行分开。</li>
 </ol>
 </blockquote>
 <h2 id="函数调用：XAgent-的通用语言"><a href="#函数调用：XAgent-的通用语言" class="headerlink" title="函数调用：XAgent 的通用语言"></a>函数调用：XAgent 的通用语言</h2><blockquote>
 <ul>
 <li>结构化的通信模式对于代理系统的稳健性至关重要。因此，使用 OpenAI 的函数调用作为 XAgent 的通用语言。</li>
-<li>这带来了几个关键属性：</li>
 </ul>
+<p>这带来了几个关键属性：</p>
 <ol>
 <li>结构化通信：函数调用的固有格式明确说明要求和期望的内容。这种结构最大限度地减少了误解和潜在的错误;</li>
 <li>统一框架：在传统的人工智能系统中，不同的任务，无论是总结、规划还是API调用，都可能需要不同的方法。通过将所有任务转换为特定的函数调用，我们确保以一致的方式处理每个任务。这种统一简化了系统设计;</li>
