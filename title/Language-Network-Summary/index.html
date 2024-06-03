@@ -26,7 +26,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | 网络 - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-06-02T12:00:00.000Z" id="date"> 2024-06-02</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-02T13:58:44.286Z" id="updated"> 2024-06-02</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong></p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | 网络 - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-06-02T12:00:00.000Z" id="date"> 2024-06-02</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-03T01:52:33.845Z" id="updated"> 2024-06-03</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong></p>
 <span id="more"></span>
 
 
@@ -163,8 +163,8 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <ul>
 <li>特点：无连接、不可靠通信。</li>
 <li>流程：不事先建立连接，数据按照包发，一包数据包含（自己的IP、程序端口、目的地IP、程序端口、数据）。</li>
-<li>缺点：发送方不管对方是否在线，数据在中间丢失也不管，如果接收方收到数据也不返回确认。</li>
 <li>优点：通信效率高。</li>
+<li>缺点：发送方不管对方是否在线，数据在中间丢失也不管，如果接收方收到数据也不返回确认。</li>
 <li>适用场景：语音通话、视频直播。</li>
 </ul>
 </blockquote>
@@ -172,9 +172,14 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <blockquote>
 <ul>
 <li>特点：面向连接、可靠通信，最终目的是要保证在不可靠的信道上实现可靠的传输。</li>
-<li>流程：三次握手建立可靠连接（客户端发送连接请求、服务端返回响应、客户端再次确认信息建立连接），传输数据进行确认，四次挥手断开连接（客户端发送断开连接请求、服务端返回稍等响应、服务端返回确认断开响应、客户端发送正式确认断开连接）。</li>
-<li>缺点：通信效率相对不高。</li>
+<li>流程：<ol>
+<li>三次握手建立可靠连接（客户端发送连接请求、服务端返回响应、客户端再次确认信息建立连接）</li>
+<li>传输数据进行确认</li>
+<li>四次挥手断开连接（客户端发送断开连接请求、服务端返回稍等响应、服务端返回确认断开响应、客户端发送正式确认断开连接）</li>
+</ol>
+</li>
 <li>优点：数据传输可靠。</li>
+<li>缺点：通信效率相对不高。</li>
 <li>适用场景：网页、文件下载、支付。</li>
 </ul>
 </blockquote>
