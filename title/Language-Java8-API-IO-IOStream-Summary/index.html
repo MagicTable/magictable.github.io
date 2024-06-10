@@ -26,7 +26,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | Java8 - API - IO - 输入输出管道流 - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-05-31T16:00:00.000Z" id="date"> 2024-06-01</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-07T12:09:36.656Z" id="updated"> 2024-06-07</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 已完成<br><strong>摘要：</strong> 文件对象里的数据进行操作。</p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | Java8 - API - IO - 输入输出管道流 - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-05-31T16:00:00.000Z" id="date"> 2024-06-01</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-10T10:32:26.676Z" id="updated"> 2024-06-10</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 已完成<br><strong>摘要：</strong> 文件对象里的数据进行操作。</p>
 <span id="more"></span>
 
 
@@ -355,11 +355,16 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <ul>
 <li>添加缓冲流，提高原始数据流读写数据的性能，减少与硬盘交互的次数。</li>
 <li>缓冲流类似添加“字符数组”，分批次读取数据。</li>
+</ul>
+<p><strong>类别</strong></p>
+<ul>
 <li><code>BufferedInputStream</code>：缓冲字节输入流</li>
 <li><code>BufferedOotputStream</code>：缓冲字节输出流</li>
 <li><code>BufferedReader</code>：缓冲字符输入流</li>
 <li><code>BufferedWriter</code>：缓冲字符输出流</li>
-<li>提示：</li>
+</ul>
+<p><strong>提示</strong></p>
+<ul>
 <li>缓冲流需要传入输入流或输出流，因此需要先创建原始数据流。</li>
 <li>缓冲流包装原始数据流。</li>
 </ul>
@@ -434,6 +439,9 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <li>若代码编码和被读取的文本文件的编码不一致，则使用字符流读取文本文件时就会出现乱码。</li>
 <li>解决不同编码时，字符流读取文本内容乱码的问题。</li>
 <li>解决思路：先获取文件的原始字节流，再将其按真实的字符集编码转换成字符输入流，这样字符输入流中的字符就不会乱码。</li>
+</ul>
+<p><strong>类别</strong></p>
+<ul>
 <li><code>InputStreamReader</code>字符输入转换流：控制输入读取的文件用什么字符集解码。</li>
 <li><code>OutputStreamWrite</code>字符输出转换流：控制输出写入的文件用什么字符集编码。</li>
 </ul>
@@ -577,12 +585,12 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 </tbody></table>
 <h1 id="数据流"><a href="#数据流" class="headerlink" title="数据流"></a>数据流</h1><blockquote>
 <ul>
-<li><p>允许把数据和其类型一并写出去。</p>
-</li>
-<li><p><code>DataInputStream</code>：输入数据流</p>
-</li>
-<li><p><code>DataOutputStream</code>：输出数据流</p>
-</li>
+<li>允许把数据和其类型一并写出去。</li>
+</ul>
+<p><strong>类别</strong></p>
+<ul>
+<li><code>DataInputStream</code>：输入数据流</li>
+<li><code>DataOutputStream</code>：输出数据流</li>
 </ul>
 </blockquote>
 <p><strong>构造方法</strong></p>
@@ -660,6 +668,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 </tr>
 </tbody></table>
 <h1 id="序列化流"><a href="#序列化流" class="headerlink" title="序列化流"></a>序列化流</h1><blockquote>
+<p><strong>类别</strong></p>
 <ul>
 <li><code>ObjectInputStream</code>：（对象字节输入流）对象反序列化，把文件里的java对象读出来。</li>
 <li><code>ObjectOutputStream</code>：（对象字节输出流）对象序列化，把java对象写入到文件中去。</li>
