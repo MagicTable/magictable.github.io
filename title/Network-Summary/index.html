@@ -26,13 +26,36 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>网络通讯（Network） | 知识总结概览</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-06-01T16:00:00.000Z" id="date"> 2024-06-02</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-05T11:37:48.338Z" id="updated"> 2024-06-05</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 待完善<br><strong>摘要：</strong></p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>网络通讯（Network） | 知识总结概览</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-06-01T16:00:00.000Z" id="date"> 2024-06-02</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-10T08:49:19.871Z" id="updated"> 2024-06-10</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 待完善<br><strong>摘要：</strong></p>
 <span id="more"></span>
 
-<h1 id="网络通讯基础知识"><a href="#网络通讯基础知识" class="headerlink" title="网络通讯基础知识"></a>网络通讯基础知识</h1><h2 id="网络通讯架构"><a href="#网络通讯架构" class="headerlink" title="网络通讯架构"></a>网络通讯架构</h2><blockquote>
+<h1 id="网络通讯基础知识"><a href="#网络通讯基础知识" class="headerlink" title="网络通讯基础知识"></a>网络通讯基础知识</h1><h2 id="网络通讯架构"><a href="#网络通讯架构" class="headerlink" title="网络通讯架构"></a>网络通讯架构</h2><p>CS架构（Client客户端&#x2F;Server服务端）</p>
+<blockquote>
+<p><strong>优点</strong></p>
 <ul>
-<li>CS架构（Client客户端&#x2F;Server服务端）</li>
-<li>BS架构（Browser浏览器&#x2F;Ssrver服务端）</li>
+<li>界面和操作可以很丰富。</li>
+<li>大部分数据保存在客户端，相对安全。</li>
+<li>大部分功能都集成在客户端，只需从服务器下载少量数据，因此访问数据快。</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>升级维护工作量较大，每一个客户端都需要升级。</li>
+<li>用户群体固定，程序需要安装才能使用。</li>
+</ul>
+</blockquote>
+<p>BS架构（Browser浏览器&#x2F;Ssrver服务端）</p>
+<blockquote>
+<p><strong>优点</strong></p>
+<ul>
+<li>客户端无需安装，有web浏览器即可。</li>
+<li>无需升级多个客户端，升级服务器即可。</li>
+<li>BS架构可以直接放在广域网上，通过一定的权限控制实现多客户端访问的目的，交互性较强。</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>在跨浏览器上，BS架构不尽如人意。</li>
+<li>表现要比CS架构的程序需要花费不少经历。</li>
+<li>在速度和安全性上需要花费巨大的设计成本。</li>
 </ul>
 </blockquote>
 <h2 id="网络通讯三要素"><a href="#网络通讯三要素" class="headerlink" title="网络通讯三要素"></a>网络通讯三要素</h2><blockquote>
