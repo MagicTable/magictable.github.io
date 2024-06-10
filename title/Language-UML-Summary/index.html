@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Language | UML - 知识总结 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | UML - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-06-10T05:00:00.000Z" id="date"> 2024-06-10</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-10T06:56:14.441Z" id="updated"> 2024-06-10</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong> 统一建模语言(Unified Modeling Language，UML)是一种为面向对象系统的产品进行说明、可视化和编制文档的一种标准语言。</p>
+<span id="more"></span>
+
+
+<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><blockquote>
+<ul>
+<li>统一建模语言(Unified Modeling Language，UML)是一种为面向对象系统的产品进行说明、可视化和编制文档的一种标准语言。</li>
+<li>UML使用面向对象设计的的建模工具，但独立于任何具体程序设计语言。</li>
+<li>我们在进行项目的时候，通过使用 UML 的面向对象图的方式来更明确、清晰的表达项目中的架设思想、项目结构、执行顺序等一些逻辑思维。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>输入格式</li>
+<li>输出格式：PNG（便于图像共享）、SVG（用于可缩放的矢量图形）、LaTeX（用于高质量排版）、ASCII art（用于基于文本的表示）</li>
+</ul>
+</blockquote>
+<h1 id="PlantUML工具"><a href="#PlantUML工具" class="headerlink" title="PlantUML工具"></a>PlantUML工具</h1><blockquote>
+<ul>
+<li>PlantUML是一个开源的Java程序，能够根据PlantUML语言生成对应的图片。</li>
+<li>PlantUML是一个通用性很强的工具，可以快速、直接地创建各种图表。</li>
+<li>PlantUML 可以与其他各种工具无缝集成，以增强您的工作流程。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>UML图</p>
+<ul>
+<li>序列图</li>
+<li>用例图</li>
+<li>类图</li>
+<li>对象图</li>
+<li>活动图</li>
+<li>组件图</li>
+<li>部署图</li>
+<li>状态图</li>
+<li>时序图</li>
+</ul>
+<p>非UML图</p>
+<ul>
+<li>JSON数据</li>
+<li>YAML数据</li>
+<li>EBNF图表</li>
+<li>网格图</li>
+<li>用户界面模型</li>
+<li>架构图</li>
+<li>规范和描述语言（SDL）</li>
+<li>Ditaa图</li>
+<li>甘特图</li>
+<li>时序图</li>
+<li>思维导图</li>
+<li>WBS图</li>
+<li>以AsciiMath或JLaTeXMath符号的数学公式</li>
+<li>信息工程图</li>
+<li>实体关系图</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>超链接和工具提示</li>
+<li>克里奥尔语：富文本、表情符号、unicode、图标</li>
+<li>OpenIconic图标</li>
+<li>Sprite图标</li>
+<li>AsciiMath的数学表达式</li>
+</ul>
+</blockquote>
+<h1 id="UML图"><a href="#UML图" class="headerlink" title="UML图"></a>UML图</h1><h1 id="非UML图"><a href="#非UML图" class="headerlink" title="非UML图"></a>非UML图</h1><h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs puml">@startuml<br>clock   &quot;Clock_0&quot;   as C0 with period 50<br>clock   &quot;Clock_1&quot;   as C1 with period 50 pulse 15 offset 10<br>binary  &quot;Binary&quot;  as B<br>concise &quot;Concise&quot; as C<br>robust  &quot;Robust&quot;  as R<br>analog  &quot;Analog&quot;  as A<br><br><br>@0<br>C is Idle<br>R is Idle<br>A is 0<br><br>@100<br>B is high<br>C is Waiting<br>R is Processing<br>A is 3<br><br>@300<br>R is Waiting<br>A is 1<br>@enduml<br><br></code></pre></td></tr></table></figure>
+
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><blockquote>
+<ul>
+<li>PlantUML官网及在线文档：<a target="_blank" rel="noopener" href="https://plantuml.com/zh/">https://plantuml.com/zh/</a></li>
+<li>语言指导PDF: <a target="_blank" rel="noopener" href="https://plantuml.com/zh/guide">https://plantuml.com/zh/guide</a></li>
+<li>Github仓库: <a target="_blank" rel="noopener" href="https://plantuml.com/zh/guide">https://github.com/plantuml/plantuml</a></li>
+</ul>
+</blockquote>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Diary-Workflow-SoftwareDevelopment/">Diary | 工作流 - 软件开发 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>记录实现虚拟老婆大人的技术文章和相关知识总结。</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PlantUML%E5%B7%A5%E5%85%B7"><span class="toc-number">2.</span> <span class="toc-text">PlantUML工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UML%E5%9B%BE"><span class="toc-number">3.</span> <span class="toc-text">UML图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%9EUML%E5%9B%BE"><span class="toc-number">4.</span> <span class="toc-text">非UML图</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE"><span class="toc-number">4.1.</span> <span class="toc-text">思维导图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">5.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">6.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>
