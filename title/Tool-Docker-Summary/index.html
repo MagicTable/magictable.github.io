@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tool | Docker - 知识总结 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Tool | Docker - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-06-16T08:00:00.000Z" id="date"> 2024-06-16</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-16T09:27:54.074Z" id="updated"> 2024-06-16</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong></p>
+<span id="more"></span>
+
+
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>容器技术：</p>
+<blockquote>
+<ul>
+<li>容器是一种轻量级、可移植、自包含的软件打包技术，使应用程序可以在几乎任何地方以相同的方式运行。</li>
+<li>开发人员在自己开发环境建设并测试号的容器，无需任何修改就能够在生产系统的虚拟机、物理服务器或公有云主机上运行。</li>
+<li>打包：标准容器可以将任何应用及依赖环境打包为一个独立运行环境，容器可以运行在几乎所有生产环境上。</li>
+<li>可以将应用本身及其依赖打包，实现“一次封装，到处运行”</li>
+<li>容器类似一种沙盒技术，在计算机安全领域中是一种安全机制，为运行中的程序提供的隔离环境。</li>
+</ul>
+</blockquote>
+<p>Docker<br>OCI容器规范</p>
+<p><strong>Docker镜像（Image）</strong></p>
+<blockquote>
+<ul>
+<li>Docker镜像就是一个只读的模板。</li>
+<li>镜像可以用来创建Docker容器。</li>
+<li>Docker提供了一个简单的机制来创建镜像或者更新现有的镜像。</li>
+<li>用户可以直接从其他人那里下载一个已经做好的镜像来直接使用。</li>
+</ul>
+</blockquote>
+<p><strong>Docker容器（Container）</strong></p>
+<blockquote>
+<ul>
+<li>Docker利用容器来运行应用。</li>
+<li>容器是从镜像创建的运行实例。</li>
+<li>可以被“运行、开始、停止、删除”。</li>
+<li>每个容器都是相互隔离的、保证安全的平台。</li>
+</ul>
+</blockquote>
+<p><strong>Docker仓库（Repository）</strong></p>
+<blockquote>
+<ul>
+<li>仓库是集中存放镜像文件的场所。</li>
+<li>仓库主持服务器（Registry）上存放这很多仓库，每个仓库中包含来很多镜像，每个镜像有不同的标签（Tag）。</li>
+</ul>
+</blockquote>
+<h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><h2 id="查看Docker-engine状态"><a href="#查看Docker-engine状态" class="headerlink" title="查看Docker engine状态"></a>查看Docker engine状态</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">systemctl status docker.service<br></code></pre></td></tr></table></figure>
+
+<h2 id="查看本地镜像"><a href="#查看本地镜像" class="headerlink" title="查看本地镜像"></a>查看本地镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker images<br></code></pre></td></tr></table></figure>
+
+<h2 id="运行容器"><a href="#运行容器" class="headerlink" title="运行容器"></a>运行容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># `-d`参数可在后台运行容器</span><br><span class="hljs-comment"># `-p`参数将宿主机8080端口映射到容器80端口</span><br><br><span class="hljs-comment"># 在后台运行一个服务端口是80的新容器</span><br>docker run -d -p 8080:80 &lt;容器ID&gt;<br></code></pre></td></tr></table></figure>
+
+<h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker attach &lt;容器ID&gt;<br><br><span class="hljs-comment"># 以命令行交互模式进入容器</span><br>docker <span class="hljs-built_in">exec</span> -it &lt;容器ID&gt; bash<br></code></pre></td></tr></table></figure>
+
+<h2 id="查看容器状态"><a href="#查看容器状态" class="headerlink" title="查看容器状态"></a>查看容器状态</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker ps &lt;容器ID&gt;<br><br><span class="hljs-comment"># 查看所有容器</span><br>docker ps -a<br></code></pre></td></tr></table></figure>
+
+<h2 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker start &lt;容器ID&gt;<br></code></pre></td></tr></table></figure>
+
+<h2 id="暂停容器（挂起）"><a href="#暂停容器（挂起）" class="headerlink" title="暂停容器（挂起）"></a>暂停容器（挂起）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker pause &lt;容器ID&gt;<br></code></pre></td></tr></table></figure>
+
+<h2 id="恢复容器"><a href="#恢复容器" class="headerlink" title="恢复容器"></a>恢复容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker unpause &lt;容器ID&gt;<br></code></pre></td></tr></table></figure>
+
+<h2 id="停止容器"><a href="#停止容器" class="headerlink" title="停止容器"></a>停止容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker stop &lt;容器ID&gt;<br></code></pre></td></tr></table></figure>
+
+<h2 id="删除容器"><a href="#删除容器" class="headerlink" title="删除容器"></a>删除容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker <span class="hljs-built_in">rm</span> &lt;容器ID&gt;<br></code></pre></td></tr></table></figure>
+
+<h2 id="获取容器-镜像元数据"><a href="#获取容器-镜像元数据" class="headerlink" title="获取容器&#x2F;镜像元数据"></a>获取容器&#x2F;镜像元数据</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker inspect<br></code></pre></td></tr></table></figure>
+
+<h2 id="查看容器中运行的进程信息"><a href="#查看容器中运行的进程信息" class="headerlink" title="查看容器中运行的进程信息"></a>查看容器中运行的进程信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker top <br></code></pre></td></tr></table></figure>
+
+<h2 id="从服务器获取实时事件"><a href="#从服务器获取实时事件" class="headerlink" title="从服务器获取实时事件"></a>从服务器获取实时事件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker events <br></code></pre></td></tr></table></figure>
+<h2 id="列出指定容器的端口映射"><a href="#列出指定容器的端口映射" class="headerlink" title="列出指定容器的端口映射"></a>列出指定容器的端口映射</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker port &lt;容器ID&gt;<br></code></pre></td></tr></table></figure>
+
+<h2 id="与主机之间进行数据拷贝"><a href="#与主机之间进行数据拷贝" class="headerlink" title="与主机之间进行数据拷贝"></a>与主机之间进行数据拷贝</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker <span class="hljs-built_in">cp</span><br></code></pre></td></tr></table></figure>
+
+
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><p>暂无</p>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Network-Protocol-TCP-Summary/">Network | 协议 - TCP（传输控制协议） - 知识总结 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>记录实现虚拟老婆大人的技术文章和相关知识总结。</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8BDocker-engine%E7%8A%B6%E6%80%81"><span class="toc-number">2.1.</span> <span class="toc-text">查看Docker engine状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E9%95%9C%E5%83%8F"><span class="toc-number">2.2.</span> <span class="toc-text">查看本地镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E5%AE%B9%E5%99%A8"><span class="toc-number">2.3.</span> <span class="toc-text">运行容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8"><span class="toc-number">2.4.</span> <span class="toc-text">进入容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%B9%E5%99%A8%E7%8A%B6%E6%80%81"><span class="toc-number">2.5.</span> <span class="toc-text">查看容器状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E5%AE%B9%E5%99%A8"><span class="toc-number">2.6.</span> <span class="toc-text">启动容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9A%82%E5%81%9C%E5%AE%B9%E5%99%A8%EF%BC%88%E6%8C%82%E8%B5%B7%EF%BC%89"><span class="toc-number">2.7.</span> <span class="toc-text">暂停容器（挂起）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%E5%AE%B9%E5%99%A8"><span class="toc-number">2.8.</span> <span class="toc-text">恢复容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%9C%E6%AD%A2%E5%AE%B9%E5%99%A8"><span class="toc-number">2.9.</span> <span class="toc-text">停止容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%AE%B9%E5%99%A8"><span class="toc-number">2.10.</span> <span class="toc-text">删除容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%AE%B9%E5%99%A8-%E9%95%9C%E5%83%8F%E5%85%83%E6%95%B0%E6%8D%AE"><span class="toc-number">2.11.</span> <span class="toc-text">获取容器&#x2F;镜像元数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%B9%E5%99%A8%E4%B8%AD%E8%BF%90%E8%A1%8C%E7%9A%84%E8%BF%9B%E7%A8%8B%E4%BF%A1%E6%81%AF"><span class="toc-number">2.12.</span> <span class="toc-text">查看容器中运行的进程信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%8E%B7%E5%8F%96%E5%AE%9E%E6%97%B6%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.13.</span> <span class="toc-text">从服务器获取实时事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E6%8C%87%E5%AE%9A%E5%AE%B9%E5%99%A8%E7%9A%84%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84"><span class="toc-number">2.14.</span> <span class="toc-text">列出指定容器的端口映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8E%E4%B8%BB%E6%9C%BA%E4%B9%8B%E9%97%B4%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E6%8B%B7%E8%B4%9D"><span class="toc-number">2.15.</span> <span class="toc-text">与主机之间进行数据拷贝</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">3.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">4.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>
