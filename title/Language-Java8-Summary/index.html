@@ -26,7 +26,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | Java8 - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-03-17T16:00:00.000Z" id="date"> 2024-03-18</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-12T13:37:36.663Z" id="updated"> 2024-06-12</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 待完善<br><strong>摘要：</strong> Java编程语言的知识总结。<br class='item-img' data-src='/../assets/image/Language/Java-logo.png'><img src="/../assets/image/Language/Java-logo.png" alt="Java-logo"></p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | Java8 - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-03-17T16:00:00.000Z" id="date"> 2024-03-18</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-23T00:12:50.498Z" id="updated"> 2024-06-23</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 待完善<br><strong>摘要：</strong> Java编程语言的知识总结。<br class='item-img' data-src='/../assets/image/Language/Java-logo.png'><img src="/../assets/image/Language/Java-logo.png" alt="Java-logo"></p>
 <span id="more"></span>
 
 
@@ -1511,7 +1511,36 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <li>Java定义了4个标准元注解，<code>@Target</code>注解的使用范围、<code>@Retention</code>注解的生命周期、<code>@Documented</code>注解将包含在javadoc中、<code>@Inherited</code>子类可以继承父类中的该注解</li>
 </ul>
 </blockquote>
-<h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1><h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><h1 id="匿名代码块、静态代码块"><a href="#匿名代码块、静态代码块" class="headerlink" title="匿名代码块、静态代码块"></a>匿名代码块、静态代码块</h1><p><strong>匿名代码块</strong></p>
+<h1 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h1><blockquote>
+<ul>
+<li>Java反射机制是在运行状态中。</li>
+<li>对于任意一个类，都能够知道这个类的所有属性和方法.</li>
+<li>对于任意一个对象，都能够调用它的任意一个方法和属性。</li>
+</ul>
+<p><strong>主要功能</strong></p>
+<ul>
+<li>在运行时判断任意一个对象所属的类。</li>
+<li>在运行时构造任意一个类的对象。</li>
+<li>在运行时判断任意一个类所具有的成员变量和方法。</li>
+<li>在运行时获取泛型信息。</li>
+<li>在运行时调用任意一个对象的成员变量和方法。</li>
+<li>在运行时处理注解。</li>
+<li>生成动态代理。</li>
+</ul>
+<p>Java反射机制主要涉及以下类：</p>
+<ul>
+<li><code>Class</code>类：反射的核心类，可以获取类的属性、方法等信息。</li>
+<li><code>Field</code>类：表示类的成员变量，可以用来获取和设置类之中的字段。</li>
+<li><code>Method</code>类：代表类的方法，可以用来获取类中的方法信息或者执行类和对象的方法。</li>
+<li><code>Constructor</code>类：代表类的构造方法。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>包路径：<code>java.lang.Class</code></li>
+</ul>
+</blockquote>
+<h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><h1 id="匿名代码块、静态代码块"><a href="#匿名代码块、静态代码块" class="headerlink" title="匿名代码块、静态代码块"></a>匿名代码块、静态代码块</h1><p><strong>匿名代码块</strong></p>
 <blockquote>
 <ul>
 <li>匿名代码块的作用是对象统一初始化。</li>

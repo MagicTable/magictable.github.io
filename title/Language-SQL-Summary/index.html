@@ -26,7 +26,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | SQL - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-04-19T16:00:00.000Z" id="date"> 2024-04-20</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-05-18T12:56:21.568Z" id="updated"> 2024-05-18</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 待完善<br><strong>摘要：</strong> SQL用于管理关系型数据库的编程语言知识总结，本文章主要关注在MySQL关系型数据库管理软件中的使用总结。<br class='item-img' data-src='/!%5BHexo-logo%5D(../assets/image/Tool/Hexo-logo.png)'><img src="/!%5BHexo-logo%5D(../assets/image/Tool/Hexo-logo.png)" alt="SQL-logo"></p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | SQL - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-04-19T16:00:00.000Z" id="date"> 2024-04-20</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-23T10:55:56.394Z" id="updated"> 2024-06-23</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 待完善<br><strong>摘要：</strong> SQL用于管理关系型数据库的编程语言知识总结，本文章主要关注在MySQL关系型数据库管理软件中的使用总结。<br class='item-img' data-src='/!%5BHexo-logo%5D(../assets/image/Tool/Hexo-logo.png)'><img src="/!%5BHexo-logo%5D(../assets/image/Tool/Hexo-logo.png)" alt="SQL-logo"></p>
 <span id="more"></span>
 
 
@@ -115,31 +115,32 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <p>详细说明请查看该文章：<a href="/title/Language-SQL-Command-Query/" title="Language | SQL - 命令 - 查询手册">Language | SQL - 命令 - 查询手册</a></p>
 </blockquote>
 <h2 id="数据-定义语言（DDL）"><a href="#数据-定义语言（DDL）" class="headerlink" title="数据 - 定义语言（DDL）"></a>数据 - 定义语言（DDL）</h2><blockquote>
-<p>介绍</p>
 <ul>
+<li>数据定义语言</li>
+<li>用于定义数据库对象（数据库、表、字段）。</li>
 <li>主要针对<code>数据库</code>、<code>表</code>、<code>字段</code>进行增、删、改、查的操作命令。</li>
 <li><code>字段</code>是表的每列数据的标识。</li>
 <li>这些不是实际真正存储的数据信息，此处不操作实际存储的数据。</li>
 </ul>
 </blockquote>
 <h2 id="数据-操作语言（DML）"><a href="#数据-操作语言（DML）" class="headerlink" title="数据 - 操作语言（DML）"></a>数据 - 操作语言（DML）</h2><blockquote>
-<p>介绍</p>
 <ul>
+<li>数据操作语言</li>
 <li>用于对表的<code>数据</code>进行增加、删除、修改的操作操作命令。</li>
 <li>提示：此处没有查询命令。</li>
 <li>需要根据已经定义创建完的数据库、表、表中的字段后，再进行操作的。</li>
 </ul>
 </blockquote>
 <h2 id="数据-查询语言（DQL）"><a href="#数据-查询语言（DQL）" class="headerlink" title="数据 - 查询语言（DQL）"></a>数据 - 查询语言（DQL）</h2><blockquote>
-<p>介绍</p>
 <ul>
-<li>专注于查询表中的数据。</li>
+<li>数据查询语言</li>
+<li>用于查询数据库表中的数据</li>
 </ul>
 </blockquote>
 <h2 id="数据-控制语言（DCL）"><a href="#数据-控制语言（DCL）" class="headerlink" title="数据 - 控制语言（DCL）"></a>数据 - 控制语言（DCL）</h2><blockquote>
-<p>介绍</p>
+<p>数据控制语言</p>
 <ul>
-<li>用来管理数据库用户、控制数据库的访问权限。</li>
+<li>用于管理数据库用户、控制数据库的访问权限。</li>
 </ul>
 </blockquote>
 <h2 id="事务-控制语言（TCT）"><a href="#事务-控制语言（TCT）" class="headerlink" title="事务 - 控制语言（TCT）"></a>事务 - 控制语言（TCT）</h2><blockquote>
@@ -168,19 +169,14 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <td align="left">A !&#x3D; 1</td>
 </tr>
 <tr>
-<td align="left">&lt;</td>
-<td align="left">小于</td>
-<td align="left">A &lt; 1</td>
-</tr>
-<tr>
 <td align="left">&gt;</td>
 <td align="left">大于</td>
 <td align="left">A &gt; 1</td>
 </tr>
 <tr>
-<td align="left">&lt;&#x3D;</td>
-<td align="left">小于等于</td>
-<td align="left">A &lt;&#x3D; 1</td>
+<td align="left">&lt;</td>
+<td align="left">小于</td>
+<td align="left">A &lt; 1</td>
 </tr>
 <tr>
 <td align="left">&gt;&#x3D;</td>
@@ -188,24 +184,9 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <td align="left">A &gt;&#x3D; 1</td>
 </tr>
 <tr>
-<td align="left">&lt;字段名&gt; BETWEEN &lt;最小值&gt; AND &lt;最大值&gt;</td>
-<td align="left">某个范围 <br> - 包含最小，不包含最大</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">IN (&lt;值列表&gt;,…)</td>
-<td align="left">在<code>IN</code>后的列表中的值，选其一</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">&lt;字段名&gt; LIKE &lt;模糊匹配表达式&gt;</td>
-<td align="left">模糊匹配 <br> - <code>_</code>匹配单个字符 <br> - <code>%</code>匹配任意个字符</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">IS NULL</td>
-<td align="left">结果为<code>NULL</code></td>
-<td align="left"></td>
+<td align="left">&lt;&#x3D;</td>
+<td align="left">小于等于</td>
+<td align="left">A &lt;&#x3D; 1</td>
 </tr>
 </tbody></table>
 </blockquote>
@@ -236,6 +217,249 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 </tr>
 </tbody></table>
 </blockquote>
+<p><strong>判断运算符</strong></p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="left">说明</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&lt;字段名&gt; BETWEEN &lt;最小值&gt; AND &lt;最大值&gt;</td>
+<td align="left">某个范围 <br> - 包含最小，不包含最大</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">IN (&lt;值列表&gt;,…)</td>
+<td align="left">在<code>IN</code>后的列表中的值，选其一</td>
+<td align="left">IN(1, 2, 3)</td>
+</tr>
+<tr>
+<td align="center">&lt;字段名&gt; LIKE &lt;模糊匹配表达式&gt;</td>
+<td align="left">模糊匹配 <br> - <code>_</code>匹配单个字符 <br> - <code>%</code>匹配任意个字符</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">IS NULL EXISTS</td>
+<td align="left">结果为<code>NULL</code></td>
+<td align="left">如果不存在</td>
+</tr>
+<tr>
+<td align="center">IS EXISTS</td>
+<td align="left"></td>
+<td align="left">如果存在</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p><strong>数值类型</strong></p>
+<blockquote>
+<ul>
+<li>提示：数据类型是有符号的范围，需要手动添加<code>UNSIGNED</code>限制。</li>
+</ul>
+</blockquote>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">位数</th>
+<th align="left">有符号范围</th>
+<th align="left">无符号范围</th>
+<th align="left">说明</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">tinyint</td>
+<td align="center">8位（1字节）</td>
+<td align="left">(-128 ~ 127)</td>
+<td align="left">(0 ~ 255)</td>
+<td align="left">小整数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">smallint</td>
+<td align="center">16位（2字节）</td>
+<td align="left">(-32768 ~ 32767)</td>
+<td align="left">(0 ~ 65535)</td>
+<td align="left">大整数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">mediumint</td>
+<td align="center">24位（3字节）</td>
+<td align="left">(-8388608 ~ 8388607)</td>
+<td align="left">(0 ~ 16777215)</td>
+<td align="left">大整数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">int</td>
+<td align="center">32位（4字节）</td>
+<td align="left">(-2147483648 ~ 2147483647)</td>
+<td align="left">(0 ~ 4294967295)</td>
+<td align="left">大整数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">bigint</td>
+<td align="center">64位（8字节）</td>
+<td align="left">(-2^63 ~ 2^63-1)</td>
+<td align="left">(0 ~ 2^64-1)</td>
+<td align="left">极大整数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center">32位（4字节）</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">单精度浮点数</td>
+<td align="left">float(5.2)：5表示整数位，2代表小数位</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">64位（8字节）</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">双精度浮点数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">decimal</td>
+<td align="center"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">小数值（精度更高）</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+</blockquote>
+<p><strong>字符串类型</strong></p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="left">大小范围(字节)</th>
+<th align="left">说明</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">char</td>
+<td align="left">0~255</td>
+<td align="left">定长字符串</td>
+<td align="left">char(10)，字符个数最大不能大于10</td>
+</tr>
+<tr>
+<td align="center">varchar</td>
+<td align="left">0~65535</td>
+<td align="left">变长字符串</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">tinyblob</td>
+<td align="left">0~255</td>
+<td align="left">不超过255个字符的二进制数据</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">tinytext</td>
+<td align="left">0~255</td>
+<td align="left">短文本字符串</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">blob</td>
+<td align="left">0~65535</td>
+<td align="left">二进制形式的长文本数据</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">text</td>
+<td align="left">0~65535</td>
+<td align="left">长文本数据</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">mediumblob</td>
+<td align="left">0~16 777 215</td>
+<td align="left">二进制形式的中等长度文本数据</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">mediumtext</td>
+<td align="left">0~16 777 215</td>
+<td align="left">中等长度文本数据</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">longblob</td>
+<td align="left">0~4 294 967 295</td>
+<td align="left">二进制形式的极大文本数据</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">longtext</td>
+<td align="left">0~4 294 967 295</td>
+<td align="left">极大文本数据</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+</blockquote>
+<p><strong>日期类型</strong></p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">位数</th>
+<th align="left">范围</th>
+<th align="left">格式</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">date</td>
+<td align="center">24位（3字节）</td>
+<td align="left">1000-01-01 至 9999-12-31</td>
+<td align="left">YYYY-MM-DD</td>
+<td align="left">日期值</td>
+</tr>
+<tr>
+<td align="center">time</td>
+<td align="center">24位（3字节）</td>
+<td align="left">-838:59:59 至 838:59:59</td>
+<td align="left">HH:MM:SS</td>
+<td align="left">日期值或持续时间</td>
+</tr>
+<tr>
+<td align="center">year</td>
+<td align="center">8位（1字节）</td>
+<td align="left">1901 至 2155</td>
+<td align="left">YYYY</td>
+<td align="left">年份值</td>
+</tr>
+<tr>
+<td align="center">datetime</td>
+<td align="center">64位（8字节）</td>
+<td align="left">1000-01-01 00:00:00 至 9999-12-31 23:59:59</td>
+<td align="left">YYYY-MM-DD HH:MM:SS</td>
+<td align="left">混合日期和日期值</td>
+</tr>
+<tr>
+<td align="center">timestamp</td>
+<td align="center">32位（4字节）</td>
+<td align="left">1970-01-01 00:00:01 至 2038-01-19 03:14:07</td>
+<td align="left">YYY-MM-DD HH:MM:SS</td>
+<td align="left">混合日期和时间值，时间戳</td>
+</tr>
+</tbody></table>
+</blockquote>
 <h1 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h1><blockquote>
 <ul>
 <li>约束作用于表中字段上的规则。</li>
@@ -256,19 +480,19 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <tbody><tr>
 <td align="center">PRIMARY KEY</td>
 <td align="left">主键约束</td>
-<td align="left">主键是一行数据的唯一标识符、要求非空且唯一</td>
+<td align="left">主键是一行数据的唯一标识符、非空且唯一</td>
 <td align="left"></td>
+</tr>
+<tr>
+<td align="center">FOREIGN KEY</td>
+<td align="left">外键约束</td>
+<td align="left">用来让两张表的数据之间建立连接，保证数据的一致性和完整性</td>
+<td align="left">FOREIGN KEY &lt;字段&gt; REFERENCES &lt;另一个表的名称&gt;(&lt;字段名&gt;)</td>
 </tr>
 <tr>
 <td align="center">NOT NULL</td>
 <td align="left">非空约束</td>
 <td align="left">限制该字段的数据不能为<code>null</code></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="center">AUTO_INCREMENT</td>
-<td align="left">自动增长</td>
-<td align="left">能够按数字字段排序添加值</td>
 <td align="left"></td>
 </tr>
 <tr>
@@ -278,22 +502,22 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <td align="left"></td>
 </tr>
 <tr>
-<td align="center">CHECK</td>
-<td align="left">检查约束</td>
-<td align="left">保证字段值满足某一个条件</td>
-<td align="left">CHECK (&lt;条件&gt;)</td>
-</tr>
-<tr>
 <td align="center">DEFAULT</td>
 <td align="left">默认约束</td>
 <td align="left">保存数据时，如果为指定该字段的值，则采用默认值</td>
 <td align="left">DEFAULT &lt;默认值&gt;</td>
 </tr>
 <tr>
-<td align="center">FOREIGN KEY</td>
-<td align="left">外键约束</td>
-<td align="left">用来让两张表的数据之间建立连接，保证数据的一致性和完整性</td>
-<td align="left">FOREIGN KEY &lt;字段&gt; REFERENCES &lt;另一个表的名称&gt;(&lt;字段名&gt;)</td>
+<td align="center">AUTO_INCREMENT</td>
+<td align="left">自动增长</td>
+<td align="left">能够按数字字段排序添加值</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">CHECK</td>
+<td align="left">检查约束</td>
+<td align="left">保证字段值满足某一个条件</td>
+<td align="left">CHECK (&lt;条件&gt;)</td>
 </tr>
 </tbody></table>
 </blockquote>
@@ -339,7 +563,10 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 </tr>
 </tbody></table>
 </blockquote>
-<h1 id="函数-SQL常用函数表"><a href="#函数-SQL常用函数表" class="headerlink" title="函数 - SQL常用函数表"></a>函数 - SQL常用函数表</h1><blockquote>
+<h1 id="聚合函数-SQL常用函数表"><a href="#聚合函数-SQL常用函数表" class="headerlink" title="聚合函数 - SQL常用函数表"></a>聚合函数 - SQL常用函数表</h1><blockquote>
+<ul>
+<li>用于对字段进行筛选。</li>
+</ul>
 <p>提示：</p>
 <ul>
 <li>将一列数据作为一个整体，进行纵向计算，计算给定的字段。</li>
@@ -352,29 +579,41 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <tr>
 <th align="left">函数</th>
 <th align="left">功能</th>
+<th align="left">例子</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">count()</td>
+<td align="left">now()</td>
+<td align="left">获取当前时间，类型：<code>datetime</code></td>
+<td align="left">new()</td>
+</tr>
+<tr>
+<td align="left">count(&lt;参数&gt;)</td>
 <td align="left">统计数量</td>
+<td align="left">count(“id”)，可以是<code>字段名</code>、<code>常量</code>、<code>*</code></td>
 </tr>
 <tr>
 <td align="left">max()</td>
 <td align="left">最大值</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">min()</td>
 <td align="left">最小值</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">avg()</td>
 <td align="left">平均值</td>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">sum()</td>
 <td align="left">求和</td>
+<td align="left"></td>
 </tr>
 <tr>
+<td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -395,7 +634,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <li>MySQL关系型数据库命令查询手册文章：<a href="/title/Tool-MySQL8-Command-Query/" title="Tool | MySQL8 - 命令 - 查询手册">Tool | MySQL8 - 命令 - 查询手册</a></li>
 </ul>
 </blockquote>
-<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Tool-MySQL8-Command-Query/">← 下一篇 Tool | MySQL8 - 命令 - 查询手册</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Tool-MySQL8-Summary/">Tool | MySQL8 - 知识总结 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">语法命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE-%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80%EF%BC%88DDL%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">数据 - 定义语言（DDL）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE-%E6%93%8D%E4%BD%9C%E8%AF%AD%E8%A8%80%EF%BC%88DML%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">数据 - 操作语言（DML）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E8%A8%80%EF%BC%88DQL%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">数据 - 查询语言（DQL）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE-%E6%8E%A7%E5%88%B6%E8%AF%AD%E8%A8%80%EF%BC%88DCL%EF%BC%89"><span class="toc-number">2.4.</span> <span class="toc-text">数据 - 控制语言（DCL）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1-%E6%8E%A7%E5%88%B6%E8%AF%AD%E8%A8%80%EF%BC%88TCT%EF%BC%89"><span class="toc-number">2.5.</span> <span class="toc-text">事务 - 控制语言（TCT）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%A6%E6%9D%9F"><span class="toc-number">4.</span> <span class="toc-text">约束</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%83%E9%99%90-%E5%B8%B8%E8%A7%81%E6%9D%83%E9%99%90%E8%A1%A8"><span class="toc-number">5.</span> <span class="toc-text">权限 - 常见权限表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0-SQL%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E8%A1%A8"><span class="toc-number">6.</span> <span class="toc-text">函数 - SQL常用函数表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">7.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">8.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Tool-MySQL8-Command-Query/">← 下一篇 Tool | MySQL8 - 命令 - 查询手册</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Tool-MySQL8-Summary/">Tool | MySQL8 - 知识总结 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">语法命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE-%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80%EF%BC%88DDL%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">数据 - 定义语言（DDL）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE-%E6%93%8D%E4%BD%9C%E8%AF%AD%E8%A8%80%EF%BC%88DML%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">数据 - 操作语言（DML）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E8%A8%80%EF%BC%88DQL%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">数据 - 查询语言（DQL）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE-%E6%8E%A7%E5%88%B6%E8%AF%AD%E8%A8%80%EF%BC%88DCL%EF%BC%89"><span class="toc-number">2.4.</span> <span class="toc-text">数据 - 控制语言（DCL）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1-%E6%8E%A7%E5%88%B6%E8%AF%AD%E8%A8%80%EF%BC%88TCT%EF%BC%89"><span class="toc-number">2.5.</span> <span class="toc-text">事务 - 控制语言（TCT）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">3.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%A6%E6%9D%9F"><span class="toc-number">5.</span> <span class="toc-text">约束</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%83%E9%99%90-%E5%B8%B8%E8%A7%81%E6%9D%83%E9%99%90%E8%A1%A8"><span class="toc-number">6.</span> <span class="toc-text">权限 - 常见权限表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0-SQL%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E8%A1%A8"><span class="toc-number">7.</span> <span class="toc-text">聚合函数 - SQL常用函数表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">8.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">9.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
 lightGallery(document.getElementById('post-bg'), {
   plugins: [lgZoom,lgThumbnail],
   selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
