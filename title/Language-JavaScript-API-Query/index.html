@@ -26,14 +26,15 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | JavaScript - API - 查询手册</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-05-23T04:00:00.000Z" id="date"> 2024-05-23</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-24T17:06:04.798Z" id="updated"> 2024-06-25</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong></p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | JavaScript - API - 查询手册</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-05-23T04:00:00.000Z" id="date"> 2024-05-23</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-24T17:20:50.154Z" id="updated"> 2024-06-25</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong></p>
 <span id="more"></span>
 
 
 <h1 id="输出方式"><a href="#输出方式" class="headerlink" title="输出方式"></a>输出方式</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">/*写入到警告框，并弹出警告框*/</span><br><span class="hljs-variable language_">window</span>.<span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;内容&quot;</span>);<br><br><span class="hljs-comment">/*写入到HTML文件中，在页面中显示*/</span><br><span class="hljs-variable language_">document</span>.<span class="hljs-title function_">write</span>(<span class="hljs-string">&quot;要输出的内容&quot;</span>);<br><br><span class="hljs-comment">/*写入到浏览器的控制台上显示*/</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;内容&quot;</span>);<br><br><span class="hljs-comment">/*写入 HTML 元素*/</span><br>innerHTML;<br></code></pre></td></tr></table></figure>
 
 
-<h1 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h1><table>
+<h1 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h1><blockquote>
+<table>
 <thead>
 <tr>
 <th align="left">方法</th>
@@ -45,11 +46,13 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <td align="left">转换为<code>number</code>数字类型</td>
 </tr>
 </tbody></table>
+</blockquote>
 <p><strong>案例</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 转换为数字类型</span><br><span class="hljs-title function_">alert</span>(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&quot;12&quot;</span>));     <span class="hljs-comment">// 结果：12</span><br><span class="hljs-title function_">alert</span>(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&quot;12A45&quot;</span>));  <span class="hljs-comment">// 结果：12</span><br><span class="hljs-title function_">alert</span>(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&quot;A12&quot;</span>));    <span class="hljs-comment">// 结果：NAN</span><br></code></pre></td></tr></table></figure>
 
 
-<h1 id="Array数组"><a href="#Array数组" class="headerlink" title="Array数组"></a>Array数组</h1><table>
+<h1 id="Array数组"><a href="#Array数组" class="headerlink" title="Array数组"></a>Array数组</h1><blockquote>
+<table>
 <thead>
 <tr>
 <th align="left">属性</th>
@@ -61,8 +64,10 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <td align="left">获取数组的长度</td>
 </tr>
 </tbody></table>
+</blockquote>
 <br>
 
+<blockquote>
 <table>
 <thead>
 <tr>
@@ -87,7 +92,9 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <td align="left">删除元素</td>
 </tr>
 </tbody></table>
-<h1 id="String字符串"><a href="#String字符串" class="headerlink" title="String字符串"></a>String字符串</h1><table>
+</blockquote>
+<h1 id="String字符串"><a href="#String字符串" class="headerlink" title="String字符串"></a>String字符串</h1><blockquote>
+<table>
 <thead>
 <tr>
 <th align="left">属性</th>
@@ -99,8 +106,10 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <td align="left">获取字符串的长度</td>
 </tr>
 </tbody></table>
+</blockquote>
 <br>
 
+<blockquote>
 <table>
 <thead>
 <tr>
@@ -129,7 +138,9 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <td align="left">提取字符串中两个指定的索引号之间的字符</td>
 </tr>
 </tbody></table>
-<h1 id="JSON对象"><a href="#JSON对象" class="headerlink" title="JSON对象"></a>JSON对象</h1><table>
+</blockquote>
+<h1 id="JSON对象"><a href="#JSON对象" class="headerlink" title="JSON对象"></a>JSON对象</h1><blockquote>
+<table>
 <thead>
 <tr>
 <th align="left">方法</th>
@@ -145,7 +156,9 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <td align="left">将JS对象转换为JSON字符串</td>
 </tr>
 </tbody></table>
-<h1 id="Window浏览器窗口对象"><a href="#Window浏览器窗口对象" class="headerlink" title="Window浏览器窗口对象"></a>Window浏览器窗口对象</h1><table>
+</blockquote>
+<h1 id="Window浏览器窗口对象"><a href="#Window浏览器窗口对象" class="headerlink" title="Window浏览器窗口对象"></a>Window浏览器窗口对象</h1><blockquote>
+<table>
 <thead>
 <tr>
 <th align="left">属性</th>
@@ -169,8 +182,10 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <td align="left">对<strong>Navigator浏览器对象</strong>的只读引用</td>
 </tr>
 </tbody></table>
+</blockquote>
 <br>
 
+<blockquote>
 <table>
 <thead>
 <tr>
@@ -200,7 +215,9 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <td align="left">延迟器，在指定的毫秒数后调用一次函数或计算表达式</td>
 </tr>
 </tbody></table>
-<h1 id="DOM文档对象模型"><a href="#DOM文档对象模型" class="headerlink" title="DOM文档对象模型"></a>DOM文档对象模型</h1><h2 id="获取"><a href="#获取" class="headerlink" title="获取"></a>获取</h2><table>
+</blockquote>
+<h1 id="DOM文档对象模型"><a href="#DOM文档对象模型" class="headerlink" title="DOM文档对象模型"></a>DOM文档对象模型</h1><h2 id="获取"><a href="#获取" class="headerlink" title="获取"></a>获取</h2><blockquote>
+<table>
 <thead>
 <tr>
 <th align="left">方法</th>
@@ -229,7 +246,9 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <td align="left">根据“标签的name属性值”获取</td>
 </tr>
 </tbody></table>
-<h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><table>
+</blockquote>
+<h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><blockquote>
+<table>
 <thead>
 <tr>
 <th align="left">方法</th>
@@ -243,12 +262,54 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <td align="left">重新赋值，修改标签的内容</td>
 </tr>
 </tbody></table>
+</blockquote>
 <h1 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a>事件监听</h1><blockquote>
 <ul>
 <li>事件监听可以理解为比较特殊的修改元素属性值的操作。</li>
 </ul>
 </blockquote>
-<p>| 方法 | 说明 |<br>| :– | :-: | :– |<br>| <code>&lt;元素对象&gt;.onclick</code> | 鼠标点击 |<br>| <code>&lt;元素对象&gt;.onblur</code> | 元素失去焦点 |<br>| <code>&lt;元素对象&gt;.onfocus</code> | 元素获得焦点 |<br>| <code>&lt;元素对象&gt;.onload</code> | 某个页面或图像被完成加载 |<br>| <code>&lt;元素对象&gt;.onsubmit</code> | 当表单提交时出发该事件 |<br>| <code>&lt;元素对象&gt;.onkeydown</code> | 某个键盘的键被按下 |<br>| <code>&lt;元素对象&gt;.onmouseover</code> | 鼠标被移到某个元素上 |<br>| <code>&lt;元素对象&gt;.onmouseout</code> | 鼠标从某个元素上移开 |</p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>&lt;元素对象&gt;.onclick</code></td>
+<td align="center">鼠标点击</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;元素对象&gt;.onblur</code></td>
+<td align="center">元素失去焦点</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;元素对象&gt;.onfocus</code></td>
+<td align="center">元素获得焦点</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;元素对象&gt;.onload</code></td>
+<td align="center">某个页面或图像被完成加载</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;元素对象&gt;.onsubmit</code></td>
+<td align="center">当表单提交时出发该事件</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;元素对象&gt;.onkeydown</code></td>
+<td align="center">某个键盘的键被按下</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;元素对象&gt;.onmouseover</code></td>
+<td align="center">鼠标被移到某个元素上</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;元素对象&gt;.onmouseout</code></td>
+<td align="center">鼠标从某个元素上移开</td>
+</tr>
+</tbody></table>
+</blockquote>
 <h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><blockquote>
 <ul>
 <li>属性 &#x3D;&#x3D; 对象的成员变量</li>
