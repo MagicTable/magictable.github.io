@@ -26,14 +26,57 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | 设计模式 - DAO分层设计思想</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-06-25T13:31:04.000Z" id="date"> 2024-06-25</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-25T13:48:50.552Z" id="updated"> 2024-06-25</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong></p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | 设计模式 - DAO分层设计思想</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-06-25T13:31:04.000Z" id="date"> 2024-06-25</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-25T16:22:03.341Z" id="updated"> 2024-06-26</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong></p>
 <span id="more"></span>
 
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt">____前台业务层____|____后台业务层____|<br>________________|_________________|<br>显示层 -&gt; 控制层 -&gt; 业务层 -&gt; 数据层 -&gt; 数据库<br></code></pre></td></tr></table></figure>
 
-<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><p>暂无</p>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt">____前台业务层____|____后台业务层____|<br>________________|_________________|<br>显示层 -&gt; 控制层 -&gt; 业务层 -&gt; 数据层 -&gt; 数据库<br></code></pre></td></tr></table></figure>
+
+<p>业务层：业务对象（Business Object，BO），又称服务层（Servce），核心目的是调用多个数据层的操作以完成整体的项目的业务设计。</p>
+<p>数据层：数据访问层（Data Access Object，DAO），专门进行数据库原子性操作，控制JDBC中的PreparedStatement接口的使用。</p>
+<p>数据库连接类（DatabaseConnection）：主要负责取得数据库的连接和关闭<br><code>public getConnection()</code><br><code>public getConnection()</code><br><code>public close()</code></p>
+<h1 id="规范要求"><a href="#规范要求" class="headerlink" title="规范要求"></a>规范要求</h1><p>在实际的工作之中，针对与简单java类的开发给出如下的要求：</p>
+<ol>
+<li>考虑到日后程序有可能出现的分布式应用问题，因此简单java类必须要实现<code>java.io.Serializable</code>接口。</li>
+<li>简单java类的名称必须与表名称保持一致。</li>
+</ol>
+<ul>
+<li>例如：表名是user，则类名称为User。</li>
+</ul>
+<ol start="3">
+<li>类中的属性不允许使用基本数据类型，都必须使用基本数据类型的包装类。</li>
+</ol>
+<ul>
+<li>基本数据类型的数值默认值是<code>0</code>,而包装类的默认值是<code>null</code>。</li>
+</ul>
+<ol start="4">
+<li>类中的属性必须使用<code>private</code>关键字进行封装，封装后的属性必须提供有<code>getter</code>和<code>setter</code>方法。</li>
+<li>类中可以定义有多个构造方法，但必须保留有一个无参构造方法。</li>
+</ol>
+<p>对于数据层的接口给出如下的开发要求：</p>
+<ol>
+<li>数据层用于操作数据，因此需要将代码保存到dao包目录下。</li>
+<li>不同的数据表的操作有可能使用不同的数据层开发，因此数据层的文件名要针对于数据表进行命名。</li>
+</ol>
+<ul>
+<li>例如：user表，数据层的接口应该命名为<code>IUserDAO</code>。</li>
+</ul>
+<ol start="3">
+<li>对于整个数据层的开发严格来讲就只有两类功能：数据更新、数据查询。</li>
+</ol>
+<ul>
+<li>数据更新：该类方法要以<code>do</code>开头的形式命名，如：doUpdate()、doUser()。</li>
+<li>查询表中数据：该类方法要以<code>find</code>开头的形式命名，如：findById()、findByName()、findAll()。</li>
+<li>统计表中数据：该类方法要以<code>get</code>开头的形式命名，如：getAllCount()、</li>
+</ul>
+<p>定义IEmpDAO接口</p>
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><blockquote>
+<ul>
+<li>参考视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1e4411S7sE?p=1&vd_source=262edcbbd8e80915a7dff074a0e165a1">Blibili - UP时钟回拨 - 《Java核心设计模式 DAO设计模式》</a></li>
+</ul>
+</blockquote>
 <h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
-<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-DesignPattern-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">Language | 设计模式 - 策略模式 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">1.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">2.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-DesignPattern-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">Language | 设计模式 - 策略模式 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%84%E8%8C%83%E8%A6%81%E6%B1%82"><span class="toc-number">2.</span> <span class="toc-text">规范要求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">3.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">4.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
 lightGallery(document.getElementById('post-bg'), {
   plugins: [lgZoom,lgThumbnail],
   selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
