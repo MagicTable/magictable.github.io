@@ -26,7 +26,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | SQL - 命令 - 查询手册</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-04-19T16:01:00.000Z" id="date"> 2024-04-20</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-25T13:21:56.140Z" id="updated"> 2024-06-25</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 已完成<br><strong>摘要：</strong> SQL关系型数据库查询语言的命令格式总结。</p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | SQL - 命令 - 查询手册</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-04-19T16:01:00.000Z" id="date"> 2024-04-20</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-26T17:57:25.291Z" id="updated"> 2024-06-27</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 已完成<br><strong>摘要：</strong> SQL关系型数据库查询语言的命令格式总结。</p>
 <ul>
 <li>提示：命令不区分大小写。<span id="more"></span></li>
 </ul>
@@ -232,12 +232,41 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 
 <h1 id="事务-控制语言（TCT）"><a href="#事务-控制语言（TCT）" class="headerlink" title="事务 - 控制语言（TCT）"></a>事务 - 控制语言（TCT）</h1><blockquote>
 <ul>
-<li>用于控制SQL执行的提交和回滚。</li>
 <li>事务是一组操作的集合，是一个不可分割的工作单位。</li>
+<li>事务是一个抽象的<strong>对象</strong>在<strong>监听</strong>对数据库做的任何操作。</li>
 <li>事务会把所有的操作作为一个整体一起向系统提交或撤销操作请求，即这些操作要么同时成功，要么同时失败。</li>
 </ul>
 </blockquote>
-<p>开启事务：<code>start transaction; / begin;</code><br>提交事务：<code>commit;</code><br>回滚事务：<code>rollback;</code></p>
+<blockquote>
+<p>开启事务</p>
+<ul>
+<li><ul>
+<li>开启一个事务（对象）,建立一个新存档。为操作的表上加锁，防止其他用户修改该表。</li>
+</ul>
+</li>
+<li><code>START TRANSACTION;</code></li>
+</ul>
+<p>保存点</p>
+<ul>
+<li>用于保存一个中间存档。可以有多个中间存档。</li>
+<li><code>SAVEPOINT &lt;保存点名称&gt;;</code></li>
+</ul>
+<p>回滚保存点</p>
+<ul>
+<li>用于回退到上一个中间存档。</li>
+<li><code>ROLLBACK TO &lt;保存点名称&gt;;</code></li>
+</ul>
+<p>提交事务</p>
+<ul>
+<li>保存数据、删除中间存档&#x2F;历史记录。释放锁、关闭事务。</li>
+<li><code>COMMIT;</code></li>
+</ul>
+<p>回滚事务：<code>rollback;</code></p>
+<ul>
+<li>撤回全部操作、回到原始存档。释放锁、关闭事务。</li>
+<li><code>ROLLBACK;</code></li>
+</ul>
+</blockquote>
 <h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><blockquote>
 <ul>
 <li>索引（index）是一种数据结构。</li>

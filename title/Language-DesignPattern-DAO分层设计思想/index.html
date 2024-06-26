@@ -26,7 +26,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | 设计模式 - DAO分层设计思想</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-06-25T13:31:04.000Z" id="date"> 2024-06-25</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-25T16:22:03.341Z" id="updated"> 2024-06-26</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong></p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | 设计模式 - DAO分层设计思想</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-06-25T13:31:04.000Z" id="date"> 2024-06-25</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-06-26T17:59:00.302Z" id="updated"> 2024-06-27</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> 编写中<br><strong>摘要：</strong></p>
 <span id="more"></span>
 
 
@@ -34,7 +34,10 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 
 <p>业务层：业务对象（Business Object，BO），又称服务层（Servce），核心目的是调用多个数据层的操作以完成整体的项目的业务设计。</p>
 <p>数据层：数据访问层（Data Access Object，DAO），专门进行数据库原子性操作，控制JDBC中的PreparedStatement接口的使用。</p>
-<p>数据库连接类（DatabaseConnection）：主要负责取得数据库的连接和关闭<br><code>public getConnection()</code><br><code>public getConnection()</code><br><code>public close()</code></p>
+<p>工具层：</p>
+<ul>
+<li>数据库连接类（DatabaseConnection）：主要负责取得数据库的连接和关闭</li>
+</ul>
 <h1 id="规范要求"><a href="#规范要求" class="headerlink" title="规范要求"></a>规范要求</h1><p>在实际的工作之中，针对与简单java类的开发给出如下的要求：</p>
 <ol>
 <li>考虑到日后程序有可能出现的分布式应用问题，因此简单java类必须要实现<code>java.io.Serializable</code>接口。</li>
@@ -69,7 +72,6 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <li>查询表中数据：该类方法要以<code>find</code>开头的形式命名，如：findById()、findByName()、findAll()。</li>
 <li>统计表中数据：该类方法要以<code>get</code>开头的形式命名，如：getAllCount()、</li>
 </ul>
-<p>定义IEmpDAO接口</p>
 <h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><blockquote>
 <ul>
 <li>参考视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1e4411S7sE?p=1&vd_source=262edcbbd8e80915a7dff074a0e165a1">Blibili - UP时钟回拨 - 《Java核心设计模式 DAO设计模式》</a></li>
