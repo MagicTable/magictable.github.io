@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AI | 项目 - Agent智能体 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>AI | 项目 - Agent智能体</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-08-11T16:00:00.000Z" id="date"> 2023-08-12</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-07-11T12:16:07.549Z" id="updated"> 2024-07-11</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]<br><strong>文章摘要：</strong> 与AI相关的、流行的、优秀的论文进行总结。</p>
+<span id="more"></span>
+
+
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>以LLM（大型语言模型）为核心控制器构建智能体<br>Agent的核心决策逻辑是让LLM根据动态变化的环境信息选择执行具体的行动或者对结果作出判断，并影响环境，通过多轮迭代重复执行上述步骤，直到完成目标。</p>
+<p>精简的决策流程：P（感知）→ P（规划）→ A（行动）</p>
+<ol>
+<li>感知（Perception）是指Agent从环境中收集信息并从中提取相关知识的能力。</li>
+<li>规划（Planning）是指Agent为了某一目标而作出的决策过程。</li>
+<li>行动（Action）是指基于环境和规划做出的动作</li>
+</ol>
+<p>工程实现上可以拆分出四大块核心模块：推理、记忆、工具、行动</p>
+<blockquote>
+<p class='item-img' data-src='/../assets/image/AI/agent%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png'><img src="/../assets/image/AI/agent%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png" alt="agent核心模块思维导图"></p>
+</blockquote>
+<p>任务拆解、思维链、提示词、长短期记忆、自注意力机制、工具、RAG知识库检索的提示此增强技术、大模型</p>
+<h1 id="Planning-规划"><a href="#Planning-规划" class="headerlink" title="Planning 规划"></a>Planning 规划</h1><p><strong>Task Decomposition 任务分解</strong></p>
+<p>子目标和分解：智能体将大型任务分解为更小的、可管理的子目标，从而能够高效处理复杂任务。</p>
+<blockquote>
+<ul>
+<li>思维链（CoT; Wei et al. 2022）已成为提高复杂任务模型性能的标准提示技术。该模型被指示“一步一步地思考”，以利用更多的测试时计算将困难的任务分解为更小、更简单的步骤。CoT 将大型任务转换为多个可管理的任务，并阐明了对模型思维过程的解释。</li>
+<li>Tree of Thoughts （ToT; Yao et al. 2023） 通过在每一步探索多种推理可能性来扩展 CoT。它首先将问题分解为多个思维步骤，并在每个步骤中生成多个思维，从而创建树状结构。搜索过程可以是 BFS（广度优先搜索）或 DFS（深度优先搜索），每个状态都由分类器（通过提示）或多数投票进行评估。</li>
+<li>LLM+P（Liu et al. 2023），涉及依靠外部经典规划师进行长期规划。此方法利用规划域定义语言 （PDDL） 作为中间接口来描述规划问题。在这个过程中， LLM （1）将问题翻译成“问题PDDL”，然后（2）请求经典规划器基于现有的“领域PDDL”生成PDDL计划，最后（3）将PDDL计划翻译回自然语言。从本质上讲，规划步骤被外包给外部工具，假设有特定领域的PDDL和合适的规划器，这在某些机器人设置中很常见，但在许多其他领域中并不常见。</li>
+</ul>
+</blockquote>
+<p><strong>Self-Reflection 自我反省</strong></p>
+<p>反思和完善：智能体可以对过去的行为进行自我批评和自我反思，从错误中吸取教训，并为未来的步骤进行改进，从而提高最终结果的质量。</p>
+<blockquote>
+<ul>
+<li>允许自主代理通过完善过去的行动决策和纠正以前的错误来迭代改进。它在不可避免的试错任务中起着至关重要的作用。</li>
+<li>ReAct（ Yao et al. 2023）通过将行动空间扩展为特定任务的离散行动和语言空间的组合，将推理和行动整合在一起LLM。前者能够LLM与环境进行交互（例如使用维基百科搜索 API），而后者则提示LLM以自然语言生成推理痕迹。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>Reflexion （ Shinn &amp; Labash 2023） 是一个框架，旨在为智能体提供动态记忆和自我反思能力，以提高推理能力。Reflexion 有一个标准的 RL 设置，其中奖励模型提供简单的二元奖励，操作空间遵循 ReAct 中的设置，其中特定于任务的动作空间通过语言进行增强，以实现复杂的推理步骤。在每次操作 之后，代理会计算一个启发式方法 ，并可选择根据自反射结果决定重置环境以开始新的试验。</li>
+</ul>
+</blockquote>
+<h1 id="Memory-记忆"><a href="#Memory-记忆" class="headerlink" title="Memory 记忆"></a>Memory 记忆</h1><p><strong>Sensory Memory 感觉记忆</strong></p>
+<p>感觉记忆：这是记忆的最早阶段，提供在原始刺激结束后保留感官信息（视觉、听觉等）印象的能力。感觉记忆通常最多只能持续几秒钟。子类别包括标志性记忆（视觉）、回声记忆（听觉）和触觉记忆（触摸）。</p>
+<p><strong>Short-Term Memory 短期记忆</strong></p>
+<p>短期记忆：所有的情境学习（参见提示工程）都是利用模型的短期记忆来学习的。</p>
+<p><strong>Long-Term Memory 长期记忆</strong></p>
+<p>长期记忆：为智能体提供了在较长时间内保留和调用（无限）信息的能力，通常是通过利用外部向量存储和快速检索。</p>
+<blockquote>
+<ul>
+<li>显性&#x2F;陈述性记忆：这是对事实和事件的记忆，指的是那些可以有意识地回忆起的记忆，包括情景记忆（事件和经验）和语义记忆（事实和概念）</li>
+<li>内隐&#x2F;程序性记忆：这种类型的记忆是无意识的，涉及自动执行的技能和例程，例如骑自行车或在键盘上打字。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>我们可以粗略地考虑以下映射：</p>
+<ul>
+<li>感觉记忆作为原始输入（包括文本、图像或其他模态）的学习嵌入表示。</li>
+<li>短期记忆作为情境学习。它是短而有限的，因为它受到 Transformer 的有限上下文窗口长度的限制。</li>
+<li>长期内存作为外部向量存储，代理可以在查询时处理，可通过快速检索访问。</li>
+</ul>
+</blockquote>
+<h1 id="Tool-use-工具使用"><a href="#Tool-use-工具使用" class="headerlink" title="Tool use 工具使用"></a>Tool use 工具使用</h1><blockquote>
+<ul>
+<li>智能体学习调用外部 API 以获取模型权重中缺少的额外信息（在预训练后通常很难更改），包括当前信息、代码执行能力、对专有信息源的访问等。</li>
+</ul>
+</blockquote>
+<hr>
+<p>任何通过传感器（sensor）感知环境（environment）并通过执行器（actuator）作用于该环境的事物都可以被视为智能体（agent）。</p>
+<p>人类有自己的欲望和偏好，因此人类有适用于自身的理性概念，这一概念与成功地选择产生环境状态序列的行动有关。</p>
+<p>理性，取决于以下4方面：</p>
+<ul>
+<li>定义成功标准的性能度量。</li>
+<li>智能体对环境的先验知识。</li>
+<li>智能体可以执行的动作。</li>
+<li>智能体目前为止的感知序列。</li>
+</ul>
+<p>理性智能体的定义：对于每个可能的感知序列，给定感知序列提供的证据和智能体所拥有的任何先验知识，理性智能体应该选择一个期望最大化其性能度量的动作。</p>
+<p>如果说某种程度上，智能体依赖于其设计者的先验知识，而不是其自身的感知和学习过程，我们就说该智能体缺乏自主性（autonomy）。</p>
+<p>人工智能的工作是设计一个智能体程序（agent program）实现智能体函数，即从感知到动作的映射。假设该程序将运行在某种具有物理传感器和执行器的计算设备上，我们称之为智能体架构（agent architecture）。</p>
+<ul>
+<li>智能体 &#x3D; 架构 + 程序</li>
+</ul>
+<p>简单反射型智能体：<br>基于模型的反射型智能体：智能体能够在传感器受限的情况下尽可能地跟踪世界的状态。（预测世界的变化）<br>基于目标的智能体：基于模型、基于目标的智能体，追踪世界状态以及试图实现的一系列目标，并选择一项最终能够实现目标的动作。<br>基于效用的智能体：</p>
+<p>智能体和环境</p>
+<p>良好行为：理性的概念</p>
+<p>环境的本质</p>
+<p>智能体的结构</p>
+<h1 id="单智能体与多智能体"><a href="#单智能体与多智能体" class="headerlink" title="单智能体与多智能体"></a>单智能体与多智能体</h1><blockquote>
+<ul>
+<li>单Agent系统主要是指一个具有自主性、交互性、协同性和智能性的软件实体，它能在目标的驱动下对环境的变化作出主动的反应，完成特定的任务。</li>
+<li>单Agent系统的优点在于其结构相对简单，易于实现和控制。由于只有一个Agent，因此其内部状态的管理和决策过程相对直观和容易理解。</li>
+<li>单Agent系统的缺点在于其处理复杂问题的能力有限，</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>多Agent系统则是由多个Agent组成的系统，这些Agent相互通讯、彼此协调，共同完成作业任务。</li>
+<li>多Agent系统的优点在于其分布式和协作的特性，能够有效处理复杂的、分布式的问题。</li>
+<li>每个Agent可以专注于其特定领域的任务，通过协作和沟通来解决整个系统的问题。</li>
+<li>多Agent系统具有更好的灵活性和可扩展性，能够适应动态变化的环境。</li>
+<li>多Agent系统也面临着一些挑战，如协调多个Agent之间的行为、处理冲突和竞争资源等问题。</li>
+</ul>
+</blockquote>
+<p>从以下几个方面进行考虑：</p>
+<pre><code>- 任务复杂性：如果任务相对简单，只需要一个实体就能完成，那么单Agent系统可能更合适。相反，如果任务复杂，需要多个实体协作才能完成，那么多Agent系统可能更合适。
+- 环境动态性：在静态或变化不大的环境中，单Agent系统可能足以应对。而在动态变化的环境中，多Agent系统可能更能适应，因为它们可以通过相互作用和协作来响应环境的变化。
+- 资源可用性：单Agent系统通常需要较少的资源，而多Agent系统需要更多的资源来支持多个Agent之间的通信和协调。
+- 系统的可扩展性：如果预期系统需要扩展以处理更多的任务或更大的工作负载，那么多Agent系统通常更易于扩展，因为可以简单地添加更多的Agent。
+- 容错性和鲁棒性：多Agent系统通常更具有容错性，因为即使某个Agent失败，其他Agent可能仍能继续执行任务。而单Agent系统一旦出现故障，整个系统可能会瘫痪。
+- 开发成本和维护：单Agent系统可能在开发和维护上更为简单和便宜，因为它们涉及较少的实体和通信协议。多Agent系统可能需要更多的开发和维护工作，以管理多个Agent之间的相互作用。
+- 应用领域的特点：某些应用领域，如分布式控制系统、多机器人系统、智能交通系统等，本质上就是多Agent系统。在这些领域，多Agent系统可能是唯一合适的选择。
+</code></pre>
+<h1 id="agent常用框架"><a href="#agent常用框架" class="headerlink" title="agent常用框架"></a>agent常用框架</h1><p>XAgent<br><a href="https://link.zhihu.com/?target=https://github.com/OpenBMB/XAgent">https://link.zhihu.com/?target=https%3A//github.com/OpenBMB/XAgent</a></p>
+<p>HuggingGPT<br><a href="https://link.zhihu.com/?target=https://huggingface.co/spaces/microsoft/HuggingGPT">https://link.zhihu.com/?target=https%3A//huggingface.co/spaces/microsoft/HuggingGPT</a></p>
+<p>AutoGPT<br><a href="https://link.zhihu.com/?target=https://github.com/Significant-Gravitas/AutoGPT">https://link.zhihu.com/?target=https%3A//github.com/Significant-Gravitas/AutoGPT</a></p>
+<p>AutoGen<br><a href="https://link.zhihu.com/?target=https://github.com/microsoft/autogen">https://link.zhihu.com/?target=https%3A//github.com/microsoft/autogen</a></p>
+<p>ChatDev<br><a href="https://link.zhihu.com/?target=https://github.com/OpenBMB/ChatDev">https://link.zhihu.com/?target=https%3A//github.com/OpenBMB/ChatDev</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/677778544">探索基于大型语言模型的智能体：定义、方法与前景</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/682500336">AI专家的数据库新篇章：DB-GPT用LLM技术定义数据库下一代交互方式</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/675593415">LLM 支持的自主代理</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/677891205">Agent AI：多模态+智能体，跨模态交互综述 Part 1</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/677899464">Agent AI：多模态+智能体，跨模态交互综述 Part 2</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/677906946">Agent AI：多模态+智能体，跨模态交互综述 Part 3</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/678837173">SpeechAgents：多模态多智能体系统模拟人类交流</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/679078735">个人LLM助手——来自清华、小米、华为、Vivo、理想等多家机构的联合综述、划分5级智能水平</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/682248029">智能体如何实现人、环境和自身的统一协同，请看清华系的方案</a></p>
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><p>参考文章：</p>
+<blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://lilianweng.github.io/posts/2023-06-23-agent/">https://lilianweng.github.io/posts/2023-06-23-agent/</a></li>
+</ul>
+</blockquote>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Tool-Git/">← 下一篇 Tool | Git</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Tool-Miniconda-Command/">Tool | Miniconda - 命令 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Planning-%E8%A7%84%E5%88%92"><span class="toc-number">2.</span> <span class="toc-text">Planning 规划</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Memory-%E8%AE%B0%E5%BF%86"><span class="toc-number">3.</span> <span class="toc-text">Memory 记忆</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Tool-use-%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">Tool use 工具使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%95%E6%99%BA%E8%83%BD%E4%BD%93%E4%B8%8E%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93"><span class="toc-number">5.</span> <span class="toc-text">单智能体与多智能体</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#agent%E5%B8%B8%E7%94%A8%E6%A1%86%E6%9E%B6"><span class="toc-number">6.</span> <span class="toc-text">agent常用框架</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">7.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">8.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>

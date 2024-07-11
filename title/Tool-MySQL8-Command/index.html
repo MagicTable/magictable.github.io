@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tool | MySQL8 - 命令 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Tool | MySQL8 - 命令</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-04-19T16:01:00.000Z" id="date"> 2024-04-20</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-07-11T11:51:39.316Z" id="updated"> 2024-07-11</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<strong>已完成</strong>、<del><em>待完善</em></del>、<del><em>编写中</em></del>]<br><strong>文章摘要：</strong> MySQL数据库管理软件的命令总结。</p>
+<span id="more"></span>
+
+
+<h1 id="未登陆数据库时的命令"><a href="#未登陆数据库时的命令" class="headerlink" title="未登陆数据库时的命令"></a>未登陆数据库时的命令</h1><h2 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 简称写法：mysql -V</span><br>mysql --version<br></code></pre></td></tr></table></figure>
+
+<h2 id="启动MySQL服务"><a href="#启动MySQL服务" class="headerlink" title="启动MySQL服务"></a>启动MySQL服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># Linux系统命令</span><br>sudo systemctl start mysql<br><br><span class="hljs-comment">#  Windows系统命令（以管理员身份运行）</span><br><span class="hljs-comment"># 提示：服务名称可能因安装方式和版本而异（例如：MySQL80）</span><br>net start &lt;服务名称&gt;<br></code></pre></td></tr></table></figure>
+
+<h2 id="停止MySQL服务"><a href="#停止MySQL服务" class="headerlink" title="停止MySQL服务"></a>停止MySQL服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># Linux系统命令</span><br>sudo systemctl stop mysql<br><br><span class="hljs-comment">#  Windows系统命令（以管理员身份运行）</span><br><span class="hljs-comment"># 提示：服务名称可能因安装方式和版本而异（例如：MySQL80）</span><br>net stop <span class="hljs-string">&quot;&lt;服务名称&gt;&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="重启MySQL服务"><a href="#重启MySQL服务" class="headerlink" title="重启MySQL服务"></a>重启MySQL服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># Linux系统命令</span><br>sudo systemctl restart mysql<br><br><span class="hljs-comment"># Windows系统命令（暂无）</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="查看MySQL运行状态"><a href="#查看MySQL运行状态" class="headerlink" title="查看MySQL运行状态"></a>查看MySQL运行状态</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># Linux系统命令</span><br>sudo systemctl status mysql<br><span class="hljs-comment">#  Windows系统命令（以管理员身份运行）</span><br><span class="hljs-comment"># 提示：服务名称可能因安装方式和版本而异（例如：MySQL80）</span><br><span class="hljs-comment"># 讲解：`start`获列出所有正在运行的服务，通过管道`|`符号附加命令，`findstr`筛选满足条件的服务名称。</span><br>net start | findstr <span class="hljs-string">&quot;&lt;服务名称&gt;&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="客户端连接MySQL"><a href="#客户端连接MySQL" class="headerlink" title="客户端连接MySQL"></a>客户端连接MySQL</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># `-h`：要连接的计算机IP地址</span><br><span class="hljs-comment"># `-P`：（大写P）目标电脑上运行的数据库管理软件的运行端口号</span><br><span class="hljs-comment"># `-u`：用户名</span><br><span class="hljs-comment"># `-p`：（小写p）密码</span><br><br><span class="hljs-comment"># 方案一：本机登入方案</span><br>mysql -u &lt;用户名&gt; -p<br><br><span class="hljs-comment"># 方案二：通过IP地址来登入方案</span><br>mysql -h &lt;目标IP地址&gt; -P &lt;数据库服务的端口号&gt; -u &lt;用户名&gt; -p<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="已登录数据库时的命令"><a href="#已登录数据库时的命令" class="headerlink" title="已登录数据库时的命令"></a>已登录数据库时的命令</h1><blockquote>
+<ul>
+<li>提示：以下所有命令都必须位于第一行，并以<code>;</code>结尾。</li>
+</ul>
+</blockquote>
+<p>退出MySQL</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 写法一</span><br>exit;<br><span class="hljs-comment">-- 写法二，简称：`\q;`</span><br>quit;<br></code></pre></td></tr></table></figure>
+
+<p>重新连接到服务器（可选参数为db和host）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\r;`</span><br><span class="hljs-keyword">connect</span>;<br></code></pre></td></tr></table></figure>
+
+<p>帮助</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 写法一，简称：`\h;`</span><br>help;<br><span class="hljs-comment">-- 写法二</span><br>?;<br><span class="hljs-comment">-- 写法三</span><br>\?;<br></code></pre></td></tr></table></figure>
+
+<p>清空当前输入语句（不是清空命令行页面）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\c;`</span><br>clear;<br></code></pre></td></tr></table></figure>
+
+<p>设置语句分隔符</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\d;`</span><br>delimiter;<br></code></pre></td></tr></table></figure>
+
+<p>使用$EDITOR编辑命令</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\e;`</span><br>edit;<br></code></pre></td></tr></table></figure>
+
+<p>向MySQL服务器发送命令，垂直显示结果</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\G;`</span><br>ego;<br></code></pre></td></tr></table></figure>
+
+<p>将命令发送到MySQL服务器</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\g;`</span><br>go;<br></code></pre></td></tr></table></figure>
+
+<p>禁止寻呼机，打印到stdout</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\n;`</span><br>nopage;<br></code></pre></td></tr></table></figure>
+
+<p>不要写入outfile</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\t;`</span><br>notee;<br></code></pre></td></tr></table></figure>
+
+<p>设置PAGER[to_pager]，通过PAGER打印查询结果</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\P;`</span><br>pager;<br></code></pre></td></tr></table></figure>
+
+<p>打印当前命令</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\p;`</span><br>print;<br></code></pre></td></tr></table></figure>
+
+<p>更改MySQL提示</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\R;`</span><br>prompt;<br></code></pre></td></tr></table></figure>
+
+<p>重新生成完成hash</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\#;`</span><br>rehash;<br></code></pre></td></tr></table></figure>
+
+<p>执行SQL脚本文件（将文件名作为参数）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\.;`</span><br>source;<br></code></pre></td></tr></table></figure>
+
+<p>从服务器获取状态信息</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\s;`</span><br>status;<br></code></pre></td></tr></table></figure>
+
+<p>执行系统shell命令</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\!;`</span><br><span class="hljs-keyword">system</span>;<br></code></pre></td></tr></table></figure>
+
+<p>设置outfile[to_outfile]，将说有内容附加到给定的outfile中</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\T;`</span><br>tee;<br></code></pre></td></tr></table></figure>
+
+<p>使用其他数据库，将数据库名作为参数</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\u;`</span><br>use;<br></code></pre></td></tr></table></figure>
+
+<p>切换到另一个字符集，可能需要处理具有多字节字符集的binlog</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\C;`</span><br>charset;<br></code></pre></td></tr></table></figure>
+
+<p>在每条语句后显示警告</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\W;`</span><br>warnings;<br></code></pre></td></tr></table></figure>
+
+<p>不要在每条语句后面都显示警告</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\w;`</span><br>nowarning;<br></code></pre></td></tr></table></figure>
+
+<p>清除会话上下文</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 简称：`\x;`</span><br>resetconnection;<br></code></pre></td></tr></table></figure>
+
+<p>为下一个要提取的查询设置字符串参数（名称1值1名称2值2…）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">query_attributes;<br></code></pre></td></tr></table></figure>
+
+<p>将当前SSL会话数据序列化到stdout或文件</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">ssl_session_data_print;<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><blockquote>
+<ul>
+<li>请重点关注分清<strong>MySQL命令</strong>和<strong>SQL结构化查询语言的语法</strong>的区分。</li>
+<li>请认真记录MySQL数据库管理软件的<code>root</code>用户名和密码。</li>
+<li>提示：在命令中会以空格为分割，若一个名字出现空格，可以将其用英文引号<code>&quot; &quot;</code>包裹起来，形成一个整体看待。</li>
+<li>成功连接进入数据库后，命令格式将有所变化：（所有文本命令都必须位于第一行，并以<code>;</code>结尾）</li>
+</ul>
+</blockquote>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><blockquote>
+<ul>
+<li>MySQL知识总结：<a href="/title/Tool-MySQL8/" title="Tool | MySQL8">Tool | MySQL8</a></li>
+<li>SQL知识总结：<a href="/title/Language-SQL/" title="Language | SQL">Language | SQL</a></li>
+</ul>
+</blockquote>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Language-SQL-Command/">← 下一篇 Language | SQL - 命令</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-SQL/">Language | SQL 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AA%E7%99%BB%E9%99%86%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">未登陆数据库时的命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%89%88%E6%9C%AC"><span class="toc-number">1.1.</span> <span class="toc-text">查看版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8MySQL%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.2.</span> <span class="toc-text">启动MySQL服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%9C%E6%AD%A2MySQL%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.3.</span> <span class="toc-text">停止MySQL服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%90%AFMySQL%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.4.</span> <span class="toc-text">重启MySQL服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8BMySQL%E8%BF%90%E8%A1%8C%E7%8A%B6%E6%80%81"><span class="toc-number">1.5.</span> <span class="toc-text">查看MySQL运行状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BF%9E%E6%8E%A5MySQL"><span class="toc-number">1.6.</span> <span class="toc-text">客户端连接MySQL</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%B2%E7%99%BB%E5%BD%95%E6%95%B0%E6%8D%AE%E5%BA%93%E6%97%B6%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">已登录数据库时的命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">3.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">4.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>

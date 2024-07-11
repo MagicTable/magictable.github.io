@@ -1,0 +1,423 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Language | Python3 - 内置函数 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | Python3 - 内置函数</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-08-09T20:00:01.000Z" id="date"> 2023-08-10</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-07-11T11:18:21.181Z" id="updated"> 2024-07-11</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<strong>待完善</strong>、<del><em>编写中</em></del>]<br><strong>文章摘要：</strong> 内置函数是python解释器在编写代码时自动导入的一些功能代码模块（即函数或方法），无需导入即可直接使用。</p>
+<ul>
+<li>共有69个内置函数。<span id="more"></span></li>
+</ul>
+<p><strong>总览</strong></p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">abs()</td>
+<td align="left">delattr()</td>
+<td align="left">hash()</td>
+<td align="left">memoryview()</td>
+<td align="left">set()</td>
+</tr>
+<tr>
+<td align="left">all()</td>
+<td align="left">dict()</td>
+<td align="left">help()</td>
+<td align="left">min()</td>
+<td align="left">setattr()</td>
+</tr>
+<tr>
+<td align="left">any()</td>
+<td align="left">dir()</td>
+<td align="left">hex()</td>
+<td align="left">next()</td>
+<td align="left">slice()</td>
+</tr>
+<tr>
+<td align="left">ascii()</td>
+<td align="left">divmod()</td>
+<td align="left">id()</td>
+<td align="left">object()</td>
+<td align="left">sorted()</td>
+</tr>
+<tr>
+<td align="left">bin()</td>
+<td align="left">enumerate()</td>
+<td align="left">input()</td>
+<td align="left">oct()</td>
+<td align="left">staticmethod()</td>
+</tr>
+<tr>
+<td align="left">bool()</td>
+<td align="left">eval()</td>
+<td align="left">int()</td>
+<td align="left">open()</td>
+<td align="left">str()</td>
+</tr>
+<tr>
+<td align="left">breakpoint()</td>
+<td align="left">exec()</td>
+<td align="left">isinstance()</td>
+<td align="left">ord()</td>
+<td align="left">sum()</td>
+</tr>
+<tr>
+<td align="left">bytearray()</td>
+<td align="left">filter()</td>
+<td align="left">issubclass()</td>
+<td align="left">pow()</td>
+<td align="left">super()</td>
+</tr>
+<tr>
+<td align="left">bytes()</td>
+<td align="left">float()</td>
+<td align="left">iter()</td>
+<td align="left">print()</td>
+<td align="left">tuple()</td>
+</tr>
+<tr>
+<td align="left">callable()</td>
+<td align="left">format()</td>
+<td align="left">len()</td>
+<td align="left">property()</td>
+<td align="left">type()</td>
+</tr>
+<tr>
+<td align="left">chr()</td>
+<td align="left">frozenset()</td>
+<td align="left">list()</td>
+<td align="left">range()</td>
+<td align="left">vars()</td>
+</tr>
+<tr>
+<td align="left">classmethod()</td>
+<td align="left">getattr()</td>
+<td align="left">locals()</td>
+<td align="left">repr()</td>
+<td align="left">zip()</td>
+</tr>
+<tr>
+<td align="left">compile()</td>
+<td align="left">globals()</td>
+<td align="left">map()</td>
+<td align="left">reversed()</td>
+<td align="left">__import__()</td>
+</tr>
+<tr>
+<td align="left">complex()</td>
+<td align="left">hasattr()</td>
+<td align="left">max()</td>
+<td align="left">round()</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+</blockquote>
+<p><strong>整数类型相关</strong></p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">内置函数名</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">abs(x)</td>
+<td align="left">将数值对象x转换成绝对值</td>
+</tr>
+<tr>
+<td align="left">pow(x,y)</td>
+<td align="left">输出x的y次方，求幂（指数）运算</td>
+</tr>
+<tr>
+<td align="left">int(x)</td>
+<td align="left">将x转换成整数</td>
+</tr>
+<tr>
+<td align="left">float(x)</td>
+<td align="left">将x转换成浮点数</td>
+</tr>
+<tr>
+<td align="left">complex(re,im)</td>
+<td align="left">输出一个带有实部re和虚部im的复数</td>
+</tr>
+<tr>
+<td align="left">round(x[,n])</td>
+<td align="left">x舍入到n位小数，半数值会舍入到偶数</td>
+</tr>
+</tbody></table>
+</blockquote>
+<p><strong>序列类型</strong></p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">内置函数名</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">len(s)</td>
+<td align="left">获取对象s所拥有的元素个数</td>
+</tr>
+<tr>
+<td align="left">min(s)</td>
+<td align="left">获取对象s的最小的元素</td>
+</tr>
+<tr>
+<td align="left">max(s)</td>
+<td align="left">获取对象s的最大的元素</td>
+</tr>
+<tr>
+<td align="left">s.count(s)</td>
+<td align="left">获取x在对象s中出现的总次数</td>
+</tr>
+<tr>
+<td align="left">s.index(x[,i[,j]])</td>
+<td align="left">获取x在对象s首次出现的元素索引号（索引号在i到j区间之内）</td>
+</tr>
+<tr>
+<td align="left">s.sort(key&#x3D;None,reverse&#x3D;False)</td>
+<td align="left">排序，key的参数str.lower是全部字母小写，reverse是默认增序排序</td>
+</tr>
+<tr>
+<td align="left">s1&#x3D;s.copy()</td>
+<td align="left">创建对象s的硬拷贝赋值给s1，等同于（s[:]）（创建重新赋值变量）</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="abs"><a href="#abs" class="headerlink" title="abs()"></a>abs()</h1><blockquote>
+<p>返回数的绝对值</p>
+</blockquote>
+<h1 id="all"><a href="#all" class="headerlink" title="all()"></a>all()</h1><blockquote>
+<p>如果可迭代对象中的所有项均为 true，则返回 True。</p>
+</blockquote>
+<h1 id="any"><a href="#any" class="headerlink" title="any()"></a>any()</h1><blockquote>
+<p>如果可迭代对象中的任何项为 true，则返回 True。</p>
+</blockquote>
+<h1 id="ascii"><a href="#ascii" class="headerlink" title="ascii()"></a>ascii()</h1><blockquote>
+<p>返回对象的可读版本。用转义字符替换 none-ascii 字符。</p>
+</blockquote>
+<h1 id="bin"><a href="#bin" class="headerlink" title="bin()"></a>bin()</h1><blockquote>
+<p>返回数的二进制版本。</p>
+</blockquote>
+<h1 id="bool"><a href="#bool" class="headerlink" title="bool()"></a>bool()</h1><blockquote>
+<p>返回指定对象的布尔值。</p>
+</blockquote>
+<h1 id="breakpoint"><a href="#breakpoint" class="headerlink" title="breakpoint()"></a>breakpoint()</h1><p>&#x3D;&#x3D;待完善&#x3D;&#x3D;</p>
+<h1 id="bytearray"><a href="#bytearray" class="headerlink" title="bytearray()"></a>bytearray()</h1><blockquote>
+<p>返回字节数组。</p>
+</blockquote>
+<h1 id="bytes"><a href="#bytes" class="headerlink" title="bytes()"></a>bytes()</h1><blockquote>
+<p>返回字节对象。</p>
+</blockquote>
+<h1 id="callable"><a href="#callable" class="headerlink" title="callable()"></a>callable()</h1><blockquote>
+<p>如果指定的对象是可调用的，则返回 True，否则返回 False。</p>
+</blockquote>
+<h1 id="chr"><a href="#chr" class="headerlink" title="chr()"></a>chr()</h1><blockquote>
+<p>返回指定 Unicode 代码中的字符。</p>
+</blockquote>
+<h1 id="classmethod"><a href="#classmethod" class="headerlink" title="classmethod()"></a>classmethod()</h1><blockquote>
+<p>把方法转换为类方法。</p>
+</blockquote>
+<h1 id="compile"><a href="#compile" class="headerlink" title="compile()"></a>compile()</h1><blockquote>
+<p>把指定的源作为对象返回，准备执行。</p>
+</blockquote>
+<h1 id="complex"><a href="#complex" class="headerlink" title="complex()"></a>complex()</h1><blockquote>
+<p>返回复数。</p>
+</blockquote>
+<h1 id="delattr"><a href="#delattr" class="headerlink" title="delattr()"></a>delattr()</h1><blockquote>
+<p>从指定的对象中删除指定的属性（属性或方法）。</p>
+</blockquote>
+<h1 id="dict"><a href="#dict" class="headerlink" title="dict()"></a>dict()</h1><blockquote>
+<p>返回字典（数组）。</p>
+</blockquote>
+<h1 id="dir"><a href="#dir" class="headerlink" title="dir()"></a>dir()</h1><blockquote>
+<p>返回指定对象的属性和方法的列表。</p>
+</blockquote>
+<h1 id="divmod"><a href="#divmod" class="headerlink" title="divmod()"></a>divmod()</h1><blockquote>
+<p>当参数1除以参数2时，返回商和余数。</p>
+</blockquote>
+<h1 id="enumerate"><a href="#enumerate" class="headerlink" title="enumerate()"></a>enumerate()</h1><blockquote>
+<p>获取集合（例如元组）并将其作为枚举对象返回。</p>
+</blockquote>
+<h1 id="eval"><a href="#eval" class="headerlink" title="eval()"></a>eval()</h1><blockquote>
+<p>评估并执行表达式。</p>
+</blockquote>
+<h1 id="exec"><a href="#exec" class="headerlink" title="exec()"></a>exec()</h1><blockquote>
+<p>执行指定的代码（或对象）。</p>
+</blockquote>
+<h1 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h1><blockquote>
+<p>使用过滤器函数排除可迭代对象中的项目。</p>
+</blockquote>
+<h1 id="float"><a href="#float" class="headerlink" title="float()"></a>float()</h1><blockquote>
+<p>返回浮点数。</p>
+</blockquote>
+<h1 id="format"><a href="#format" class="headerlink" title="format()"></a>format()</h1><blockquote>
+<p>格式化指定值。</p>
+</blockquote>
+<h1 id="frozenset"><a href="#frozenset" class="headerlink" title="frozenset()"></a>frozenset()</h1><blockquote>
+<p>返回 frozenset 对象。</p>
+</blockquote>
+<h1 id="getattr"><a href="#getattr" class="headerlink" title="getattr()"></a>getattr()</h1><blockquote>
+<p>返回指定属性的值（属性或方法）。</p>
+</blockquote>
+<h1 id="globals"><a href="#globals" class="headerlink" title="globals()"></a>globals()</h1><blockquote>
+<p>以字典返回当前全局符号表。</p>
+</blockquote>
+<h1 id="hasattr"><a href="#hasattr" class="headerlink" title="hasattr()"></a>hasattr()</h1><blockquote>
+<p>如果指定的对象拥有指定的属性（属性&#x2F;方法），则返回 True。</p>
+</blockquote>
+<h1 id="hash"><a href="#hash" class="headerlink" title="hash()"></a>hash()</h1><blockquote>
+<p>返回指定对象的哈希值。</p>
+</blockquote>
+<h1 id="help"><a href="#help" class="headerlink" title="help()"></a>help()</h1><blockquote>
+<p>执行内建的帮助系统。</p>
+</blockquote>
+<h1 id="hex"><a href="#hex" class="headerlink" title="hex()"></a>hex()</h1><blockquote>
+<p>把数字转换为十六进制值。</p>
+</blockquote>
+<h1 id="id"><a href="#id" class="headerlink" title="id()"></a>id()</h1><blockquote>
+<p>返回对象的 id。</p>
+</blockquote>
+<h1 id="input"><a href="#input" class="headerlink" title="input()"></a>input()</h1><blockquote>
+<p><strong>说明</strong>：允许用户输入。</p>
+<p><strong>注意</strong>：</p>
+<ul>
+<li>在输入之前程序会停在那里。</li>
+<li>此输入语句需要提前编写提示，否则用户不知道要输入什么。</li>
+</ul>
+</blockquote>
+<h1 id="int"><a href="#int" class="headerlink" title="int()"></a>int()</h1><blockquote>
+<p>返回整数。</p>
+</blockquote>
+<h1 id="isinstance"><a href="#isinstance" class="headerlink" title="isinstance()"></a>isinstance()</h1><blockquote>
+<p>如果指定的对象是指定对象的实例，则返回 True。</p>
+</blockquote>
+<h1 id="issubclass"><a href="#issubclass" class="headerlink" title="issubclass()"></a>issubclass()</h1><blockquote>
+<p>如果指定的类是指定对象的子类，则返回 True。</p>
+</blockquote>
+<h1 id="iter"><a href="#iter" class="headerlink" title="iter()"></a>iter()</h1><blockquote>
+<p>返回迭代器对象。</p>
+</blockquote>
+<h1 id="len"><a href="#len" class="headerlink" title="len()"></a>len()</h1><blockquote>
+<p>返回对象的长度。</p>
+</blockquote>
+<h1 id="list"><a href="#list" class="headerlink" title="list()"></a>list()</h1><blockquote>
+<p>返回列表。</p>
+</blockquote>
+<h1 id="locals"><a href="#locals" class="headerlink" title="locals()"></a>locals()</h1><blockquote>
+<p>返回当前本地符号表的更新字典。</p>
+</blockquote>
+<h1 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h1><h1 id="max"><a href="#max" class="headerlink" title="max()"></a>max()</h1><h1 id="memoryview"><a href="#memoryview" class="headerlink" title="memoryview()"></a>memoryview()</h1><h1 id="min"><a href="#min" class="headerlink" title="min()"></a>min()</h1><h1 id="next"><a href="#next" class="headerlink" title="next()"></a>next()</h1><h1 id="object"><a href="#object" class="headerlink" title="object()"></a>object()</h1><h1 id="oct"><a href="#oct" class="headerlink" title="oct()"></a>oct()</h1><h1 id="open"><a href="#open" class="headerlink" title="open()"></a>open()</h1><blockquote>
+<p><strong>打开文件</strong></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">open</span>(file,mode=<span class="hljs-string">&#x27; &#x27;</span>)<br><span class="hljs-comment"># file参数是指定需要操作的文件名(可以指定文件路径)</span><br><span class="hljs-comment"># mode参数是指定需要操作的方式</span><br><span class="hljs-comment"># mode参数值:</span><br><span class="hljs-comment"># &#x27;r&#x27;   只读  以只读方式打开已经存在的文件</span><br><span class="hljs-comment"># &#x27;w&#x27;  只写  以可写方式打开文件，若指定文件不存在，则建立新文件</span><br><span class="hljs-comment"># &#x27;x&#x27;  新建  以可写方式建立一个新文件</span><br><span class="hljs-comment"># &#x27;a&#x27;  追加  以追加写入方式打开一个文件，若指定的文件不存在，则建立新文件，再追加写入</span><br><span class="hljs-comment"># &#x27;b&#x27;  二进制  二进制模式</span><br><span class="hljs-comment"># &#x27;t&#x27;  文本  文本模式</span><br><span class="hljs-comment"># &#x27;+&#x27;  读写  以读写方式打开一个文件</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>关闭文件</strong></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">open</span>.close()<br><span class="hljs-comment"># close()方法可以关闭打开的文件</span><br><span class="hljs-comment"># 如果文件不关闭会占电脑内存，无法保存到硬盘，导致断电后会数据丢失</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>写入文件</strong></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">open</span>.write(x)<br><span class="hljs-comment"># write(x)是open内置函数中的方法之一</span><br><span class="hljs-comment"># f代表以可写方式打开的文件对象</span><br><span class="hljs-comment"># write()方法把x内容写入文件后，返回写入的字节数</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>读取文件</strong></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">open</span>.read(size)<br><span class="hljs-comment"># size是可选参数，若指定读取字节数，则读取指定大小字节的内容，若没有指定，则读取全部内容</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>一次读取一行</strong></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">open</span>.readline(s)<br><span class="hljs-comment"># s为可选参数，若设置指定大小的字节，则返回相应大小的字符串，若没有设定，则以行为单位返回一行字符串</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>以列表格式读取多行</strong></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">open</span>.readlines()<br><span class="hljs-comment"># 把f文件中的所有文件变成以一行为一个元素，返回结果为一个列表</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>指定位置</strong></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">open</span>.tell(x)<br><span class="hljs-comment"># x为文件中字节的下标</span><br><span class="hljs-comment"># tell()方法返回当前文件可读的位置(字节数)</span><br><br><span class="hljs-built_in">open</span>.seek(offset[,whence])<br><span class="hljs-comment"># seek()方法从新指定将要读写的的当前位置</span><br><span class="hljs-comment"># offset参数设置位置的偏移量的字节数</span><br><span class="hljs-comment"># whence参数可选，确定文件起计位置。默认值为SEEK_SET或者0，代表从文件的开始位置+偏移量来确定当前位置</span><br><span class="hljs-comment">#   - SEEK_CUR或者1，代表当前位置起计</span><br><span class="hljs-comment">#   - SEEK_END或者2，代表从文件的结尾起计。   </span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>写入文件</strong></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">open</span>.write(s)<br><span class="hljs-comment"># s参数是需要写入的字符串</span><br><br><span class="hljs-built_in">open</span>.writelines(s)<br><span class="hljs-comment"># s参数是一组可迭代数据类型，如列表</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="ord"><a href="#ord" class="headerlink" title="ord()"></a>ord()</h1><h1 id="pow"><a href="#pow" class="headerlink" title="pow()"></a>pow()</h1><h1 id="print"><a href="#print" class="headerlink" title="print()"></a>print()</h1><blockquote>
+<p><strong>说明</strong>：</p>
+<ul>
+<li>Python编程语言中用“print（）”内置函数进行输出内容。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>使用方法：</p>
+<ul>
+<li>输出字符串类型需要将其放在引号中间（单、双、三引号都可以）。</li>
+<li>三引号可把编写代码分行编写，但依旧输出成一行。</li>
+<li>此函数也可通过输出变量，通过变量输出不同的结果。</li>
+<li>若使用逗号输出多个字符串，逗号实际输出时空格。</li>
+<li>都为字符串时可以使用加号进行合并。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>参数：</p>
+<ul>
+<li>end&#x3D;”内容”，可以输出在一行，并让下一个print()输出在同一行后面。</li>
+<li>sep&#x3D;”内容”，会以指定的字符来链接print中的内容。</li>
+</ul>
+</blockquote>
+<h1 id="property"><a href="#property" class="headerlink" title="property()"></a>property()</h1><h1 id="range"><a href="#range" class="headerlink" title="range()"></a>range()</h1><h1 id="repr"><a href="#repr" class="headerlink" title="repr()"></a>repr()</h1><h1 id="reversed"><a href="#reversed" class="headerlink" title="reversed()"></a>reversed()</h1><h1 id="round"><a href="#round" class="headerlink" title="round()"></a>round()</h1><h1 id="set"><a href="#set" class="headerlink" title="set()"></a>set()</h1><h1 id="setattr"><a href="#setattr" class="headerlink" title="setattr()"></a>setattr()</h1><h1 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h1><h1 id="sorted"><a href="#sorted" class="headerlink" title="sorted()"></a>sorted()</h1><h1 id="staticmethod"><a href="#staticmethod" class="headerlink" title="staticmethod()"></a>staticmethod()</h1><h1 id="str"><a href="#str" class="headerlink" title="str()"></a>str()</h1><h1 id="sum"><a href="#sum" class="headerlink" title="sum()"></a>sum()</h1><h1 id="super"><a href="#super" class="headerlink" title="super()"></a>super()</h1><h1 id="tuple"><a href="#tuple" class="headerlink" title="tuple()"></a>tuple()</h1><h1 id="type"><a href="#type" class="headerlink" title="type()"></a>type()</h1><h1 id="vars"><a href="#vars" class="headerlink" title="vars()"></a>vars()</h1><h1 id="zip"><a href="#zip" class="headerlink" title="zip()"></a>zip()</h1><h1 id="import"><a href="#import" class="headerlink" title="__import__()"></a>__import__()</h1><h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><p>暂无</p>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Language-Python3-ReservedKeyword/">← 下一篇 Language | Python3 - 保留关键字</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-Python3/">Language | Python3 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#abs"><span class="toc-number">1.</span> <span class="toc-text">abs()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#all"><span class="toc-number">2.</span> <span class="toc-text">all()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#any"><span class="toc-number">3.</span> <span class="toc-text">any()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ascii"><span class="toc-number">4.</span> <span class="toc-text">ascii()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#bin"><span class="toc-number">5.</span> <span class="toc-text">bin()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#bool"><span class="toc-number">6.</span> <span class="toc-text">bool()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#breakpoint"><span class="toc-number">7.</span> <span class="toc-text">breakpoint()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#bytearray"><span class="toc-number">8.</span> <span class="toc-text">bytearray()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#bytes"><span class="toc-number">9.</span> <span class="toc-text">bytes()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#callable"><span class="toc-number">10.</span> <span class="toc-text">callable()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#chr"><span class="toc-number">11.</span> <span class="toc-text">chr()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#classmethod"><span class="toc-number">12.</span> <span class="toc-text">classmethod()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#compile"><span class="toc-number">13.</span> <span class="toc-text">compile()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#complex"><span class="toc-number">14.</span> <span class="toc-text">complex()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#delattr"><span class="toc-number">15.</span> <span class="toc-text">delattr()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dict"><span class="toc-number">16.</span> <span class="toc-text">dict()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dir"><span class="toc-number">17.</span> <span class="toc-text">dir()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#divmod"><span class="toc-number">18.</span> <span class="toc-text">divmod()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#enumerate"><span class="toc-number">19.</span> <span class="toc-text">enumerate()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eval"><span class="toc-number">20.</span> <span class="toc-text">eval()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#exec"><span class="toc-number">21.</span> <span class="toc-text">exec()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#filter"><span class="toc-number">22.</span> <span class="toc-text">filter()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#float"><span class="toc-number">23.</span> <span class="toc-text">float()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#format"><span class="toc-number">24.</span> <span class="toc-text">format()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#frozenset"><span class="toc-number">25.</span> <span class="toc-text">frozenset()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#getattr"><span class="toc-number">26.</span> <span class="toc-text">getattr()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#globals"><span class="toc-number">27.</span> <span class="toc-text">globals()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hasattr"><span class="toc-number">28.</span> <span class="toc-text">hasattr()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hash"><span class="toc-number">29.</span> <span class="toc-text">hash()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#help"><span class="toc-number">30.</span> <span class="toc-text">help()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hex"><span class="toc-number">31.</span> <span class="toc-text">hex()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#id"><span class="toc-number">32.</span> <span class="toc-text">id()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#input"><span class="toc-number">33.</span> <span class="toc-text">input()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#int"><span class="toc-number">34.</span> <span class="toc-text">int()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#isinstance"><span class="toc-number">35.</span> <span class="toc-text">isinstance()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#issubclass"><span class="toc-number">36.</span> <span class="toc-text">issubclass()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#iter"><span class="toc-number">37.</span> <span class="toc-text">iter()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#len"><span class="toc-number">38.</span> <span class="toc-text">len()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#list"><span class="toc-number">39.</span> <span class="toc-text">list()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#locals"><span class="toc-number">40.</span> <span class="toc-text">locals()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#map"><span class="toc-number">41.</span> <span class="toc-text">map()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#max"><span class="toc-number">42.</span> <span class="toc-text">max()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#memoryview"><span class="toc-number">43.</span> <span class="toc-text">memoryview()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#min"><span class="toc-number">44.</span> <span class="toc-text">min()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#next"><span class="toc-number">45.</span> <span class="toc-text">next()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#object"><span class="toc-number">46.</span> <span class="toc-text">object()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#oct"><span class="toc-number">47.</span> <span class="toc-text">oct()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#open"><span class="toc-number">48.</span> <span class="toc-text">open()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ord"><span class="toc-number">49.</span> <span class="toc-text">ord()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pow"><span class="toc-number">50.</span> <span class="toc-text">pow()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#print"><span class="toc-number">51.</span> <span class="toc-text">print()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#property"><span class="toc-number">52.</span> <span class="toc-text">property()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#range"><span class="toc-number">53.</span> <span class="toc-text">range()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#repr"><span class="toc-number">54.</span> <span class="toc-text">repr()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reversed"><span class="toc-number">55.</span> <span class="toc-text">reversed()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#round"><span class="toc-number">56.</span> <span class="toc-text">round()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#set"><span class="toc-number">57.</span> <span class="toc-text">set()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#setattr"><span class="toc-number">58.</span> <span class="toc-text">setattr()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#slice"><span class="toc-number">59.</span> <span class="toc-text">slice()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#sorted"><span class="toc-number">60.</span> <span class="toc-text">sorted()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#staticmethod"><span class="toc-number">61.</span> <span class="toc-text">staticmethod()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#str"><span class="toc-number">62.</span> <span class="toc-text">str()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#sum"><span class="toc-number">63.</span> <span class="toc-text">sum()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#super"><span class="toc-number">64.</span> <span class="toc-text">super()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tuple"><span class="toc-number">65.</span> <span class="toc-text">tuple()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#type"><span class="toc-number">66.</span> <span class="toc-text">type()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vars"><span class="toc-number">67.</span> <span class="toc-text">vars()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#zip"><span class="toc-number">68.</span> <span class="toc-text">zip()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#import"><span class="toc-number">69.</span> <span class="toc-text">__import__()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">70.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">71.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>

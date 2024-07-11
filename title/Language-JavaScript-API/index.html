@@ -1,0 +1,424 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Language | JavaScript - API | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | JavaScript - API</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-05-23T04:00:00.000Z" id="date"> 2024-05-23</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-07-11T11:38:06.133Z" id="updated"> 2024-07-11</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]<br><strong>文章摘要：</strong></p>
+<span id="more"></span>
+
+
+<h1 id="输出方式"><a href="#输出方式" class="headerlink" title="输出方式"></a>输出方式</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">/*写入到警告框，并弹出警告框*/</span><br><span class="hljs-variable language_">window</span>.<span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;内容&quot;</span>);<br><br><span class="hljs-comment">/*写入到HTML文件中，在页面中显示*/</span><br><span class="hljs-variable language_">document</span>.<span class="hljs-title function_">write</span>(<span class="hljs-string">&quot;要输出的内容&quot;</span>);<br><br><span class="hljs-comment">/*写入到浏览器的控制台上显示*/</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;内容&quot;</span>);<br><br><span class="hljs-comment">/*打印获取到的DOM对象*/</span><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">dir</span>(<span class="hljs-string">&quot;DOM对象&quot;</span>);<br><br><span class="hljs-comment">/*写入 HTML 元素*/</span><br>innerHTML;<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>parseInt(&lt;数据&gt;)</code></td>
+<td align="left">转换为<code>number</code>数字类型</td>
+</tr>
+</tbody></table>
+</blockquote>
+<p><strong>案例</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 转换为数字类型</span><br><span class="hljs-title function_">alert</span>(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&quot;12&quot;</span>));     <span class="hljs-comment">// 结果：12</span><br><span class="hljs-title function_">alert</span>(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&quot;12A45&quot;</span>));  <span class="hljs-comment">// 结果：12</span><br><span class="hljs-title function_">alert</span>(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&quot;A12&quot;</span>));    <span class="hljs-comment">// 结果：NAN</span><br></code></pre></td></tr></table></figure>
+
+
+<h1 id="Array数组"><a href="#Array数组" class="headerlink" title="Array数组"></a>Array数组</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>&lt;Array&gt;.length</code></td>
+<td align="left">获取数组的长度</td>
+</tr>
+</tbody></table>
+</blockquote>
+<br>
+
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>&lt;Array&gt;.length</code></td>
+<td align="left">获取数组的长度</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;Array&gt;.forEach()</code></td>
+<td align="left">遍历数组中<strong>有值的元素</strong>，并调用一次传入的函数</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;Array&gt;.push(&lt;元素&gt;, &lt;元素&gt;...)</code></td>
+<td align="left">在数组末尾追加新元素，并返回新的长度</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;Array&gt;.splice(&lt;元素下标&gt;, &lt;删除元素的个数&gt;)</code></td>
+<td align="left">删除元素</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="String字符串"><a href="#String字符串" class="headerlink" title="String字符串"></a>String字符串</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>&lt;String&gt;.length</code></td>
+<td align="left">获取字符串的长度</td>
+</tr>
+</tbody></table>
+</blockquote>
+<br>
+
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>&lt;String&gt;.length</code></td>
+<td align="left">获取字符串的长度</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;String&gt;.charAt(&lt;下标&gt;)</code></td>
+<td align="left">返回在指定下标位置的字符</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;String&gt;.indexOf(&lt;需要查找的字符串&gt;)</code></td>
+<td align="left">检索字符串，返回下标数字</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;String&gt;.trim()</code></td>
+<td align="left">去除字符串两边的空格，返回新字符串</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;String&gt;.substring(&lt;起始下标&gt;, &lt;结束下标&gt;)</code></td>
+<td align="left">提取字符串中两个指定的索引号之间的字符</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="JSON对象"><a href="#JSON对象" class="headerlink" title="JSON对象"></a>JSON对象</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>JSON.parse(&lt;json字符串&gt;)</code></td>
+<td align="left">将JSON字符串转换为JS对象</td>
+</tr>
+<tr>
+<td align="left"><code>JSON.string(&lt;js对象&gt;)</code></td>
+<td align="left">将JS对象转换为JSON字符串</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="Window浏览器窗口对象"><a href="#Window浏览器窗口对象" class="headerlink" title="Window浏览器窗口对象"></a>Window浏览器窗口对象</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>window.history</code></td>
+<td align="left">对<strong>History历史记录对象</strong>的只读引用</td>
+</tr>
+<tr>
+<td align="left"><code>window.location</code></td>
+<td align="left">用于窗口或框架的<strong>Location地址栏对象</strong></td>
+</tr>
+<tr>
+<td align="left"><code>window.location.href</code></td>
+<td align="left">返回完整的URL字符串，重新赋值URL并跳转到新页面</td>
+</tr>
+<tr>
+<td align="left"><code>window.navigator</code></td>
+<td align="left">对<strong>Navigator浏览器对象</strong>的只读引用</td>
+</tr>
+</tbody></table>
+</blockquote>
+<br>
+
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="center">返回值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>window.alert()</code></td>
+<td align="center"></td>
+<td align="left">显示带有一段消息和一个确认按钮的警告框</td>
+</tr>
+<tr>
+<td align="left"><code>window.confirm()</code></td>
+<td align="center"><code>boolean</code></td>
+<td align="left">显示带有一段消息以及确认按钮和取消按钮的对话框</td>
+</tr>
+<tr>
+<td align="left"><code>window.setInterval(&lt;匿名函数&gt;, &lt;毫秒数&gt;)</code></td>
+<td align="center"></td>
+<td align="left">计时器，按照指定的周期（毫秒）来调用函数或计算表达式</td>
+</tr>
+<tr>
+<td align="left"><code>window.setTimeout()</code></td>
+<td align="center"></td>
+<td align="left">延迟器，在指定的毫秒数后调用一次函数或计算表达式</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="DOM文档对象模型"><a href="#DOM文档对象模型" class="headerlink" title="DOM文档对象模型"></a>DOM文档对象模型</h1><h2 id="获取"><a href="#获取" class="headerlink" title="获取"></a>获取</h2><p><code>var myvideo = document.querySelector(&#39;button&#39;);</code></p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="center">返回值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>document.getElementsByTagName(&quot;&lt;标签名称&gt;&quot;)</code></td>
+<td align="center">元素对象数组</td>
+<td align="left">根据“标签名”获取</td>
+</tr>
+<tr>
+<td align="left"><code>document.getElementById(&quot;&lt;id属性的值&gt;&quot;)</code></td>
+<td align="center">单个元素对象</td>
+<td align="left">根据“id标签的属性值”获取</td>
+</tr>
+<tr>
+<td align="left"><code>document.getElementsByClassName(&quot;&lt;class标签的值&gt;&quot;)</code></td>
+<td align="center">元素对象数组</td>
+<td align="left">根据“class标签的属性值”获取</td>
+</tr>
+<tr>
+<td align="left"><code>document.getElementsByName(&quot;&lt;标签的name值&gt;&quot;)</code></td>
+<td align="center">元素对象数组</td>
+<td align="left">根据“标签的name属性值”获取</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="center">返回值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>&lt;元素对象&gt;.innerHTML</code></td>
+<td align="center"></td>
+<td align="left">重新赋值，修改标签的内容</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a>事件监听</h1><blockquote>
+<ul>
+<li>事件监听可以理解为比较特殊的修改元素属性值的操作。</li>
+</ul>
+</blockquote>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>&lt;元素对象&gt;.onclick</code></td>
+<td align="center">鼠标点击</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;元素对象&gt;.onblur</code></td>
+<td align="center">元素失去焦点</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;元素对象&gt;.onfocus</code></td>
+<td align="center">元素获得焦点</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;元素对象&gt;.onload</code></td>
+<td align="center">某个页面或图像被完成加载</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;元素对象&gt;.onsubmit</code></td>
+<td align="center">当表单提交时出发该事件</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;元素对象&gt;.onkeydown</code></td>
+<td align="center">某个键盘的键被按下</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;元素对象&gt;.onmouseover</code></td>
+<td align="center">鼠标被移到某个元素上</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;元素对象&gt;.onmouseout</code></td>
+<td align="center">鼠标从某个元素上移开</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="存储数据在浏览器"><a href="#存储数据在浏览器" class="headerlink" title="存储数据在浏览器"></a>存储数据在浏览器</h1><h2 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h2><blockquote>
+<ul>
+<li>一种允许网站在用户浏览器中存储键值对的方法，数据在浏览器会话之间持久存在，即使关闭浏览器窗口也不会被清除。</li>
+<li><code>localStorage</code>中的数据存储在客户端，并且是同步的，这意味着在读取或写入数据时会阻塞其他JavaScript代码的执行。</li>
+</ul>
+</blockquote>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>localStorage.setItem(&#39;key&#39;, &#39;value&#39;)</code></td>
+<td align="center">存储数据</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;变量&gt; = localStorage.getItem(&#39;key&#39;)</code></td>
+<td align="center">读取数据，根据<code>key</code>返回对应的值</td>
+</tr>
+<tr>
+<td align="left"><code>localStorage.removeItem(&#39;key&#39;)</code></td>
+<td align="center">删除数据</td>
+</tr>
+<tr>
+<td align="left"><code>localStorage.clear()</code></td>
+<td align="center">清空所有</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h2 id="sessionStorage"><a href="#sessionStorage" class="headerlink" title="sessionStorage"></a>sessionStorage</h2><blockquote>
+<ul>
+<li>存储的数据只在会话期间存在，当用户关闭浏览器窗口或标签页时，数据会被清除。</li>
+</ul>
+</blockquote>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>sessionStorage.setItem(&#39;key&#39;, &#39;value&#39;)</code></td>
+<td align="center">存储数据</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;变量&gt; = sessionStorage.getItem(&#39;key&#39;)</code></td>
+<td align="center">读取数据</td>
+</tr>
+<tr>
+<td align="left"><code>sessionStorage.removeItem(&#39;key&#39;)</code></td>
+<td align="center">删除数据</td>
+</tr>
+<tr>
+<td align="left"><code>sessionStorage.clear()</code></td>
+<td align="center">清空所有</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h2 id="cookies（待完善）"><a href="#cookies（待完善）" class="headerlink" title="cookies（待完善）"></a>cookies（待完善）</h2><blockquote>
+<ul>
+<li>在每次HTTP请求中都会被发送到服务器，因此它们可以用于维持用户的会话状态。</li>
+<li><code>cookies</code>可以设置过期时间，也可以设置为在浏览器关闭时删除。</li>
+</ul>
+</blockquote>
+<p>&#x3D;&#x3D;待完善&#x3D;&#x3D;</p>
+<blockquote>
+<ul>
+<li>设置 cookie：<code>document.cookie = &#39;key=value; expires=Fri, 31 Dec 2023 23:59:59 GMT; path=/&#39;;</code></li>
+<li>读取 cookie：<code>var cookieValue = document.cookie.split(&#39;; &#39;).find(row =&gt; row.startsWith(&#39;key=&#39;)).split(&#39;=&#39;)[1];</code></li>
+<li>删除 cookie：<code>document.cookie = &#39;key=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/&#39;;</code><br>&#x3D;&#x3D;待完善&#x3D;&#x3D;</li>
+</ul>
+</blockquote>
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><blockquote>
+<ul>
+<li>属性 &#x3D;&#x3D; 对象的成员变量</li>
+<li>方法 &#x3D;&#x3D; 对象的成员函数</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>对象的属性，其实可以“二次修改赋值”和“获取”。</li>
+</ul>
+</blockquote>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><blockquote>
+<ul>
+<li>JavaScript知识总结：<a href="/title/Language-JavaScript/" title="Language | JavaScript">Language | JavaScript - 知识总结</a></li>
+<li>JavaScript关键字：<a href="/title/Language-JavaScript-Keyword/" title="Language | JavaScript - 关键字">Language | JavaScript - 关键字</a></li>
+</ul>
+</blockquote>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Language-Java8-API-io-File/">← 下一篇 Language | Java8 - API - io - File文件对象操作</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-JavaScript-Keyword/">Language | JavaScript - 关键字 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BE%93%E5%87%BA%E6%96%B9%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">输出方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.</span> <span class="toc-text">数据类型转换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array%E6%95%B0%E7%BB%84"><span class="toc-number">3.</span> <span class="toc-text">Array数组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#String%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.</span> <span class="toc-text">String字符串</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JSON%E5%AF%B9%E8%B1%A1"><span class="toc-number">5.</span> <span class="toc-text">JSON对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Window%E6%B5%8F%E8%A7%88%E5%99%A8%E7%AA%97%E5%8F%A3%E5%AF%B9%E8%B1%A1"><span class="toc-number">6.</span> <span class="toc-text">Window浏览器窗口对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DOM%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B"><span class="toc-number">7.</span> <span class="toc-text">DOM文档对象模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96"><span class="toc-number">7.1.</span> <span class="toc-text">获取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9"><span class="toc-number">7.2.</span> <span class="toc-text">修改</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC"><span class="toc-number">8.</span> <span class="toc-text">事件监听</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-number">9.</span> <span class="toc-text">存储数据在浏览器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#localStorage"><span class="toc-number">9.1.</span> <span class="toc-text">localStorage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sessionStorage"><span class="toc-number">9.2.</span> <span class="toc-text">sessionStorage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cookies%EF%BC%88%E5%BE%85%E5%AE%8C%E5%96%84%EF%BC%89"><span class="toc-number">9.3.</span> <span class="toc-text">cookies（待完善）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">10.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">11.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>

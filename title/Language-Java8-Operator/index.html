@@ -1,0 +1,342 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Language | Java8 - 运算符 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | Java8 - 运算符</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-03-17T16:02:00.000Z" id="date"> 2024-03-18</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-07-11T10:57:14.793Z" id="updated"> 2024-07-11</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<strong>已完成</strong>、<del><em>待完善</em></del>、<del><em>编写中</em></del>]<br><strong>文章摘要：</strong> 运算符用于对变量和值的执行操作。</p>
+<ul>
+<li>Java运算符共分为6类：算术运算符、关系运算符、逻辑运算符、位运算符、赋值运算符、条件运算符（三元运算符）<span id="more"></span></li>
+</ul>
+<h1 id="算术运算符（共7个）"><a href="#算术运算符（共7个）" class="headerlink" title="算术运算符（共7个）"></a>算术运算符（共7个）</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="left">名称</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+</td>
+<td align="left">加（求和）</td>
+<td align="left">x + y</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="left">减（求差）</td>
+<td align="left">x - y</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="left">乘（求积）</td>
+<td align="left">x * y</td>
+</tr>
+<tr>
+<td align="center">&#x2F;</td>
+<td align="left">除(取整)</td>
+<td align="left">x &#x2F; y</td>
+</tr>
+<tr>
+<td align="center">%</td>
+<td align="left">模(取余)</td>
+<td align="left">x % y</td>
+</tr>
+<tr>
+<td align="center">++</td>
+<td align="left">自增</td>
+<td align="left">1++ &#x3D; 1， ++1 &#x3D; 2</td>
+</tr>
+<tr>
+<td align="center">–</td>
+<td align="left">自减</td>
+<td align="left">1– &#x3D; 1， –1 &#x3D; 0</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="关系运算符（共6个）"><a href="#关系运算符（共6个）" class="headerlink" title="关系运算符（共6个）"></a>关系运算符（共6个）</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="left">名称</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&#x3D;&#x3D;</td>
+<td align="left">全等</td>
+<td align="left">x &#x3D;&#x3D; y</td>
+</tr>
+<tr>
+<td align="center">!&#x3D;</td>
+<td align="left">不等</td>
+<td align="left">x !&#x3D; y</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="left">小于</td>
+<td align="left">x &lt; y</td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="left">大于</td>
+<td align="left">x &gt; y</td>
+</tr>
+<tr>
+<td align="center">&lt;&#x3D;</td>
+<td align="left">小于等于</td>
+<td align="left">x &lt;&#x3D; y</td>
+</tr>
+<tr>
+<td align="center">&gt;&#x3D;</td>
+<td align="left">大于等于</td>
+<td align="left">x &gt;&#x3D; y</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="逻辑运算符（共3个）"><a href="#逻辑运算符（共3个）" class="headerlink" title="逻辑运算符（共3个）"></a>逻辑运算符（共3个）</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="left">名称</th>
+<th align="left">描述</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&amp;&amp;</td>
+<td align="left">逻辑与</td>
+<td align="left">若两个条件都为<code>true</code>，则返回<code>true</code></td>
+<td align="left">0&amp;&amp;0&#x3D;0, 1&amp;&amp;1&#x3D;1, 0&amp;&amp;1&#x3D;0</td>
+</tr>
+<tr>
+<td align="center">||</td>
+<td align="left">逻辑或</td>
+<td align="left">若两个条件中有一个或一个以上都为<code>true</code>，则返回<code>true</code></td>
+<td align="left">0||0&#x3D;0, 1||1&#x3D;1, 0||1&#x3D;1</td>
+</tr>
+<tr>
+<td align="center">!</td>
+<td align="left">逻辑非（取反）</td>
+<td align="left">反转结果，若结果为<code>false</code>，则返回<code>true</code></td>
+<td align="left">!false &#x3D; true, !true &#x3D; false</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="位运算符（共8个）"><a href="#位运算符（共8个）" class="headerlink" title="位运算符（共8个）"></a>位运算符（共8个）</h1><blockquote>
+<ul>
+<li>位运算符操作的对象是二进制数。</li>
+<li>位运算符比除法、乘法计算速度快很多。</li>
+</ul>
+</blockquote>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="left">名称</th>
+<th align="left">描述</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&amp;</td>
+<td align="left">位与</td>
+<td align="left">如果相对应的位都是1，则结果为1，否则为0</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">|</td>
+<td align="left">位或</td>
+<td align="left">如果相对应的位有1个或2个是1，则结果为1，否则为0</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="left">位异或</td>
+<td align="left">如果相对应的位有1个或2个是1，则反转后为0；若都是0，则反转后为1</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">~</td>
+<td align="left">位取反</td>
+<td align="left">按位取反每一位操作数，即0改成1，1改成0</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">&lt;&lt;</td>
+<td align="left">位左移</td>
+<td align="left">按位左移操作数指定的位数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;</td>
+<td align="left">位右移</td>
+<td align="left">按位右移操作数指定的位数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;&gt;</td>
+<td align="left">无符号右移</td>
+<td align="left">忽略符号位，左操作数的值往右操作数指定的位数右移，移动得到的空位以零填充</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="赋值运算符（共13个）"><a href="#赋值运算符（共13个）" class="headerlink" title="赋值运算符（共13个）"></a>赋值运算符（共13个）</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="left">名称</th>
+<th align="left">例子</th>
+<th align="left">等效于</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&#x3D;</td>
+<td align="left">赋值</td>
+<td align="left">x &#x3D; 1</td>
+<td align="left">x &#x3D; 1</td>
+</tr>
+<tr>
+<td align="center">+&#x3D;</td>
+<td align="left">加法赋值</td>
+<td align="left">x +&#x3D; 1</td>
+<td align="left">x &#x3D; x + 1</td>
+</tr>
+<tr>
+<td align="center">-&#x3D;</td>
+<td align="left">减法赋值</td>
+<td align="left">x -&#x3D; 1</td>
+<td align="left">x &#x3D; x - 1</td>
+</tr>
+<tr>
+<td align="center">*&#x3D;</td>
+<td align="left">乘法赋值</td>
+<td align="left">x *&#x3D; 1</td>
+<td align="left">x &#x3D; x * 1</td>
+</tr>
+<tr>
+<td align="center">&#x2F;&#x3D;</td>
+<td align="left">除法赋值</td>
+<td align="left">x &#x2F;&#x3D; 1</td>
+<td align="left">x &#x3D; x &#x2F; 1</td>
+</tr>
+<tr>
+<td align="center">%&#x3D;</td>
+<td align="left">取余赋值</td>
+<td align="left">x %&#x3D; 1</td>
+<td align="left">x &#x3D; x % 1</td>
+</tr>
+<tr>
+<td align="center">&amp;&#x3D;</td>
+<td align="left">位与赋值</td>
+<td align="left">二进制A &amp;&#x3D; 二进制B</td>
+<td align="left">二进制B &#x3D; 二进制A &amp; 二进制B</td>
+</tr>
+<tr>
+<td align="center">|&#x3D;</td>
+<td align="left">位或赋值</td>
+<td align="left">二进制A |&#x3D; 二进制B</td>
+<td align="left">二进制B &#x3D; 二进制A | 二进制B</td>
+</tr>
+<tr>
+<td align="center">^&#x3D;</td>
+<td align="left">位异或赋值</td>
+<td align="left">二进制A ^&#x3D; 二进制B</td>
+<td align="left">二进制B &#x3D; 二进制A ^ 二进制B</td>
+</tr>
+<tr>
+<td align="center">~&#x3D;</td>
+<td align="left">位取反赋值</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">&lt;&lt;&#x3D;</td>
+<td align="left">位左移赋值</td>
+<td align="left">二进制A &lt;&lt;&#x3D; 移动的位数</td>
+<td align="left">二进制B &#x3D; 二进制A &lt;&lt; 移动的位数</td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;&#x3D;</td>
+<td align="left">位右移赋值</td>
+<td align="left">二进制A &gt;&gt;&#x3D; 移动的位数</td>
+<td align="left">二进制B &#x3D; 二进制A &gt;&gt; 移动的位数</td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;&gt;&#x3D;</td>
+<td align="left">位右移补零赋值</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="条件运算符（三元运算符）"><a href="#条件运算符（三元运算符）" class="headerlink" title="条件运算符（三元运算符）"></a>条件运算符（三元运算符）</h1><blockquote>
+<ul>
+<li>条件运算符又称为三元运算符。</li>
+<li>运算符符号：<code>?</code>(问号)、<code>:</code>(冒号)。</li>
+<li>运算时需要操作三个操作数。</li>
+</ul>
+</blockquote>
+<p><strong>案例</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 数据类型 变量名 = 判断条件 ？ 条件为`ture`执行 ： 条件为`false`执行 ;</span><br><br><span class="hljs-comment">//案例一</span><br><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br><span class="hljs-type">string</span> <span class="hljs-variable">data</span> <span class="hljs-operator">=</span> (a &gt; <span class="hljs-number">0</span>) ? <span class="hljs-string">&quot;正确&quot;</span> ： <span class="hljs-string">&quot;错误&quot;</span>;<br>System.out.println(data)<br><span class="hljs-comment">// 结果是：正确</span><br><br><span class="hljs-comment">// 案例二</span><br><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br><span class="hljs-type">string</span> <span class="hljs-variable">data</span> <span class="hljs-operator">=</span> (a &lt; <span class="hljs-number">0</span>) ? <span class="hljs-string">&quot;正确&quot;</span> ： <span class="hljs-string">&quot;错误&quot;</span>;<br>System.out.println(data)<br><span class="hljs-comment">// 结果是：错误</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="instanceof运算符"><a href="#instanceof运算符" class="headerlink" title="instanceof运算符"></a>instanceof运算符</h1><blockquote>
+<ul>
+<li><code>instanceof</code>运算符的前一个操作数通常是一个引用类型变量，后一个操作数通常是一个类。</li>
+<li>判断类型：<code>boolean</code></li>
+</ul>
+<p><strong>适用场景</strong></p>
+<ul>
+<li>用于判断运算符前面的引用变量是否是运算符后面的类型，即是否是其自类型的实例。</li>
+</ul>
+</blockquote>
+<p><strong>案例</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 定义一个字符串类型的变量。</span><br><span class="hljs-type">String</span> <span class="hljs-variable">s</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;字符串类型&quot;</span>;<br><span class="hljs-comment">// 判断变量`s`是否是`String`字符串类型</span><br><span class="hljs-type">boolean</span> <span class="hljs-variable">bool</span> <span class="hljs-operator">=</span> s <span class="hljs-keyword">instanceof</span> String;<br><br><span class="hljs-comment">// 结果是：true</span><br></code></pre></td></tr></table></figure>
+
+
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><p>暂无</p>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Language-Java8-OperatorPriority/">← 下一篇 Language | Java8 - 运算符优先级</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-Java8-Keyword/">Language | Java8 - 关键字 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E5%85%B17%E4%B8%AA%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">算术运算符（共7个）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E5%85%B16%E4%B8%AA%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">关系运算符（共6个）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E5%85%B13%E4%B8%AA%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">逻辑运算符（共3个）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E5%85%B18%E4%B8%AA%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">位运算符（共8个）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E5%85%B113%E4%B8%AA%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">赋值运算符（共13个）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">条件运算符（三元运算符）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#instanceof%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">7.</span> <span class="toc-text">instanceof运算符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">8.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">9.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>

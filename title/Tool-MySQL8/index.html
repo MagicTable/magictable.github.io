@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tool | MySQL8 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Tool | MySQL8</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-04-19T16:00:00.000Z" id="date"> 2024-04-20</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-07-11T12:11:05.035Z" id="updated"> 2024-07-11</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<strong>已完成</strong>、<del><em>待完善</em></del>、<del><em>编写中</em></del>]<br><strong>文章摘要：</strong> 开源的<strong>关系型数据库</strong>管理系统，使用<strong>结构化查询语言（SQL）</strong>进行数据库管理。<br class='item-img' data-src='/../assets/image/Tool/MySQL-logo.png'><img src="/../assets/image/Tool/MySQL-logo.png" alt="MySQL-logo"></p>
+<span id="more"></span>
+
+
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><blockquote>
+<p>数据库（DB）</p>
+<ul>
+<li>DataBase</li>
+<li>数据库是表的集合，是存储数据的仓库。</li>
+<li>将数据组织成结构化的形式组织、存储和管理起来的仓库。</li>
+<li>可以方便地对数据进行查询、更新、删除等操作。</li>
+</ul>
+</blockquote>
+<blockquote>
+<h2 id="关系型数据库（RDBMS）"><a href="#关系型数据库（RDBMS）" class="headerlink" title="关系型数据库（RDBMS）"></a>关系型数据库（RDBMS）</h2><ul>
+<li>概念：建立在关系模型的基础上，由多张相互连接的二维表组成的数据库。</li>
+<li>特点：使用<code>表</code>存储数据，使用SQL语言操作。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>数据库管理系统（DBMS）</p>
+<ul>
+<li>DataBase Management System</li>
+<li>实现对数据库资源有效组织、管理和存取的系统软件。</li>
+<li>负责数据库的建立和维护、数据定义、数据操纵、数据库的运行管理以及通信等功能。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>SQL</p>
+<ul>
+<li>Structured Query Language</li>
+<li>SQL是操作<strong>关系型数据库</strong>的编程语言，定义了统一的标准。</li>
+</ul>
+</blockquote>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><blockquote>
+<p>MySQL</p>
+<ul>
+<li>MySQL是一个<strong>关系型数据库管理系统</strong>。</li>
+<li>使用<strong>结构化查询语言（SQL）</strong>进行数据库管理。</li>
+<li>SQL是操作<strong>关系型数据库</strong>的编程语言，定义了统一的标准。</li>
+</ul>
+</blockquote>
+<h1 id="关系数据库的底层逻辑"><a href="#关系数据库的底层逻辑" class="headerlink" title="关系数据库的底层逻辑"></a>关系数据库的底层逻辑</h1><blockquote>
+<ul>
+<li><strong>表（Table）</strong>：表是数据库中的基本单位，用于存储具有相同属性的数据记录。每个表都由行和列组成。</li>
+<li><strong>字段（Field）或列（Column）</strong>：字段是表中的一个数据项，定义了表中数据的属性和类型。每个字段都有一个唯一的字段名，用于标识和引用该字段。</li>
+<li><strong>记录（Record）或行（Row）</strong>：记录是表中的一行数据，代表一个具体的数据实体。每个记录包含与表中字段相对应的数据值。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>实体（Entily）</strong>：客观存在的、可以被描述的事物。</li>
+<li><strong>属性（Attribute）</strong>：用于描述实体所具有的特征或特性。</li>
+<li><strong>表（Table）</strong>：将不同的记录组织在一起，用来存储具体数据。表是数据库的基本组成单位。</li>
+<li><strong>关系（Relationship）</strong>：实体之间的联系。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>事务</strong>：MySQL中的事务是确保数据库从一个一致性状态转变到另一个一致性状态的过程。它具有四个基本特性，即原子性（不可分割的工作单元）、一致性（系统始终处于一致状态）、隔离性（并发事务互不干扰）和持久性（提交后对数据库的修改是永久性的）。</li>
+</ul>
+</blockquote>
+<h1 id="命令查询"><a href="#命令查询" class="headerlink" title="命令查询"></a>命令查询</h1><blockquote>
+<ul>
+<li>详细说明请查看该文章：<a href="/title/Tool-MySQL8-Command/" title="Tool | MySQL8 - 命令">Tool | MySQL8 - 命令</a></li>
+</ul>
+</blockquote>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><blockquote>
+<ul>
+<li>函数是一段可以直接被另一段程序调用的程序或代码。</li>
+</ul>
+</blockquote>
+<h1 id="安装与卸载（Debian-Linux-12系统）"><a href="#安装与卸载（Debian-Linux-12系统）" class="headerlink" title="安装与卸载（Debian Linux 12系统）"></a>安装与卸载（Debian Linux 12系统）</h1><p><strong>安装MySQL服务器和客户端软件包</strong></p>
+<blockquote>
+<ul>
+<li>安装过程中会提示输入<code>root</code>用户的密码和加密方式。</li>
+</ul>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install mysql-server mysql-client<br></code></pre></td></tr></table></figure>
+
+
+<h1 id="安装与卸载（Windows系统）"><a href="#安装与卸载（Windows系统）" class="headerlink" title="安装与卸载（Windows系统）"></a>安装与卸载（Windows系统）</h1><blockquote>
+<ul>
+<li>教程：<a target="_blank" rel="noopener" href="https://bareth.blog.csdn.net/article/details/107369405">网站网址</a></li>
+</ul>
+</blockquote>
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><p>暂无</p>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><blockquote>
+<ul>
+<li>MySQL命令：<a href="/title/Tool-MySQL8-Command/" title="Tool | MySQL8 - 命令">Tool | MySQL8 - 命令</a></li>
+<li>MySQL知识总结：<a href="/title/Tool-MySQL8/" title="Tool | MySQL8">Tool | MySQL8</a></li>
+<li>SQL知识总结：<a href="/title/Language-SQL/" title="Language | SQL">Language | SQL</a></li>
+</ul>
+</blockquote>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Language-SQL/">← 下一篇 Language | SQL</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-Java8-API-swing/">Language | Java8 - API - Swing图形化界面 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88RDBMS%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">关系型数据库（RDBMS）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">2.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91"><span class="toc-number">3.</span> <span class="toc-text">关系数据库的底层逻辑</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%9F%A5%E8%AF%A2"><span class="toc-number">4.</span> <span class="toc-text">命令查询</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">5.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BD%EF%BC%88Debian-Linux-12%E7%B3%BB%E7%BB%9F%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">安装与卸载（Debian Linux 12系统）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BD%EF%BC%88Windows%E7%B3%BB%E7%BB%9F%EF%BC%89"><span class="toc-number">7.</span> <span class="toc-text">安装与卸载（Windows系统）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">8.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">9.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>
