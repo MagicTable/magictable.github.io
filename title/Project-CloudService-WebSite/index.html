@@ -26,15 +26,15 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Project | 云服务 - 网站搭建</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-06-14T12:00:00.000Z" id="date"> 2024-06-14</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-07-11T12:14:35.130Z" id="updated"> 2024-07-11</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]<br><strong>文章摘要：</strong></p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Project | 云服务 - 网站搭建</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-06-14T12:00:00.000Z" id="date"> 2024-06-14</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-07-13T17:06:21.498Z" id="updated"> 2024-07-14</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]<br><strong>文章摘要：</strong></p>
 <span id="more"></span>
 
 
-<p>项目所需工具</p>
-<blockquote>
+<h1 id="项目开发工具配置流程"><a href="#项目开发工具配置流程" class="headerlink" title="项目开发工具配置流程"></a>项目开发工具配置流程</h1><blockquote>
 <p>IDEA</p>
 <ul>
 <li>负责后端代码编写、前后端项目资源整合、打包发布</li>
+<li>Maven包管理工具、Tomcat服务器框架、MySQL数据库</li>
 </ul>
 <p>VScode</p>
 <ul>
@@ -49,24 +49,77 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <li>负责在公网上运行项目程序、提供与开发人员的权限、维护服务器正常运行</li>
 </ul>
 </blockquote>
-<h1 id="项目开发流程"><a href="#项目开发流程" class="headerlink" title="项目开发流程"></a>项目开发流程</h1><p>协商</p>
-<p>前端代码编写</p>
-<p>后端代码编写</p>
-<p>购买云服务器</p>
-<p>配置云服务器</p>
+<h2 id="部署与配置（IDEA）"><a href="#部署与配置（IDEA）" class="headerlink" title="部署与配置（IDEA）"></a>部署与配置（IDEA）</h2><ol>
+<li>使用 IDEA 创建一个新项目。</li>
+</ol>
 <blockquote>
 <ul>
-<li>设置安全组&#x2F;防火墙：给开发者开放数据库软件的3306端口、提供项目对外使用的程序端口</li>
+<li>构建系统选择：Maven</li>
 </ul>
 </blockquote>
-<p>打包发布到云服务器</p>
+<blockquote>
+<p class='item-img' data-src='/../assets/image/Project/CloudService-WebSite-01.png'><img src="/../assets/image/Project/CloudService-WebSite-01.png"></p>
+</blockquote>
+<ol start="2">
+<li>将Tomcat添加到IDEA中。</li>
+</ol>
 <blockquote>
 <ul>
-<li>注意软件是否配置完善，如数据库的账号、密码、表。</li>
-<li>发布时注意将依赖的资源和文件都需要一并上传。</li>
+<li>点击菜单栏打开“<code>设置</code>”窗口：<code>文件 -&gt; 设置</code></li>
+<li>切换到“<code>构建、执行、部署 -&gt; 应用程序服务器</code>”页面，点击“+”添加“<code>Web</code>框架模块”</li>
 </ul>
 </blockquote>
-<h1 id="环境配置流程"><a href="#环境配置流程" class="headerlink" title="环境配置流程"></a>环境配置流程</h1><p>购买debian操作系统的云服务器</p>
+<blockquote>
+<p class='item-img' data-src='/../assets/image/Project/CloudService-WebSite-02.png'><img src="/../assets/image/Project/CloudService-WebSite-02.png"></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>填写“Tomcat的所在目录”</li>
+</ul>
+</blockquote>
+<blockquote>
+<p class='item-img' data-src='/../assets/image/Project/CloudService-WebSite-02-1.png'><img src="/../assets/image/Project/CloudService-WebSite-02-1.png"></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>点击<code>应用</code>，并点击<code>确定</code></li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>修改pom.xml配置文件，改为输出为 web 应用。</li>
+</ol>
+<blockquote>
+<ul>
+<li>在文件中添加<code>&lt;packaging&gt;war&lt;/packaging&gt;</code>，并点击刷新按钮。</li>
+<li>添加图片中的第11行的代码。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p class='item-img' data-src='/../assets/image/Project/CloudService-WebSite-03.png'><img src="/../assets/image/Project/CloudService-WebSite-03.png"></p>
+</blockquote>
+<blockquote>
+<ul>
+<li>提示：该步骤将会自动为当前模块创建<code>“Web模块”</code>和两个<code>“工件”</code>。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>自动为当前模块创建“Web模块”。<br class='item-img' data-src='/../assets/image/Project/CloudService-WebSite-03-1.png'><img src="/../assets/image/Project/CloudService-WebSite-03-1.png"><br>会自动创建两个工件。<br class='item-img' data-src='/../assets/image/Project/CloudService-WebSite-03-2.png'><img src="/../assets/image/Project/CloudService-WebSite-03-2.png"><br><code>归档型</code>：将文件打包压缩成一个<code>.war</code>文件，方便部署到生产环境。<br><code>展开型</code>：保留项目目录结构没有压缩，用于测试开发方面修改文件。<br class='item-img' data-src='/../assets/image/Project/CloudService-WebSite-03-3.png'><img src="/../assets/image/Project/CloudService-WebSite-03-3.png"><img src="/../assets/image/Project/CloudService-WebSite-03-4.png"></p>
+</blockquote>
+<ol start="4">
+<li>添加运行&#x2F;调试配置。（即提供一键式运行Tomcat服务器）</li>
+</ol>
+<blockquote>
+<ul>
+<li>点击菜单栏打开“<code>运行/调试窗口</code>”窗口：<code>运行 -&gt; 编辑配置</code></li>
+<li>点击“<code>+</code>”添加“<code>Tomcat服务器</code> -&gt; <code>本地</code>”</li>
+<li>点击切换到“部署”页面，点击“<code>+</code>”添加“<code>工件</code>”</li>
+<li>点击<code>应用</code>，并点击<code>确定</code></li>
+</ul>
+</blockquote>
+<blockquote>
+<p class='item-img' data-src='/../assets/image/Project/CloudService-WebSite-04.png'><img src="/../assets/image/Project/CloudService-WebSite-04.png"><br class='item-img' data-src='/../assets/image/Project/CloudService-WebSite-04-1.png'><img src="/../assets/image/Project/CloudService-WebSite-04-1.png"></p>
+</blockquote>
+<h1 id="服务器环境配置流程"><a href="#服务器环境配置流程" class="headerlink" title="服务器环境配置流程"></a>服务器环境配置流程</h1><p>在华为云平台购买debian操作系统的云服务器</p>
 <p>SSH登录操作系统，使用root用户登录</p>
 <p>更改镜像源</p>
 <blockquote>
@@ -99,9 +152,26 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <blockquote>
 <p>- </p>
 </blockquote>
+<h1 id="项目开发流程"><a href="#项目开发流程" class="headerlink" title="项目开发流程"></a>项目开发流程</h1><p>协商</p>
+<p>前端代码编写</p>
+<p>后端代码编写</p>
+<p>购买云服务器</p>
+<p>配置云服务器</p>
+<blockquote>
+<ul>
+<li>设置安全组&#x2F;防火墙：给开发者开放数据库软件的3306端口、提供项目对外使用的程序端口</li>
+</ul>
+</blockquote>
+<p>打包发布到云服务器</p>
+<blockquote>
+<ul>
+<li>注意软件是否配置完善，如数据库的账号、密码、表。</li>
+<li>发布时注意将依赖的资源和文件都需要一并上传。</li>
+</ul>
+</blockquote>
 <h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><p>暂无</p>
 <h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
-<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Network-Protocol-HTTP/">← 下一篇 Network | 协议 - HTTP（超文本传输协议）</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-UML-Summary/">Language | UML 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">项目开发流程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">环境配置流程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">3.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">4.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Network-Protocol-HTTP/">← 下一篇 Network | 协议 - HTTP（超文本传输协议）</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-UML-Summary/">Language | UML 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">项目开发工具配置流程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E4%B8%8E%E9%85%8D%E7%BD%AE%EF%BC%88IDEA%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">部署与配置（IDEA）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">服务器环境配置流程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">项目开发流程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">4.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">5.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
 lightGallery(document.getElementById('post-bg'), {
   plugins: [lgZoom,lgThumbnail],
   selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
