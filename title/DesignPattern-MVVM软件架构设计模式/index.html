@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>DesignPattern | MVVM软件架构设计模式 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>DesignPattern | MVVM软件架构设计模式</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-07-22T14:28:27.000Z" id="date"> 2024-07-22</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-07-22T15:09:10.529Z" id="updated"> 2024-07-22</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]<br><strong>文章摘要：</strong> MVVM（Model-View-ViewModel）是一种软件架构设计模式。是一种简化用户界面的事件驱动编程方式。</p>
+<span id="more"></span>
+
+
+<h1 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h1><blockquote>
+<p class='item-img' data-src='/../assets/image/Language/DesignPattern-MVVM%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.png'><img src="/../assets/image/Language/DesignPattern-MVVM%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.png" alt="DesignPattern-MVVM设计模式"></p>
+</blockquote>
+<p>Model（模型）</p>
+<blockquote>
+<p>（javaScript对象）</p>
+<ul>
+<li>表示应用程序的数据逻辑，如数据库记录。</li>
+<li>通常负责访问数据源，如数据库或API。</li>
+<li>不直接与View交互。</li>
+</ul>
+</blockquote>
+<p>View（视图）</p>
+<blockquote>
+<p>（DOM，HTML操作的元素）</p>
+<ul>
+<li>表示UI层，即用户看到并与之交互的界面。</li>
+<li>通常由XAML（在.NET中），HTML（在Web应用中），或各种UI框架的标记语言定义。</li>
+<li>不包含业务逻辑，仅负责展示数据和发送用户操作。</li>
+</ul>
+</blockquote>
+<p>ViewModel（视图模型）</p>
+<blockquote>
+<ul>
+<li>作为View和Model之间的桥梁。</li>
+<li>包含视图所需的逻辑和数据，以及将用户操作映射到Model操作的命令。</li>
+<li>为视图提供数据绑定支持和命令接口。</li>
+</ul>
+</blockquote>
+<h1 id="关键特性"><a href="#关键特性" class="headerlink" title="关键特性"></a>关键特性</h1><blockquote>
+<ul>
+<li><strong>数据绑定：</strong>View和ViewModel之间的双向或单向数据绑定，使得视图能够自动更新以反映模型状态的变化，反之亦然。</li>
+<li><strong>命令：</strong>ViewModel中的命令属性允许视图触发操作，例如按钮点击。</li>
+<li><strong>依赖注入：</strong>ViewModel通常通过依赖注入与Model和其他服务进行交互。</li>
+<li><strong>视图模型定位：</strong>框架或约定用于将View与相应的ViewModel关联起来。</li>
+</ul>
+</blockquote>
+<h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><blockquote>
+<ul>
+<li><strong>分离关注点：</strong>降低了视图逻辑和业务逻辑之间的耦合。</li>
+<li><strong>可测试性：</strong>ViewModel可以独立于UI进行单元测试。</li>
+<li><strong>可维护性：</strong>清晰的职责划分使得代码更易于维护。</li>
+<li><strong>易于实现MVVM框架：</strong>许多现代框架（如Angular, Vue.js, WPF）内置了对MVVM模式的支持。</li>
+</ul>
+</blockquote>
+<h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><blockquote>
+<ul>
+<li><strong>复杂性：</strong>对于简单的应用来说，MVVM可能显得过于复杂。</li>
+<li><strong>学习曲线：</strong>开发者需要理解数据绑定、命令以及框架特定的MVVM实现。</li>
+<li><strong>过度抽象：</strong>在某些情况下，过度使用ViewModel可能导致不必要的抽象层。</li>
+</ul>
+</blockquote>
+<h1 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h1><blockquote>
+<ul>
+<li><strong>富客户端应用：</strong>如使用WPF, Silverlight, 或 UWP的桌面应用。</li>
+<li><strong>Web应用：</strong>现代JavaScript框架（如Knockout.js, Vue.js）支持MVVM模式。</li>
+<li><strong>移动应用：</strong>使用MVVM Light或MVVM Cross的Xamarin.Forms应用。</li>
+</ul>
+</blockquote>
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><p>暂无</p>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Tool-Vue3/">Tool | Vue3 - JavaScript 框架 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">核心概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E7%89%B9%E6%80%A7"><span class="toc-number">2.</span> <span class="toc-text">关键特性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-number">3.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9"><span class="toc-number">4.</span> <span class="toc-text">缺点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">5.</span> <span class="toc-text">应用场景</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">6.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">7.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tool | Vue3 - JavaScript 框架 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"等待输入","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"code.copy","copyFinish":"code.copyFinish","expand":"code.expand"}}</script><script src="//unpkg.com/mermaid@9.2.2/dist/mermaid.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script><script>MathJax.Hub.Config({
+ menuSettings: {
+   zoom: "None"
+ },
+ showMathMenu: false,
+ jax: ["input/TeX","output/CommonHTML"],
+ extensions: ["tex2jax.js"],
+ TeX: {
+   extensions: ["AMSmath.js","AMSsymbols.js"],
+   equationNumbers: {
+     autoNumber: "AMS"
+   }
+ },
+ tex2jax: {
+   inlineMath: [["\\(", "\\)"]],
+   displayMath: [["\\[", "\\]"]]
+ }
+});</script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><link rel="stylesheet" href="/css/arknights.css"><script>if (window.localStorage.getItem('theme-mode') === 'light') document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark') document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.ttf");
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+  --dark-background: url('/img/dark_backdrop.jpg');
+  --light-background: url('/img/light_backdrip.jpg');
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/task_matter/"><span class="navItemTitle">任务事项</span></a></li><li class="navItem"><a class="navBlock" href="/news_information/"><span class="navItemTitle">新闻资讯</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Tool | Vue3 - JavaScript 框架</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-07-22T12:58:47.000Z" id="date"> 2024-07-22</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-07-28T14:12:52.433Z" id="updated"> 2024-07-28</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]<br><strong>文章摘要：</strong> Vue 是一款用于构建用户界面的 JavaScript 框架。<br class='item-img' data-src='/../assets/image/Tool/Vue3-logo.jpeg'><img src="/../assets/image/Tool/Vue3-logo.jpeg" alt="Vue3-logo"></p>
+<span id="more"></span>
+
+
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><blockquote>
+<ul>
+<li>渐进式的JavaScript框架。</li>
+<li>基于标准 HTML、CSS 和 JavaScript 构建。</li>
+<li>提供了一套声明式的、组件化的编程模型。</li>
+</ul>
+</blockquote>
+<p><strong>适用场景</strong></p>
+<blockquote>
+<ul>
+<li>无需构建步骤，渐进式增强静态的 HTML</li>
+<li>在任何页面中作为 Web Components 嵌入</li>
+<li>单页应用 (SPA)</li>
+<li>全栈 &#x2F; 服务端渲染 (SSR)</li>
+<li>Jamstack &#x2F; 静态站点生成 (SSG)</li>
+<li>开发桌面端、移动端、WebGL，甚至是命令行终端中的界面</li>
+</ul>
+</blockquote>
+<p><strong>声明式渲染：</strong>Vue 基于标准 HTML 拓展了一套模板语法，使得我们可以声明式地描述最终输出的 HTML 和 JavaScript 状态之间的关系。<br><strong>响应性：</strong>Vue 会自动跟踪 JavaScript 状态并在其发生变化时响应式地更新 DOM。</p>
+<p><strong>单文件组件</strong></p>
+<blockquote>
+<ul>
+<li>使用一种类似 HTML 格式的文件来书写 Vue 组件，它被称为单文件组件 (也被称为 *.vue 文件，英文 Single-File Components，缩写为 SFC)。</li>
+<li>单文件组件会将一个组件的逻辑 (JavaScript)，模板 (HTML) 和样式 (CSS) 封装在同一个文件里。</li>
+</ul>
+</blockquote>
+<h1 id="选项式-API（Options-API）"><a href="#选项式-API（Options-API）" class="headerlink" title="选项式 API（Options API）"></a>选项式 API（Options API）</h1><h1 id="组合式-API-Composition-API"><a href="#组合式-API-Composition-API" class="headerlink" title="组合式 API (Composition API)"></a>组合式 API (Composition API)</h1><table>
+<thead>
+<tr>
+<th align="left">setup（）</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>&lt;script setup&gt;</code></td>
+<td align="left">无需手动<code>return</code>暴露变量或函数</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">响应式：核心</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>reactive()</code></td>
+<td align="left">接收对象类型数据的参数传入并返回一个响应式的对象</td>
+</tr>
+<tr>
+<td align="left"><code>ref()</code></td>
+<td align="left">接收简单类型或者对象类型的数据传入并返回一个响应式的对象</td>
+</tr>
+<tr>
+<td align="left"><code>computed()</code></td>
+<td align="left">计算属性，返回一个计算后的新对象</td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>watch()</code></td>
+<td align="left">数据监听器，侦听一个或多个响应式数据源，并在数据源变化时调用所给的回调函数。</td>
+</tr>
+</tbody></table>
+<p>在侦听器创建时立即出发回调，响应式数据变化之后继续执行回调</p>
+<table>
+<thead>
+<tr>
+<th align="left">响应式 API：工具</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">响应式 API：进阶</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">生命周期钩子</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">依赖注入</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#96;&#96;</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h1 id="内置指令"><a href="#内置指令" class="headerlink" title="内置指令"></a>内置指令</h1><blockquote>
+<p>官网文档：<a target="_blank" rel="noopener" href="https://cn.vuejs.org/api/built-in-directives.html">https://cn.vuejs.org/api/built-in-directives.html</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">指令</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>v-text</code></td>
+<td align="left">更新元素的文本内容</td>
+</tr>
+<tr>
+<td align="left"><code>v-html</code></td>
+<td align="left">更新元素的 innerHTML</td>
+</tr>
+<tr>
+<td align="left"><code>v-show</code></td>
+<td align="left">基于表达式值的真假性，来改变元素的可见性</td>
+</tr>
+<tr>
+<td align="left"><code>v-if</code></td>
+<td align="left">基于表达式值的真假性，来条件性地渲染元素或者模板片段</td>
+</tr>
+<tr>
+<td align="left"><code>v-else</code></td>
+<td align="left">表示<code>v-if</code>或<code>v-if</code>&#x2F;<code>v-else-if</code>链式调用的<code>else 块</code></td>
+</tr>
+<tr>
+<td align="left"><code>v-else-if</code></td>
+<td align="left">表示<code>v-if</code>的<code>else if 块</code>，可以进行链式调用</td>
+</tr>
+<tr>
+<td align="left"><code>v-for</code></td>
+<td align="left">基于原始数据多次渲染元素或模板块</td>
+</tr>
+<tr>
+<td align="left"><code>v-on</code></td>
+<td align="left">给元素绑定事件监听器</td>
+</tr>
+<tr>
+<td align="left"><code>v-bind</code></td>
+<td align="left">动态的绑定一个或多个属性(attribute)，也可以是组件的 prop</td>
+</tr>
+<tr>
+<td align="left"><code>v-model</code></td>
+<td align="left">在表单输入元素或组件上创建双向绑定</td>
+</tr>
+<tr>
+<td align="left"><code>v-slot</code></td>
+<td align="left">用于声明具名插槽或是期望接收 props 的作用域插槽</td>
+</tr>
+<tr>
+<td align="left"><code>v-pre</code></td>
+<td align="left">跳过该元素及其所有子元素的编译</td>
+</tr>
+<tr>
+<td align="left"><code>v-once</code></td>
+<td align="left">仅渲染元素和组件一次，并跳过之后的更新</td>
+</tr>
+<tr>
+<td align="left"><code>v-memo</code></td>
+<td align="left">期望的绑定值类型：<code>any[]</code></td>
+</tr>
+<tr>
+<td align="left"><code>v-cloak</code></td>
+<td align="left">用于隐藏尚未完成编译的 DOM 模板</td>
+</tr>
+</tbody></table>
+<h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><h1 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h1><h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><blockquote>
+<p>推荐详细教程请前往Vue官网查看文档：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://cn.vuejs.org/guide/introduction.html">官方教学文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://cn.vuejs.org/api/">官方API文档</a></li>
+</ul>
+</blockquote>
+<p>双向数据更新<br>实时更新</p>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/DesignPattern-MVVM%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">← 下一篇 DesignPattern | MVVM软件架构设计模式</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Tool-MyBatis/">Tool | MyBatis - 数据持久层框架 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧</a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%89%E9%A1%B9%E5%BC%8F-API%EF%BC%88Options-API%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">选项式 API（Options API）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E5%BC%8F-API-Composition-API"><span class="toc-number">3.</span> <span class="toc-text">组合式 API (Composition API)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text">内置指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">6.</span> <span class="toc-text">表达式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">7.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">8.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr>主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside><div id="shadow-aside"></div></main><canvas id="canvas-dust"></canvas><script src="/js/search.js"></script><script src="/js/arknights.js"></script><script src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></body></html>
