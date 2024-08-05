@@ -26,7 +26,7 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 }</style><style>:root {
   --dark-background: url('/img/dark_backdrop.jpg');
   --light-background: url('/img/light_backdrip.jpg');
-}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | SQL</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-04-19T16:00:00.000Z" id="date"> 2024-04-20</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-08-03T07:57:34.177Z" id="updated"> 2024-08-03</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<strong>待完善</strong>、<del><em>编写中</em></del>]<br><strong>文章摘要：</strong> SQL用于管理关系型数据库的编程语言知识总结，本文章主要关注在MySQL关系型数据库管理软件中的使用总结。<br class='item-img' data-src='/!%5BHexo-logo%5D(../assets/image/Tool/Hexo-logo.png)'><img src="/!%5BHexo-logo%5D(../assets/image/Tool/Hexo-logo.png)" alt="SQL-logo"></p>
+}</style><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><nav><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><div id="shadow-header"></div><article><div id="post-bg"><div id="post-title"><h1>Language | SQL</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-04-19T16:00:00.000Z" id="date"> 2024-04-20</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-08-05T17:06:01.016Z" id="updated"> 2024-08-06</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<strong>待完善</strong>、<del><em>编写中</em></del>]<br><strong>文章摘要：</strong> SQL用于管理关系型数据库的编程语言知识总结，本文章主要关注在MySQL关系型数据库管理软件中的使用总结。<br class='item-img' data-src='/!%5BHexo-logo%5D(../assets/image/Tool/Hexo-logo.png)'><img src="/!%5BHexo-logo%5D(../assets/image/Tool/Hexo-logo.png)" alt="SQL-logo"></p>
 <span id="more"></span>
 
 
@@ -146,11 +146,67 @@ if (window.localStorage.getItem('theme-mode') === 'dark') document.documentEleme
 <h2 id="事务-控制语言（TCT）"><a href="#事务-控制语言（TCT）" class="headerlink" title="事务 - 控制语言（TCT）"></a>事务 - 控制语言（TCT）</h2><blockquote>
 <ul>
 <li>用于控制SQL执行的提交和回滚。</li>
-<li>原子性：事务是不可分割的最小单元，要么全部成功，要么全部失败。</li>
-<li>一致性：事务完成时，必须使所有的数据都保持一致状态。</li>
-<li>隔离性：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行。</li>
-<li>持久性：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。</li>
+<li><strong>原子性</strong>：事务是不可分割的最小单元，要么全部成功，要么全部失败。</li>
+<li><strong>一致性</strong>：事务完成时，必须使所有的数据都保持一致状态。</li>
+<li><strong>隔离性</strong>：数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行。</li>
+<li><strong>持久性</strong>：事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。</li>
 </ul>
+</blockquote>
+<p><strong>事务产生的问题</strong></p>
+<blockquote>
+<ul>
+<li><strong>脏读（dirty read）</strong>：当一个事务读取另一个事务尚未提交的修改时，产生脏读。</li>
+<li><strong>不可重复读（nonrepeatable read）</strong>：同一个查询在同一个事务中多次进行，由于其他提交事务所做的修改或删除，每次返回不同的结果集，此时发生不可重复读。</li>
+<li><strong>幻读（phantom read）</strong>：同一个查询在同一事务中多次进行，由于其他提交事务所做的插入或删除操作，每次返回不同的结果集，此时返回幻读。</li>
+</ul>
+</blockquote>
+<p><strong>事务的隔离界别</strong></p>
+<blockquote>
+<ul>
+<li><strong>Read Uncommitted（未提交读）</strong>：事务中的修改，即使没有提交，对其他事务也是可见的。</li>
+<li><strong>Read Committed（提交读）</strong>：一个事务只能看见已经提交的事务所做的修改。</li>
+<li><strong>Repeatable Read（重复读）</strong>：在同一事务中，查询同一个记录会返回相同的结果，即使在这个事务中其他地方已经修改过这个记录。</li>
+<li><strong>Serialize（串行化）</strong>：所有事务依次逐个执行，这样每个事务都感觉不到其他事务的存在。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">隔离级别</th>
+<th align="center">脏读</th>
+<th align="center">不可重复读</th>
+<th align="center">幻读</th>
+<th align="center">加锁读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>Read Uncommitted</code>（未提交读）</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">不加锁</td>
+</tr>
+<tr>
+<td align="left"><code>Read Committed</code>（提交读）</td>
+<td align="center"></td>
+<td align="center">Y</td>
+<td align="center">Y</td>
+<td align="center">不加锁</td>
+</tr>
+<tr>
+<td align="left"><code>Repeatable Read</code>（重复读）</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">不加锁</td>
+</tr>
+<tr>
+<td align="left"><code>Serialize</code>（串行化）</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">加锁</td>
+</tr>
+</tbody></table>
 </blockquote>
 <h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><p><strong>比较运算符</strong></p>
 <blockquote>
