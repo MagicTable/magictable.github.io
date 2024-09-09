@@ -1,0 +1,383 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Language | Python3 - 运算符 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('/img/dark_backdrop.jpg');
+ --light-background: url('/img/light_backdrip.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Language | Python3 - 运算符</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-08-09T20:00:03.000Z" id="date"> 2023-08-10</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-08T15:20:59.332Z" id="updated"> 2024-09-08</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<strong>已完成</strong>、<del><em>待完善</em></del>、<del><em>编写中</em></del>]</p>
+<p><strong>文章摘要：</strong> 运算符用于对变量和值的执行操作。</p>
+<ul>
+<li>Python运算符共分为7类：算术运算符、关系运算符、逻辑运算符、位运算符、赋值运算符、身份运算符、成员运算符</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="算术运算符（共7个）"><a href="#算术运算符（共7个）" class="headerlink" title="算术运算符（共7个）"></a>算术运算符（共7个）</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="left">名称</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+</td>
+<td align="left">加</td>
+<td align="left">x + y</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="left">减</td>
+<td align="left">x - y</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="left">乘</td>
+<td align="left">x * y</td>
+</tr>
+<tr>
+<td align="center">&#x2F;</td>
+<td align="left">除</td>
+<td align="left">x &#x2F; y</td>
+</tr>
+<tr>
+<td align="center">%</td>
+<td align="left">取模（保留余数）</td>
+<td align="left">x % y</td>
+</tr>
+<tr>
+<td align="center">&#x2F;&#x2F;</td>
+<td align="left">取整（保留整数）</td>
+<td align="left">x &#x2F;&#x2F; y</td>
+</tr>
+<tr>
+<td align="center">**</td>
+<td align="left">求幂（指数计算）</td>
+<td align="left">x ** y</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="关系运算符（共6个）"><a href="#关系运算符（共6个）" class="headerlink" title="关系运算符（共6个）"></a>关系运算符（共6个）</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="left">名称</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&#x3D;&#x3D;</td>
+<td align="left">全等</td>
+<td align="left">x &#x3D;&#x3D; y</td>
+</tr>
+<tr>
+<td align="center">!&#x3D;</td>
+<td align="left">不等</td>
+<td align="left">x !&#x3D; y</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="left">小于</td>
+<td align="left">x &lt; y</td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="left">大于</td>
+<td align="left">x &gt; y</td>
+</tr>
+<tr>
+<td align="center">&lt;&#x3D;</td>
+<td align="left">小于等于</td>
+<td align="left">x &lt;&#x3D; y</td>
+</tr>
+<tr>
+<td align="center">&gt;&#x3D;</td>
+<td align="left">大于等于</td>
+<td align="left">x &gt;&#x3D; y</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="逻辑运算符（共3个）"><a href="#逻辑运算符（共3个）" class="headerlink" title="逻辑运算符（共3个）"></a>逻辑运算符（共3个）</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="left">名称</th>
+<th align="left">描述</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">and</td>
+<td align="left">与&#x2F;且</td>
+<td align="left">若两个条件都为<code>True</code>，则返回<code>True</code></td>
+<td align="left">0&amp;0&#x3D;0, 1&amp;1&#x3D;1, 0&amp;1&#x3D;0</td>
+</tr>
+<tr>
+<td align="center">or</td>
+<td align="left">或</td>
+<td align="left">若两个条件中有一个或一个以上都为<code>True</code>，则返回<code>True</code></td>
+<td align="left">0|0&#x3D;0, 1|1&#x3D;1, 0|1&#x3D;1</td>
+</tr>
+<tr>
+<td align="center">not</td>
+<td align="left">非</td>
+<td align="left">反转结果，若结果为<code>False</code>，则返回<code>True</code></td>
+<td align="left">~0&#x3D;1, ~ 1&#x3D;0</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="位运算符（共6个）"><a href="#位运算符（共6个）" class="headerlink" title="位运算符（共6个）"></a>位运算符（共6个）</h1><blockquote>
+<p>提示：</p>
+<ul>
+<li>位运算符是对二进制的运算。</li>
+<li>只能适用于整数，其总体运算规则是先把整数转换位二进制表示形式，按最低位对齐，短的高位补0，然后进行位运算。</li>
+<li>最后把得到的二进制数转换为十进制数。</li>
+</ul>
+</blockquote>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="left">名称</th>
+<th align="left">描述</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&amp;</td>
+<td align="left">位与</td>
+<td align="left">如果相对应的位都是1，则结果为1，否则为0</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">|</td>
+<td align="left">位或</td>
+<td align="left">如果相对应的位有1个或2个是1，则结果为1，否则为0</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="left">位异或</td>
+<td align="left">如果相对应的位有1个或2个是1，则反转后为0；若都是0，则反转后为1</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">~</td>
+<td align="left">位取反</td>
+<td align="left">按位取反每一位操作数，即0改成1，1改成0</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">&lt;&lt;</td>
+<td align="left">位左移</td>
+<td align="left">按位左移操作数指定的位数</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;</td>
+<td align="left">位右移</td>
+<td align="left">按位右移操作数指定的位数</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="赋值运算符（共13个）"><a href="#赋值运算符（共13个）" class="headerlink" title="赋值运算符（共13个）"></a>赋值运算符（共13个）</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="left">名称</th>
+<th align="left">例子</th>
+<th align="left">等效于</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&#x3D;</td>
+<td align="left">赋值</td>
+<td align="left">x &#x3D; 1</td>
+<td align="left">x &#x3D; 1</td>
+</tr>
+<tr>
+<td align="center">+&#x3D;</td>
+<td align="left">加法赋值</td>
+<td align="left">x +&#x3D; 1</td>
+<td align="left">x &#x3D; x + 1</td>
+</tr>
+<tr>
+<td align="center">-&#x3D;</td>
+<td align="left">减法赋值</td>
+<td align="left">x -&#x3D; 1</td>
+<td align="left">x &#x3D; x - 1</td>
+</tr>
+<tr>
+<td align="center">*&#x3D;</td>
+<td align="left">乘法赋值</td>
+<td align="left">x *&#x3D; 1</td>
+<td align="left">x &#x3D; x * 1</td>
+</tr>
+<tr>
+<td align="center">&#x2F;&#x3D;</td>
+<td align="left">除法赋值</td>
+<td align="left">x &#x2F;&#x3D; 1</td>
+<td align="left">x &#x3D; x &#x2F; 1</td>
+</tr>
+<tr>
+<td align="center">%&#x3D;</td>
+<td align="left">取余赋值</td>
+<td align="left">x %&#x3D; 1</td>
+<td align="left">x &#x3D; x % 1</td>
+</tr>
+<tr>
+<td align="center">&#x2F;&#x2F;&#x3D;</td>
+<td align="left">取整赋值</td>
+<td align="left">x &#x2F;&#x2F;&#x3D; 1</td>
+<td align="left">x &#x3D; x &#x2F;&#x2F; 1</td>
+</tr>
+<tr>
+<td align="center">**&#x3D;</td>
+<td align="left">求幂赋值</td>
+<td align="left">x **&#x3D; 1</td>
+<td align="left">x &#x3D; x ** 1</td>
+</tr>
+<tr>
+<td align="center">&amp;&#x3D;</td>
+<td align="left">位与赋值</td>
+<td align="left">二进制A &amp;&#x3D; 二进制B</td>
+<td align="left">二进制B &#x3D; 二进制A &amp; 二进制B</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="left">&#x3D;</td>
+<td align="left">位或赋值</td>
+<td align="left">二进制A |&#x3D; 二进制B</td>
+</tr>
+<tr>
+<td align="center">^&#x3D;</td>
+<td align="left">位异或赋值</td>
+<td align="left">二进制A ^&#x3D; 二进制B</td>
+<td align="left">二进制2 &#x3D; 二进制0 ^ 二进制1</td>
+</tr>
+<tr>
+<td align="center">&lt;&lt;&#x3D;</td>
+<td align="left">位左移赋值</td>
+<td align="left">二进制A &lt;&lt;&#x3D; 移动的位数</td>
+<td align="left">二进制B &#x3D; 二进制A &lt;&lt; 移动的位数</td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;&#x3D;</td>
+<td align="left">位右移赋值</td>
+<td align="left">二进制A &gt;&gt;&#x3D; 移动的位数</td>
+<td align="left">二进制B &#x3D; 二进制A &gt;&gt;&#x3D; 移动的位数</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="身份运算符（共2个）"><a href="#身份运算符（共2个）" class="headerlink" title="身份运算符（共2个）"></a>身份运算符（共2个）</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="left">名称</th>
+<th align="left">描述</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">is</td>
+<td align="left">是</td>
+<td align="left">若两个变量是同一个对象或数据相等，则返回<code>True</code></td>
+<td align="left">2 is 2</td>
+</tr>
+<tr>
+<td align="center">is not</td>
+<td align="left">不是</td>
+<td align="left">若两个变量不是同一个对象或数据不相等，则返回<code>True</code></td>
+<td align="left">2 is not 3</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="成员运算符（共2个）"><a href="#成员运算符（共2个）" class="headerlink" title="成员运算符（共2个）"></a>成员运算符（共2个）</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="left">名称</th>
+<th align="left">描述</th>
+<th align="left">例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">in</td>
+<td align="left">在</td>
+<td align="left">若该对象存在于指定的序列对象中，则返回<code>True</code></td>
+<td align="left">2 in list[1,2,3]</td>
+</tr>
+<tr>
+<td align="center">not in</td>
+<td align="left">不在</td>
+<td align="left">若该对象不存在于指定的序列对象中，则返回<code>True</code></td>
+<td align="left">2 not in list[1,2,3]</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="AI提示词"><a href="#AI提示词" class="headerlink" title="AI提示词"></a>AI提示词</h1><p>暂无</p>
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><p>暂无</p>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Language-Python3-OperatorPriority/">← 下一篇 Language | Python3 - 运算符优先级</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-Python3-ReservedKeyword/">Language | Python3 - 保留关键字 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E5%85%B17%E4%B8%AA%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">算术运算符（共7个）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E5%85%B16%E4%B8%AA%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">关系运算符（共6个）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E5%85%B13%E4%B8%AA%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">逻辑运算符（共3个）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E5%85%B16%E4%B8%AA%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">位运算符（共6个）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E5%85%B113%E4%B8%AA%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">赋值运算符（共13个）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BA%AB%E4%BB%BD%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E5%85%B12%E4%B8%AA%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">身份运算符（共2个）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%90%E5%91%98%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E5%85%B12%E4%B8%AA%EF%BC%89"><span class="toc-number">7.</span> <span class="toc-text">成员运算符（共2个）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AI%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">8.</span> <span class="toc-text">AI提示词</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">9.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">10.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

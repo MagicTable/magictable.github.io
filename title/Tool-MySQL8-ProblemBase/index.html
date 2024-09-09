@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tool | MySQL8 - 问题库 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('/img/dark_backdrop.jpg');
+ --light-background: url('/img/light_backdrip.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Tool | MySQL8 - 问题库</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-04-19T16:00:00.000Z" id="date"> 2024-04-20</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-08T15:38:54.782Z" id="updated"> 2024-09-08</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<strong>已完成</strong>、<del><em>待完善</em></del>、<del><em>编写中</em></del>]</p>
+<p><strong>文章摘要：</strong> MySQL数据库管理软件的命令总结。</p>
+<span id="more"></span>
+
+<h1 id="MySQL忘记密码重置数据库密码"><a href="#MySQL忘记密码重置数据库密码" class="headerlink" title="MySQL忘记密码重置数据库密码"></a>MySQL忘记密码重置数据库密码</h1><blockquote>
+<ul>
+<li>无密码状态root登录数据库。</li>
+<li>用于在忘记密码的时候重置MySQL数据库。</li>
+<li>windows用户需要进入管理员模式。</li>
+</ul>
+</blockquote>
+<ol>
+<li>（命令行窗口01）关闭MySQL数据库服务器</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Linux系统命令</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl stop mysql</span><br><span class="line"></span><br><span class="line"><span class="comment">#  Windows系统命令（以管理员身份运行）</span></span><br><span class="line"><span class="comment"># 提示：服务名称可能因安装方式和版本而异（例如：MySQL80）</span></span><br><span class="line">net stop <span class="string">&quot;&lt;服务名称&gt;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>（命令行窗口01）运行mysql服务，跳过权限检查</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 运行mysql服务，跳过权限检查</span></span><br><span class="line"><span class="built_in">sudo</span> mysqld_safe --skip-grant-tables &amp;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行上述一条命令后，需要持续处于运行状态</span></span><br><span class="line"><span class="comment"># 需要在新的命令行窗口，执行下面的操作</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>（命令行窗口02）开启新的命令行窗口，进行重置密码</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 无需密码，直接通过root用户登录数据库</span></span><br><span class="line">mysql -u root</span><br><span class="line"></span><br><span class="line"><span class="comment"># 刷新权限</span></span><br><span class="line">FLUSH PRIVILEGES;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 为root用户设置新的密码</span></span><br><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@`localhost` IDENTIFIED BY <span class="string">&#x27;新密码&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>（命令行窗口01）手动关闭mysql的安全模式服务进程<blockquote>
+<ul>
+<li>提示：若不会或没有成功，可以选择重启计算机即可。</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 关闭命令运行，并需要通过手动强制关闭进程服务</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 找到MySQL安全模式的服务进程ID</span></span><br><span class="line">ps aux | grep mysqld_safe</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭MySQL的安全模式服务进程</span></span><br><span class="line"><span class="built_in">kill</span> &lt;进程ID&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="AI提示词"><a href="#AI提示词" class="headerlink" title="AI提示词"></a>AI提示词</h1><p>暂无</p>
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><blockquote>
+<ul>
+<li>暂无</li>
+</ul>
+</blockquote>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><blockquote>
+<ul>
+<li>MySQL知识总结：<a href="/title/Tool-MySQL8/" title="Tool | MySQL8 - 关系型数据库软件">Tool | MySQL8</a></li>
+<li>SQL知识总结：<a href="/title/Language-SQL/" title="Language | SQL">Language | SQL</a></li>
+</ul>
+</blockquote>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Language-SQL/">← 下一篇 Language | SQL</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-Java8-API-swing/">Language | Java8 - API - Swing图形化界面 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%86%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text">MySQL忘记密码重置数据库密码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AI%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">2.</span> <span class="toc-text">AI提示词</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">3.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">4.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

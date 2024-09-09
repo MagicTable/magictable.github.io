@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Diary | 类库 - axios - 网络请求库 - (NodeJS) | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('/img/dark_backdrop.jpg');
+ --light-background: url('/img/light_backdrip.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Diary | 类库 - axios - 网络请求库 - (NodeJS)</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-08-05T17:20:53.000Z" id="date"> 2024-08-06</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-08T14:55:43.509Z" id="updated"> 2024-09-08</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]</p>
+<p><strong>文章摘要：</strong> 摘要内容。</p>
+<p class='item-img' data-src='/../assets/image/Diary/logo/Library-NodeJS-axios-logo.excalidraw.svg'><img src="/../assets/image/Diary/logo/Library-NodeJS-axios-logo.excalidraw.svg" alt="logo"></p>
+<span id="more"></span>
+
+<blockquote>
+<p>前置依赖：</p>
+</blockquote>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p>Axios 是一个基于 promise 网络请求库，作用于node.js 和浏览器中。</p>
+</blockquote>
+<p>特性</p>
+<blockquote>
+<ul>
+<li>从浏览器创建 XMLHttpRequests</li>
+<li>从 node.js 创建 http 请求</li>
+<li>支持 Promise API</li>
+<li>拦截请求和响应</li>
+<li>转换请求和响应数据</li>
+<li>取消请求</li>
+<li>超时处理</li>
+<li>查询参数序列化支持嵌套项处理</li>
+<li>自动将请求体序列化为：</li>
+<li><ul>
+<li>JSON (application&#x2F;json)</li>
+</ul>
+</li>
+<li><ul>
+<li>Multipart &#x2F; FormData (multipart&#x2F;form-data)</li>
+</ul>
+</li>
+<li><ul>
+<li>URL encoded form (application&#x2F;x-www-form-urlencoded)</li>
+</ul>
+</li>
+<li>将 HTML Form 转换成 JSON 进行请求</li>
+<li>自动转换JSON数据</li>
+<li>获取浏览器和 node.js 的请求进度，并提供额外的信息（速度、剩余时间）</li>
+<li>为 node.js 设置带宽限制</li>
+<li>兼容符合规范的 FormData 和 Blob（包括 node.js）</li>
+<li>客户端支持防御XSRF</li>
+</ul>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>使用npm安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios</span><br></pre></td></tr></table></figure>
+
+<h2 id="Axios-API"><a href="#Axios-API" class="headerlink" title="Axios API"></a>Axios API</h2><p>方法</p>
+<blockquote>
+<ul>
+<li><code>axios(config)</code>：可以向 axios 传递相关配置来创建请求。</li>
+</ul>
+</blockquote>
+<p>参数</p>
+<blockquote>
+<ul>
+<li><code>method</code>：请求方式，<code>get</code>、<code>post</code>、<code>delete</code>、<code>patch</code>、<code>put</code>。</li>
+<li><code>url</code>：请求地址</li>
+<li><code>data</code>：</li>
+</ul>
+</blockquote>
+<p>案例</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> logon_submit = <span class="title function_">axios</span>(&#123;</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;/user/logon&#x27;</span>,</span><br><span class="line">    <span class="attr">data</span>: &#123;</span><br><span class="line">        <span class="attr">account</span>: <span class="string">&quot;YH202408091830001000&quot;</span>,</span><br><span class="line">        <span class="attr">password</span>: <span class="string">&quot;123456&quot;</span>,</span><br><span class="line">        <span class="attr">check_code_type</span>: <span class="string">&#x27;image&#x27;</span>,</span><br><span class="line">        <span class="attr">check_code</span>: <span class="string">&#x27;abcd&#x27;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="function"><span class="params">reactive</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;数据：&quot;</span> + reactive.<span class="property">data</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 用GET请求方式获取远程图片</span></span><br><span class="line"><span class="title function_">axios</span>(&#123;</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;http://localhost:8080&#x27;</span>,</span><br><span class="line">    <span class="attr">responseType</span>: <span class="string">&#x27;stream&#x27;</span>,</span><br><span class="line">&#125;).<span class="title function_">then</span>()</span><br></pre></td></tr></table></figure>
+
+<h2 id="axios常用语法"><a href="#axios常用语法" class="headerlink" title="axios常用语法"></a>axios常用语法</h2><p><code>axios(config)</code>：通用&#x2F;最本质的发任意类型的方式。<br><code>axios(url[,config])</code>：可以指定url发<code>get请求</code>。<br><code>axios.request(config)</code>：等同于<code>axios(config)</code>。<br><code>axios.get(url[,config])</code>：发<code>get请求</code>。<br><code>axios.post()</code></p>
+<h2 id="AI提示词"><a href="#AI提示词" class="headerlink" title="AI提示词"></a>AI提示词</h2><p>暂无</p>
+<h2 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h2><blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.axios-js.com/zh-cn/docs/">第三方教程</a></li>
+</ul>
+</blockquote>
+<h2 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h2><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Tool-IntellijIDEA/">← 下一篇 Tool | Intellij IDEA - 集成开发环境（IDEA）</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/DesignPattern-MVVM%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">DesignPattern | MVVM软件架构设计模式 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Axios-API"><span class="toc-number">3.</span> <span class="toc-text">Axios API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#axios%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">axios常用语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AI%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">5.</span> <span class="toc-text">AI提示词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">6.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">7.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

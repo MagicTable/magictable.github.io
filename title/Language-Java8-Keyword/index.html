@@ -1,0 +1,427 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Language | Java8 - 关键字 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('/img/dark_backdrop.jpg');
+ --light-background: url('/img/light_backdrip.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Language | Java8 - 关键字</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-03-17T16:01:00.000Z" id="date"> 2024-03-18</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-08T15:15:10.640Z" id="updated"> 2024-09-08</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<strong>已完成</strong>、<del><em>待完善</em></del>、<del><em>编写中</em></del>]</p>
+<p><strong>文章摘要：</strong> 关键字是Java编程语言中的语法规则语句，具有特殊含义，用于定义程序的基本结构和元素。</p>
+<span id="more"></span>
+
+<h1 id="访问控制"><a href="#访问控制" class="headerlink" title="访问控制"></a>访问控制</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">标识符</th>
+<th align="left">说明</th>
+<th align="left">详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">private</td>
+<td align="left">当前类访问级别</td>
+<td align="left">私有的，<code>本类</code>可见</td>
+</tr>
+<tr>
+<td align="left">default</td>
+<td align="left">包访问级别</td>
+<td align="left">默认（可不写），<code>本类</code>、<code>同包</code>可见</td>
+</tr>
+<tr>
+<td align="left">protected</td>
+<td align="left">子类访问级别</td>
+<td align="left">受保护的，<code>本类</code>、<code>同包</code>、<code>子类</code>可见</td>
+</tr>
+<tr>
+<td align="left">public</td>
+<td align="left">公共访问级别</td>
+<td align="left">公共的，<code>本类</code>、<code>同包</code>、<code>子类</code>、<code>任何地方</code>对任何类可见</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="类、接口、方法、抽象、变量、代码块"><a href="#类、接口、方法、抽象、变量、代码块" class="headerlink" title="类、接口、方法、抽象、变量、代码块"></a>类、接口、方法、抽象、变量、代码块</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">标识符</th>
+<th align="left">说明</th>
+<th align="left">详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">class</td>
+<td align="left">定义类</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">abstract</td>
+<td align="left">定义抽象类</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">extends</td>
+<td align="left">类继承抽象类&#x2F;实现类</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">interface</td>
+<td align="left">定义接口类</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">implements</td>
+<td align="left">类继承接口类</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">static</td>
+<td align="left">声明静态</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">final</td>
+<td align="left">最终，不可改变的</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">synchronized</td>
+<td align="left">线程、同步</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">volatile</td>
+<td align="left">修饰变量</td>
+<td align="left">表示该变量的值可能会被多个线程同时修改</td>
+</tr>
+<tr>
+<td align="left">transient</td>
+<td align="left">修饰变量</td>
+<td align="left">表示该变量不需要被序列化</td>
+</tr>
+<tr>
+<td align="left">native</td>
+<td align="left">本地、原生方法（非java实现）</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">strictfp</td>
+<td align="left">严格浮点、精准浮点</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">enum</td>
+<td align="left">枚举类型</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">标识符</th>
+<th align="left">说明</th>
+<th align="left">详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">if</td>
+<td align="left">如果</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">else</td>
+<td align="left">否则</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">switch</td>
+<td align="left">根据值选择执行</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">case</td>
+<td align="left">定义一个值以供switch选择</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">default</td>
+<td align="left">在switch语句中定义默认分支</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">while</td>
+<td align="left">循环</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">do</td>
+<td align="left">运行</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">for</td>
+<td align="left">循环</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">break</td>
+<td align="left">跳出本层整个循环</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">continue</td>
+<td align="left">跳出本层当前循环</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">return</td>
+<td align="left">返回</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">assert</td>
+<td align="left">断言表达式是否为真</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">instanceof</td>
+<td align="left">判断某一个对象的类型是否继承自另一个类型中</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">标识符</th>
+<th align="left">说明</th>
+<th align="left">详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">try</td>
+<td align="left">抛出异常</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">catch</td>
+<td align="left">捕获异常</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">finally</td>
+<td align="left">垃圾回收器</td>
+<td align="left">有没有异常都执行</td>
+</tr>
+<tr>
+<td align="left">throw</td>
+<td align="left">手动抛出异常对象</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">throws</td>
+<td align="left">声明一个方法中可能会抛出异常</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">标识符</th>
+<th align="left">说明</th>
+<th align="left">详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">byte</td>
+<td align="left">字节型</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">short</td>
+<td align="left">短整型</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">int</td>
+<td align="left">整型</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">long</td>
+<td align="left">长整型</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">float</td>
+<td align="left">单精度浮点</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">double</td>
+<td align="left">双精度浮点</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">char</td>
+<td align="left">字符型</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">boolean</td>
+<td align="left">布尔型</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="变量引用"><a href="#变量引用" class="headerlink" title="变量引用"></a>变量引用</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">标识符</th>
+<th align="left">说明</th>
+<th align="left">详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">new</td>
+<td align="left">实例化对象</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">this</td>
+<td align="left">当前对象</td>
+<td align="left">本身调用者当前对象</td>
+</tr>
+<tr>
+<td align="left">super</td>
+<td align="left">引用基类（父类、超类）</td>
+<td align="left">父类对象的引用</td>
+</tr>
+<tr>
+<td align="left">void</td>
+<td align="left">无返回值</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">null</td>
+<td align="left">空值</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">true</td>
+<td align="left">真</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">false</td>
+<td align="left">假</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="包相关"><a href="#包相关" class="headerlink" title="包相关"></a>包相关</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">标识符</th>
+<th align="left">说明</th>
+<th align="left">详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">package</td>
+<td align="left">包</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">import</td>
+<td align="left">引入</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h1><blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">标识符</th>
+<th align="left">说明</th>
+<th align="left">详情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">goto</td>
+<td align="left">是关键字，但不能使用</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">const</td>
+<td align="left">是关键字，但不能使用</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="AI提示词"><a href="#AI提示词" class="headerlink" title="AI提示词"></a>AI提示词</h1><p>暂无</p>
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><p>暂无</p>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Language-Java8-Operator/">← 下一篇 Language | Java8 - 运算符</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Language-Java8/">Language | Java8 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6"><span class="toc-number">1.</span> <span class="toc-text">访问控制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E6%96%B9%E6%B3%95%E3%80%81%E6%8A%BD%E8%B1%A1%E3%80%81%E5%8F%98%E9%87%8F%E3%80%81%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="toc-number">2.</span> <span class="toc-text">类、接口、方法、抽象、变量、代码块</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="toc-number">3.</span> <span class="toc-text">流程控制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">异常处理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.</span> <span class="toc-text">基本数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%BC%95%E7%94%A8"><span class="toc-number">6.</span> <span class="toc-text">变量引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8C%85%E7%9B%B8%E5%85%B3"><span class="toc-number">7.</span> <span class="toc-text">包相关</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%9D%E7%95%99%E5%AD%97"><span class="toc-number">8.</span> <span class="toc-text">保留字</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AI%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">9.</span> <span class="toc-text">AI提示词</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">10.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">11.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

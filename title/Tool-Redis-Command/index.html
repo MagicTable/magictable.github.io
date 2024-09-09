@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tool | Redis - 命令 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('/img/dark_backdrop.jpg');
+ --light-background: url('/img/light_backdrip.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Tool | Redis - 命令</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-09-04T17:00:00.000Z" id="date"> 2024-09-05</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-08T15:43:03.405Z" id="updated"> 2024-09-08</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]</p>
+<p><strong>文章摘要：</strong> 摘要内容。</p>
+<span id="more"></span>
+
+<h2 id="连接Redis"><a href="#连接Redis" class="headerlink" title="连接Redis"></a>连接Redis</h2><p>命令</p>
+<blockquote>
+<ul>
+<li><code>redis-cli</code></li>
+</ul>
+</blockquote>
+<p>参数</p>
+<blockquote>
+<ul>
+<li><code>-h &lt;IP&gt;</code>：连接到指定的主机IP地址。</li>
+<li><code>-p &lt;端口&gt;</code>：连接到指定的端口。（正常是6379）。</li>
+<li><code>-a &lt;密码&gt;</code>：连接到redis数据库的密码。</li>
+</ul>
+</blockquote>
+<p>案例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 本地连接</span></span><br><span class="line">redis-cli</span><br><span class="line"></span><br><span class="line"><span class="comment"># 远程连接</span></span><br><span class="line">redis-cli -h &lt;远程IP&gt; -p &lt;端口&gt; -a &lt;数据库密码&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="启动Redis"><a href="#启动Redis" class="headerlink" title="启动Redis"></a>启动Redis</h2><h2 id="重启Redis"><a href="#重启Redis" class="headerlink" title="重启Redis"></a>重启Redis</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl restart redis-server</span><br></pre></td></tr></table></figure>
+
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><blockquote>
+<ul>
+<li><code>SET &lt;key&gt; &lt;value&gt;</code>：设置键值对。</li>
+<li><code>GET &lt;key&gt;</code>：获取指定键的值。</li>
+<li><code>DEL &lt;key&gt;</code>：删除指定的键。</li>
+<li><code>EXISTS &lt;key&gt;</code>：检查键是否存在。</li>
+<li><code>KEYS &lt;pattern&gt;</code>：查找所有符合给定模式匹配的键。</li>
+<li><code>TYPE &lt;key&gt;</code>：返回键的类型。</li>
+</ul>
+</blockquote>
+<h2 id="数据结构操作"><a href="#数据结构操作" class="headerlink" title="数据结构操作"></a>数据结构操作</h2><h3 id="列表（List）"><a href="#列表（List）" class="headerlink" title="列表（List）"></a>列表（List）</h3><blockquote>
+<ul>
+<li><code>LPUSH &lt;key&gt; &lt;value1&gt; &lt;value2&gt; ...</code>：将一个或多个值插入到列表的头部。</li>
+<li><code>LPOP &lt;key&gt;</code>：移除并返回列表的第一个元素。</li>
+</ul>
+</blockquote>
+<h3 id="哈希（Hash）"><a href="#哈希（Hash）" class="headerlink" title="哈希（Hash）"></a>哈希（Hash）</h3><blockquote>
+<ul>
+<li><code>HSET &lt;key&gt; &lt;field&gt; &lt;value&gt;</code>：为哈希表中的字段赋值。</li>
+<li><code>HGET &lt;key&gt; &lt;field&gt;</code>：获取哈希表中字段的值。</li>
+</ul>
+</blockquote>
+<h3 id="集合（Set）"><a href="#集合（Set）" class="headerlink" title="集合（Set）"></a>集合（Set）</h3><blockquote>
+<ul>
+<li><code>SADD &lt;key&gt; &lt;member1&gt; &lt;member2&gt; ...</code>：向集合添加一个或多个成员。</li>
+<li><code>SMEMBERS &lt;key&gt;</code>：返回集合中的所有成员。</li>
+</ul>
+</blockquote>
+<h2 id="权限和配置"><a href="#权限和配置" class="headerlink" title="权限和配置"></a>权限和配置</h2><blockquote>
+<ul>
+<li><code>CONFIG GET &lt;pattern&gt;</code>：获取配置信息。</li>
+<li><code>AUTH &lt;password&gt;</code>：使用密码进行认证。</li>
+<li><code>ACL SETUSER &lt;username&gt; &gt;password&gt; ...</code>：设置用户权限（Redis 6.0 及以上版本）。</li>
+</ul>
+</blockquote>
+<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><blockquote>
+<ul>
+<li><code>INFO</code>：获取服务器的信息和统计。</li>
+<li><code>PING</code>：检查服务器是否运行。</li>
+<li><code>ECHO &lt;message&gt;</code>：回显一个消息。</li>
+<li><code>QUIT</code>：关闭连接。</li>
+</ul>
+</blockquote>
+<h2 id="AI提示词"><a href="#AI提示词" class="headerlink" title="AI提示词"></a>AI提示词</h2><p>暂无</p>
+<h2 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h2><p>暂无</p>
+<h2 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h2><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Tool-Nginx-Command/">← 下一篇 Tool - Nginx - 命令</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Tool-Nginx/">Tool - Nginx - Web服务器 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5Redis"><span class="toc-number">1.</span> <span class="toc-text">连接Redis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8Redis"><span class="toc-number">2.</span> <span class="toc-text">启动Redis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%90%AFRedis"><span class="toc-number">3.</span> <span class="toc-text">重启Redis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text">基本操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%93%8D%E4%BD%9C"><span class="toc-number">5.</span> <span class="toc-text">数据结构操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%EF%BC%88List%EF%BC%89"><span class="toc-number">5.1.</span> <span class="toc-text">列表（List）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%EF%BC%88Hash%EF%BC%89"><span class="toc-number">5.2.</span> <span class="toc-text">哈希（Hash）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E5%90%88%EF%BC%88Set%EF%BC%89"><span class="toc-number">5.3.</span> <span class="toc-text">集合（Set）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%83%E9%99%90%E5%92%8C%E9%85%8D%E7%BD%AE"><span class="toc-number">6.</span> <span class="toc-text">权限和配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4"><span class="toc-number">7.</span> <span class="toc-text">其他命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AI%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">8.</span> <span class="toc-text">AI提示词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">9.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">10.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

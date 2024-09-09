@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>DesignPattern | SSM架构设计思想 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('/img/dark_backdrop.jpg');
+ --light-background: url('/img/light_backdrip.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>DesignPattern | SSM架构设计思想</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-06-25T13:31:04.000Z" id="date"> 2024-06-25</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-08T14:38:58.933Z" id="updated"> 2024-09-08</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]</p>
+<p><strong>文章摘要：</strong> 摘要内容。</p>
+<span id="more"></span>
+
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">____前台业务层____|____后台业务层____|</span><br><span class="line">________________|_________________|</span><br><span class="line">显示层 -&gt; 控制层 -&gt; 业务层 -&gt; 持久层 -&gt; 数据库</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>持久层：dao层（mapper层）</p>
+<blockquote>
+<ul>
+<li>作用：主要是做数据持久层的工作，负责与数据库进行交互的操作都封装在这里。</li>
+<li>Dao层首先设计的是接口。</li>
+<li>然后是Spring的配置文件中定义接口的实现类。</li>
+<li>然后可以在模块中进行接口的调用来进行数据业务的处理。（不再关心接口的实现类是哪个类）</li>
+<li>数据源的配置以及有关数据库连接的参数都在Spring的配置文件中进行配置。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>业务层：service层</p>
+<blockquote>
+<ul>
+<li>Service层主要负责业务模块的逻辑应用设计。</li>
+<li>建立好Dao层之后再建立service层，service层又在controller层之下。（因为既要调用dao层的接口又要提供接口给controller层）</li>
+<li>每个模型都有一个service接口，每个接口分别封装各自的业务处理的方法。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>表现层：controller层（Handler层）</p>
+<blockquote>
+<ul>
+<li>作用：负责具体的业务模块流程的控制。</li>
+<li>配置也同样是在spring的配置文件里面进行。</li>
+<li>调用service层提供的接口来控制业务流程。</li>
+<li>业务流程的不同会又有不同的控制器，在具体的开发中可以将我们的流程进行抽象的归纳，设计出可以重复利用的子单元模块流程。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>视图层：view层</p>
+<blockquote>
+<ul>
+<li>作用：主要和控制层紧密结合，负责前台页面的表示。</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<h2 id="规范要求"><a href="#规范要求" class="headerlink" title="规范要求"></a>规范要求</h2><p>在实际的工作之中，针对与简单java类的开发给出如下的要求：</p>
+<ol>
+<li>考虑到日后程序有可能出现的分布式应用问题，因此简单java类必须要实现<code>java.io.Serializable</code>接口。</li>
+<li>简单java类的名称必须与表名称保持一致。</li>
+</ol>
+<ul>
+<li>例如：表名是user，则类名称为User。</li>
+</ul>
+<ol start="3">
+<li>类中的属性不允许使用基本数据类型，都必须使用基本数据类型的包装类。</li>
+</ol>
+<ul>
+<li>基本数据类型的数值默认值是<code>0</code>,而包装类的默认值是<code>null</code>。</li>
+</ul>
+<ol start="4">
+<li>类中的属性必须使用<code>private</code>关键字进行封装，封装后的属性必须提供有<code>getter</code>和<code>setter</code>方法。</li>
+<li>类中可以定义有多个构造方法，但必须保留有一个无参构造方法。</li>
+</ol>
+<p>对于数据层的接口给出如下的开发要求：</p>
+<ol>
+<li>数据层用于操作数据，因此需要将代码保存到dao包目录下。</li>
+<li>不同的数据表的操作有可能使用不同的数据层开发，因此数据层的文件名要针对于数据表进行命名。</li>
+</ol>
+<ul>
+<li>例如：user表，数据层的接口应该命名为<code>IUserDAO</code>。</li>
+</ul>
+<ol start="3">
+<li>对于整个数据层的开发严格来讲就只有两类功能：数据更新、数据查询。</li>
+</ol>
+<ul>
+<li>数据更新：该类方法要以<code>do</code>开头的形式命名，如：doUpdate()、doUser()。</li>
+<li>查询表中数据：该类方法要以<code>find</code>开头的形式命名，如：findById()、findByName()、findAll()。</li>
+<li>统计表中数据：该类方法要以<code>get</code>开头的形式命名，如：getAllCount()、</li>
+</ul>
+<h2 id="AI提示词"><a href="#AI提示词" class="headerlink" title="AI提示词"></a>AI提示词</h2><p>暂无</p>
+<h2 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h2><p>暂无</p>
+<h2 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h2><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Language-JavaScript-API-JQuery/">← 下一篇 Language | JavaScript - API - JQuery</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/DesignPattern-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">DesignPattern | 策略模式 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%84%E8%8C%83%E8%A6%81%E6%B1%82"><span class="toc-number">2.</span> <span class="toc-text">规范要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AI%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">3.</span> <span class="toc-text">AI提示词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">4.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">5.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

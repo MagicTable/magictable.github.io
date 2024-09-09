@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tool - Nginx - Web服务器 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('/img/dark_backdrop.jpg');
+ --light-background: url('/img/light_backdrip.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Tool - Nginx - Web服务器</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-09-04T16:00:00.000Z" id="date"> 2024-09-05</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-09T04:25:15.528Z" id="updated"> 2024-09-09</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]</p>
+<p><strong>文章摘要：</strong> Nginx是一款轻量级的Web服务器、反向代理服务器，适合部署前端。</p>
+<ul>
+<li>文章专注 Debian linux 12 操作系统上的配置。</li>
+</ul>
+<p class='item-img' data-src='/../assets/image/Tool/logo/Nginx-logo.excalidraw.svg'><img src="/../assets/image/Tool/logo/Nginx-logo.excalidraw.svg" alt="logo"></p>
+<span id="more"></span>
+
+<p class='item-img' data-src='/../assets/image/Tool/Nginx/Summary.excalidraw.svg'><img src="/../assets/image/Tool/Nginx/Summary.excalidraw.svg" alt="总结"></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<ul>
+<li>高性能的web服务器，适合部署前端。</li>
+<li>功能：负载均衡，代理转发、缓存</li>
+<li>反向代理：作为反向代理服务器，提高安全性和性能。</li>
+<li>负载均衡，分发请求到多个后端服务器，提升应用的可用性和伸缩性。</li>
+<li>静态文件服务：高效处理静态资源请求，减轻后端应用服务器负担。</li>
+<li>SSL&#x2F;TLS终止：处理HTTPS请求，简化后端应用服务器配置。</li>
+</ul>
+</blockquote>
+<h2 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h2><h3 id="apt包管理器方式安装"><a href="#apt包管理器方式安装" class="headerlink" title="apt包管理器方式安装"></a><code>apt</code>包管理器方式安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install nginx</span><br></pre></td></tr></table></figure>
+
+<h3 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull nginx</span><br></pre></td></tr></table></figure>
+
+<h3 id="源代码编译安装"><a href="#源代码编译安装" class="headerlink" title="源代码编译安装"></a>源代码编译安装</h3><ol>
+<li>安装前置依赖（若已安装可跳过该步骤）<blockquote>
+<ul>
+<li>编译依赖gcc环境，如果没有gcc环境，需要安装gcc</li>
+<li>zlib库提供了很多种压缩和解压缩的方式，nginx使用zlib对http包的内容进行gzip，所以需要在linux上安装zlib库。</li>
+<li>OpenSSL 是一个强大的安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及SSL协议，并提供丰富的应用程序供测试或其它目的使用。</li>
+<li>nginx不仅支持http协议，还支持https（即在ssl协议上传http），所以需要在linux安装openssl库。</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install gcc-c++</span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> apt install -y zlib zlib-devel</span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> apt install -y openssl openssl-devel</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>下载Nginx源代码并解压nginx安装包</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开始下载</span></span><br><span class="line">wget http://nginx.org/download/nginx-1.18.0.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压压缩包</span></span><br><span class="line">tar -zxvf nginx-1.18.0.tar.gz</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>进入解压后的nginx目录</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;解压后的文件夹&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>设置configure</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果要查看配置详细参数，可输入如下命令</span></span><br><span class="line">./configure --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>参数设置如下：</li>
+</ul>
+</blockquote>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">./configure \</span><br><span class="line"></span><br><span class="line">--prefix=/usr/local/nginx \</span><br><span class="line"></span><br><span class="line">--pid-path=/var/run/nginx/nginx.pid \</span><br><span class="line"></span><br><span class="line">--lock-path=/var/lock/nginx.lock \</span><br><span class="line"></span><br><span class="line">--error-log-path=/var/log/nginx/error.log \</span><br><span class="line"></span><br><span class="line">--http-log-path=/var/log/nginx/access.log \</span><br><span class="line"></span><br><span class="line">--with-http_gzip_static_module \</span><br><span class="line"></span><br><span class="line">--http-client-body-temp-path=/var/temp/nginx/client \</span><br><span class="line"></span><br><span class="line">--http-proxy-temp-path=/var/temp/nginx/proxy \</span><br><span class="line"></span><br><span class="line">--http-fastcgi-temp-path=/var/temp/nginx/fastcgi \</span><br><span class="line"></span><br><span class="line">--http-uwsgi-temp-path=/var/temp/nginx/uwsgi \</span><br><span class="line"></span><br><span class="line">--http-scgi-temp-path=/var/temp/nginx/scgi</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>注意：上边将临时文件目录指定为&#x2F;var&#x2F;temp&#x2F;nginx，需要在&#x2F;var下创建temp及nginx目录</li>
+</ul>
+</blockquote>
+<ol start="5">
+<li>开始编译安装</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make</span><br><span class="line"></span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>安装完成<blockquote>
+<ul>
+<li>具体操作请查看命令相关文章。</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<h2 id="Nginx目录结构"><a href="#Nginx目录结构" class="headerlink" title="Nginx目录结构"></a>Nginx目录结构</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/nginx</span><br><span class="line">|-- /client_body_temp</span><br><span class="line">|-- /conf            // 配置文件</span><br><span class="line">|-- /fastcgi_temp</span><br><span class="line">|-- /html            // 前端网页</span><br><span class="line">|-- /logs</span><br><span class="line">|-- /proxy_temp</span><br><span class="line">|-- /sbin            // 可执行程序</span><br><span class="line">|-- /scgi_temp</span><br><span class="line">|-- /uwsgi_temp</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Nginx配置文件"><a href="#Nginx配置文件" class="headerlink" title="Nginx配置文件"></a>Nginx配置文件</h2><p>配置文件结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 上下文</span><br><span class="line">http &#123;</span><br><span class="line">    # 虚拟主机</span><br><span class="line">    server &#123;</span><br><span class="line">        # 资源文件</span><br><span class="line">        location &#123;</span><br><span class="line">            listen 80;</span><br><span class="line">            server_name localhost;</span><br><span class="line">        &#125;</span><br><span class="line">        location &#123;&#125;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;&#125;</span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>虚拟机server通过listen和server_name进行区分，若有多个server配置，则<code>listen</code>和<code>server_name</code>不能重复。</p>
+<blockquote>
+<p><code>listen</code>：监听可以配置成<code>IP</code>或<code>端口</code>或<code>IP+端口</code></p>
+<ul>
+<li><code>listen 127.0.0.1:8080;</code></li>
+<li><code>listen 127.0.0.1;</code>（端口不写，默认80）</li>
+<li><code>listen 8080;</code></li>
+<li><code>listen *:8080;</code></li>
+<li><code>listen localhost:8080;</code></li>
+</ul>
+</blockquote>
+<blockquote>
+<p><code>server</code>：<code>server_name</code>主要用于区分。</p>
+<ul>
+<li></li>
+</ul>
+</blockquote>
+<h3 id="Nginx默认配置文件"><a href="#Nginx默认配置文件" class="headerlink" title="Nginx默认配置文件"></a>Nginx默认配置文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="配置-Web静态网页"><a href="#配置-Web静态网页" class="headerlink" title="配置 - Web静态网页"></a>配置 - Web静态网页</h3><blockquote>
+<ul>
+<li>配置静态的后台管理系统。</li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 虚拟主机</span><br><span class="line">server &#123;</span><br><span class="line">    listen 8080;              # 端口号</span><br><span class="line">    server_name localhost;    # 主机名称</span><br><span class="line">    # 资源文件配置</span><br><span class="line">    location / &#123;</span><br><span class="line">        root /home/blog       # 配置根目录</span><br><span class="line">        index index.html index2.html;   # 首页配置，可配置多个首页</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h2><h2 id="负载均衡的策略"><a href="#负载均衡的策略" class="headerlink" title="负载均衡的策略"></a>负载均衡的策略</h2><p>轮询</p>
+<blockquote>
+<ul>
+<li>按顺序轮流分配请求。</li>
+</ul>
+</blockquote>
+<p>权重</p>
+<blockquote>
+<ul>
+<li>根据服务器性能设置权重，根据权重值进行分配请求。</li>
+</ul>
+</blockquote>
+<p>IP哈希</p>
+<blockquote>
+<ul>
+<li>根据用户IP地址进行请求分配，保证同一个用户请求同一个服务器。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>JWT登录验证</p>
+<ul>
+<li>方案一：使ip_hash策略</li>
+<li>方案二：redis告诉缓冲数据库</li>
+</ul>
+</blockquote>
+<p>最少连接</p>
+<blockquote>
+<ul>
+<li>将请求分配给当前连接数最少的服务器。</li>
+</ul>
+</blockquote>
+<p>url_hash</p>
+<blockquote>
+<ul>
+<li>url</li>
+</ul>
+</blockquote>
+<p>通过fair（第三方）来的</p>
+<blockquote>
+<ul>
+<li></li>
+</ul>
+</blockquote>
+<h2 id="代理转发"><a href="#代理转发" class="headerlink" title="代理转发"></a>代理转发</h2><p>正向代理：知道数据的来源。通过代理服务器帮忙获取已知数据。<br>反向代理：</p>
+<h2 id="AI提示词"><a href="#AI提示词" class="headerlink" title="AI提示词"></a>AI提示词</h2><p>暂无</p>
+<h2 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h2><blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1rG4y1e7BQ/?spm_id_from=333.999.0.0&vd_source=262edcbbd8e80915a7dff074a0e165a1">B站教程</a></li>
+</ul>
+</blockquote>
+<p>暂无</p>
+<h2 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h2><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Tool-Redis-Command/">← 下一篇 Tool | Redis - 命令</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Tool-Redis/">Tool | Redis - 高性能键值存储数据库 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">安装方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#apt%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85"><span class="toc-number">2.1.</span> <span class="toc-text">apt包管理器方式安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker%E5%AE%89%E8%A3%85"><span class="toc-number">2.2.</span> <span class="toc-text">Docker安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BA%90%E4%BB%A3%E7%A0%81%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85"><span class="toc-number">2.3.</span> <span class="toc-text">源代码编译安装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text">Nginx目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">Nginx配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Nginx%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">4.1.</span> <span class="toc-text">Nginx默认配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-Web%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5"><span class="toc-number">4.2.</span> <span class="toc-text">配置 - Web静态网页</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text">反向代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%9A%84%E7%AD%96%E7%95%A5"><span class="toc-number">6.</span> <span class="toc-text">负载均衡的策略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%90%86%E8%BD%AC%E5%8F%91"><span class="toc-number">7.</span> <span class="toc-text">代理转发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AI%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">8.</span> <span class="toc-text">AI提示词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">9.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">10.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

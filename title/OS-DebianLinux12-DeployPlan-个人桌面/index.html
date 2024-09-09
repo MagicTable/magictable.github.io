@@ -1,0 +1,400 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>OS | Debian Linux 12 - 部署配置方案 - 个人桌面 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('/img/dark_backdrop.jpg');
+ --light-background: url('/img/light_backdrip.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>OS | Debian Linux 12 - 部署配置方案 - 个人桌面</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-12-15T16:00:00.000Z" id="date"> 2023-12-16</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-08T15:30:56.152Z" id="updated"> 2024-09-08</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<strong>已完成</strong>、<del><em>待完善</em></del>、<del><em>编写中</em></del>]</p>
+<p><strong>文章摘要：</strong> 本文章将以日常使用场景和人工智能研发为目的，总结在GNOME图形界面上进行配置和优化 Debian Linux 12 操作系统的流程。</p>
+<span id="more"></span>
+
+<h1 id="系统安装简介"><a href="#系统安装简介" class="headerlink" title="系统安装简介"></a>系统安装简介</h1><blockquote>
+<ul>
+<li>Debian Linux 12 在这次发行中包含了许多软件包的更新，比较重要的是Linux内核映像使用了6.1版本，GNOME桌面环境使用了43版本。</li>
+<li>Debian Linux 12 当前使用的是<code>fcitx5输入法框架</code>，但是百度输入法或搜狗输入法还并不支持fcitx5输入法框架。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>系统下载官方网址：<a target="_blank" rel="noopener" href="https://www.debian.org/distrib/">https://www.debian.org/distrib/</a></p>
+</blockquote>
+<h1 id="磁盘分区"><a href="#磁盘分区" class="headerlink" title="磁盘分区"></a>磁盘分区</h1><p><strong>方案</strong>：大小为2TB的单个固态硬盘</p>
+<table>
+<thead>
+<tr>
+<th align="center">盘区</th>
+<th align="center">分区目录</th>
+<th align="center">大小</th>
+<th align="left">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">EFI系统分区</td>
+<td align="center">500MB</td>
+<td align="left">用于存放启动引导程序</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">&#x2F;</td>
+<td align="center">500GB</td>
+<td align="left">根目录文件</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">交换空间</td>
+<td align="center">10GB</td>
+<td align="left">用于在内存不足时把一部分内存数据暂存到磁盘上，来避免系统崩溃</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">&#x2F;home</td>
+<td align="center">1000GB</td>
+<td align="left">存放用户数据文件</td>
+</tr>
+</tbody></table>
+<h1 id="目录规划"><a href="#目录规划" class="headerlink" title="目录规划"></a>目录规划</h1><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">/home/用户名/ # 个人文件和数据存储在用户主目录下，根据需要创建不同的文件夹。</span><br><span class="line">|-- /Cache # 存储个人缓存文件。</span><br><span class="line">|-- /Project # 存储个人的项目文件，可再根据实际创建子目录，方便组织和管理项目文件。</span><br><span class="line">|-- /Resource # 存储个人收集的资源。</span><br><span class="line">    |-- /工程</span><br><span class="line">    |-- /交叉归档</span><br><span class="line">        |-- 某某系列游戏（表情包、海报壁纸、漫画、人物语音包、设定集、同人、小说、宣传视频、游戏截图、游戏素材、游戏原画、原声音频、周边、CG动画、COS）等</span><br><span class="line">    |-- /软件包</span><br><span class="line">        |-- 实用工具、操作系统、编程代码、艺术创作、游戏娱乐等</span><br><span class="line">    |-- /视频</span><br><span class="line">        |-- 动态壁纸、录像、视频素材、网络视频（短视频、广告、新闻、CG）、影视视频</span><br><span class="line">    |-- /图片</span><br><span class="line">        |-- 精选壁纸、图片参考、图片分类、图片素材</span><br><span class="line">    |-- /文档</span><br><span class="line">        |-- 漫画、小说、论文、书籍</span><br><span class="line">    |-- /音频</span><br><span class="line">        |-- 语音包、音乐库、音乐素材</span><br><span class="line"></span><br><span class="line">/opt/ # 通过网络下载的deb软件包进行安装的个人使用的软件。若有写软件无法通过软件包管理器安装，可以将其安装到这个目录下，并添加相应的可执行文件路径到环境变量中。</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置系统初始化"><a href="#配置系统初始化" class="headerlink" title="配置系统初始化"></a>配置系统初始化</h1><h2 id="将主用户添加到sudo用户组"><a href="#将主用户添加到sudo用户组" class="headerlink" title="将主用户添加到sudo用户组"></a>将主用户添加到sudo用户组</h2><blockquote>
+<p>原因是已经设置了root密码（超级用户密码），将无法以user（普通用户）来安装软件包需要将user（普通用户）添加到sudo（超级用户）组中来获得更高的权限。</p>
+</blockquote>
+<p><strong>方案一</strong>：通过命令方式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 以下命名选择一种即可</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 第一种实现的命令</span></span><br><span class="line"><span class="built_in">sudo</span> usermod -aG <span class="built_in">sudo</span> &lt;用户名&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第二种实现的命令</span></span><br><span class="line"><span class="built_in">sudo</span> /usr/sbin/addgroup 用户名 <span class="built_in">sudo</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>方案二</strong>：通过手动编辑配置文件方式</p>
+<blockquote>
+<p>手动打开<code>/etc/sudoers</code>文件并添加如下内容。</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用户名 ALL=(ALL:ALL) ALL</span><br></pre></td></tr></table></figure>
+
+<h2 id="切换软件包仓库镜像站点"><a href="#切换软件包仓库镜像站点" class="headerlink" title="切换软件包仓库镜像站点"></a>切换软件包仓库镜像站点</h2><blockquote>
+<ul>
+<li>选择合适的软件包源（Debian档案库的软件包镜像源），选择离本机距离最近、最为靠谱的镜像源服务器，来提高访问和下载速度。</li>
+<li>本文章讲述切换为“清华大学镜像源”的方法，<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/debian/">清华大学镜像源官方说明文档</a>网站链接。</li>
+</ul>
+</blockquote>
+<p>使用支持HTTPS的镜像源，可以有效避免国内运营商的缓存劫持。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Debian 当前版本默认支持HTTPS</span></span><br><span class="line"><span class="comment"># 该软件包让Debian系统支持HTTPS源</span></span><br><span class="line"><span class="comment"># 且能解决无法拉取HTTPS源的问题</span></span><br><span class="line"><span class="built_in">sudo</span> apt install apt-transport-https</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装或更新证书`ca-certificates`</span></span><br><span class="line"><span class="built_in">sudo</span> apt install ca-certificates</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法一</strong>：通过手动编辑配置文件方式</p>
+<blockquote>
+<ul>
+<li>手动打开<code>/etc/apt/sources.list</code>文件并写入如下内容。</li>
+</ul>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware</span><br><span class="line"># deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure>
+
+<p><strong>方法二</strong>：通过图形界面方式</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- 打开`Software &amp; Updates`软件，转跳到`Debian Software`选项卡。</span><br><span class="line">- 将“下载自”选择为“http://mirrors.tuna.tsinghua.edu.cn/debian”即可。</span><br></pre></td></tr></table></figure>
+
+<h2 id="卸载默认多余软件"><a href="#卸载默认多余软件" class="headerlink" title="卸载默认多余软件"></a>卸载默认多余软件</h2><blockquote>
+<ul>
+<li><strong>卸载默认的游戏软件</strong>：2048、对对碰、俄罗斯方块、关灯、国际象棋、黑白棋、华容道、机器人、连珠消球、扫雷、数独、数壹、四邻、四子连线、推盘、消色块、投掷子、AisleRiot接龙游戏、GNOME贪食蛇</li>
+</ul>
+</blockquote>
+<h2 id="更新系统及软件"><a href="#更新系统及软件" class="headerlink" title="更新系统及软件"></a>更新系统及软件</h2><blockquote>
+<ul>
+<li>将Debian系统更新至最新版本。</li>
+<li>先更新本地软件包缓存，再正式更新整个系统。</li>
+</ul>
+</blockquote>
+<p><strong>方案</strong>：通过命令方式</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 更新本地软件包缓存</span></span><br><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="comment"># 立即更新所有已安装的软件、内核、其他系统组件</span></span><br><span class="line"><span class="built_in">sudo</span> apt upgrade</span><br></pre></td></tr></table></figure>
+
+<h2 id="清理多余的依赖包和配置文件"><a href="#清理多余的依赖包和配置文件" class="headerlink" title="清理多余的依赖包和配置文件"></a>清理多余的依赖包和配置文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过命令方式</span></span><br><span class="line"><span class="built_in">sudo</span> apt --purge autoremove</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置中文输入法"><a href="#设置中文输入法" class="headerlink" title="设置中文输入法"></a>设置中文输入法</h2><blockquote>
+<ul>
+<li>打开Fcitx5软件，选择输入法-&gt;添加“拼音”-&gt;点击应用</li>
+<li>提示：Debian Linux 12 当前使用的是<code>fcitx5输入法框架</code>，但是百度输入法或搜狗输入法还并不支持fcitx5输入法框架。</li>
+<li>警示：需要将Fcitx5软件添加到开机自启动中，否则可能每次开机可能用不了输入法。</li>
+</ul>
+</blockquote>
+<h1 id="配置系统默认软件"><a href="#配置系统默认软件" class="headerlink" title="配置系统默认软件"></a>配置系统默认软件</h1><p><strong>设置</strong></p>
+<blockquote>
+<p>网络（待完善）</p>
+<ul>
+<li>将IPv4设置为静态：将本机IP地址手动设置为一个固定IP，方便之后远程连接本机只需要记住一个固定的IP地址即可。</li>
+<li>设置VPN</li>
+</ul>
+<p>蓝牙</p>
+<ul>
+<li>始终打开</li>
+</ul>
+<p>外观</p>
+<ul>
+<li>样式：深色主题</li>
+</ul>
+<p>多任务</p>
+<ul>
+<li>工作空间设置为1个</li>
+</ul>
+<p>隐私</p>
+<ul>
+<li>从不（息屏锁屏），允许（锁屏显示通知）</li>
+<li>启用（定位服务、摄像头、麦克风、雷电接口）隐私权限</li>
+<li>禁用（文件历史），禁用（定期自动清理回收站与临时文件）</li>
+</ul>
+<p>电源</p>
+<ul>
+<li>禁用（自动挂起）</li>
+</ul>
+<p>共享</p>
+<ul>
+<li>始终打开共享（文件共享、远程桌面、媒体共享）并设置密码。</li>
+</ul>
+<p>键盘</p>
+<ul>
+<li>修改打字切换输入源的快捷键：“Ctrl+空格”</li>
+</ul>
+<p>日期和时间</p>
+<ul>
+<li>启用（自动设置时间），禁用（自动设置时区），时间格式改为24小时制。</li>
+</ul>
+</blockquote>
+<p><strong>优化</strong></p>
+<blockquote>
+<p>通用</p>
+<ul>
+<li>禁用（笔记本电脑盖子关闭时挂起）</li>
+</ul>
+<p>外观</p>
+<ul>
+<li>光标：</li>
+<li>图标：</li>
+<li>shell：</li>
+<li>声音：</li>
+<li>过时应用程序：</li>
+<li>背景图像：</li>
+<li>图像调整：</li>
+</ul>
+<p>字体</p>
+<p>开机启动程序</p>
+<ul>
+<li>Fcitx5</li>
+</ul>
+<p>窗口</p>
+<ul>
+<li>启用（附加模态对话框）</li>
+<li>启用（居中显示新窗口）</li>
+<li>禁用（副键点击调整大小）</li>
+<li>窗口聚焦：点击对焦</li>
+</ul>
+<p>窗口标题栏</p>
+<ul>
+<li>标题栏动作-双击：Toggle Maximize（切换最大化）</li>
+<li>标题栏动作-中间点击：None（无动作）</li>
+<li>标题栏动作-双击：Menu（显示菜单）</li>
+<li>标题栏按钮：启用（最大化、最小化）、放置（右边）</li>
+</ul>
+<p>键盘和鼠标</p>
+<ul>
+<li>禁用（中键点击粘贴）</li>
+</ul>
+<p>顶栏</p>
+<ul>
+<li>时钟：启用（工作日、日期、秒）</li>
+</ul>
+</blockquote>
+<p><strong>文件管理器</strong></p>
+<blockquote>
+<ul>
+<li>启用（显示隐藏文件夹）</li>
+<li>按文件名A-Z排序</li>
+</ul>
+<p>首选项：</p>
+<ul>
+<li>启用（将文件夹排在文件前面）</li>
+<li>用来打开项目的操作：双击</li>
+<li>可选的上下文菜单操作：启用（创建链接）、禁用（永久删除）</li>
+</ul>
+</blockquote>
+<p><strong>终端</strong></p>
+<blockquote>
+<p>首选项</p>
+<ul>
+<li>主题类型：暗色</li>
+<li>新终端打开在：标签页</li>
+<li>新选项卡位置：下一个</li>
+</ul>
+<p>配置文件</p>
+<ul>
+<li>终端起始尺寸：132列*32行</li>
+<li>字体类型：DejaVu Sans Mono</li>
+<li>字体大小：12</li>
+<li>允许闪烁文本：聚焦时</li>
+<li>光标形状：下划线，启用（光标闪烁）</li>
+</ul>
+</blockquote>
+<h1 id="系统美化配置"><a href="#系统美化配置" class="headerlink" title="系统美化配置"></a>系统美化配置</h1><blockquote>
+<ul>
+<li>本文章将使用手动修改文件的方式进行美化。</li>
+<li>尽可能不下载多余的第三方工具进行辅助美化。</li>
+</ul>
+</blockquote>
+<h2 id="安装美化GNOME桌面所需的软件包"><a href="#安装美化GNOME桌面所需的软件包" class="headerlink" title="安装美化GNOME桌面所需的软件包"></a>安装美化GNOME桌面所需的软件包</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装GNOME扩展管理器工具。</span></span><br><span class="line"><span class="built_in">sudo</span> apt install gnome-shell-extension-manager</span><br><span class="line"><span class="comment"># 主题工具</span></span><br><span class="line"><span class="comment"># gnome-tweaks可以更改应用程序本身、图标、光标、主题，但不能更改shell的主题</span></span><br><span class="line"><span class="built_in">sudo</span> apt install gnome-tweaks</span><br></pre></td></tr></table></figure>
+
+<h2 id="默认自带扩展配置"><a href="#默认自带扩展配置" class="headerlink" title="默认自带扩展配置"></a>默认自带扩展配置</h2><p>GNOME 43 版本的图形界面扩展工具默认安装自带了以下扩展。</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">Applications Menu（建议禁用）</span><br><span class="line">- 显示应用程序基于类别的应用程序菜单。</span><br><span class="line"></span><br><span class="line">Auto Move Windows（建议启用）</span><br><span class="line">- 在创建窗口时将应用程序移动到特定的工作区。</span><br><span class="line"></span><br><span class="line">Launch new instance（建议禁用）</span><br><span class="line">- 在短划线或应用程序视图中点击时始终启动新实例。</span><br><span class="line"></span><br><span class="line">Native Window Placement（建议禁用）</span><br><span class="line">- 以更紧凑的方式排列浏览中的窗口。</span><br><span class="line"></span><br><span class="line">Places Status Indicator（建议禁用）</span><br><span class="line">- 添加用于在系统中快速导航的菜单。</span><br><span class="line"></span><br><span class="line">Remvable Drive Menu（建议启用）</span><br><span class="line">- 添加用于访问和卸载可移动设备的菜单选项。</span><br><span class="line"></span><br><span class="line">Screenshot Windows Sizer（建议启用）</span><br><span class="line">- 调整GNOME软件窗口的大小屏幕截图。</span><br><span class="line"></span><br><span class="line">User Themes（建议启用）</span><br><span class="line">- 从用户目录加载外壳主题。</span><br><span class="line"></span><br><span class="line">Windows List（建议禁用）</span><br><span class="line">- 在屏幕底部显示窗口列表。</span><br><span class="line"></span><br><span class="line">windowNavigator（建议启用）</span><br><span class="line">- 允许在覆盖模式下用键盘选择窗口和工作区。</span><br><span class="line">- &lt;Alt&gt; + [数字] == 选择窗口</span><br><span class="line">- &lt;Ctrl&gt; + [数字] == 选择工作区</span><br><span class="line"></span><br><span class="line">Workspace Indicator（建议禁用）</span><br><span class="line">- 在菜单栏中放一个图标，提示当前所在工作区，并提供切换到了另一个工作区的功能。</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装推荐扩展配置"><a href="#安装推荐扩展配置" class="headerlink" title="安装推荐扩展配置"></a>安装推荐扩展配置</h2><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Just-Perfection</span><br><span class="line">- 用于对界面进行大量自定义与精简。</span><br><span class="line"></span><br><span class="line">Blur-My-Shell</span><br><span class="line">- 用于让面板、顶部栏、Overview、锁屏、gnome自带的截屏、特定APP，都能毛玻璃化。</span><br><span class="line"></span><br><span class="line">Big-Avatar</span><br><span class="line">- 在右上角菜单出现你的头像，点击后触发自定义的命令。</span><br></pre></td></tr></table></figure>
+
+<h2 id="手动安装美化资源"><a href="#手动安装美化资源" class="headerlink" title="手动安装美化资源"></a>手动安装美化资源</h2><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">背景壁纸</span><br><span class="line">- [雷电芽衣_2560*1440](https://desk.3gbizhi.com/deskYX/1732.html)</span><br><span class="line"></span><br><span class="line">主题</span><br><span class="line"></span><br><span class="line">图标</span><br><span class="line">- 系统或应用图标：</span><br><span class="line">- 光标图标：</span><br><span class="line"></span><br><span class="line">Dock栏美化</span><br><span class="line">- 动画效果</span><br><span class="line"></span><br><span class="line">系统特效</span><br><span class="line">- 程序切换效果</span><br><span class="line"></span><br><span class="line">登入界面美化</span><br><span class="line"></span><br><span class="line">开机画面美化</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h1><h2 id="Nvidia显卡驱动"><a href="#Nvidia显卡驱动" class="headerlink" title="Nvidia显卡驱动"></a>Nvidia显卡驱动</h2><blockquote>
+<ul>
+<li>第三方教学文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/ruanjiannb/article/details/134470352">https://blog.csdn.net/ruanjiannb/article/details/134470352</a></li>
+</ul>
+</blockquote>
+<ol>
+<li>安装Nvidia显卡检测软件包</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装Nvidia显卡检测软件包</span></span><br><span class="line"><span class="built_in">sudo</span> apt install nvidia-detect</span><br><span class="line"><span class="comment"># 查看Nvidia显卡信息</span></span><br><span class="line">nvidia-detect</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>安装Nvidia显卡驱动程序软件包</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装Nvidia显卡驱动程序软件包</span></span><br><span class="line"><span class="built_in">sudo</span> apt install nvidia-driver</span><br><span class="line"><span class="comment"># 查看Nvidia显卡信息</span></span><br><span class="line">nvidia-smi</span><br><span class="line"><span class="comment"># 查询到CUDA Version最高支持的CUDA版本是多少</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>到Nvidia官网下载对应版本的CUDA工具包</p>
+<blockquote>
+<ul>
+<li>这一步暂时不执行</li>
+<li>没有支持Debian Linux 12 操作系统的版本</li>
+</ul>
+</blockquote>
+</li>
+<li><p>到Nvidia官网下载对应版本的CUDNN库文件</p>
+<blockquote>
+<ul>
+<li>这一步暂时不执行</li>
+<li>没有支持Debian Linux 12 操作系统的版本</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<h2 id="安装所需实用软件"><a href="#安装所需实用软件" class="headerlink" title="安装所需实用软件"></a>安装所需实用软件</h2><blockquote>
+<ul>
+<li>笔记工具：</li>
+<li>代码编辑：VScode、<a target="_blank" rel="noopener" href="https://www.jetbrains.com.cn/idea/">Intellij IDEA</a></li>
+<li>远程控制：Remmina、<a target="_blank" rel="noopener" href="https://sunlogin.oray.com/download">贝锐向日葵</a></li>
+<li>文件传输：[]</li>
+<li>网络下载：[]</li>
+<li>虚拟机：<a target="_blank" rel="noopener" href="https://www.virtualbox.org/">VirtualBox</a></li>
+<li>数据库：MySQL</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>版本控制：Git</li>
+<li>编程开发：<a target="_blank" rel="noopener" href="https://docs.anaconda.com/free/miniconda/">Miniconda</a>、Python3、Java17、Java8、Node.js</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>浏览器：firefox</li>
+<li>电子邮件：<a target="_blank" rel="noopener" href="https://element.io/">element</a></li>
+<li>即时通讯：<a target="_blank" rel="noopener" href="https://im.qq.com/index/#downloadAnchor">QQ</a></li>
+<li>云盘存储：<a target="_blank" rel="noopener" href="https://pan.baidu.com/download#linux">百度网盘</a>、<a target="_blank" rel="noopener" href="https://www.jianguoyun.com/#/">坚果云</a></li>
+<li>视频会议：<a target="_blank" rel="noopener" href="https://meeting.tencent.com/">腾讯会议</a></li>
+<li>音视频播放器：VLC</li>
+<li>录屏直播：obs-studio</li>
+<li>翻译：[]</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>图像绘画：Krita、</li>
+<li>视频剪辑：[]</li>
+<li>三维制作：Blender</li>
+</ul>
+</blockquote>
+<p><strong>apt安装软件</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># java安装命令</span></span><br><span class="line"><span class="built_in">sudo</span> apt install openjdk-17-jdk</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装MySQL服务器和客户端软件包</span></span><br><span class="line"><span class="built_in">sudo</span> apt install mysql-server mysql-client</span><br><span class="line"><span class="comment"># 安装过程中会提示输入root密码和加密方式</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>手动下载deb安装包</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># dpkg安装deb软件包命令</span></span><br><span class="line"><span class="built_in">sudo</span> dpkg -i &lt;安装包名&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 若安装软件包时提示依赖关系出现问题时，执行下面命令</span></span><br><span class="line"><span class="comment"># 确保软件源最新，更新软件源列表</span></span><br><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"></span><br><span class="line"><span class="comment"># 当安装deb软件出现“依赖关系问题”的报错提示时执行该命令，自动安装缺少的库或软件包</span></span><br><span class="line"><span class="built_in">sudo</span> apt-get install -f -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行完上一步后发现还是没有安装，就再执行一次dpkg安装软件包命令</span></span><br><span class="line"><span class="comment"># 若还是没有成功，就请放弃使用该软件吧</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="AI提示词"><a href="#AI提示词" class="headerlink" title="AI提示词"></a>AI提示词</h1><p>暂无</p>
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><blockquote>
+<ul>
+<li>GNOME图形界面的美化文件网站：<a target="_blank" rel="noopener" href="https://www.gnome-look.org/">gnome-look</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>GNOME Shell扩展文件的存放目录：<code>/home/用户名/.local/share/gnome-shell/extensions/</code></li>
+<li>全局用户-主题文件的存放目录：<code>/usr/share/themes/</code></li>
+<li>全局用户-光标和图标文件的存放目录：<code>/usr/share/icons/</code></li>
+<li>当前用户-主题文件的存放目录：<code>/home/用户名/.local/share/themes/</code></li>
+<li>当前用户-光标和图标文件的存放目录：<code>/home/用户名/.local/share/icons/</code></li>
+</ul>
+</blockquote>
+<p><strong>小建议</strong></p>
+<blockquote>
+<ul>
+<li>文件名在Linux中区分大小写。</li>
+<li>文件名不建议使用特殊符号、空格来组成文件名。</li>
+</ul>
+</blockquote>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><blockquote>
+<ul>
+<li>Debian Linux知识总结：<a href="/title/OS-DebianLinux12/" title="OS | Debian Linux 12">OS | Debian Linux 12</a></li>
+</ul>
+</blockquote>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/OS-DebianLinux12-DeployPlan-Web%E6%9C%8D%E5%8A%A1%E5%99%A8/">← 下一篇 OS | Debian Linux 12 - 部署配置方案 - Web服务器</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/OS-DebianLinux12-Command-RemoteAccess/">OS | Debian Linux 12 - 远程访问 - 命令 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">系统安装简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA"><span class="toc-number">2.</span> <span class="toc-text">磁盘分区</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E8%A7%84%E5%88%92"><span class="toc-number">3.</span> <span class="toc-text">目录规划</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">4.</span> <span class="toc-text">配置系统初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86%E4%B8%BB%E7%94%A8%E6%88%B7%E6%B7%BB%E5%8A%A0%E5%88%B0sudo%E7%94%A8%E6%88%B7%E7%BB%84"><span class="toc-number">4.1.</span> <span class="toc-text">将主用户添加到sudo用户组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E8%BD%AF%E4%BB%B6%E5%8C%85%E4%BB%93%E5%BA%93%E9%95%9C%E5%83%8F%E7%AB%99%E7%82%B9"><span class="toc-number">4.2.</span> <span class="toc-text">切换软件包仓库镜像站点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B8%E8%BD%BD%E9%BB%98%E8%AE%A4%E5%A4%9A%E4%BD%99%E8%BD%AF%E4%BB%B6"><span class="toc-number">4.3.</span> <span class="toc-text">卸载默认多余软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F%E5%8F%8A%E8%BD%AF%E4%BB%B6"><span class="toc-number">4.4.</span> <span class="toc-text">更新系统及软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%85%E7%90%86%E5%A4%9A%E4%BD%99%E7%9A%84%E4%BE%9D%E8%B5%96%E5%8C%85%E5%92%8C%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">4.5.</span> <span class="toc-text">清理多余的依赖包和配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95"><span class="toc-number">4.6.</span> <span class="toc-text">设置中文输入法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%B3%BB%E7%BB%9F%E9%BB%98%E8%AE%A4%E8%BD%AF%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">配置系统默认软件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E9%85%8D%E7%BD%AE"><span class="toc-number">6.</span> <span class="toc-text">系统美化配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E7%BE%8E%E5%8C%96GNOME%E6%A1%8C%E9%9D%A2%E6%89%80%E9%9C%80%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-number">6.1.</span> <span class="toc-text">安装美化GNOME桌面所需的软件包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E8%87%AA%E5%B8%A6%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE"><span class="toc-number">6.2.</span> <span class="toc-text">默认自带扩展配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%8E%A8%E8%8D%90%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE"><span class="toc-number">6.3.</span> <span class="toc-text">安装推荐扩展配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85%E7%BE%8E%E5%8C%96%E8%B5%84%E6%BA%90"><span class="toc-number">6.4.</span> <span class="toc-text">手动安装美化资源</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6"><span class="toc-number">7.</span> <span class="toc-text">安装软件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nvidia%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8"><span class="toc-number">7.1.</span> <span class="toc-text">Nvidia显卡驱动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%89%80%E9%9C%80%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6"><span class="toc-number">7.2.</span> <span class="toc-text">安装所需实用软件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AI%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">8.</span> <span class="toc-text">AI提示词</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">9.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">10.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

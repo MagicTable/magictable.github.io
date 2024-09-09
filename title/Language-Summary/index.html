@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Language | 程序语言 - 知识总结 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('/img/dark_backdrop.jpg');
+ --light-background: url('/img/light_backdrip.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Language | 程序语言 - 知识总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-08-08T16:01:00.000Z" id="date"> 2023-08-09</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-08T15:22:46.247Z" id="updated"> 2024-09-08</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<strong>已完成</strong>、<del><em>待完善</em></del>、<del><em>编写中</em></del>]</p>
+<p><strong>文章摘要：</strong> 程序语言，作为计算机科学的核心要素，是人与计算机之间沟通的桥梁。它们为程序员提供了精确控制计算机行为的工具，从而简化了编程过程，使得解决复杂问题变得可能。</p>
+<span id="more"></span>
+
+<blockquote>
+<ul>
+<li>学习编程语言之前，首先要搞清楚「编程语言」这个概念。</li>
+<li>我们也可以通过”语言“来控制计算机，让计算机为我们做事情，这样的语言就叫做编程语言（Programming Language）。</li>
+<li>编程语言也有固定的格式和词汇，我们必须经过学习才会使用，才能控制计算机。</li>
+<li>编程语言有很多种</li>
+<li>可以将不同的编程语言比喻成各国语言，为了表达同一个意思，可能使用不同的语句。（例如，表达“世界你好”的意思）</li>
+<li>在编程语言中，同样的操作也可能使用不同的语句。（例如，在屏幕上显示“C语言中文网”）</li>
+<li>编程语言类似于人类语言，由直观的词汇组成，我们很容易就能理解它的意思</li>
+<li>总结：编程语言是用来控制计算机的一系列指令（Instruction），它有固定的格式和词汇（不同编程语言的格式和词汇不一样），必须遵守，否则就会出错，达不到我们的目的。</li>
+<li>代码文件中具有特定含义的词汇、语句，按照特定的格式组织在一起，就构成了源代码（Source Code），也称源码或代码（Code）。</li>
+<li>每个编程语言肯定规定了源代码中每个词汇、语句的含义，也规定了它们该如何组织在一起，这就是语法（Syntax）。它与我们学习英语时所说的“语法”类似，都规定了如何将特定的词汇和句子组织成能听懂的语言。</li>
+<li>编写源代码的过程就叫做编程（Program）。从事编程工作的人叫程序员（Programmer）。</li>
+<li>（程序员也很幽默，喜欢自嘲，经常说自己的工作辛苦，地位低，像农民一样，所以称自己是”码农“，就是写代码的农民。也有人自嘲称是”程序猿“。）</li>
+</ul>
+</blockquote>
+<h1 id="定义与目的"><a href="#定义与目的" class="headerlink" title="定义与目的"></a>定义与目的</h1><blockquote>
+<ul>
+<li>程序语言：是一种形式化的符号系统，用于描述计算机如何执行任务。它提供了一种与计算机交互的方式，使程序员能够精确地控制计算机的行为。</li>
+<li>目的：简化了编程过程，使得复杂任务变得可实现，增强了代码的可读性和可维护性，促进了代码的复用和标准化。</li>
+<li>程序是为了模拟现实世界，解决现实问题而使用计算机语言编写的一系列有序的指令集合。</li>
+</ul>
+</blockquote>
+<h1 id="主要分类"><a href="#主要分类" class="headerlink" title="主要分类"></a>主要分类</h1><p><strong>按难易程度分类</strong></p>
+<blockquote>
+<ul>
+<li><strong>机器语言：</strong>最底层的编程语言，它完全由二进制代码组成，直接对应于计算机的硬件指令。机器语言非常难以理解和编写，因为它要求程序员直接操作硬件层面的细节，如寄存器、内存地址等。</li>
+<li><strong>汇编语言：</strong>汇编语言相对于机器语言来说，是一种低级语言，但它使用助记符来代替二进制代码，这使得编程变得稍微容易一些。汇编语言与机器语言有一一对应的关系，每一条汇编语言指令通常对应一条机器语言指令。</li>
+<li><strong>高级语言：</strong>高级语言是更接近人类语言的编程语言，它们抽象了硬件细节，提供了更丰富的语法和库函数，使得编程变得更加容易和高效。</li>
+</ul>
+</blockquote>
+<p><strong>按执行方式分类</strong></p>
+<blockquote>
+<ul>
+<li><strong>解释型：</strong>在运行时由解释器逐行或逐段地将源代码转换成机器码并执行。这种方式不需要预先编译成目标平台的机器码，因此可以快速地开发和测试，但执行效率通常不如编译型语言。</li>
+<li><strong>编译型：</strong>需要将源文件编译成平台相关的机器码文件，一次编译多次执行，执行效率高，不可跨平台。</li>
+<li><strong>编译+解释：</strong>首先将源代码编译成中间代码（Intermediate Code），然后在运行时由解释器或虚拟机（VM）执行中间代码。这种方式结合了编译型和解释型语言的特点，既可以提高执行效率，又保持了一定的跨平台能力。</li>
+</ul>
+</blockquote>
+<h1 id="基本组成"><a href="#基本组成" class="headerlink" title="基本组成"></a>基本组成</h1><blockquote>
+<ul>
+<li>数据类型：定义了可以存储的数据种类（如整数、浮点数、字符、布尔值等）。</li>
+<li>运算符：对数据执行操作的符号（如加、减、乘、除等）。</li>
+<li>控制结构：定义了程序如何执行（如顺序、选择和循环结构）。</li>
+<li>函数&#x2F;方法：封装了一段可重用的代码。</li>
+</ul>
+</blockquote>
+<h1 id="编程范式"><a href="#编程范式" class="headerlink" title="编程范式"></a>编程范式</h1><blockquote>
+<p>流程式</p>
+<ul>
+<li>关注的是如何执行任务，强调的是步骤和算法。</li>
+</ul>
+<p>函数式</p>
+<ul>
+<li>关注的是不变性，强调的是纯函数和不可变性。</li>
+</ul>
+<p>面向对象</p>
+<ul>
+<li>关注的是“事物”和它们之间的关系，强调的是对象和类。</li>
+</ul>
+<p>面向接口编程</p>
+<ul>
+<li>降低耦合度。</li>
+<li>在实例化时，将使用实现类的接口作为数据类型，变的是实现类，但其数据数据类型是接口类型。</li>
+</ul>
+<p>逻辑式</p>
+<ul>
+<li>关注的是推理和知识表示，强调的是规则和推理。</li>
+</ul>
+<p>声明式</p>
+<ul>
+<li>程序员只需描述程序的逻辑，而具体的执行步骤由系统自行决定。</li>
+</ul>
+</blockquote>
+<h1 id="重要概念与特性"><a href="#重要概念与特性" class="headerlink" title="重要概念与特性"></a>重要概念与特性</h1><blockquote>
+<ul>
+<li>语法与语义：语法定义了代码的结构，语义定义了代码的意义。</li>
+<li>编译与解释：编译型语言（如C++）先编译成机器码执行；解释型语言（如Python）逐行翻译并执行。</li>
+<li>静态与动态类型：静态类型语言（如Java）在编译时确定变量类型；动态类型语言（如Python）在运行时确定变量类型。</li>
+<li>强类型与弱类型语言：强类型语言（如Python）不允许隐式类型转换；弱类型语言（如JavaScript）允许隐式转换。</li>
+</ul>
+</blockquote>
+<h1 id="发展趋势与挑战"><a href="#发展趋势与挑战" class="headerlink" title="发展趋势与挑战"></a>发展趋势与挑战</h1><blockquote>
+<ul>
+<li>多范式编程：多种范式的融合，以满足不同需求。</li>
+<li>并发与并行编程：处理多核和分布式系统中的问题。</li>
+<li>人工智能与机器学习集成：利用机器学习改进编程工具和开发流程。</li>
+<li>安全与隐私挑战：随着软件在各个领域的广泛应用，安全和隐私问题日益突出。</li>
+</ul>
+</blockquote>
+<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><blockquote>
+<ul>
+<li>程序语言是现代计算的核心，它的发展不断推动着技术的进步。</li>
+<li>掌握程序语言不仅仅是掌握一种技能，更是理解计算机科学基础的一种方式。随着技术的不断发展，程序语言及其相关领域将继续为我们提供无尽的机会和挑战。</li>
+</ul>
+</blockquote>
+<h1 id="AI提示词"><a href="#AI提示词" class="headerlink" title="AI提示词"></a>AI提示词</h1><p>暂无</p>
+<h1 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h1><blockquote>
+<ul>
+<li>程序 &#x3D; 数据结构 + 算法</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>学习程序语言是实现虚拟老婆大人的基础知识之一。</li>
+<li>详细的程序语言知识请查看具体的文章。</li>
+</ul>
+</blockquote>
+<h1 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h1><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/AI-Summary/">← 下一篇 AI | 人工智能 - 知识总结</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Diary-Python%E4%B9%8B%E7%A6%85/">Diary | Python之禅 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%8E%E7%9B%AE%E7%9A%84"><span class="toc-number">1.</span> <span class="toc-text">定义与目的</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%88%86%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">主要分类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90"><span class="toc-number">3.</span> <span class="toc-text">基本组成</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F"><span class="toc-number">4.</span> <span class="toc-text">编程范式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5%E4%B8%8E%E7%89%B9%E6%80%A7"><span class="toc-number">5.</span> <span class="toc-text">重要概念与特性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF%E4%B8%8E%E6%8C%91%E6%88%98"><span class="toc-number">6.</span> <span class="toc-text">发展趋势与挑战</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">7.</span> <span class="toc-text">结论</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AI%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">8.</span> <span class="toc-text">AI提示词</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">9.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">10.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

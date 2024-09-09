@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Diary | 类库 - SpringBoot 2 - 框架 - (Maven) | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('/img/dark_backdrop.jpg');
+ --light-background: url('/img/light_backdrip.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Diary | 类库 - SpringBoot 2 - 框架 - (Maven)</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-08-31T16:00:00.000Z" id="date"> 2024-09-01</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-09T13:15:57.163Z" id="updated"> 2024-09-09</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]</p>
+<p><strong>文章摘要：</strong>  摘要内容。</p>
+<p class='item-img' data-src='/../assets/image/Diary/logo/Library-Maven-springBoot2-logo.excalidraw.svg'><img src="/../assets/image/Diary/logo/Library-Maven-springBoot2-logo.excalidraw.svg" alt="logo"></p>
+<span id="more"></span>
+
+<p class='item-img' data-src='/../assets/image/Diary/Library-Maven-SpringBoot2/Summary.excalidraw.svg'><img src="/../assets/image/Diary/Library-Maven-SpringBoot2/Summary.excalidraw.svg" alt="Library-Maven-SpringBoot2"></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<ul>
+<li><strong>快速开发</strong>：提供默认配置，简化项目配置，减少样板代码。</li>
+<li><strong>独立运行</strong>：打包成可执行jar文件，内嵌服务器，轻松部署。</li>
+<li><strong>开箱即用</strong>：提供多种starter依赖，快书集成常用功能。</li>
+<li><strong>自动配置</strong>：根据项目与i来自动配置spring应用，减少配置工作。</li>
+<li><strong>微服务支持</strong>：方便构建微服务架构，支持spring cloud。</li>
+</ul>
+</blockquote>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h2 id="项目约定"><a href="#项目约定" class="headerlink" title="项目约定"></a>项目约定</h2><blockquote>
+<ul>
+<li>默认将当前配置类所在的包当作扫描包的路径。</li>
+<li>端口号默认：8080</li>
+<li>上传文件一次传输最大：10MB</li>
+</ul>
+</blockquote>
+<h2 id="配置和自动配置原理"><a href="#配置和自动配置原理" class="headerlink" title="配置和自动配置原理"></a>配置和自动配置原理</h2><h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><h3 id="application-properties配置文件"><a href="#application-properties配置文件" class="headerlink" title="application.properties配置文件"></a><code>application.properties</code>配置文件</h3><blockquote>
+<ul>
+<li>配置文件名称必须是：application.properties</li>
+<li>存储位置在：scr&#x2F;main&#x2F;resources</li>
+</ul>
+</blockquote>
+<p>设置基本信息</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 端口号</span><br><span class="line">server.port=8080</span><br><span class="line"></span><br><span class="line"># 项目虚拟路径（web项目名）</span><br><span class="line">server.servlet.context-path=/agent</span><br><span class="line"></span><br><span class="line"># 设置懒加载</span><br><span class="line">spring.main.lazy-initialization=true</span><br></pre></td></tr></table></figure>
+
+<p>文件上传</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">servlet:</span></span><br><span class="line">  <span class="attr">multipart:</span></span><br><span class="line">    <span class="attr">max-file-size:</span> <span class="string">100MB</span>     <span class="comment"># 每个文件大小最大限制</span></span><br><span class="line">    <span class="attr">max-request-size:</span> <span class="string">200MB</span>  <span class="comment"># 每次传输文件大小最大限制</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义SpringApplication"><a href="#自定义SpringApplication" class="headerlink" title="自定义SpringApplication"></a>自定义SpringApplication</h3><h3 id="后台命令行启动图标"><a href="#后台命令行启动图标" class="headerlink" title="后台命令行启动图标"></a>后台命令行启动图标</h3><p>在<code>resources</code>目录下创建<code>banner</code>的图片，或者创建一个<code>banner.txt</code>的文本文件，就能在启动时显示一个以字符构成的图标。</p>
+<h3 id="配置文件优先级"><a href="#配置文件优先级" class="headerlink" title="配置文件优先级"></a>配置文件优先级</h3><p>文件格式</p>
+<blockquote>
+<ul>
+<li><code>yml</code> &gt; <code>yaml</code> &gt; <code>properties</code>配置文件。</li>
+</ul>
+</blockquote>
+<p>文件位置</p>
+<table>
+<thead>
+<tr>
+<th align="left">配置文件位置</th>
+<th align="left">说明</th>
+<th align="center">优先级</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>classpath:/</code></td>
+<td align="left">资源根路径</td>
+<td align="center">最低</td>
+</tr>
+<tr>
+<td align="left"><code>classpath:/config/*/</code></td>
+<td align="left">资源根路径下的config目录</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><code>classpath:/config/</code></td>
+<td align="left">资源根路径下的config目录</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><code>file:./</code></td>
+<td align="left">项目根路径</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><code>file:./config/*/</code></td>
+<td align="left"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><code>file:./config/</code></td>
+<td align="left">项目根路径下的config目录</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><code>java -jar &lt;项目名&gt;.jar --spring.config.location=&lt;配置文件位置&gt;</code></td>
+<td align="left">命令行指定文件</td>
+<td align="center">最大</td>
+</tr>
+</tbody></table>
+<h3 id="Profile文件的加载"><a href="#Profile文件的加载" class="headerlink" title="Profile文件的加载"></a>Profile文件的加载</h3><p>对于应用程序来说，不同的环境需要不同的配置。</p>
+<h3 id="外部配置文件读取"><a href="#外部配置文件读取" class="headerlink" title="外部配置文件读取"></a>外部配置文件读取</h3><h3 id="springboot启动器的概念"><a href="#springboot启动器的概念" class="headerlink" title="springboot启动器的概念"></a>springboot启动器的概念</h3><p><code>autoconfiguration</code>启动器</p>
+<p>启动器的作用：实现模块化和依赖封装</p>
+<p>打包成jar包</p>
+<h3 id="自定义启动器"><a href="#自定义启动器" class="headerlink" title="自定义启动器"></a>自定义启动器</h3><p>有默认的配置文件，写在META-INF目录下、<br>写个类去读取默认的配置文件，构建spring.factories</p>
+<ol>
+<li>创建一个模块（父子工程）</li>
+<li>编写配置文件、配置验证码的一些默认信息</li>
+<li>写一下实体类，映射配置信息，来存储读取出来的配置信息</li>
+<li>写业务，写验证码的工具类</li>
+<li>创建配置类，将验证码工具类加入到ioc容器中</li>
+</ol>
+<h2 id="热部署和日志"><a href="#热部署和日志" class="headerlink" title="热部署和日志"></a>热部署和日志</h2><h2 id="Web开发"><a href="#Web开发" class="headerlink" title="Web开发"></a>Web开发</h2><h2 id="集成MyBatis"><a href="#集成MyBatis" class="headerlink" title="集成MyBatis"></a>集成MyBatis</h2><h2 id="启动原理源码"><a href="#启动原理源码" class="headerlink" title="启动原理源码"></a>启动原理源码</h2><h2 id="自定义starters"><a href="#自定义starters" class="headerlink" title="自定义starters"></a>自定义starters</h2><h2 id="集成中间件"><a href="#集成中间件" class="headerlink" title="集成中间件"></a>集成中间件</h2><h2 id="AI提示词"><a href="#AI提示词" class="headerlink" title="AI提示词"></a>AI提示词</h2><p>请教我学习SpringBoot2框架，使用maven管理工具搭建，列出学习路线，提供更多的解释便于我理解</p>
+<h2 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h2><p>总结</p>
+<blockquote>
+<ul>
+<li>建议将springboot的启动类&#x2F;配置类，放置在外层，这样在自动扫描包路径时能将全部的对象进行扫描，进行添加bean对象。</li>
+</ul>
+</blockquote>
+<h2 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h2><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Diary-Library-Maven-springBoot2-%E6%9F%A5%E8%AF%A2%E6%89%8B%E5%86%8C/">← 下一篇 Diary | 类库 - SpringBoot 2 - 查询手册 - (Maven)</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Network-Protocol-Matrix/">Network | 协议 - Matrix 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">2.</span> <span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%BA%A6%E5%AE%9A"><span class="toc-number">3.</span> <span class="toc-text">项目约定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%92%8C%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">配置和自动配置原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#application-properties%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">5.1.</span> <span class="toc-text">application.properties配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89SpringApplication"><span class="toc-number">5.2.</span> <span class="toc-text">自定义SpringApplication</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E5%8F%B0%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8%E5%9B%BE%E6%A0%87"><span class="toc-number">5.3.</span> <span class="toc-text">后台命令行启动图标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-number">5.4.</span> <span class="toc-text">配置文件优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Profile%E6%96%87%E4%BB%B6%E7%9A%84%E5%8A%A0%E8%BD%BD"><span class="toc-number">5.5.</span> <span class="toc-text">Profile文件的加载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96"><span class="toc-number">5.6.</span> <span class="toc-text">外部配置文件读取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#springboot%E5%90%AF%E5%8A%A8%E5%99%A8%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">5.7.</span> <span class="toc-text">springboot启动器的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%90%AF%E5%8A%A8%E5%99%A8"><span class="toc-number">5.8.</span> <span class="toc-text">自定义启动器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%83%AD%E9%83%A8%E7%BD%B2%E5%92%8C%E6%97%A5%E5%BF%97"><span class="toc-number">6.</span> <span class="toc-text">热部署和日志</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web%E5%BC%80%E5%8F%91"><span class="toc-number">7.</span> <span class="toc-text">Web开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E6%88%90MyBatis"><span class="toc-number">8.</span> <span class="toc-text">集成MyBatis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%90%86%E6%BA%90%E7%A0%81"><span class="toc-number">9.</span> <span class="toc-text">启动原理源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89starters"><span class="toc-number">10.</span> <span class="toc-text">自定义starters</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-number">11.</span> <span class="toc-text">集成中间件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AI%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">12.</span> <span class="toc-text">AI提示词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">13.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">14.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

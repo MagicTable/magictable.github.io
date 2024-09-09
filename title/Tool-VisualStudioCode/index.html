@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="zh-cn" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tool | Visual Studio Code - 轻量级代码编辑器 | 魔术桌的个人博客</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><script src="//unpkg.com/mermaid@10.5.0/dist/mermaid.min.js"></script><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>@font-face {
+ font-family: BenderLight;
+ src: local('Bender'), url("/font/BenderLight.woff2") format('woff2');
+}
+@font-face {
+ font-family: 'JetBrains Mono';
+ src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}</style><style>:root {
+ --dark-background: url('/img/dark_backdrop.jpg');
+ --light-background: url('/img/light_backdrip.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Tool | Visual Studio Code - 轻量级代码编辑器</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2023-08-31T16:00:00.000Z" id="date"> 2023-09-01</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-08T15:44:05.635Z" id="updated"> 2024-09-08</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<strong>已完成</strong>、<del><em>待完善</em></del>、<del><em>编写中</em></del>]</p>
+<p><strong>文章摘要：</strong> ‌Visual Studio Code（‌VS Code）是一款由‌微软开发的免费开源的现代化轻量级代码编辑器，支持‌Windows、‌Linux和‌macOS操作系统。</p>
+<p class='item-img' data-src='/../assets/image/Tool/logo/VScode-logo.excalidraw.svg'><img src="/../assets/image/Tool/logo/VScode-logo.excalidraw.svg" alt="logo"></p>
+<span id="more"></span>
+
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p>Visual Studio Code 简称为 VS Code，是一款轻量级、跨平台、免费且开源的源代码编辑器。支持主流开发语言的语法高亮、智能代码补全、自定义快捷方式、括号匹配、代码片段提示、代码对比等效性，支持插件扩展。</p>
+</blockquote>
+<h2 id="设置及配置文件"><a href="#设置及配置文件" class="headerlink" title="设置及配置文件"></a>设置及配置文件</h2><p>settings.json<br>自动判断文件编码类型</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;workbench.cloudChanges.autoResume&quot;</span><span class="punctuation">:</span> <span class="string">&quot;off&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;workbench.cloudChanges.continueOn&quot;</span><span class="punctuation">:</span> <span class="string">&quot;off&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;workbench.tree.indent&quot;</span><span class="punctuation">:</span> <span class="number">16</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;workbench.tree.renderIndentGuides&quot;</span><span class="punctuation">:</span> <span class="string">&quot;always&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;workbench.startupEditor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;none&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;workbench.list.smoothScrolling&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">&quot;extensions.autoCheckUpdates&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;update.mode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;manual&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;terminal.integrated.inheritEnv&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;terminal.integrated.smoothScrolling&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">&quot;window.menuBarVisibility&quot;</span><span class="punctuation">:</span> <span class="string">&quot;toggle&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;excalidraw.theme&quot;</span><span class="punctuation">:</span> <span class="string">&quot;dark&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;editor.fontSize&quot;</span><span class="punctuation">:</span> <span class="number">16</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;editor.cursorBlinking&quot;</span><span class="punctuation">:</span> <span class="string">&quot;smooth&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;editor.smoothScrolling&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;editor.cursorSmoothCaretAnimation&quot;</span><span class="punctuation">:</span> <span class="string">&quot;on&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;editor.mouseWheelZoom&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="美化方案"><a href="#美化方案" class="headerlink" title="美化方案"></a>美化方案</h2><p>编程字体 - 注意事项</p>
+<blockquote>
+<ul>
+<li>代码的宽度应该是固定的。</li>
+<li>代码的字体应该是容易辨识的。</li>
+<li>不要使用非等宽字体作为编程字体。</li>
+<li>不要使用字体过窄或过胖的字体。</li>
+<li>不要使用各种迷乱的字体，如脚本字体、装饰字体等。</li>
+</ul>
+</blockquote>
+<p>字体推荐</p>
+<blockquote>
+<ul>
+<li><strong>JetBrains Mono</strong>，下载网址：<a target="_blank" rel="noopener" href="https://www.jetbrains.com/zh-cn/lp/mono/">https://www.jetbrains.com/zh-cn/lp/mono/</a></li>
+</ul>
+</blockquote>
+<h2 id="扩展插件推荐"><a href="#扩展插件推荐" class="headerlink" title="扩展插件推荐"></a>扩展插件推荐</h2><p>扩展功能类</p>
+<blockquote>
+<ul>
+<li><strong>Chinese (Simplified) (简体中文)</strong>, VScode中文界面插件。</li>
+<li><strong>markdownlint</strong>，Makdown预览模式和语法格式化功能。</li>
+<li><strong>PlantUML</strong>，绘制UML图，类图、流程图、时序图等图的绘制。（实现一个文件修改代码生成流程图）</li>
+<li><strong>Excalidraw</strong>，绘图软件，白板、流程图，简单易上手。（实现一个文件随时修改图像和展示结果，无需导出图片操作）</li>
+<li><strong>CodeSnap</strong>，代码截图工具。（实现选择代码生成截图）</li>
+<li><strong>翻译（英汉词典）</strong>，中英文翻译插件。</li>
+<li><strong>Cloudmusic</strong>，网易云音乐播放器。</li>
+</ul>
+</blockquote>
+<p>管理功能类</p>
+<blockquote>
+<ul>
+<li><strong>Git Graph</strong>，Git版本控制可视化插件。</li>
+<li><strong>Remote - SSH</strong>, SSH远程连接计算机插件。</li>
+<li><strong>Docker</strong>，Docker容器图形化界面插件。</li>
+<li><strong>MySQL</strong>，MySQL数据库图形化界面插件。</li>
+</ul>
+</blockquote>
+<p>程序语言相关</p>
+<blockquote>
+<ul>
+<li><strong>C&#x2F;C++ Extension Pack</strong>, C&#x2F;C++程序语言的插件。</li>
+<li><strong>Python</strong>, Python程序语言的编译器。</li>
+<li><strong>Extension Pack for Java</strong>，Java程序语言的VScode扩展。</li>
+</ul>
+</blockquote>
+<p>前端相关</p>
+<blockquote>
+<ul>
+<li><strong>Live Server</strong>，网页应用启动功能，且实时响应更新浏览器中的画面（热更新）。</li>
+<li><strong>Code Runner</strong>，用于运行代码或脚本的功能。</li>
+<li><strong>Thunder Client</strong>，API调试插件，发起网络请求。</li>
+</ul>
+</blockquote>
+<h2 id="快捷键总结"><a href="#快捷键总结" class="headerlink" title="快捷键总结"></a>快捷键总结</h2><p>快速导航</p>
+<blockquote>
+<ul>
+<li><code>Ctrl + Tab</code>：切换已打开的文件页面。</li>
+<li><code>Ctrl + E</code>：调出文件搜索框。</li>
+</ul>
+</blockquote>
+<p>标签页</p>
+<blockquote>
+<ul>
+<li><code>Ctrl + B</code>：显示&#x2F;隐藏标签页</li>
+<li><code>Ctrl + Shift + E</code>：资源管理器</li>
+<li><code>Ctrl + Shift + F</code>：搜索</li>
+<li><code>Ctrl + Shift + D</code>：运行和调试</li>
+<li><code>Ctrl + Shift + G</code>：源代码管理</li>
+<li><code>Ctrl + Shift + X</code>：扩展</li>
+</ul>
+</blockquote>
+<p>终端</p>
+<blockquote>
+<ul>
+<li><code>Ctrl + (~)</code>：终端</li>
+<li><code>Ctrl + Shift + (~)</code>：新建终端</li>
+<li><code>Ctrl + Shift + [上下键]</code>：多终端之间切换</li>
+</ul>
+</blockquote>
+<p>编辑</p>
+<blockquote>
+<ul>
+<li><code>Ctrl + N</code>：新建文件</li>
+<li><code>Ctrl + S</code>: 保存文件</li>
+<li><code>Ctrl + W</code>：关闭文件</li>
+<li><code>Ctrl + Q</code>：关闭软件</li>
+<li><code>Alt + [上下键]</code>：上下移动一行</li>
+<li><code>Ctrl + F</code>：关键词查找内容</li>
+<li><code>Ctrl + H</code>：替换内容</li>
+<li><code>Ctrl + L</code>：选择当前行</li>
+<li><code>Ctrl + Alt + [上下键]</code>：添加光标</li>
+</ul>
+</blockquote>
+<h2 id="Visual-Studio-Code底层实现解析"><a href="#Visual-Studio-Code底层实现解析" class="headerlink" title="Visual Studio Code底层实现解析"></a>Visual Studio Code底层实现解析</h2><h3 id="跨平台实现"><a href="#跨平台实现" class="headerlink" title="跨平台实现"></a>跨平台实现</h3><blockquote>
+<ul>
+<li>VSCode的跨平台特性得益于其基于Electron框架的实现。</li>
+<li>Electron是一个开源框架，它允许开发者使用Web技术（HTML, CSS, JavaScript）来构建跨平台的桌面应用。</li>
+<li>Electron基于Chromium和Node.js，其中Chromium负责渲染VSCode的界面，而Node.js则提供了后端处理能力。</li>
+</ul>
+</blockquote>
+<h3 id="多进程架构"><a href="#多进程架构" class="headerlink" title="多进程架构"></a>多进程架构</h3><blockquote>
+<ul>
+<li>VSCode采用了多进程架构，以提高应用的稳定性和性能。当VSCode第一次启动时，会创建一个主进程（main process）。</li>
+<li>随后，每个打开的窗口都会创建一个渲染进程（Renderer Process），用于渲染窗口内容。</li>
+<li>VSCode还会为每个窗口创建一个进程专门来执行插件，即Extension Host进程。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>主进程</strong>：负责管理VSCode的整体运行，如文件操作、窗口管理、插件加载等。</li>
+<li><strong>渲染进程</strong>：负责显示窗口内容，处理用户交互等。</li>
+<li><strong>Extension Host进程</strong>：负责执行插件代码，实现各种扩展功能。</li>
+</ul>
+</blockquote>
+<h3 id="插件架构与扩展性"><a href="#插件架构与扩展性" class="headerlink" title="插件架构与扩展性"></a>插件架构与扩展性</h3><blockquote>
+<ul>
+<li>VSCode的插件架构是其扩展性的关键。</li>
+<li>VSCode创建Extension Host进程的方式是创建一个新的Electron进程，并以Node.js的形式运行。这种设计使得插件可以在独立的进程中运行，互不干扰，提高了应用的稳定性。</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>对于开发者而言，可以通过编写插件来扩展VSCode的功能。VSCode提供了丰富的API和文档，方便开发者进行插件开发。此外，VSCode还提供了插件市场，方便用户查找和安装所需的插件。</li>
+</ul>
+</blockquote>
+<h2 id="AI提示词"><a href="#AI提示词" class="headerlink" title="AI提示词"></a>AI提示词</h2><p>暂无</p>
+<h2 id="博主提示"><a href="#博主提示" class="headerlink" title="博主提示"></a>博主提示</h2><blockquote>
+<ul>
+<li>个人推荐将VScode作为“文档编写、流程图绘制、环境管理、远程访问、数据库管理、API测试、中英翻译”的用途。</li>
+</ul>
+</blockquote>
+<h2 id="反向链接"><a href="#反向链接" class="headerlink" title="反向链接"></a>反向链接</h2><p>暂无</p>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/title/Project-DigitalHuman-Doc/">← 下一篇 Project | 虚拟数字人 - 项目文档</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/title/Tool-Hexo-Command/">Tool | Hexo - 命令 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="/img/avatar_MagicTable.png" alt="Logo"></a><h1 id="Dr"><a href="/">魔术桌</a></h1><div id="description"><p>「因为所以科学道理，原来如此皆有前提」</p></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%8F%8A%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">设置及配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BE%8E%E5%8C%96%E6%96%B9%E6%A1%88"><span class="toc-number">3.</span> <span class="toc-text">美化方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90"><span class="toc-number">4.</span> <span class="toc-text">扩展插件推荐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">快捷键总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Visual-Studio-Code%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E8%A7%A3%E6%9E%90"><span class="toc-number">6.</span> <span class="toc-text">Visual Studio Code底层实现解析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%9E%E7%8E%B0"><span class="toc-number">6.1.</span> <span class="toc-text">跨平台实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E8%BF%9B%E7%A8%8B%E6%9E%B6%E6%9E%84"><span class="toc-number">6.2.</span> <span class="toc-text">多进程架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E6%9E%B6%E6%9E%84%E4%B8%8E%E6%89%A9%E5%B1%95%E6%80%A7"><span class="toc-number">6.3.</span> <span class="toc-text">插件架构与扩展性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AI%E6%8F%90%E7%A4%BA%E8%AF%8D"><span class="toc-number">7.</span> <span class="toc-text">AI提示词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E4%B8%BB%E6%8F%90%E7%A4%BA"><span class="toc-number">8.</span> <span class="toc-text">博主提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%93%BE%E6%8E%A5"><span class="toc-number">9.</span> <span class="toc-text">反向链接</span></a></li></ol></div></div><footer><nobr>构建来自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
