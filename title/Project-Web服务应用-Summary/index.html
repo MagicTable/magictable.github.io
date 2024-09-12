@@ -59,7 +59,7 @@ lightGallery(document.getElementById('post-bg'), {
    }
  }
 });
-document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Project | Web网站 - 开发总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-09-02T16:00:00.000Z" id="date"> 2024-09-03</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-08T15:34:42.986Z" id="updated"> 2024-09-08</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]</p>
+document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Project | Web网站 - 开发总结</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-09-02T16:00:00.000Z" id="date"> 2024-09-03</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-12T03:07:17.117Z" id="updated"> 2024-09-12</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]</p>
 <p><strong>文章摘要：</strong> 摘要内容。</p>
 <p class='item-img' data-src='/../assets/image/Project/logo/Web%E6%9C%8D%E5%8A%A1%E5%BA%94%E7%94%A8-logo.excalidraw.svg'><img src="/../assets/image/Project/logo/Web%E6%9C%8D%E5%8A%A1%E5%BA%94%E7%94%A8-logo.excalidraw.svg" alt="logo"></p>
 <span id="more"></span>
@@ -75,14 +75,9 @@ document.addEventListener("pjax:complete", reset);reset()})</script></head><body
 <blockquote>
 <ul>
 <li>SSM软件架构</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>表现层（Web层）：负责接收用户请求并返回响应，例如SpringMVC。</li>
-<li>业务逻辑层（Service层）：负责处理具体的业务逻辑，例如Spring。</li>
-<li>数据访问层（DAO层）：负责与数据库进行交互，例如MyBatis。</li>
-<li>数据持久层（数据库层）：负责数据存储。</li>
+<li>解决高并发问题</li>
+<li>分布式微服务架构</li>
+<li>集群部署</li>
 </ul>
 </blockquote>
 <h1 id="项目分析"><a href="#项目分析" class="headerlink" title="项目分析"></a>项目分析</h1><h1 id="项目规划"><a href="#项目规划" class="headerlink" title="项目规划"></a>项目规划</h1><h1 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h1><p>Vite：web开发构建工具</p>
@@ -304,7 +299,13 @@ document.addEventListener("pjax:complete", reset);reset()})</script></head><body
 </blockquote>
 <h1 id="Web层的axios请求服务命名规范"><a href="#Web层的axios请求服务命名规范" class="headerlink" title="Web层的axios请求服务命名规范"></a>Web层的axios请求服务命名规范</h1><p><strong>请求路径的变量命名</strong>：通过下划线拼接多个层级的路径，并全小写，例如：<code>/user/logon</code>、<code>user_logon</code><br><strong>请求的请求体中的数据命名规范</strong>：使用后端的小驼峰命名法，即在发生和接收时进行“前端的下划线命名”和“小驼峰命名”之间的转换。</p>
 <h1 id="Controller控制层请求URL映射规范"><a href="#Controller控制层请求URL映射规范" class="headerlink" title="Controller控制层请求URL映射规范"></a>Controller控制层请求URL映射规范</h1><p><strong>请求数据的接收</strong>：接收小驼峰命名法的对象参数<br><strong>请求RUL路径映射</strong>：全小写</p>
-<h1 id="Service业务层方法命名"><a href="#Service业务层方法命名" class="headerlink" title="Service业务层方法命名"></a>Service业务层方法命名</h1><table>
+<h1 id="Service业务层方法命名"><a href="#Service业务层方法命名" class="headerlink" title="Service业务层方法命名"></a>Service业务层方法命名</h1><blockquote>
+<ul>
+<li>URL请求方式：GET(查询)、POST(插入&#x2F;新增)、PUT(更新&#x2F;修改)、DELETE(删除)</li>
+</ul>
+</blockquote>
+<p>待完善：保存一条数据<code>save</code></p>
+<table>
 <thead>
 <tr>
 <th align="left">功能</th>
@@ -314,13 +315,13 @@ document.addEventListener("pjax:complete", reset);reset()})</script></head><body
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">插入 - 增加一条数据</td>
+<td align="left">插入&#x2F;新增 - 增加一条数据</td>
 <td align="left"><code>add</code></td>
 <td align="left"><code>Object</code></td>
 <td align="left"><code>boolean</code></td>
 </tr>
 <tr>
-<td align="left">插入 - 批量增加</td>
+<td align="left">插入&#x2F;新增 - 批量增加</td>
 <td align="left"><code>addMore</code></td>
 <td align="left"><code>Map&lt;Object&gt;</code></td>
 <td align="left"><code>boolean</code></td>
@@ -350,13 +351,13 @@ document.addEventListener("pjax:complete", reset);reset()})</script></head><body
 <td align="left">—</td>
 </tr>
 <tr>
-<td align="left">更新 - 根据id字段修改一条数据（局部）</td>
+<td align="left">更新&#x2F;修改 - 根据id字段修改一条数据（局部）</td>
 <td align="left"><code>updatePartial</code></td>
 <td align="left"><code>Object</code></td>
 <td align="left"><code>boolean</code></td>
 </tr>
 <tr>
-<td align="left">更新 - 根据id字段修改一条数据（整体）</td>
+<td align="left">更新&#x2F;修改 - 根据id字段修改一条数据（整体）</td>
 <td align="left"><code>updateFull</code></td>
 <td align="left"><code>Object</code></td>
 <td align="left"><code>boolean</code></td>
@@ -402,13 +403,13 @@ document.addEventListener("pjax:complete", reset);reset()})</script></head><body
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">插入 - 增加一条数据</td>
+<td align="left">插入&#x2F;新增 - 增加一条数据</td>
 <td align="left"><code>insert</code></td>
 <td align="left"><code>Object</code></td>
 <td align="left"><code>int</code></td>
 </tr>
 <tr>
-<td align="left">插入 - 批量增加</td>
+<td align="left">插入&#x2F;新增 - 批量增加</td>
 <td align="left"><code>insertMore</code></td>
 <td align="left"><code>Map&lt;Object&gt;</code></td>
 <td align="left"><code>int</code></td>
@@ -438,13 +439,13 @@ document.addEventListener("pjax:complete", reset);reset()})</script></head><body
 <td align="left">—</td>
 </tr>
 <tr>
-<td align="left">更新 - 根据id字段修改一条数据（局部）</td>
+<td align="left">更新&#x2F;修改 - 根据id字段修改一条数据（局部）</td>
 <td align="left"><code>updatePartial</code></td>
 <td align="left"><code>Object</code></td>
 <td align="left"><code>int</code></td>
 </tr>
 <tr>
-<td align="left">更新 - 根据id字段修改一条数据（整体）</td>
+<td align="left">更新&#x2F;修改 - 根据id字段修改一条数据（整体）</td>
 <td align="left"><code>updateFull</code></td>
 <td align="left"><code>Object</code></td>
 <td align="left"><code>int</code></td>

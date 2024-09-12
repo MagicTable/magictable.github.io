@@ -59,19 +59,28 @@ lightGallery(document.getElementById('post-bg'), {
    }
  }
 });
-document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Diary | 类库 - SpringBoot 2 - 框架 - (Maven)</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-08-31T16:00:00.000Z" id="date"> 2024-09-01</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-09T13:15:57.163Z" id="updated"> 2024-09-09</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]</p>
+document.addEventListener("pjax:complete", reset);reset()})</script></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">文章动态</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">文章归档</span></a></li><li class="navItem"><a class="navBlock" href="/data_asset/"><span class="navItemTitle">数据资产</span></a></li><li class="navItem"><a class="navBlock" href="/web_navigation/"><span class="navItemTitle">网站导航</span></a></li><li class="navItem"><a class="navBlock" href="/about/"><span class="navItemTitle">关于</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Diary | 类库 - SpringBoot 2 - 框架 - (Maven)</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-08-31T16:00:00.000Z" id="date"> 2024-09-01</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-09-12T03:42:21.004Z" id="updated"> 2024-09-12</time></div></span></div></div><hr><div id="post-content"><p><strong>文章状态：</strong> [<del><em>已完成</em></del>、<del><em>待完善</em></del>、<strong>编写中</strong>]</p>
 <p><strong>文章摘要：</strong>  摘要内容。</p>
 <p class='item-img' data-src='/../assets/image/Diary/logo/Library-Maven-springBoot2-logo.excalidraw.svg'><img src="/../assets/image/Diary/logo/Library-Maven-springBoot2-logo.excalidraw.svg" alt="logo"></p>
 <span id="more"></span>
 
-<p class='item-img' data-src='/../assets/image/Diary/Library-Maven-SpringBoot2/Summary.excalidraw.svg'><img src="/../assets/image/Diary/Library-Maven-SpringBoot2/Summary.excalidraw.svg" alt="Library-Maven-SpringBoot2"></p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><blockquote>
+<p class='item-img' data-src='/../assets/image/Diary/Library-Maven/SpringBoot2/Summary.excalidraw.svg'><img src="/../assets/image/Diary/Library-Maven/SpringBoot2/Summary.excalidraw.svg" alt="Library-Maven-SpringBoot2"></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>作用</p>
+<blockquote>
+<p><strong>简化依赖配置</strong></p>
 <ul>
-<li><strong>快速开发</strong>：提供默认配置，简化项目配置，减少样板代码。</li>
-<li><strong>独立运行</strong>：打包成可执行jar文件，内嵌服务器，轻松部署。</li>
-<li><strong>开箱即用</strong>：提供多种starter依赖，快书集成常用功能。</li>
-<li><strong>自动配置</strong>：根据项目与i来自动配置spring应用，减少配置工作。</li>
-<li><strong>微服务支持</strong>：方便构建微服务架构，支持spring cloud。</li>
+<li>简化依赖配置，快速搭建初始项目。</li>
+<li>spring boot是一个框架，也是一个项目。</li>
+<li>spring boot中包含了很多启动器，启动器根据使用场景来分类，定义了当前项目使用的所有依赖坐标和版本号，管理依赖关系，整合成一个新的依赖，统一管理，称之为<code>启动器</code>。</li>
+<li>开发时将spring boot作为父级引入到自己的项目中，通过继承的方式引入父级提供的依赖。<br>称之为<code>启动器</code>、<code>spring-boot-starter-&lt;场景&gt;</code>。</li>
+</ul>
+<p><strong>独立运行</strong></p>
+<ul>
+<li>打包成可执行jar文件，内嵌服务器，轻松部署。</li>
+</ul>
+<p><strong>微服务支持</strong></p>
+<ul>
+<li>方便构建微服务架构，支持spring cloud。</li>
 </ul>
 </blockquote>
 <h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h2 id="项目约定"><a href="#项目约定" class="headerlink" title="项目约定"></a>项目约定</h2><blockquote>
