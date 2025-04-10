@@ -1,0 +1,35 @@
+import{_ as a}from"./plugin-vue_export-helper-DlAUqK2U.js";import{c as e,a as s,b as i,d as p,e as l,o as t}from"./app-C-jtbkLB.js";const c={};function r(o,n){return t(),e("div",null,[n[0]||(n[0]=s("p",null,[s("strong",null,"文章摘要："),l(" 配置方案。")],-1)),i(" more "),n[1]||(n[1]=p(`<h2 id="软件包目录结构" tabindex="-1"><a class="header-anchor" href="#软件包目录结构"><span>软件包目录结构</span></a></h2><div class="hint-container info"><p class="hint-container-title">相关信息</p><p>nacos软件包中，本质是一个spring项目，一个打包好的jar包项目。</p></div><div class="language-txt line-numbers-mode" data-highlighter="shiki" data-ext="txt" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>nacos/</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>|-- bin/     # 可执行文件</span></span>
+<span class="line"><span>	|-- logs/</span></span>
+<span class="line"><span>	|-- work/</span></span>
+<span class="line"><span>	derby.log</span></span>
+<span class="line"><span>	shutdown.cmd  # windows结束脚本</span></span>
+<span class="line"><span>	startup.cmd   # windows运行脚本</span></span>
+<span class="line"><span>	shutdown.sh   # linux结束脚本</span></span>
+<span class="line"><span>	startup.sh    # linux运行脚本</span></span>
+<span class="line"><span>	</span></span>
+<span class="line"><span>|-- conf/    # 配置文件</span></span>
+<span class="line"><span>	|-- announcement_en-US.conf</span></span>
+<span class="line"><span>	|-- announcement_zh-CN.conf</span></span>
+<span class="line"><span>	|-- application.properties           # nacos主要配置文件</span></span>
+<span class="line"><span>	|-- application.properties.example</span></span>
+<span class="line"><span>	|-- cluster.conf.example             # nacos集群</span></span>
+<span class="line"><span>	|-- console-guide.conf</span></span>
+<span class="line"><span>	|-- nacos-logback.xml</span></span>
+<span class="line"><span>	|-- 1.4.0-ipv6_support-update.sql</span></span>
+<span class="line"><span>	|-- derby-schema.sql</span></span>
+<span class="line"><span>	|-- mysql-schema.sql</span></span>
+<span class="line"><span>	</span></span>
+<span class="line"><span>|-- data/    # 数据文件</span></span>
+<span class="line"><span>	|-- connection/</span></span>
+<span class="line"><span>	|-- derby-data/</span></span>
+<span class="line"><span>	|-- naming/</span></span>
+<span class="line"><span>	|-- protocol/</span></span>
+<span class="line"><span>	|-- tps/</span></span>
+<span class="line"><span>	</span></span>
+<span class="line"><span>|-- logs/    # 日志文件</span></span>
+<span class="line"><span>	|-- # 很多日志文件</span></span>
+<span class="line"><span>	</span></span>
+<span class="line"><span>|-- target/  # jar运行程序</span></span>
+<span class="line"><span>	|-- nacos-server.jar  # 运行程序</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,3))])}const v=a(c,[["render",r]]),u=JSON.parse('{"path":"/software/Package-Nacos-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.html","title":"Package - Nacos - 配置文件","lang":"zh-CN","frontmatter":{"title":"Package - Nacos - 配置文件","author":"魔术桌","cover":null,"category":["软件程序/软件包"],"date":"2024-09-24T00:00:00.000Z","tag":["进度-待完善","查询手册"],"description":"文章摘要： 配置方案。","head":[["meta",{"property":"og:url","content":"https://mister-hope.github.io/software/Package-Nacos-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.html"}],["meta",{"property":"og:site_name","content":"魔术桌的知识库"}],["meta",{"property":"og:title","content":"Package - Nacos - 配置文件"}],["meta",{"property":"og:description","content":"文章摘要： 配置方案。"}],["meta",{"property":"og:type","content":"article"}],["meta",{"property":"og:locale","content":"zh-CN"}],["meta",{"property":"og:updated_time","content":"2025-03-23T15:30:56.000Z"}],["meta",{"property":"article:author","content":"魔术桌"}],["meta",{"property":"article:tag","content":"进度-待完善"}],["meta",{"property":"article:tag","content":"查询手册"}],["meta",{"property":"article:published_time","content":"2024-09-24T00:00:00.000Z"}],["meta",{"property":"article:modified_time","content":"2025-03-23T15:30:56.000Z"}],["script",{"type":"application/ld+json"},"{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"Article\\",\\"headline\\":\\"Package - Nacos - 配置文件\\",\\"image\\":[\\"\\"],\\"datePublished\\":\\"2024-09-24T00:00:00.000Z\\",\\"dateModified\\":\\"2025-03-23T15:30:56.000Z\\",\\"author\\":[{\\"@type\\":\\"Person\\",\\"name\\":\\"魔术桌\\"}]}"]]},"git":{"createdTime":1742743856000,"updatedTime":1742743856000,"contributors":[{"name":"MagicTable","username":"MagicTable","email":"13459588094@163.com","commits":1}]},"readingTime":{"minutes":0.59,"words":177},"filePathRelative":"software/Package-Nacos-配置文件.md","localizedDate":"2024年9月24日","excerpt":"<p><strong>文章摘要：</strong> 配置方案。</p>\\n","autoDesc":true}');export{v as comp,u as data};
