@@ -1,0 +1,1947 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://blog.magictable.ha.cn/atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <id>https://blog.magictable.ha.cn</id>
+  <title>魔术桌的知识仓库</title>
+  <subtitle>「因为所以科学道理，原来如此皆有前提」</subtitle>
+  <author>
+    <name>魔术桌</name>
+    <email>13459588094@163.com</email>
+    <uri>https://blog.magictable.ha.cn</uri>
+  </author>
+  <icon>https://blog.magictable.ha.cn/assets/image/头像.png</icon>
+  <logo>https://blog.magictable.ha.cn/assets/image/头像.png</logo>
+  <rights>Copyright © 2023 魔术桌</rights>
+  <updated>2025-06-19T09:36:09.573Z</updated>
+  <generator>@vuepress/plugin-feed</generator>
+  <link rel="self" href="https://blog.magictable.ha.cn/atom.xml"/>
+  <link rel="alternate" href="https://blog.magictable.ha.cn"/>
+  <category term="硬件设备/原材料"/>
+  <category term="学习笔记/技术"/>
+  <category term="软件程序/软件包"/>
+  <category term="软件程序/语言"/>
+  <category term="学习笔记/方案"/>
+  <category term="世界规则/社会"/>
+  <category term="硬件设备/硬件设备"/>
+  <category term="硬件设备/工艺"/>
+  <contributor>
+    <name>魔术桌</name>
+  </contributor>
+  <entry>
+    <title type="text">Material - 基础知识 - 化学元素周期表</title>
+    <id>https://blog.magictable.ha.cn/hardware/Material-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%8C%96%E5%AD%A6%E5%85%83%E7%B4%A0%E5%91%A8%E6%9C%9F%E8%A1%A8.html</id>
+    <link href="https://blog.magictable.ha.cn/hardware/Material-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E5%8C%96%E5%AD%A6%E5%85%83%E7%B4%A0%E5%91%A8%E6%9C%9F%E8%A1%A8.html"/>
+    <updated>2025-06-17T10:12:25.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> 化学元素周期表是化学学科的基石，它系统地组织了所有已知化学元素，揭示了它们之间的内在联系和规律。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> 化学元素周期表是化学学科的基石，它系统地组织了所有已知化学元素，揭示了它们之间的内在联系和规律。</p>
+<!-- more -->
+<h2>引言</h2>
+<p>化学元素周期表是化学学科的基石，它系统地组织了所有已知化学元素，揭示了它们之间的内在联系和规律。自1869年俄国化学家德米特里·门捷列夫首次提出元素周期表以来，这一工具已成为化学研究和教育中不可或缺的资源。随着科学的发展，周期表不断更新，从最初的70个元素扩展到现在已确认的118个元素。本报告将详细介绍化学元素周期表的基本结构、元素分类、周期表的演变历程以及其在化学研究和工业应用中的重要性。</p>
+<h2>化学元素周期表的结构</h2>
+<p>化学元素周期表是一种按原子序数（即原子核中质子的数量）从小到大排序的化学元素列表。它采用了独特的表格形式，将特性相似的元素排列在同一族中。这种排列方式揭示了元素性质的周期性变化规律，使我们能够预测元素的化学行为和物理特性。</p>
+<h3>周期表的基本布局</h3>
+<p>化学元素周期表由7个周期和18个族组成，以表格形式呈现。周期表的水平行称为"周期"，垂直列称为"族"或"族"。这种布局方式使得具有相似化学性质的元素位于同一族中，而具有相似电子排布的元素则位于同一周期中。</p>
+<p>在周期表中，元素通常以以下方式标识：</p>
+<ul>
+<li>原子序数：位于元素符号左上角，表示原子核中质子的数量</li>
+<li>元素符号：位于元素名称上方，通常是元素名称的首字母缩写</li>
+<li>元素名称：位于表格中央</li>
+<li>相对原子质量：位于元素符号下方，表示该元素的平均原子质量（以碳-12原子质量的1/12为单位）</li>
+</ul>
+<h3>周期表的分区</h3>
+<p>化学元素周期表可以分为以下几个主要区域：</p>
+<ol>
+<li><strong>主族元素</strong>：包括IA至IIA族和VA至VIIIA族，共14个族。这些元素的价电子位于s轨道和p轨道，具有相对稳定的电子构型。</li>
+<li><strong>过渡金属</strong>：包括IIIB至VIII族，共11个族。这些元素的价电子位于d轨道，具有多样的氧化态和催化性能。</li>
+<li><strong>f区元素</strong>：包括镧系元素（57-71号）和锕系元素（89-103号）。这些元素的价电子位于f轨道，具有特殊的化学性质。</li>
+<li><strong>稀有气体</strong>：即第18族元素，包括氦、氖、氩、氪、氙、氡和鉨。这些元素的电子层结构已达到稳定状态，化学性质非常稳定。</li>
+</ol>
+<h2>化学元素周期表的元素信息</h2>
+<p>以下是一个完整的化学元素周期表，列出了所有已确认的118个元素的基本信息，包括原子序数、元素符号、元素名称和相对原子质量等。</p>
+<p>第一周期（1-2号元素）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原子序数</th>
+<th style="text-align:center">元素符号</th>
+<th style="text-align:left">元素名称</th>
+<th style="text-align:left">相对原子质量</th>
+<th style="text-align:left">发现年份</th>
+<th style="text-align:left">主要性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">H</td>
+<td style="text-align:left">氢</td>
+<td style="text-align:left">1.008</td>
+<td style="text-align:left">公元前</td>
+<td style="text-align:left">非金属，宇宙中最常见的元素，占普通氢的75%</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">He</td>
+<td style="text-align:left">氦</td>
+<td style="text-align:left">4.0026</td>
+<td style="text-align:left">1895年</td>
+<td style="text-align:left">稀有气体，沸点最低的元素，用于低温研究和气冷反应堆</td>
+</tr>
+</tbody>
+</table>
+<p>第二周期（3-10号元素）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原子序数</th>
+<th style="text-align:center">元素符号</th>
+<th style="text-align:left">元素名称</th>
+<th style="text-align:left">相对原子质量</th>
+<th style="text-align:left">发现年份</th>
+<th style="text-align:left">主要性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Li</td>
+<td style="text-align:left">锂</td>
+<td style="text-align:left">6.94</td>
+<td style="text-align:left">1817年</td>
+<td style="text-align:left">轻金属，用于锂离子电池，性质活泼</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">Be</td>
+<td style="text-align:left">铍</td>
+<td style="text-align:left">9.0122</td>
+<td style="text-align:left">1798年</td>
+<td style="text-align:left">稀有金属，硬度高，熔点高，用于航空航天</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">B</td>
+<td style="text-align:left">硼</td>
+<td style="text-align:left">10.81</td>
+<td style="text-align:left">1808年</td>
+<td style="text-align:left">金属loid，半导体材料，用于光学透镜</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">C</td>
+<td style="text-align:left">碳</td>
+<td style="text-align:left">12.011</td>
+<td style="text-align:left">公元前</td>
+<td style="text-align:left">非金属，具有多种同素异形体，如金刚石和石墨</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">N</td>
+<td style="text-align:left">氮</td>
+<td style="text-align:left">14.007</td>
+<td style="text-align:left">1772年</td>
+<td style="text-align:left">气体，占空气78%，用于氮肥和制冷剂</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">O</td>
+<td style="text-align:left">氧</td>
+<td style="text-align:left">15.999</td>
+<td style="text-align:left">1774年</td>
+<td style="text-align:left">气体，占空气21%，支持燃烧和呼吸</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">F</td>
+<td style="text-align:left">氟</td>
+<td style="text-align:left">18.998</td>
+<td style="text-align:left">1886年</td>
+<td style="text-align:left">气体，最活泼的非金属，用于制冷剂和消毒剂</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">Ne</td>
+<td style="text-align:left">氖</td>
+<td style="text-align:left">20.18</td>
+<td style="text-align:left">1898年</td>
+<td style="text-align:left">稀有气体，用于霓虹灯和低温研究</td>
+</tr>
+</tbody>
+</table>
+<p>第三周期（11-18号元素）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原子序数</th>
+<th style="text-align:center">元素符号</th>
+<th style="text-align:left">元素名称</th>
+<th style="text-align:left">相对原子质量</th>
+<th style="text-align:left">发现年份</th>
+<th style="text-align:left">主要性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:center">Na</td>
+<td style="text-align:left">钠</td>
+<td style="text-align:left">22.99</td>
+<td style="text-align:left">1807年</td>
+<td style="text-align:left">碱金属，性质活泼，与水反应剧烈，用于钠电池</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:center">Mg</td>
+<td style="text-align:left">镁</td>
+<td style="text-align:left">24.305</td>
+<td style="text-align:left">1808年</td>
+<td style="text-align:left">碱土金属，轻金属，强度高，用于航空航天和合金</td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td style="text-align:center">Al</td>
+<td style="text-align:left">铝</td>
+<td style="text-align:left">26.982</td>
+<td style="text-align:left">1825年</td>
+<td style="text-align:left">轻金属，抗腐蚀，导电性好，广泛应用于建筑和包装</td>
+</tr>
+<tr>
+<td style="text-align:center">14</td>
+<td style="text-align:center">Si</td>
+<td style="text-align:left">硅</td>
+<td style="text-align:left">28.085</td>
+<td style="text-align:left">1823年</td>
+<td style="text-align:left">金属loid，半导体材料，用于电子器件和太阳能电池</td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td style="text-align:center">P</td>
+<td style="text-align:left">磷</td>
+<td style="text-align:left">30.974</td>
+<td style="text-align:left">1669年</td>
+<td style="text-align:left">非金属，生物体内必需元素，用于肥料和阻燃剂</td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td style="text-align:center">S</td>
+<td style="text-align:left">硫</td>
+<td style="text-align:left">32.06</td>
+<td style="text-align:left">公元前</td>
+<td style="text-align:left">非金属，黄色晶体，用于化肥和火药</td>
+</tr>
+<tr>
+<td style="text-align:center">17</td>
+<td style="text-align:center">Cl</td>
+<td style="text-align:left">氯</td>
+<td style="text-align:left">35.45</td>
+<td style="text-align:left">1774年</td>
+<td style="text-align:left">黄绿色气体，强氧化剂，用于消毒和合成材料</td>
+</tr>
+<tr>
+<td style="text-align:center">18</td>
+<td style="text-align:center">Ar</td>
+<td style="text-align:left">氩</td>
+<td style="text-align:left">39.95</td>
+<td style="text-align:left">1894年</td>
+<td style="text-align:left">稀有气体，惰性，用于氩气灯和焊接保护</td>
+</tr>
+</tbody>
+</table>
+<p>第四周期（19-36号元素）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原子序数</th>
+<th style="text-align:center">元素符号</th>
+<th style="text-align:left">元素名称</th>
+<th style="text-align:left">相对原子质量</th>
+<th style="text-align:left">发现年份</th>
+<th style="text-align:left">主要性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">19</td>
+<td style="text-align:center">K</td>
+<td style="text-align:left">钾</td>
+<td style="text-align:left">39.098</td>
+<td style="text-align:left">1807年</td>
+<td style="text-align:left">碱金属，性质极活泼，用于钾肥和钾电池</td>
+</tr>
+<tr>
+<td style="text-align:center">20</td>
+<td style="text-align:center">Ca</td>
+<td style="text-align:left">钙</td>
+<td style="text-align:left">40.078</td>
+<td style="text-align:left">1808年</td>
+<td style="text-align:left">碱土金属，人体必需元素，用于建筑材料和食品添加剂</td>
+</tr>
+<tr>
+<td style="text-align:center">21</td>
+<td style="text-align:center">Sc</td>
+<td style="text-align:left">钪</td>
+<td style="text-align:left">44.956</td>
+<td style="text-align:left">1875年</td>
+<td style="text-align:left">过渡金属，硬度高，用于合金和催化剂</td>
+</tr>
+<tr>
+<td style="text-align:center">22</td>
+<td style="text-align:center">Ti</td>
+<td style="text-align:left">钛</td>
+<td style="text-align:left">47.867</td>
+<td style="text-align:left">1791年</td>
+<td style="text-align:left">过渡金属，强度高，耐腐蚀，用于航空航天和医疗器材</td>
+</tr>
+<tr>
+<td style="text-align:center">23</td>
+<td style="text-align:center">V</td>
+<td style="text-align:left">钒</td>
+<td style="text-align:left">50.942</td>
+<td style="text-align:left">1831年</td>
+<td style="text-align:left">过渡金属，硬度高，韧性好，用于特殊钢和合金</td>
+</tr>
+<tr>
+<td style="text-align:center">24</td>
+<td style="text-align:center">Cr</td>
+<td style="text-align:left">铬</td>
+<td style="text-align:left">51.996</td>
+<td style="text-align:left">1797年</td>
+<td style="text-align:left">过渡金属，硬度高，耐腐蚀，用于不锈钢和表面处理</td>
+</tr>
+<tr>
+<td style="text-align:center">25</td>
+<td style="text-align:center">Mn</td>
+<td style="text-align:left">锰</td>
+<td style="text-align:left">54.938</td>
+<td style="text-align:left">1774年</td>
+<td style="text-align:left">过渡金属，多种氧化态，用于不锈钢和锰钢</td>
+</tr>
+<tr>
+<td style="text-align:center">26</td>
+<td style="text-align:center">Fe</td>
+<td style="text-align:left">铁</td>
+<td style="text-align:left">55.845</td>
+<td style="text-align:left">公元前</td>
+<td style="text-align:left">过渡金属，强度高，延展性好，广泛应用于建筑和制造</td>
+</tr>
+<tr>
+<td style="text-align:center">27</td>
+<td style="text-align:center">Co</td>
+<td style="text-align:left">钴</td>
+<td style="text-align:left">58.933</td>
+<td style="text-align:left">1735年</td>
+<td style="text-align:left">过渡金属，磁性材料，用于电池和催化剂</td>
+</tr>
+<tr>
+<td style="text-align:center">28</td>
+<td style="text-align:center">Ni</td>
+<td style="text-align:left">镍</td>
+<td style="text-align:left">58.693</td>
+<td style="text-align:left">1751年</td>
+<td style="text-align:left">过渡金属，强度高，耐腐蚀，用于不锈钢和硬币</td>
+</tr>
+<tr>
+<td style="text-align:center">29</td>
+<td style="text-align:center">Cu</td>
+<td style="text-align:left">铜</td>
+<td style="text-align:left">63.546</td>
+<td style="text-align:left">公元前</td>
+<td style="text-align:left">过渡金属，导电性好，延展性强，广泛应用于电气和建筑</td>
+</tr>
+<tr>
+<td style="text-align:center">30</td>
+<td style="text-align:center">Zn</td>
+<td style="text-align:left">锌</td>
+<td style="text-align:left">65.38</td>
+<td style="text-align:left">1586年</td>
+<td style="text-align:left">过渡金属，抗腐蚀，用于镀锌和合金</td>
+</tr>
+<tr>
+<td style="text-align:center">31</td>
+<td style="text-align:center">Ga</td>
+<td style="text-align:left">镓</td>
+<td style="text-align:left">69.723</td>
+<td style="text-align:left">1875年</td>
+<td style="text-align:left">后过渡金属，熔点低，用于半导体和合金</td>
+</tr>
+<tr>
+<td style="text-align:center">32</td>
+<td style="text-align:center">Ge</td>
+<td style="text-align:left">锗</td>
+<td style="text-align:left">72.63</td>
+<td style="text-align:left">1886年</td>
+<td style="text-align:left">类金属，半导体材料，用于红外探测器和光纤通信</td>
+</tr>
+<tr>
+<td style="text-align:center">33</td>
+<td style="text-align:center">As</td>
+<td style="text-align:left">砷</td>
+<td style="text-align:left">74.922</td>
+<td style="text-align:left">1250年</td>
+<td style="text-align:left">金属loid，有毒，用于农药和半导体</td>
+</tr>
+<tr>
+<td style="text-align:center">34</td>
+<td style="text-align:center">Se</td>
+<td style="text-align:left">硒</td>
+<td style="text-align:left">78.971</td>
+<td style="text-align:left">1817年</td>
+<td style="text-align:left">非金属，光敏材料，用于太阳能电池和复印机</td>
+</tr>
+<tr>
+<td style="text-align:center">35</td>
+<td style="text-align:center">Br</td>
+<td style="text-align:left">溴</td>
+<td style="text-align:left">79.904</td>
+<td style="text-align:left">1826年</td>
+<td style="text-align:left">液体非金属，腐蚀性强，用于消毒和阻燃剂</td>
+</tr>
+<tr>
+<td style="text-align:center">36</td>
+<td style="text-align:center">Kr</td>
+<td style="text-align:left">氪</td>
+<td style="text-align:left">83.798</td>
+<td style="text-align:left">1898年</td>
+<td style="text-align:left">稀有气体，惰性，用于氪灯和焊接保护</td>
+</tr>
+</tbody>
+</table>
+<p>第五周期（37-54号元素）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原子序数</th>
+<th style="text-align:center">元素符号</th>
+<th style="text-align:left">元素名称</th>
+<th style="text-align:left">相对原子质量</th>
+<th style="text-align:left">发现年份</th>
+<th style="text-align:left">主要性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">37</td>
+<td style="text-align:center">Rb</td>
+<td style="text-align:left">铷</td>
+<td style="text-align:left">85.468</td>
+<td style="text-align:left">1861年</td>
+<td style="text-align:left">碱金属，性质极活泼，用于铷原子钟和电池</td>
+</tr>
+<tr>
+<td style="text-align:center">38</td>
+<td style="text-align:center">Sr</td>
+<td style="text-align:left">锶</td>
+<td style="text-align:left">87.62</td>
+<td style="text-align:left">1790年</td>
+<td style="text-align:left">碱土金属，硬度低，用于烟花和核工业</td>
+</tr>
+<tr>
+<td style="text-align:center">39</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:left">钇</td>
+<td style="text-align:left">88.906</td>
+<td style="text-align:left">1794年</td>
+<td style="text-align:left">过渡金属，硬度高，用于合金和催化剂</td>
+</tr>
+<tr>
+<td style="text-align:center">40</td>
+<td style="text-align:center">Zr</td>
+<td style="text-align:left">锆</td>
+<td style="text-align:left">91.224</td>
+<td style="text-align:left">1789年</td>
+<td style="text-align:left">过渡金属，耐腐蚀，用于核反应堆和珠宝</td>
+</tr>
+<tr>
+<td style="text-align:center">41</td>
+<td style="text-align:center">Nb</td>
+<td style="text-align:left">铌</td>
+<td style="text-align:left">92.906</td>
+<td style="text-align:left">1801年</td>
+<td style="text-align:left">过渡金属，超导体，用于医疗设备和合金</td>
+</tr>
+<tr>
+<td style="text-align:center">42</td>
+<td style="text-align:center">Mo</td>
+<td style="text-align:left">钼</td>
+<td style="text-align:left">95.95</td>
+<td style="text-align:left">1781年</td>
+<td style="text-align:left">过渡金属，强度高，耐腐蚀，用于合金和催化剂</td>
+</tr>
+<tr>
+<td style="text-align:center">43</td>
+<td style="text-align:center">Tc</td>
+<td style="text-align:left">锝</td>
+<td style="text-align:left">[98]</td>
+<td style="text-align:left">1974年</td>
+<td style="text-align:left">人工放射性元素，用于医学成像和治疗</td>
+</tr>
+<tr>
+<td style="text-align:center">44</td>
+<td style="text-align:center">Ru</td>
+<td style="text-align:left">钌</td>
+<td style="text-align:left">101.07</td>
+<td style="text-align:left">1844年</td>
+<td style="text-align:left">过渡金属，硬度高，耐腐蚀，用于合金和催化剂</td>
+</tr>
+<tr>
+<td style="text-align:center">45</td>
+<td style="text-align:center">Rh</td>
+<td style="text-align:left">铑</td>
+<td style="text-align:left">102.91</td>
+<td style="text-align:left">1803年</td>
+<td style="text-align:left">过渡金属，硬度高，耐腐蚀，用于催化剂和珠宝</td>
+</tr>
+<tr>
+<td style="text-align:center">46</td>
+<td style="text-align:center">Pd</td>
+<td style="text-align:left">钯</td>
+<td style="text-align:left">106.42</td>
+<td style="text-align:left">1803年</td>
+<td style="text-align:left">过渡金属，强度高，耐腐蚀，用于催化剂和珠宝</td>
+</tr>
+<tr>
+<td style="text-align:center">47</td>
+<td style="text-align:center">Ag</td>
+<td style="text-align:left">银</td>
+<td style="text-align:left">107.87</td>
+<td style="text-align:left">公元前</td>
+<td style="text-align:left">过渡金属，导电性好，延展性强，广泛应用于珠宝和电子</td>
+</tr>
+<tr>
+<td style="text-align:center">48</td>
+<td style="text-align:center">Cd</td>
+<td style="text-align:left">镉</td>
+<td style="text-align:left">112.41</td>
+<td style="text-align:left">1817年</td>
+<td style="text-align:left">过渡金属，毒性大，用于合金和电池</td>
+</tr>
+<tr>
+<td style="text-align:center">49</td>
+<td style="text-align:center">In</td>
+<td style="text-align:left">铟</td>
+<td style="text-align:left">114.82</td>
+<td style="text-align:left">1863年</td>
+<td style="text-align:left">后过渡金属，延展性好，用于半导体和合金</td>
+</tr>
+<tr>
+<td style="text-align:center">50</td>
+<td style="text-align:center">Sn</td>
+<td style="text-align:left">锡</td>
+<td style="text-align:left">118.71</td>
+<td style="text-align:left">公元前</td>
+<td style="text-align:left">后过渡金属，延展性好，用于焊料和合金</td>
+</tr>
+<tr>
+<td style="text-align:center">51</td>
+<td style="text-align:center">Sb</td>
+<td style="text-align:left">锑</td>
+<td style="text-align:left">121.76</td>
+<td style="text-align:left">公元前</td>
+<td style="text-align:left">金属loid，半导体材料，用于阻燃剂和合金</td>
+</tr>
+<tr>
+<td style="text-align:center">52</td>
+<td style="text-align:center">Te</td>
+<td style="text-align:left">碲</td>
+<td style="text-align:left">127.6</td>
+<td style="text-align:left">1783年</td>
+<td style="text-align:left">金属loid，半导体材料，用于太阳能电池和红外探测器</td>
+</tr>
+<tr>
+<td style="text-align:center">53</td>
+<td style="text-align:center">I</td>
+<td style="text-align:left">碘</td>
+<td style="text-align:left">126.9</td>
+<td style="text-align:left">1811年</td>
+<td style="text-align:left">液体非金属，毒性大，用于消毒和药物合成</td>
+</tr>
+<tr>
+<td style="text-align:center">54</td>
+<td style="text-align:center">Xe</td>
+<td style="text-align:left">氙</td>
+<td style="text-align:left">131.29</td>
+<td style="text-align:left">1898年</td>
+<td style="text-align:left">稀有气体，惰性，用于氙灯和麻醉剂</td>
+</tr>
+</tbody>
+</table>
+<p>第六周期（55-78号元素）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原子序数</th>
+<th style="text-align:center">元素符号</th>
+<th style="text-align:left">元素名称</th>
+<th style="text-align:left">相对原子质量</th>
+<th style="text-align:left">发现年份</th>
+<th style="text-align:left">主要性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">55</td>
+<td style="text-align:center">Cs</td>
+<td style="text-align:left">铯</td>
+<td style="text-align:left">132.91</td>
+<td style="text-align:left">1860年</td>
+<td style="text-align:left">碱金属，性质最活泼，用于铯原子钟和电池</td>
+</tr>
+<tr>
+<td style="text-align:center">56</td>
+<td style="text-align:center">Ba</td>
+<td style="text-align:left">钡</td>
+<td style="text-align:left">137.33</td>
+<td style="text-align:left">1774年</td>
+<td style="text-align:left">碱土金属，毒性大，用于荧光材料和核工业</td>
+</tr>
+<tr>
+<td style="text-align:center">57-71</td>
+<td style="text-align:center">La-Lu</td>
+<td style="text-align:left">镧系元素</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">f区元素，具有特殊磁性和光学性质</td>
+</tr>
+<tr>
+<td style="text-align:center">72</td>
+<td style="text-align:center">Hf</td>
+<td style="text-align:left">铪</td>
+<td style="text-align:left">178.49</td>
+<td style="text-align:left">1923年</td>
+<td style="text-align:left">过渡金属，耐腐蚀，用于合金和催化剂</td>
+</tr>
+<tr>
+<td style="text-align:center">73</td>
+<td style="text-align:center">Ta</td>
+<td style="text-align:left">钽</td>
+<td style="text-align:left">180.95</td>
+<td style="text-align:left">1802年</td>
+<td style="text-align:left">过渡金属，耐腐蚀，用于电容器和合金</td>
+</tr>
+<tr>
+<td style="text-align:center">74</td>
+<td style="text-align:center">W</td>
+<td style="text-align:left">钨</td>
+<td style="text-align:left">183.84</td>
+<td style="text-align:left">1783年</td>
+<td style="text-align:left">过渡金属，熔点高，强度高，用于灯丝和合金</td>
+</tr>
+<tr>
+<td style="text-align:center">75</td>
+<td style="text-align:center">Re</td>
+<td style="text-align:left">钼</td>
+<td style="text-align:left">186.21</td>
+<td style="text-align:left">1925年</td>
+<td style="text-align:left">过渡金属，硬度高，耐腐蚀，用于合金和催化剂</td>
+</tr>
+<tr>
+<td style="text-align:center">76</td>
+<td style="text-align:center">Os</td>
+<td style="text-align:left">锇</td>
+<td style="text-align:left">190.23</td>
+<td style="text-align:left">1803年</td>
+<td style="text-align:left">过渡金属，硬度高，耐腐蚀，用于合金和催化剂</td>
+</tr>
+<tr>
+<td style="text-align:center">77</td>
+<td style="text-align:center">Ir</td>
+<td style="text-align:left">�铱</td>
+<td style="text-align:left">192.22</td>
+<td style="text-align:left">1803年</td>
+<td style="text-align:left">过渡金属，硬度高，耐腐蚀，用于催化剂和珠宝</td>
+</tr>
+<tr>
+<td style="text-align:center">78</td>
+<td style="text-align:center">Pt</td>
+<td style="text-align:left">钯</td>
+<td style="text-align:left">195.08</td>
+<td style="text-align:left">1735年</td>
+<td style="text-align:left">过渡金属，强度高，耐腐蚀，用于催化剂和珠宝</td>
+</tr>
+</tbody>
+</table>
+<p>第七周期（79-118号元素）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原子序数</th>
+<th style="text-align:center">元素符号</th>
+<th style="text-align:left">元素名称</th>
+<th style="text-align:left">相对原子质量</th>
+<th style="text-align:left">发现年份</th>
+<th style="text-align:left">主要性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">79</td>
+<td style="text-align:center">Au</td>
+<td style="text-align:left">金</td>
+<td style="text-align:left">196.97</td>
+<td style="text-align:left">公元前</td>
+<td style="text-align:left">过渡金属，导电性好，延展性强，广泛应用于珠宝和电子</td>
+</tr>
+<tr>
+<td style="text-align:center">80</td>
+<td style="text-align:center">Hg</td>
+<td style="text-align:left">汞</td>
+<td style="text-align:left">200.59</td>
+<td style="text-align:left">公元前</td>
+<td style="text-align:left">过渡金属，唯一在常温下呈液态的金属，用于温度计和电池</td>
+</tr>
+<tr>
+<td style="text-align:center">81</td>
+<td style="text-align:center">Tl</td>
+<td style="text-align:left">铊</td>
+<td style="text-align:left">204.38</td>
+<td style="text-align:left">1861年</td>
+<td style="text-align:left">后过渡金属，毒性大，用于合金和药物合成</td>
+</tr>
+<tr>
+<td style="text-align:center">82</td>
+<td style="text-align:center">Pb</td>
+<td style="text-align:left">铅</td>
+<td style="text-align:left">207.2</td>
+<td style="text-align:left">公元前</td>
+<td style="text-align:left">后过渡金属，密度大，毒性大，用于防护和合金</td>
+</tr>
+<tr>
+<td style="text-align:center">83</td>
+<td style="text-align:center">Bi</td>
+<td style="text-align:left">铋</td>
+<td style="text-align:left">208.98</td>
+<td style="text-align:left">1832年</td>
+<td style="text-align:left">后过渡金属，密度大，用于放射性防护和药物</td>
+</tr>
+<tr>
+<td style="text-align:center">84</td>
+<td style="text-align:center">Po</td>
+<td style="text-align:left">钋</td>
+<td style="text-align:left">[209]</td>
+<td style="text-align:left">1898年</td>
+<td style="text-align:left">人工放射性元素，毒性极强，用于放射性研究</td>
+</tr>
+<tr>
+<td style="text-align:center">85</td>
+<td style="text-align:center">At</td>
+<td style="text-align:left">砹</td>
+<td style="text-align:left">[210]</td>
+<td style="text-align:left">1940年</td>
+<td style="text-align:left">人工放射性元素，毒性极强，用于放射性研究</td>
+</tr>
+<tr>
+<td style="text-align:center">86</td>
+<td style="text-align:center">Rn</td>
+<td style="text-align:left">氡</td>
+<td style="text-align:left">[222]</td>
+<td style="text-align:left">1898年</td>
+<td style="text-align:left">人工放射性稀有气体，放射性强，用于医疗成像</td>
+</tr>
+<tr>
+<td style="text-align:center">87</td>
+<td style="text-align:center">Fr</td>
+<td style="text-align:left">钫</td>
+<td style="text-align:left">[223]</td>
+<td style="text-align:left">1939年</td>
+<td style="text-align:left">人工放射性碱金属，毒性极强，用于放射性研究</td>
+</tr>
+<tr>
+<td style="text-align:center">88</td>
+<td style="text-align:center">Ra</td>
+<td style="text-align:left">镭</td>
+<td style="text-align:left">[226]</td>
+<td style="text-align:left">1898年</td>
+<td style="text-align:left">人工放射性碱土金属，放射性强，用于医疗和研究</td>
+</tr>
+<tr>
+<td style="text-align:center">89-103</td>
+<td style="text-align:center">Ac-Lr</td>
+<td style="text-align:left">锕系元素</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">f区放射性元素，具有特殊核性质</td>
+</tr>
+<tr>
+<td style="text-align:center">104</td>
+<td style="text-align:center">Rf</td>
+<td style="text-align:left">鈩</td>
+<td style="text-align:left">[267]</td>
+<td style="text-align:left">1964年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+<tr>
+<td style="text-align:center">105</td>
+<td style="text-align:center">Db</td>
+<td style="text-align:left">钅杜</td>
+<td style="text-align:left">[268]</td>
+<td style="text-align:left">1967年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+<tr>
+<td style="text-align:center">106</td>
+<td style="text-align:center">Sg</td>
+<td style="text-align:left">钅喜</td>
+<td style="text-align:left">[271]</td>
+<td style="text-align:left">1974年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+<tr>
+<td style="text-align:center">107</td>
+<td style="text-align:center">Bh</td>
+<td style="text-align:left">钅波</td>
+<td style="text-align:left">[274]</td>
+<td style="text-align:left">1976年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+<tr>
+<td style="text-align:center">108</td>
+<td style="text-align:center">Hs</td>
+<td style="text-align:left">钅黑</td>
+<td style="text-align:left">[277]</td>
+<td style="text-align:left">1984年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+<tr>
+<td style="text-align:center">109</td>
+<td style="text-align:center">Mt</td>
+<td style="text-align:left">钅麦</td>
+<td style="text-align:left">[278]</td>
+<td style="text-align:left">1982年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+<tr>
+<td style="text-align:center">110</td>
+<td style="text-align:center">Ds</td>
+<td style="text-align:left">钅达</td>
+<td style="text-align:left">[281]</td>
+<td style="text-align:left">1994年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+<tr>
+<td style="text-align:center">111</td>
+<td style="text-align:center">Rg</td>
+<td style="text-align:left">钅仑</td>
+<td style="text-align:left">[282]</td>
+<td style="text-align:left">1994年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+<tr>
+<td style="text-align:center">112</td>
+<td style="text-align:center">Cn</td>
+<td style="text-align:left">镍</td>
+<td style="text-align:left">[285]</td>
+<td style="text-align:left">1996年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+<tr>
+<td style="text-align:center">113</td>
+<td style="text-align:center">Uut</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">[286]</td>
+<td style="text-align:left">2003年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+<tr>
+<td style="text-align:center">114</td>
+<td style="text-align:center">Uuq</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">[289]</td>
+<td style="text-align:left">1999年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+<tr>
+<td style="text-align:center">115</td>
+<td style="text-align:center">Uup</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">[288]</td>
+<td style="text-align:left">2003年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+<tr>
+<td style="text-align:center">116</td>
+<td style="text-align:center">Uuh</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">[292]</td>
+<td style="text-align:left">1999年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+<tr>
+<td style="text-align:center">117</td>
+<td style="text-align:center">Uus</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">[291]</td>
+<td style="text-align:left">2010年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+<tr>
+<td style="text-align:center">118</td>
+<td style="text-align:center">Uuo</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">[294]</td>
+<td style="text-align:left">2006年</td>
+<td style="text-align:left">人工放射性元素，用于超重元素研究</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="硬件设备/原材料"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-17T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Technology - 通信 - 技术 - WiFi</title>
+    <id>https://blog.magictable.ha.cn/note/Technology-%E9%80%9A%E4%BF%A1-%E6%8A%80%E6%9C%AF-WiFi.html</id>
+    <link href="https://blog.magictable.ha.cn/note/Technology-%E9%80%9A%E4%BF%A1-%E6%8A%80%E6%9C%AF-WiFi.html"/>
+    <updated>2025-06-17T00:31:46.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+<!-- more -->
+<h2>简介</h2>
+<p>简要说明</p>
+<ul>
+<li></li>
+</ul>
+<p>主要功能</p>
+<ul>
+<li></li>
+</ul>
+<p>注意事项</p>
+<ul>
+<li></li>
+</ul>
+<p>适用场景</p>
+<ul>
+<li></li>
+</ul>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="学习笔记/技术"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-17T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Technology - 通信 - 技术 - 星闪</title>
+    <id>https://blog.magictable.ha.cn/note/Technology-%E9%80%9A%E4%BF%A1-%E6%8A%80%E6%9C%AF-%E6%98%9F%E9%97%AA.html</id>
+    <link href="https://blog.magictable.ha.cn/note/Technology-%E9%80%9A%E4%BF%A1-%E6%8A%80%E6%9C%AF-%E6%98%9F%E9%97%AA.html"/>
+    <updated>2025-06-17T00:31:46.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+<!-- more -->
+<h2>简介</h2>
+<p>简要说明</p>
+<ul>
+<li></li>
+</ul>
+<p>主要功能</p>
+<ul>
+<li></li>
+</ul>
+<p>注意事项</p>
+<ul>
+<li></li>
+</ul>
+<p>适用场景</p>
+<ul>
+<li></li>
+</ul>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="学习笔记/技术"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-17T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Technology - 通信 - 技术 - 蓝牙</title>
+    <id>https://blog.magictable.ha.cn/note/Technology-%E9%80%9A%E4%BF%A1-%E6%8A%80%E6%9C%AF-%E8%93%9D%E7%89%99.html</id>
+    <link href="https://blog.magictable.ha.cn/note/Technology-%E9%80%9A%E4%BF%A1-%E6%8A%80%E6%9C%AF-%E8%93%9D%E7%89%99.html"/>
+    <updated>2025-06-17T00:31:46.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+<!-- more -->
+<h2>简介</h2>
+<p>简要说明</p>
+<ul>
+<li></li>
+</ul>
+<p>主要功能</p>
+<ul>
+<li></li>
+</ul>
+<p>注意事项</p>
+<ul>
+<li></li>
+</ul>
+<p>适用场景</p>
+<ul>
+<li></li>
+</ul>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="学习笔记/技术"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-17T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Package - OpenSCAD</title>
+    <id>https://blog.magictable.ha.cn/software/Package-OpenSCAD.html</id>
+    <link href="https://blog.magictable.ha.cn/software/Package-OpenSCAD.html"/>
+    <updated>2025-06-16T18:22:18.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> OpenSCAD是一款开源的3D建模工具，与其他常见的3D建模软件（如Blender）不同，它不依赖交互式操作，而是通过编写脚本代码来生成3D模型。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> OpenSCAD是一款开源的3D建模工具，与其他常见的3D建模软件（如Blender）不同，它不依赖交互式操作，而是通过编写脚本代码来生成3D模型。</p>
+<!-- more -->
+<h2>简介</h2>
+<p>简要说明</p>
+<ul>
+<li>OpenSCAD是一款开源的3D建模工具。</li>
+<li>与其他常见的3D建模软件（如Blender）不同，它不依赖交互式操作，而是通过编写脚本代码来生成3D模型。</li>
+<li>这种基于代码的建模方式使得设计过程更加精确、可重复，并适合需要精细控制的设计需求。</li>
+</ul>
+<p>主要功能</p>
+<ul>
+<li><strong>基于代码建模</strong>：OpenSCAD允许用户通过脚本语言创建3D模型，用户可以通过编程方式精确控制每一个细节，从而实现高度定制化的设计。</li>
+<li><strong>参数化设计</strong>：用户可以通过调整参数快速生成不同版本的模型，非常适合需要批量生产的场景。</li>
+</ul>
+<p>注意事项</p>
+<ul>
+<li><strong>学习曲线</strong>：尽管OpenSCAD的语法简单易懂，但完全掌握其功能需要一定的编程基础，尤其是对C语言风格的脚本语言有一定了解。</li>
+<li><strong>非交互式操作</strong>：OpenSCAD不是交互式建模工具，不适合需要实时调整和视觉反馈的设计任务，例如动画制作。</li>
+<li><strong>渲染时间</strong>：复杂模型的渲染可能需要较长时间，尤其是在处理高精度或大型模型时。</li>
+</ul>
+<p>适用场景</p>
+<ul>
+<li><strong>机械设计</strong>：适合创建机械部件，如齿轮、支架等，因其能精确控制尺寸和细节。</li>
+<li><strong>3D打印</strong>：支持导出STL文件，可直接用于3D打印，非常适合制作定制化零件或模型。</li>
+<li><strong>电子产品外壳设计</strong>：用于设计电子设备的外壳、支架等，满足对尺寸和结构的严格要求。</li>
+</ul>
+<h2>安装与卸载</h2>
+<p>详细总结：<a href=""></a></p>
+<h2>终端命令</h2>
+<p>详细总结：<a href=""></a></p>
+<h2>配置文件</h2>
+<p>详细总结：<a href=""></a></p>
+<h2>热门推荐</h2>
+<p>详细总结：<a href=""></a></p>
+<h2>问题总结</h2>
+<p>详细总结：<a href=""></a></p>
+<h2>API整理</h2>
+<h3>对象 - 立方体</h3>
+<div class="language-txt line-numbers-mode" data-highlighter="prismjs" data-ext="txt"><pre><code class="language-txt"><span class="line">// 立方体的长宽高都一样</span>
+<span class="line">cube([&lt;边长&gt;]);</span>
+<span class="line">// 立方体的长、宽、高</span>
+<span class="line">cube([&lt;长度x&gt;,&lt;宽度y&gt;,&lt;高度z&gt;]);</span>
+<span class="line"></span>
+<span class="line">// center代表是否居中</span>
+<span class="line">cube([&lt;长度x&gt;,&lt;宽度y&gt;,&lt;高度z&gt;],center=true);</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>对象 - 圆柱</h2>
+<div class="language-txt line-numbers-mode" data-highlighter="prismjs" data-ext="txt"><pre><code class="language-txt"><span class="line">cylinder(h=&lt;高度&gt;,r=&lt;半径&gt;);</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>动作 - 平移</h2>
+<div class="language-txt line-numbers-mode" data-highlighter="prismjs" data-ext="txt"><pre><code class="language-txt"><span class="line">translate([&lt;长度x&gt;,&lt;宽度y&gt;,&lt;高度z&gt;])</span>
+<span class="line">    &lt;对象&gt;</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h2>动作 - 旋转</h2>
+<div class="language-txt line-numbers-mode" data-highlighter="prismjs" data-ext="txt"><pre><code class="language-txt"><span class="line">rotate([&lt;x轴旋转&gt;,&lt;y轴旋转&gt;,&lt;z轴旋转&gt;])</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div>]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="软件程序/软件包"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-17T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Technology - 自动化控制</title>
+    <id>https://blog.magictable.ha.cn/note/Technology-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%8E%A7%E5%88%B6.html</id>
+    <link href="https://blog.magictable.ha.cn/note/Technology-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%8E%A7%E5%88%B6.html"/>
+    <updated>2025-06-16T10:56:56.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+<!-- more -->
+<h2>简介</h2>
+<p>简要说明</p>
+<ul>
+<li></li>
+</ul>
+<p>主要功能</p>
+<ul>
+<li></li>
+</ul>
+<p>注意事项</p>
+<ul>
+<li></li>
+</ul>
+<p>适用场景</p>
+<ul>
+<li></li>
+</ul>
+<h2>电工常识</h2>
+<blockquote>
+<p>[!NOTE] 提示</p>
+<ul>
+<li>直流电（电流有固定方向且稳定，24V，有负极和正极）</li>
+<li>交流电（电流无固定方向且不稳定，220V，有火线和零线）</li>
+</ul>
+</blockquote>
+<ul>
+<li>安全用电常识</li>
+<li>电路基本知识</li>
+<li>电气设备和材料知识</li>
+<li>配线与安装知识</li>
+<li>测量与调试知识</li>
+<li>维护与检修知识</li>
+<li>环靶与安全防护知识</li>
+<li>操作技能与规范</li>
+<li>工具和设备使用知识</li>
+<li>图纸与符号识别知识</li>
+<li>电气元件选型：断路器、交流接触器、热继电器、中间继电器、时间继电器、按钮、指示灯、转换开关、行程开关</li>
+<li>电气设备换线：PLC换线、变频器换线、电气元件换线、控制柜换线</li>
+</ul>
+<h2>自动化</h2>
+<blockquote>
+<p>[!NOTE] 流水线项目</p>
+<ul>
+<li>启动流程：应 “从下游往上游” 依次启动。</li>
+<li>关闭流程：应 “从上游往下游” 依次关闭。</li>
+</ul>
+</blockquote>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="学习笔记/技术"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-16T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Language - Java - 问题总结 - OpenJDK与OracleJDK之间的迁移</title>
+    <id>https://blog.magictable.ha.cn/software/Language-Java-%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93-OpenJDK%E4%B8%8EOracleJDK%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BF%81%E7%A7%BB.html</id>
+    <link href="https://blog.magictable.ha.cn/software/Language-Java-%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93-OpenJDK%E4%B8%8EOracleJDK%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BF%81%E7%A7%BB.html"/>
+    <updated>2025-06-16T10:56:56.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> Open JDK 与 Oracle JDK 之间的迁移。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> Open JDK 与 Oracle JDK 之间的迁移。</p>
+<!-- more -->
+<h2>迁移说明</h2>
+<p>功能/特性差异</p>
+<ul>
+<li><strong>JavaFX</strong>：从 JDK 11 开始，OpenJDK 移除了 JavaFX，而 Oracle JDK 仍然包含它。如果你的应用依赖于 JavaFX，迁移后需要单独引入 JavaFX 库。</li>
+<li><strong>JFR（Java Flight Recorder）和 JMC（Java Mission Control）</strong> ：这些是 Oracle JDK 提供的商业功能，OpenJDK 中通常需要额外配置或使用替代工具。</li>
+<li><strong>专有组件</strong>：Oracle JDK 包含一些闭源组件（如 JCE、JavaFX 等），而 OpenJDK 通常不包含这些组件，迁移时可能需要额外处理。</li>
+<li><strong>JVM 性能</strong>：Oracle JDK 在 JVM 性能、GC 和图形渲染方面通常表现更优，而 OpenJDK 由于社区驱动，更新频率高，但某些功能可能不如 Oracle JDK 稳定。</li>
+<li><strong>模块系统</strong>：从 JDK 9 开始，Java 引入了模块系统（JPMS），这可能会影响某些应用程序的兼容性。迁移时需要确保代码兼容模块系统。</li>
+</ul>
+<p>兼容性问题</p>
+<ul>
+<li><strong>API 变化</strong>：虽然 Oracle JDK 和 OpenJDK 的核心代码几乎一致，但某些 API 可能在不同版本之间发生变化。例如，Oracle JDK 8u211 之后的版本与 OpenJDK 8 代码一致，但如果你使用的是旧版本的 Oracle JDK，可能会遇到兼容性问题。</li>
+<li><strong>第三方库</strong>：某些第三方库可能依赖于 Oracle JDK 的特定功能，迁移后可能需要更新或替换这些库。</li>
+</ul>
+<h2>迁移步骤</h2>
+<ul>
+<li><strong>创建清单</strong>：在迁移前，需要创建一个清单，列出所有使用 Oracle JDK 的机器和应用程序。这包括 JDK 类型、访问详情、操作系统、安装类型和 JDK 版本。</li>
+<li><strong>分析代码</strong>：使用工具如 <code>jdeps</code> 分析应用程序的依赖关系，识别可能需要修改的代码。例如，某些代码可能使用了 Oracle JDK 的专有 API，需要替换为 OpenJDK 的替代方案。</li>
+<li><strong>测试与验证</strong>：在迁移后，需要进行广泛的测试，包括自动化测试、性能测试和稳定性测试，确保应用程序在新环境中正常运行。</li>
+</ul>
+<h2>运维与部署</h2>
+<ul>
+<li><strong>环境变量</strong>：迁移后，需要更新环境变量（如 <code>JAVA_HOME</code>）以指向新的 OpenJDK 安装路径。</li>
+<li><strong>部署策略</strong>：在生产环境中，建议采用渐进式迁移策略，先在测试环境中验证，再逐步推广到生产环境。</li>
+</ul>
+<h2>迁移工具</h2>
+<ul>
+<li><strong>Windup</strong>：这是一个开源工具，可以帮助分析源代码并生成迁移报告，支持从 Oracle JDK 到 OpenJDK 的迁移。</li>
+<li><strong>jenv 和 SDKMAN</strong>：这些工具可以帮助管理多个 JDK 版本，方便在不同环境中切换。</li>
+</ul>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="软件程序/语言"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-16T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Language - Java - 问题总结 - OpenJDK与OracleJDK的区别</title>
+    <id>https://blog.magictable.ha.cn/software/Language-Java-%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93-OpenJDK%E4%B8%8EOracleJDK%E7%9A%84%E5%8C%BA%E5%88%AB.html</id>
+    <link href="https://blog.magictable.ha.cn/software/Language-Java-%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93-OpenJDK%E4%B8%8EOracleJDK%E7%9A%84%E5%8C%BA%E5%88%AB.html"/>
+    <updated>2025-06-16T10:56:56.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> Open JDK 与 Oracle JDK 的区别。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> Open JDK 与 Oracle JDK 的区别。</p>
+<!-- more -->
+<p>Open JDK 与 Oracle JDK 的主要区别在于 <strong>开源性质</strong>、<strong>商业支持</strong>、<strong>功能集成</strong> 和 <strong>许可协议</strong>。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">特性</th>
+<th style="text-align:left">OpenJDK</th>
+<th style="text-align:left">Oracle JDK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">开源性</td>
+<td style="text-align:left">开源</td>
+<td style="text-align:left">闭源</td>
+</tr>
+<tr>
+<td style="text-align:center">许可协议</td>
+<td style="text-align:left">GPLv2</td>
+<td style="text-align:left">JRL</td>
+</tr>
+<tr>
+<td style="text-align:center">商业支持</td>
+<td style="text-align:left">无</td>
+<td style="text-align:left">有（需付费）</td>
+</tr>
+<tr>
+<td style="text-align:center">功能集成</td>
+<td style="text-align:left">基础功能</td>
+<td style="text-align:left">更多商业工具（如 Flight Recorder）</td>
+</tr>
+<tr>
+<td style="text-align:center">适用场景</td>
+<td style="text-align:left">开源、个人开发者</td>
+<td style="text-align:left">企业、需要稳定支持</td>
+</tr>
+<tr>
+<td style="text-align:center">安装方式</td>
+<td style="text-align:left">压缩包</td>
+<td style="text-align:left">安装程序</td>
+</tr>
+<tr>
+<td style="text-align:center">更新频率</td>
+<td style="text-align:left">高</td>
+<td style="text-align:left">低（LTS 版本）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>以下是详细对比：</strong></p>
+<ol>
+<li>开源与闭源</li>
+</ol>
+<ul>
+<li><strong>Open JDK</strong> 是一个 <strong>开源项目</strong>，其源代码是公开的，任何人都可以自由查看、修改和分发。它由 Oracle、Red Hat、IBM 等公司以及全球开发者社区共同维护 。</li>
+<li><strong>Oracle JDK</strong> 是 <strong>闭源的</strong>，虽然其底层代码基于 Open JDK，但部分组件（如图形渲染器、JCE 等）是闭源的，且不提供完整的源代码 。</li>
+</ul>
+<ol start="2">
+<li>许可协议</li>
+</ol>
+<ul>
+<li><strong>Open JDK</strong> 采用 <strong>GPLv2</strong> 协议，允许商业使用，但要求任何修改后的代码必须开源 。</li>
+<li><strong>Oracle JDK</strong> 采用 <strong>JRL（Java Research License）</strong>，仅允许个人研究使用，不提供开源源代码。商业使用需要购买 Oracle 的商业许可证 。</li>
+</ul>
+<ol start="3">
+<li>功能与组件</li>
+</ol>
+<ul>
+<li><strong>Oracle JDK</strong> 提供了更完整的工具链，如安装程序（MSI、RPM、DEB 等），而 OpenJDK 通常仅提供压缩包（tar.gz 或 zip）。包含一些额外的商业功能，如 Java Flight Recorder、Java Mission Control、JCE（Java Cryptography Extension）等，这些功能在 Open JDK 中通常需要额外配置或使用替代方案 。</li>
+</ul>
+<ol start="4">
+<li>商业支持与更新</li>
+</ol>
+<ul>
+<li><strong>Open JDK</strong> 由社区维护，虽然也有 LTS 版本（如 OpenJDK 17、21），但更新和维护主要依赖社区贡献，商业支持需要自行寻找 。</li>
+<li><strong>Oracle JDK</strong> 提供 <strong>长期支持（LTS）</strong> 和 <strong>付费的商业支持</strong>，包括安全更新、性能优化和故障排除服务 。</li>
+</ul>
+<ol start="5">
+<li>适用场景</li>
+</ol>
+<ul>
+<li><strong>Open JDK</strong> 适合 <strong>开源项目、个人开发者、小型企业</strong>，以及希望避免商业许可费用的用户。它更新频率高，适合需要快速迭代的项目 。</li>
+<li><strong>Oracle JDK</strong> 更适合 <strong>大型企业、需要长期支持和稳定性的项目</strong>，以及需要使用 Java Flight Recorder、Mission Control 等工具的场景 。</li>
+</ul>
+<ol start="6">
+<li>性能与稳定性</li>
+</ol>
+<ul>
+<li><strong>Open JDK</strong>由于社区驱动，更新频率高，但某些功能可能不如 Oracle JDK 稳定。</li>
+<li><strong>Oracle JDK</strong>在 <strong>JVM 性能、GC（垃圾回收）和图形渲染</strong> 方面通常表现更优，尤其是在生产环境中 。</li>
+</ul>
+<ol start="7">
+<li>安装与配置</li>
+</ol>
+<ul>
+<li><strong>Open JDK</strong> 需要手动解压和配置，适合高级用户或需要自定义构建的场景 。</li>
+<li><strong>Oracle JDK</strong> 提供了 <strong>安装程序</strong>，可以自动配置环境变量（如 <code>JAVA_HOME</code>）和文件关联，安装过程更简单 。</li>
+</ul>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="软件程序/语言"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-16T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Language - Java - 问题总结 - 查看本机安装的JDK版本</title>
+    <id>https://blog.magictable.ha.cn/software/Language-Java-%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93-%E6%9F%A5%E7%9C%8B%E6%9C%AC%E6%9C%BA%E5%AE%89%E8%A3%85%E7%9A%84JDK%E7%89%88%E6%9C%AC.html</id>
+    <link href="https://blog.magictable.ha.cn/software/Language-Java-%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93-%E6%9F%A5%E7%9C%8B%E6%9C%AC%E6%9C%BA%E5%AE%89%E8%A3%85%E7%9A%84JDK%E7%89%88%E6%9C%AC.html"/>
+    <updated>2025-06-16T10:56:56.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+<!-- more -->
+<h2>方案一：使用<code>java -version</code>命令</h2>
+<p>在终端中运行以下命令</p>
+<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code class="language-bash"><span class="line"><span class="token function">java</span> <span class="token parameter variable">-version</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><div class="hint-container note">
+<p class="hint-container-title">注释</p>
+<p>若输出的内容包含**“OpenJDK“<strong>，则表示安装的是</strong>OpenJDK**，例如：</p>
+<div class="language-txt line-numbers-mode" data-highlighter="prismjs" data-ext="txt"><pre><code class="language-txt"><span class="line">openjdk version "17.0.3" 2021-10-19</span>
+<span class="line">OpenJDK Runtime Environment (build 17.0.3+8-Ubuntu-0ubuntu1.20.04)</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>若输出的内容包含**“Java HotSpot”<strong>，则表示你使用的是</strong>Oracle JDK**，例如：</p>
+<div class="language-txt line-numbers-mode" data-highlighter="prismjs" data-ext="txt"><pre><code class="language-txt"><span class="line">java version "17.0.3" 2021-10-19</span>
+<span class="line">Java(TM) SE Runtime Environment (build 17.0.3+8-Ubuntu-0ubuntu1.20.04)</span>
+<span class="line">Java HotSpot(TM) 64-Bit Server VM (build 17.0.3+8-Ubuntu-0ubuntu1.20.04, mixed mode, sharing)</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
+<h2>方案二：查看系统属性</h2>
+<p>在Java中，通过系统属性来判断当前使用的JDK版本。运行以下代码：</p>
+<div class="language-java line-numbers-mode" data-highlighter="prismjs" data-ext="java"><pre><code class="language-java"><span class="line"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"java.vm.name"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"java.runtime.name"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"java.vm.version"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"><span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"java.specification.version"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container note">
+<p class="hint-container-title">注释</p>
+<p>如果输出中包含 <strong>"OpenJDK"</strong> ，则表示使用的是 <strong>OpenJDK</strong>。</p>
+<p>如果输出中包含 <strong>"Java HotSpot"</strong> ，则表示使用的是 <strong>Oracle JDK</strong>。</p>
+</div>
+<h2>方法三：通过文件名判断</h2>
+<p>JDK的安装路径通常会显示其版本信息。例如：</p>
+<ul>
+<li><strong>OpenJDK</strong>：<code>/usr/lib/jvm/java-17-openjdk-</code> 或 <code>C:\Program Files\OpenJDK\</code></li>
+<li><strong>Oracle JDK</strong>：<code>/usr/lib/jvm/java-17-oracle-jdk-</code> 或 <code>C:\Program Files\Java\jdk-17.0.3\</code></li>
+</ul>
+<h2>方法四：查看许可证协议</h2>
+<p><strong>OpenJDK</strong> 采用 <strong>GPL V2</strong> 协议，允许商业使用，但源代码是开源的。</p>
+<p><strong>Oracle JDK</strong> 采用 <strong>JRL（Java Research License）</strong> ，仅允许个人研究使用，不提供开源源代码。</p>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="软件程序/语言"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-16T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Solution - 知识仓库</title>
+    <id>https://blog.magictable.ha.cn/note/Solution-%E7%9F%A5%E8%AF%86%E4%BB%93%E5%BA%93.html</id>
+    <link href="https://blog.magictable.ha.cn/note/Solution-%E7%9F%A5%E8%AF%86%E4%BB%93%E5%BA%93.html"/>
+    <updated>2025-06-15T09:09:58.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> 构建个人知识库并实现数据的集中管理，围绕 Obsidian 软件制定并实施一套高效的知识整理方案。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> 构建个人知识库并实现数据的集中管理，围绕 Obsidian 软件制定并实施一套高效的知识整理方案。</p>
+<!-- more -->
+<h2>简介</h2>
+<p>简要说明</p>
+<ul>
+<li>构建个人知识库并实现数据的集中管理，围绕 Obsidian 软件制定并实施一套高效的知识整理方案。</li>
+</ul>
+<p>主要作用</p>
+<ul>
+<li><strong>知识整合</strong>：集中管理各类信息，包括“日记、联系人、工作、私人、项目、资源、知识”，实现“系统化、结构化”存储数据。</li>
+<li><strong>便捷检索</strong>：通过强大的搜索功能，快速定位所需信息，提高工作效率。</li>
+<li><strong>结构化组织</strong>：采用“分类标签、外部链接、内部链接”等方式，构建清晰的知识结构，便于知识的扩展和回顾。</li>
+<li><strong>协同共享</strong>：支持多人协作，促进知识共享与交流，增强团队协作能力。</li>
+<li><strong>个性化定制</strong>：根据个人需求，自定义界面和功能，打造专属的知识管理空间。</li>
+</ul>
+<h2>思想和方案</h2>
+<ul>
+<li>将数据整理成知识，并在其之上开发应用，并非只停留在知识层面。</li>
+<li>知识之间存在依赖关系（前置知识），因此需要学习当前任务所需的 “专业知识” 和 “相关知识”，不能只学习单个知识。</li>
+<li>文章将会提供尽可能多的案例和解决方案。</li>
+<li>笔记总结借鉴了“门面模式”，为开发者重新提供新的知识查询方式，降低理解难度。</li>
+<li>解决官方网站文档苦涩难懂的需求。</li>
+<li>知识应该以尽可能少的专业概念来描述知识，减少层级关系。</li>
+<li>将知识、项目、解决方案，实现模块化读取和调用。</li>
+</ul>
+<p>核心知识</p>
+<ul>
+<li>采用 Markdown 作为记录笔记的文件格式。</li>
+<li>使用 Obsidian 笔记软件中的双向链接功能，实现修改文件名称和目录时能够自动修改相关链接。</li>
+<li>使用 Obsidian 笔记软件中的丰富插件和个性化页面设计，降低多款软件之间的切换成本，提高数据管理和查询的效率。</li>
+</ul>
+<h2>分类和规划 - 数据类</h2>
+<h3>日记（diary）</h3>
+<ul>
+<li>用于记录生活中重要事件，便于长期回顾和分析。通过系统化的日记记录，个人可以更好地反思过去、规划未来，形成持续的成长轨迹。</li>
+<li>命名规范：文件以<code>YYYY-MM-DD_HHmmss</code>格式命名，确保唯一性和可追溯性。</li>
+</ul>
+<p>分类建议</p>
+<ul>
+<li>工作日志：记录每日工作内容、进展、问题和解决方案。</li>
+<li>思想日志：记录个人思考、感悟和灵感。</li>
+<li>生活日志：记录日常生活中的重要事件和体验。</li>
+<li>读书笔记：记录阅读过程中的关键观点和心得。</li>
+<li>旅行日志：记录旅行中的见闻和感受。</li>
+</ul>
+<h3>联系人（contact）</h3>
+<ul>
+<li>用于管理与个人生活紧密相关的人物信息，并对其进行分类整理。通过系统化的联系人管理，个人可以更高效地维护人际关系网络。</li>
+<li>命名规范：文件以4位数字组成进行排序，最多支持9999位人物信息。</li>
+</ul>
+<p>分类建议</p>
+<ul>
+<li>基本信息：姓名、联系方式（电话、邮箱、社交媒体账号）、地址等。</li>
+<li>关系信息：与自己的关系（家人、朋友、同事等）、认识时间、重要程度。</li>
+<li>个人特点：兴趣爱好、性格特点、擅长领域。</li>
+<li>互动记录：重要会面、沟通记录、赠礼记录。</li>
+<li>分类标签：职业、地域、兴趣爱好等多维度标签。</li>
+</ul>
+<h3>工作（work）</h3>
+<ul>
+<li>用于记录和管理工作相关信息，帮助个人系统化管理职业发展，提升工作效率和成果，为职业成长奠定基础。</li>
+<li>命名规范：通过"烤肉串命名法（kebab-case）"在文件名后面不断追加新标题。</li>
+</ul>
+<p>管理内容</p>
+<ul>
+<li>职业信息：个人职业、职位、职称。</li>
+<li>公司信息：工作单位、工作地点。</li>
+<li>工作经历：工作经历、离退休状况。</li>
+<li>工作表现：工作表现、薪资。</li>
+<li>职业发展：简历、职业规划、职业资格与证书。</li>
+</ul>
+<p>管理实践</p>
+<ul>
+<li>工作日报：记录每日工作进展，包括工作计划、完成情况、遇到的问题。</li>
+<li>任务管理：通过工具管理个人任务，明确优先级和截止日期。</li>
+<li>成果记录：系统记录工作成果和项目进展。</li>
+<li>职业规划：定期更新职业目标和发展计划。</li>
+<li>职业网络：管理与工作相关的联系人网络。</li>
+</ul>
+<h3>私人（private）</h3>
+<ul>
+<li>用于记录和管理个人生活相关信息，保护个人隐私，确保敏感信息的安全。</li>
+<li>命名规范：通过"烤肉串命名法（kebab-case）"在文件名后面不断追加新标题。</li>
+</ul>
+<p>管理内容</p>
+<ul>
+<li>健康信息：健康状况、体检报告、医疗记录</li>
+<li>财务信息：银行账户、投资记录、消费记录</li>
+<li>社交信息：朋友、社交活动、旅行记录</li>
+<li>个人成长：学习经历、技能提升、兴趣爱好</li>
+<li>网络行为轨迹：网络使用习惯、浏览记录</li>
+</ul>
+<p>管理实践</p>
+<ul>
+<li>敏感信息特别保护：对敏感个人信息采取特别保护措施。</li>
+<li>分类分级管理：对不同类级的个人信息，根据具体场景实施分类分级管理，采取相应安全技术措施和人员管理措施。</li>
+<li>最小化收集：只收集和保存必要的个人信息。</li>
+<li>定期清理：定期清理不再需要的个人信息。</li>
+</ul>
+<h3>项目（project）</h3>
+<ul>
+<li>用于记录和管理项目相关信息，便于项目跟踪与执行，确保项目目标的实现。</li>
+<li>命名规范：通过"烤肉串命名法（kebab-case）"在文件名后面不断追加新标题。</li>
+</ul>
+<p>管理内容</p>
+<ul>
+<li>项目基本信息：项目名称、目标、范围、预算、时间表。</li>
+<li>项目计划与进度：任务分解、里程碑、资源分配。</li>
+<li>项目成员与角色：团队成员、职责分配。</li>
+<li>项目风险与问题：风险识别、应对措施。</li>
+<li>项目成果与交付物：项目文档、产品、服务。</li>
+<li>项目评估与总结：项目评价、经验教训。</li>
+</ul>
+<h3>资源（resource）</h3>
+<ul>
+<li>用于管理各类资源信息，便于资源调用与共享，提升资源利用效率。</li>
+<li>命名规范：文件以4位数字组成进行排序，每种分类尽量不超过9999条数据。</li>
+</ul>
+<p>分类建议</p>
+<ul>
+<li>产品、设计、影视、音乐、游戏、漫画、小说、论文</li>
+</ul>
+<p>管理实践</p>
+<ul>
+<li>资源分组：将资源按照类别和类型进行分组管理。</li>
+<li>资源标签：为资源添加多维度标签，便于检索和管理。</li>
+<li>资源备份：定期备份重要资源，防止数据丢失。</li>
+<li>资源共享：设置合理的共享权限，控制资源访问范围。</li>
+<li>资源更新：定期更新资源，保持资源的时效性和准确性。</li>
+</ul>
+<h2>分类和规划 - 知识类</h2>
+<h3>总结笔记（note）</h3>
+<ul>
+<li>收集和整理学习过程中的笔记，包括日记、论文、摘要、方案、技术文档等。</li>
+<li>分类示例：日常日记、学术论文、知识摘要、项目方案、技术笔记。</li>
+</ul>
+<h3>艺术设计（design）</h3>
+<ul>
+<li>存储与艺术相关的知识和灵感，涵盖风格、视觉设计等领域。</li>
+<li>分类包括：设计风格、视觉元素。</li>
+</ul>
+<h3>硬件设备（hardware）</h3>
+<ul>
+<li>专注于硬件相关的知识，包括原材料、元器件、加工工艺和具体硬件设备。</li>
+<li>分类示例：原材料、元器件、制造工艺、硬件产品。</li>
+</ul>
+<h3>软件程序（software）</h3>
+<ul>
+<li>涵盖软件程序相关的知识，从设计模式到编程语言，再到操作系统和软件包。</li>
+<li>分类包括：设计模式、数据结构、算法设计、软件架构、程序语言、代码类库、操作系统、软件包。</li>
+</ul>
+<h3>世界规则（rule）</h3>
+<ul>
+<li>总结世界运行的基本规则和原理，涉及健康、环境、社会、道德、法律、经济和政策等方面。</li>
+<li>分类包括：健康规则、环境法则、社会规范、道德伦理、法律制度、经济规律、政策解读。</li>
+</ul>
+<div class="hint-container note">
+<p class="hint-container-title">注释</p>
+<p><strong>知识类笔记</strong>主要是对知识的总结，快速查询固定知识，对相关问题的总结，推荐的相关内容或解决方案，因此该类笔记需要有一下2种标签：</p>
+<ul>
+<li>主要标签（知识总结、查询手册、问题总结、热门推荐）</li>
+<li>状态标签（已停滞、待完善、进行中、已完成）</li>
+</ul>
+</div>
+<h2>配置Obsidian软件</h2>
+<p>详细总结：<a href="/software/Package-Obsidian-%E7%83%AD%E9%97%A8%E6%8E%A8%E8%8D%90-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88-%E7%9F%A5%E8%AF%86%E4%BB%93%E5%BA%93.html" target="_blank">Package-Obsidian-热门推荐-配置方案-知识仓库</a></p>
+<h2>属性和模板</h2>
+<ul>
+<li>Markdown是一种轻量级标记语言，使用易读易写的纯文本格式编写文档。</li>
+<li>并且可通过Obsidian笔记软件完整适配。</li>
+</ul>
+<h3>日记（diary）</h3>
+<p>详细总结：<a href="/software/Language-Markdown-%E7%83%AD%E9%97%A8%E6%8E%A8%E8%8D%90-%E6%A8%A1%E6%9D%BF-%E6%97%A5%E8%AE%B0.html" target="_blank">Language-Markdown-热门推荐-模板-日记</a></p>
+<h3>联系人（contact）</h3>
+<p>详细总结：<a href="/software/Language-Markdown-%E7%83%AD%E9%97%A8%E6%8E%A8%E8%8D%90-%E6%A8%A1%E6%9D%BF-%E8%81%94%E7%B3%BB%E4%BA%BA.html" target="_blank">Language-Markdown-热门推荐-模板-联系人</a></p>
+<h3>工作（work）</h3>
+<h3>私人（private）</h3>
+<h3>项目（project）</h3>
+<h3>资源（resource）</h3>
+<h3>总结笔记（note）</h3>
+<h3>艺术设计（design）</h3>
+<h3>硬件设备（hardware）</h3>
+<h3>软件程序（software）</h3>
+<h3>世界规则（rule）</h3>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="学习笔记/方案"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-09T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Language - Markdown - 热门推荐 - 模板 - 日记</title>
+    <id>https://blog.magictable.ha.cn/software/Language-Markdown-%E7%83%AD%E9%97%A8%E6%8E%A8%E8%8D%90-%E6%A8%A1%E6%9D%BF-%E6%97%A5%E8%AE%B0.html</id>
+    <link href="https://blog.magictable.ha.cn/software/Language-Markdown-%E7%83%AD%E9%97%A8%E6%8E%A8%E8%8D%90-%E6%A8%A1%E6%9D%BF-%E6%97%A5%E8%AE%B0.html"/>
+    <updated>2025-06-15T06:48:27.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> Markdown模板展示，用于记录生活中重要事件，便于长期回顾和分析。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> Markdown模板展示，用于记录生活中重要事件，便于长期回顾和分析。</p>
+<!-- more -->
+<p>文件以4位数字组成进行排序，最多支持9999位人物信息。</p>
+<div class="language-txt line-numbers-mode" data-highlighter="prismjs" data-ext="txt"><pre><code class="language-txt"><span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div>]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="软件程序/语言"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-09T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Language - Markdown - 热门推荐 - 模板 - 联系人</title>
+    <id>https://blog.magictable.ha.cn/software/Language-Markdown-%E7%83%AD%E9%97%A8%E6%8E%A8%E8%8D%90-%E6%A8%A1%E6%9D%BF-%E8%81%94%E7%B3%BB%E4%BA%BA.html</id>
+    <link href="https://blog.magictable.ha.cn/software/Language-Markdown-%E7%83%AD%E9%97%A8%E6%8E%A8%E8%8D%90-%E6%A8%A1%E6%9D%BF-%E8%81%94%E7%B3%BB%E4%BA%BA.html"/>
+    <updated>2025-06-15T06:48:27.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> Markdown模板展示，管理与个人生活紧密相关的人物信息，并对其进行分类整理。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> Markdown模板展示，管理与个人生活紧密相关的人物信息，并对其进行分类整理。</p>
+<!-- more -->
+<div class="language-txt line-numbers-mode" data-highlighter="prismjs" data-ext="txt"><pre><code class="language-txt"><span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div>]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="软件程序/语言"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-09T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Language - Markdown - 热门推荐 - 模板 - 项目文档</title>
+    <id>https://blog.magictable.ha.cn/software/Language-Markdown-%E7%83%AD%E9%97%A8%E6%8E%A8%E8%8D%90-%E6%A8%A1%E6%9D%BF-%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3.html</id>
+    <link href="https://blog.magictable.ha.cn/software/Language-Markdown-%E7%83%AD%E9%97%A8%E6%8E%A8%E8%8D%90-%E6%A8%A1%E6%9D%BF-%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3.html"/>
+    <updated>2025-06-14T11:32:46.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> Markdown模板展示，管理与个人生活紧密相关的人物信息，并对其进行分类整理。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> Markdown模板展示，管理与个人生活紧密相关的人物信息，并对其进行分类整理。</p>
+<!-- more -->
+<div class="language-txt line-numbers-mode" data-highlighter="prismjs" data-ext="txt"><pre><code class="language-txt"><span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div></div>]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="软件程序/语言"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-09T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Package - Obsidian - 热门推荐 - 配置方案 - 知识仓库</title>
+    <id>https://blog.magictable.ha.cn/software/Package-Obsidian-%E7%83%AD%E9%97%A8%E6%8E%A8%E8%8D%90-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88-%E7%9F%A5%E8%AF%86%E4%BB%93%E5%BA%93.html</id>
+    <link href="https://blog.magictable.ha.cn/software/Package-Obsidian-%E7%83%AD%E9%97%A8%E6%8E%A8%E8%8D%90-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88-%E7%9F%A5%E8%AF%86%E4%BB%93%E5%BA%93.html"/>
+    <updated>2025-06-15T09:09:58.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> 构建个人知识库并实现数据的集中管理，围绕 Obsidian 软件制定并实施一套高效的知识整理方案。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> 构建个人知识库并实现数据的集中管理，围绕 Obsidian 软件制定并实施一套高效的知识整理方案。</p>
+<!-- more -->
+<h2>介绍说明</h2>
+<ul>
+<li><strong>Markdown编辑</strong>：Obsidian支持Markdown语法，用户可以方便地创建标题、列表、表格等格式。</li>
+<li><strong>双向链接</strong>：在软件内修改或移动到其他目录时，会自动更新其他使用到该文件的链接。</li>
+<li><strong>知识图谱</strong>：Obsidian的核心功能是创建知识图谱，通过链接笔记，将零散的信息组织成一个有结构的网络。</li>
+<li><strong>模板</strong>：Obsidian提供了多种模板，方便用户快速创建笔记。</li>
+<li><strong>跨平台</strong>：Obsidian支持Windows、macOS和Linux操作系统，同时也有移动端应用。</li>
+<li><strong>插件市场</strong>：Obsidian拥有一个庞大的插件市场，用户可以根据自己的需求安装插件。</li>
+</ul>
+<h2>所需插件</h2>
+<ul>
+<li><strong>Projects</strong>：项目管理视图，类似飞书的多维表格。</li>
+<li><strong>Excalidraw</strong>：绘图功能</li>
+<li><strong>Kanban</strong>：任务实现展示</li>
+<li><strong>Git</strong>：版本控制，自动同步笔记。</li>
+</ul>
+<h2>笔记目录结构</h2>
+<ul>
+<li>顶级目录分类如下，同时可自行选择英文或中文命名方式。</li>
+</ul>
+<blockquote>
+<p></p>
+</blockquote>
+<ul>
+<li>将笔记分类保持在同一目录层级内，有助于简化管理复杂性并避免因层级过多而导致的笔记间链接过长。</li>
+</ul>
+<blockquote>
+<p></p>
+</blockquote>
+<blockquote>
+<p></p>
+</blockquote>
+<h2>附件目录结构</h2>
+<ul>
+<li>在每个笔记目录下，创建有专门的子目录结构，用于存放各类附件文件。</li>
+<li>附件文件包括“图片、音频、视频和画板”等。</li>
+<li>主要作用是在按笔记分类对附件进行集中管理，同时缩短文件链接的长度。</li>
+</ul>
+<blockquote>
+<p></p>
+</blockquote>
+<h2>效果展示</h2>
+<blockquote>
+<p></p>
+</blockquote>
+<blockquote>
+<p></p>
+</blockquote>
+<blockquote>
+<p></p>
+</blockquote>
+<blockquote>
+<p></p>
+</blockquote>
+<blockquote>
+<p></p>
+</blockquote>
+<blockquote>
+<p></p>
+</blockquote>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="软件程序/软件包"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-09T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Society - 职业 - 自由职业</title>
+    <id>https://blog.magictable.ha.cn/rule/Society-%E8%81%8C%E4%B8%9A-%E8%87%AA%E7%94%B1%E8%81%8C%E4%B8%9A.html</id>
+    <link href="https://blog.magictable.ha.cn/rule/Society-%E8%81%8C%E4%B8%9A-%E8%87%AA%E7%94%B1%E8%81%8C%E4%B8%9A.html"/>
+    <updated>2025-06-14T11:32:46.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+<!-- more -->
+<h2>简介</h2>
+<h2>平台</h2>
+<p>Upwork</p>
+<p>程序员客栈</p>
+<p>电鸭社区</p>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="世界规则/社会"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-06T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Device - 数据传输线 - HDMI</title>
+    <id>https://blog.magictable.ha.cn/hardware/Device-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%BA%BF-HDMI.html</id>
+    <link href="https://blog.magictable.ha.cn/hardware/Device-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%BA%BF-HDMI.html"/>
+    <updated>2025-06-14T11:32:46.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+<!-- more -->
+<h2>简介</h2>
+<p>简要说明</p>
+<ul>
+<li></li>
+</ul>
+<p>主要功能</p>
+<ul>
+<li>用于传输高清音视频信号，支持无压缩的音频和视频传输。</li>
+</ul>
+<p>注意事项</p>
+<ul>
+<li></li>
+</ul>
+<p>适用场景</p>
+<ul>
+<li></li>
+</ul>
+<h2>类型</h2>
+<ul>
+<li>标准HDMI：适用于电视和显示器。</li>
+<li>Mini HDMI：用于平板电脑和相机。</li>
+<li>Micro HDMI：用于小型设备如便携摄像机。</li>
+</ul>
+<h2>型号</h2>
+<ul>
+<li>HDMI 1.4：支持4K分辨率。</li>
+<li>HDMI 2.1：支持8K分辨率，适合高端电视和游戏机。</li>
+</ul>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="硬件设备/硬件设备"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-05T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Device - 数据传输线 - USB</title>
+    <id>https://blog.magictable.ha.cn/hardware/Device-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%BA%BF-USB.html</id>
+    <link href="https://blog.magictable.ha.cn/hardware/Device-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%BA%BF-USB.html"/>
+    <updated>2025-06-14T11:32:46.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+<!-- more -->
+<h2>简介</h2>
+<p>简要说明</p>
+<ul>
+<li></li>
+</ul>
+<p>主要功能</p>
+<ul>
+<li>用于连接电脑与外部设备，支持数据传输和充电。</li>
+</ul>
+<p>注意事项</p>
+<ul>
+<li></li>
+</ul>
+<p>适用场景</p>
+<ul>
+<li></li>
+</ul>
+<h2>接口类型</h2>
+<ul>
+<li>USB Type-A：常见于电脑和充电器。</li>
+<li>USB Type-B：多用于打印机、外置硬盘。</li>
+<li>Micro USB：常见于智能手机和平板电脑。</li>
+<li>USB-C：支持正反插，传输速度快，适用于新设备。</li>
+</ul>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="硬件设备/硬件设备"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-05T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Device - 数据传输线</title>
+    <id>https://blog.magictable.ha.cn/hardware/Device-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%BA%BF.html</id>
+    <link href="https://blog.magictable.ha.cn/hardware/Device-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%BA%BF.html"/>
+    <updated>2025-06-14T11:32:46.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> 数据传输线是指通过电缆将数据或信号从一处传输到另一处的媒介。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> 数据传输线是指通过电缆将数据或信号从一处传输到另一处的媒介。</p>
+<!-- more -->
+<h2>简介</h2>
+<p>简要说明</p>
+<ul>
+<li></li>
+</ul>
+<p>主要功能</p>
+<ul>
+<li></li>
+</ul>
+<p>注意事项</p>
+<ul>
+<li></li>
+</ul>
+<p>适用场景</p>
+<ul>
+<li></li>
+</ul>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="硬件设备/硬件设备"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-05T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Process（加工工艺）</title>
+    <id>https://blog.magictable.ha.cn/hardware/Process%EF%BC%88%E5%8A%A0%E5%B7%A5%E5%B7%A5%E8%89%BA%EF%BC%89.html</id>
+    <link href="https://blog.magictable.ha.cn/hardware/Process%EF%BC%88%E5%8A%A0%E5%B7%A5%E5%B7%A5%E8%89%BA%EF%BC%89.html"/>
+    <updated>2025-06-16T10:56:56.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> 通过一系列有序的步骤、方法和参数，将原材料或半成品转化为最终产品的系统性技术流程。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> 通过一系列有序的步骤、方法和参数，将原材料或半成品转化为最终产品的系统性技术流程。</p>
+<!-- more -->
+<h2>简介</h2>
+<p>简要说明</p>
+<ul>
+<li>通过一系列有序的步骤、方法和参数，将原材料或半成品转化为最终产品的系统性技术流程。</li>
+<li>核心作用在于优化生产效率、控制产品质量，并满足特定功能需求。</li>
+</ul>
+<p>主要功能</p>
+<ul>
+<li><strong>性能优化</strong>：通过参数调整（如切削速度、温度、压力）提升产品性能。</li>
+<li><strong>流程标准化</strong>：定义加工顺序（如前段制程的晶圆加工、后段制程的封装）和工艺规范，减少人为误差。</li>
+<li><strong>成本控制</strong>：集成多功能设备减少工序切换成本。</li>
+<li><strong>质量控制</strong>：通过检测确保成品符合标准。</li>
+</ul>
+<p>注意事项</p>
+<ul>
+<li><strong>设备与材料适配性</strong>：根据材料特性选择工艺设备。</li>
+</ul>
+<p>适用场景</p>
+<ul>
+<li></li>
+</ul>
+<h2>功能</h2>
+<p>缝纫、焊接、</p>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="硬件设备/工艺"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-05T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+  <entry>
+    <title type="text">Society - 网络宽带</title>
+    <id>https://blog.magictable.ha.cn/rule/Society-%E7%BD%91%E7%BB%9C%E5%AE%BD%E5%B8%A6.html</id>
+    <link href="https://blog.magictable.ha.cn/rule/Society-%E7%BD%91%E7%BB%9C%E5%AE%BD%E5%B8%A6.html"/>
+    <updated>2025-06-14T11:32:46.000Z</updated>
+    <summary type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p><strong>文章摘要：</strong> 摘要内容。</p>
+<!-- more -->
+<h2>简介</h2>
+<p>资讯所在地区带宽运营商情况</p>
+<p>宽带套餐种类</p>
+<p>问题</p>
+<ul>
+<li>合约期限</li>
+<li>是否能更换套餐</li>
+<li>如何注销</li>
+<li>能否免费迁移</li>
+</ul>
+<p>采购路由器</p>
+<p>联系安装师傅上门安装</p>
+]]></content>
+    <author>
+      <name>魔术桌</name>
+    </author>
+    <category term="世界规则/社会"/>
+    <contributor>
+      <name>魔术桌</name>
+    </contributor>
+    <published>2025-06-05T00:00:00.000Z</published>
+    <rights>Copyright by 魔术桌</rights>
+  </entry>
+</feed>
