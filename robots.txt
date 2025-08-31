@@ -1,0 +1,4 @@
+User-agent:*
+Disallow:
+
+Sitemap: https://blog.magictable.ha.cn/sitemap.xml
