@@ -1,0 +1,37 @@
+import{_ as a,c as s,a as e,o as i}from"./app-wlfcSj72.js";const l={};function t(c,n){return i(),s("div",null,n[0]||(n[0]=[e(`<p><strong>文章摘要：</strong> 配置方案。</p><h2 id="软件包目录结构" tabindex="-1"><a class="header-anchor" href="#软件包目录结构"><span>软件包目录结构</span></a></h2><div class="hint-container info"><p class="hint-container-title">相关信息</p><p>nacos软件包中，本质是一个spring项目，一个打包好的jar包项目。</p></div><div class="language-txt line-numbers-mode" data-highlighter="prismjs" data-ext="txt"><pre><code class="language-txt"><span class="line">nacos/</span>
+<span class="line"></span>
+<span class="line">|-- bin/     # 可执行文件</span>
+<span class="line">	|-- logs/</span>
+<span class="line">	|-- work/</span>
+<span class="line">	derby.log</span>
+<span class="line">	shutdown.cmd  # windows结束脚本</span>
+<span class="line">	startup.cmd   # windows运行脚本</span>
+<span class="line">	shutdown.sh   # linux结束脚本</span>
+<span class="line">	startup.sh    # linux运行脚本</span>
+<span class="line">	</span>
+<span class="line">|-- conf/    # 配置文件</span>
+<span class="line">	|-- announcement_en-US.conf</span>
+<span class="line">	|-- announcement_zh-CN.conf</span>
+<span class="line">	|-- application.properties           # nacos主要配置文件</span>
+<span class="line">	|-- application.properties.example</span>
+<span class="line">	|-- cluster.conf.example             # nacos集群</span>
+<span class="line">	|-- console-guide.conf</span>
+<span class="line">	|-- nacos-logback.xml</span>
+<span class="line">	|-- 1.4.0-ipv6_support-update.sql</span>
+<span class="line">	|-- derby-schema.sql</span>
+<span class="line">	|-- mysql-schema.sql</span>
+<span class="line">	</span>
+<span class="line">|-- data/    # 数据文件</span>
+<span class="line">	|-- connection/</span>
+<span class="line">	|-- derby-data/</span>
+<span class="line">	|-- naming/</span>
+<span class="line">	|-- protocol/</span>
+<span class="line">	|-- tps/</span>
+<span class="line">	</span>
+<span class="line">|-- logs/    # 日志文件</span>
+<span class="line">	|-- # 很多日志文件</span>
+<span class="line">	</span>
+<span class="line">|-- target/  # jar运行程序</span>
+<span class="line">	|-- nacos-server.jar  # 运行程序</span>
+<span class="line"></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,4)]))}const r=a(l,[["render",t]]),o=JSON.parse('{"path":"/software/Package-Nacos-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.html","title":"Package - Nacos - 配置文件","lang":"zh-CN","frontmatter":{"title":"Package - Nacos - 配置文件","author":"魔术桌","cover":null,"category":["软件程序/软件包"],"date":"2024-09-24T00:00:00.000Z","tag":["进度-待完善","查询手册"],"description":"文章摘要： 配置方案。 软件包目录结构 相关信息 nacos软件包中，本质是一个spring项目，一个打包好的jar包项目。","head":[["script",{"type":"application/ld+json"},"{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"Article\\",\\"headline\\":\\"Package - Nacos - 配置文件\\",\\"image\\":[\\"\\"],\\"datePublished\\":\\"2024-09-24T00:00:00.000Z\\",\\"dateModified\\":\\"2025-10-06T02:37:54.000Z\\",\\"author\\":[{\\"@type\\":\\"Person\\",\\"name\\":\\"魔术桌\\"}]}"],["meta",{"property":"og:url","content":"https://blog.magictable.ha.cn/software/Package-Nacos-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.html"}],["meta",{"property":"og:site_name","content":"魔术桌"}],["meta",{"property":"og:title","content":"Package - Nacos - 配置文件"}],["meta",{"property":"og:description","content":"文章摘要： 配置方案。 软件包目录结构 相关信息 nacos软件包中，本质是一个spring项目，一个打包好的jar包项目。"}],["meta",{"property":"og:type","content":"article"}],["meta",{"property":"og:locale","content":"zh-CN"}],["meta",{"property":"og:updated_time","content":"2025-10-06T02:37:54.000Z"}],["meta",{"property":"article:author","content":"魔术桌"}],["meta",{"property":"article:tag","content":"查询手册"}],["meta",{"property":"article:tag","content":"进度-待完善"}],["meta",{"property":"article:published_time","content":"2024-09-24T00:00:00.000Z"}],["meta",{"property":"article:modified_time","content":"2025-10-06T02:37:54.000Z"}]]},"git":{"updatedTime":1759718274000,"contributors":[{"name":"MagicTable-RedmiNote12TPro-Android","username":"","email":"13459588094@163.com","commits":2},{"name":"MagicTable-HappinessHome-DebianLinux","username":"","email":"13459588094@163.com","commits":1}],"changelog":[{"hash":"2fee46a18beafc4284ad1e19b3f2684c7954037e","time":1759718274000,"email":"13459588094@163.com","author":"MagicTable-RedmiNote12TPro-Android","message":"手机端同步笔记"},{"hash":"ea490d819f6b9c38b6faf647221faa9808862172","time":1759413290000,"email":"13459588094@163.com","author":"MagicTable-HappinessHome-DebianLinux","message":"更新博客文章数据"},{"hash":"bd68b5c596d6a0543e6461d26edd64a5440f6020","time":1758421995000,"email":"13459588094@163.com","author":"MagicTable-RedmiNote12TPro-Android","message":"初始化仓库版本"}]},"autoDesc":true,"filePathRelative":"software/Package-Nacos-配置文件.md","excerpt":"<p><strong>文章摘要：</strong> 配置方案。</p>\\n"}');export{r as comp,o as data};
